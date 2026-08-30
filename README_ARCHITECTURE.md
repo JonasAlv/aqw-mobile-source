@@ -8,27 +8,28 @@ The goal of this project is to maintain a mobile wrapper for AdventureQuest Worl
 ## Legacy Architecture vs. Modern Architecture
 
 ### The Old Way (Legacy)
-Previously, the repository relied on a complex multi-repository structure:
-- A main repository containing the Android wrapper source.
-- A secondary `patches` submodule containing **pre-compiled binary `.swf` files**.
-- Developers had to manually extract, decompile, patch, and recompile the `.swf` files on their local machine, then push those binaries to the `patches` repo.
-- The GitHub Action blindly downloaded these pre-compiled binaries and packaged them.
-- This was extremely error-prone, caused merge conflicts with binary files, and made tracking actual code changes impossible.
+Previously, the repository relied on a complex multi-repository structure containing pre-compiled binary `.swf` files. Then, it transitioned to hosting decompiled Artix Entertainment ActionScript (`.asasm`) files directly in the public repository, applying them dynamically with a Python script. Both approaches posed major DMCA and copyright risks.
 
-### The New Way (Standalone)
-We have modernized the project into a single, standalone repository:
-- **No more pre-compiled SWFs in source control!** Only raw `.asasm` source code changes are tracked.
-- **`pocket-patches/`**: This directory now contains only the raw, human-readable `.asasm` files representing the exact modifications we make to the game.
-- **Automated Python Patcher**: A custom `python3 patcher.py` script downloads the *latest* vanilla game files directly from Artix Entertainment's servers, decompiles them on the fly, applies our modifications, and recompiles the game.
-- **Automated CI/CD**: The GitHub Action now builds everything dynamically. When you trigger a release, the GitHub Action automatically downloads the `D` compiler, builds `RABCDAsm` from source, runs the Python patcher, and generates the final APKs (Android) and ZIP bundles (Windows Desktop) using Adobe AIR.
+### The New Way (Two-Repo DMCA-Safe Architecture)
+We have modernized the project into a completely clean, two-repository split system:
+
+#### 1. The Public Wrapper Repository (`aqw-mobile-source`)
+This repository. It is 100% open source and contains **zero** proprietary AE code. 
+- It contains the ActionScript UI logic (the joystick, menus, config).
+- It contains the build scripts (`build.sh` and GitHub Actions).
+- When triggered, it securely connects to the Private Repository via a `PATCH_TOKEN`, downloads the pre-patched game files, compiles the UI, and bundles the final APK.
+- If you run the build script locally without patched files, it safely falls back to downloading vanilla game files so the build won't fail.
+
+#### 2. The Private Patch Repository (`pocket-patches`)
+A hidden, secure repository that contains the decompiled Artix Entertainment `.asasm` files and the Python patching engine (`patcher.py`).
+- Because it is private, it is completely hidden from DMCA bots and copyright scanners.
+- It contains its own GitHub Action. When patches are updated, it downloads the vanilla game from AE, applies the patches via `RABCDAsm`, compiles the modified `.swf` files, and saves them as a hidden workflow artifact (`patched-gamefiles`).
 
 ## Update System
-1. **GitHub Releases**: When the GitHub Action finishes, it uploads the APKs and Windows ZIPs to a new GitHub Release on `JonasAlv/aqw-mobile`.
+1. **GitHub Releases**: When the public GitHub Action finishes compiling the APKs and Windows ZIPs, it uploads them to a new GitHub Release.
 2. **In-Game Checker**: The mobile wrapper (`Mobile.swf`) queries the GitHub API (`/releases/latest`) on startup.
 3. **Prompt**: If the latest release tag (e.g., `v3.1.2`) is newer than the `versionNumber` in `Mobile-app.xml`, the game displays an update prompt allowing players to directly download the new APK.
 
 ## Making Changes
-To edit the game logic (e.g., joystick or UI), you can provide patches in `pocket-patches/`:
-
-1. **Full File Replacement**: Name your file ending in `.copy.asasm` (e.g., `Game.class.copy.asasm`). The Python script will completely overwrite the vanilla file with yours.
-2. **Method Insertion**: Name your file ending in `.method.asasm` (e.g., `onEnterFrame.method.asasm`). The Python script will dynamically inject the body of your text file directly into the matching trait method of the vanilla `.class.asasm` file, avoiding the need to track entire files for small logic changes.
+* **To change the Mobile UI or Wrapper logic**: Commit your ActionScript changes directly to this public repository.
+* **To change game patches or fix core `.swf` logic**: Commit your `.asasm` files to the private `pocket-patches` repository. Wait for the private action to finish building, then trigger a new release in the public repository.

@@ -27,11 +27,12 @@ Grab the latest release from the [Releases](../../releases/latest) tab! **Only d
 
 ## Security & Architecture
 
-- **100% Open Source:** The app is compiled completely automatically on GitHub Actions using the latest vanilla game files. What you see in the code is exactly what gets built.
+- **DMCA-Safe & 100% Open Source:** This public repository contains **zero** proprietary Artix Entertainment code. It strictly hosts the open-source ActionScript UI wrapper (`Pocket.as`). 
+- **Automated Private Patching:** The proprietary AE patches (which intercept loading, expose private state, and inject custom UIs) are housed in a secure, private repository. The public GitHub Action securely downloads the pre-compiled, patched `.swf` files from the private repo during the build process to generate the final APK.
 - **Secure Login:** Logins occur directly with Artix Entertainment servers. Your passwords are never stored.
 - **Fair Play:** This client does not include cheats, botting tools, or automation.
 
-*(For developers and technical details on how the Python patching system works, see [README_ARCHITECTURE.md](README_ARCHITECTURE.md).)*
+*(For developers and technical details on how the split-repository patching system works, see [README_ARCHITECTURE.md](README_ARCHITECTURE.md).)*
 
 ---
 **Notes:** 

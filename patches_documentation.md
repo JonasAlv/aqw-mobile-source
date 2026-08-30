@@ -30,3 +30,5 @@ Anthony added new `public` getters/setters to the root `Game` class:
 
 ## Conclusion
 The `pocket-patches` (or ASASM modifications) essentially convert the original `game.swf` from a closed-box web player into an API-driven engine that the `Mobile.swf` wrapper can control, cache, and overlay touch controls onto.
+
+*(Note: To protect the project from DMCA takedowns, these proprietary ASASM modifications are no longer stored in this public repository. They are hosted and built inside a separate private `pocket-patches` repository.)*
