@@ -85,6 +85,12 @@ jobs:
                     -   architecture: "armv8"
                         render-mode: "auto"
                         suffix: ""
+                    -   architecture: "armv8"
+                        render-mode: "direct"
+                        suffix: "-direct"
+                    -   architecture: "armv8"
+                        render-mode: "gpu"
+                        suffix: "-gpu"
                     -   architecture: "armv7"
                         render-mode: "auto"
                         suffix: ""
@@ -188,6 +194,8 @@ jobs:
 
                         ### Android
                         * **armv8 (recommended)**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8.apk`
+                        * **armv8-direct (alternative)**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-direct.apk` (Best for modern devices if standard lags)
+                        * **armv8-gpu (legacy)**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-gpu.apk` (May cause visual glitches)
                         * **armv7 (32-bit)**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv7.apk`
 
                         ### Windows
