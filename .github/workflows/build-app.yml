@@ -66,13 +66,19 @@ jobs:
                     air-version: "51.3.1"
                     accept-license: yes
 
+            -   name: Compile WorkerMain.swf
+                run: |
+                    mkdir -p loader/gamefiles/embed
+                    amxmlc loader/worker-src/WorkerMain.as -source-path+=loader/src -source-path+=loader/worker-src -output loader/gamefiles/embed/WorkerMain.swf -swf-version=18
+
             -   name: Inject updated code into Mobile.swf
                 run: |
                     amxmlc \
                       +configname=airmobile \
                       -define+=POCKET::IS_DESKTOP,false \
                       -define+=POCKET::IS_MOBILE,true \
-                      -source-path loader/src \
+                      -source-path+=loader/src \
+                      -source-path+=loader/worker-src \
                       -output Mobile_code.swf \
                       loader/src/Pocket.as
                     abcexport Mobile_code.swf
@@ -85,7 +91,8 @@ jobs:
                       +configname=air \
                       -define+=POCKET::IS_DESKTOP,true \
                       -define+=POCKET::IS_MOBILE,false \
-                      -source-path loader/src \
+                      -source-path+=loader/src \
+                      -source-path+=loader/worker-src \
                       -external-library-path+=loader/libs/DiscordRPC.ane \
                       -output Desktop_code.swf \
                       loader/src/Pocket.as
