@@ -20,12 +20,11 @@ Pick **armv8** for most modern devices or **armv7** for older 32-bit devices.
 
 ### Desktop
 
-Desktop builds may be available for:
+Desktop builds are bundled as captive runtimes (no Adobe AIR installation required):
 
-* Windows
-* macOS
+* **Windows**: `AQWPocket-vX.X.X-windows.zip`
 
-Use the build matching your operating system and architecture.
+Just extract the ZIP file and run the executable!
 
 **Only download from this repository. Builds from other sources may be modified.**
 
