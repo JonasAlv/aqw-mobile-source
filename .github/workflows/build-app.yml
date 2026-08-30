@@ -150,7 +150,7 @@ jobs:
             -   name: Build Windows App
                 run: |
                     adt -certificate -cn AQWPocket -validityPeriod 25 2048-RSA desktop.p12 aqwpocket
-                    adt -package -storetype PKCS12 -keystore desktop.p12 -storepass aqwpocket -target bundle AQWPocket-${{ needs.patch.outputs.VERSION }}-windows loader/Desktop-app.xml -C loader Desktop.swf icons/icon-16x16.png icons/icon-32x32.png icons/icon-36x36.png icons/icon-48x48.png icons/icon-72x72.png icons/icon-96x96.png icons/icon-128x128.png icons/icon-144x144.png icons/icon-192x192.png gamefiles/game.swf gamefiles/world-map.swf gamefiles/book-of-lore.swf gamefiles/character-select.swf
+                    adt -package -storetype PKCS12 -keystore desktop.p12 -storepass aqwpocket -target bundle AQWPocket-${{ needs.patch.outputs.VERSION }}-windows loader/Desktop-app.xml -extdir loader/libs -C loader Desktop.swf icons/icon-16x16.png icons/icon-32x32.png icons/icon-36x36.png icons/icon-48x48.png icons/icon-72x72.png icons/icon-96x96.png icons/icon-128x128.png icons/icon-144x144.png icons/icon-192x192.png gamefiles/game.swf gamefiles/world-map.swf gamefiles/book-of-lore.swf gamefiles/character-select.swf
                     Compress-Archive -Path AQWPocket-${{ needs.patch.outputs.VERSION }}-windows -DestinationPath AQWPocket-${{ needs.patch.outputs.VERSION }}-windows.zip
             
             -   name: Upload
@@ -176,6 +176,7 @@ jobs:
             
             -   name: Build Linux App
                 run: |
+                    sed -i '/<extensionID>fi.joniaromaa.adobeair.discordrpc<\/extensionID>/d' loader/Desktop-app.xml
                     adt -certificate -cn AQWPocket -validityPeriod 25 2048-RSA desktop.p12 aqwpocket
                     adt -package -storetype PKCS12 -keystore desktop.p12 -storepass aqwpocket -target bundle AQWPocket-${{ needs.patch.outputs.VERSION }}-linux loader/Desktop-app.xml -C loader Desktop.swf icons/icon-16x16.png icons/icon-32x32.png icons/icon-36x36.png icons/icon-48x48.png icons/icon-72x72.png icons/icon-96x96.png icons/icon-128x128.png icons/icon-144x144.png icons/icon-192x192.png gamefiles/game.swf gamefiles/world-map.swf gamefiles/book-of-lore.swf gamefiles/character-select.swf
                     zip -r AQWPocket-${{ needs.patch.outputs.VERSION }}-linux.zip AQWPocket-${{ needs.patch.outputs.VERSION }}-linux
