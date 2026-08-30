@@ -136,7 +136,7 @@ jobs:
                 uses: actions/upload-artifact@v4
                 with:
                     name: build-${{ matrix.architecture }}${{ matrix.suffix }}
-                    path: "*.apk"
+                    path: "AQWPocket-*.apk"
 
     build-windows:
         needs: patch
@@ -163,7 +163,7 @@ jobs:
                 uses: actions/upload-artifact@v4
                 with:
                     name: build-windows
-                    path: "*.zip"
+                    path: "AQWPocket-*.zip"
 
 
 
@@ -201,5 +201,5 @@ jobs:
                         ### Windows
                         * `AQWPocket-${{ needs.patch.outputs.VERSION }}-windows.zip`
                     files: |
-                        *.apk
-                        *.zip
+                        AQWPocket-*.apk
+                        AQWPocket-*.zip
