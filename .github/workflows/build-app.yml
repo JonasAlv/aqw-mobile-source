@@ -52,12 +52,6 @@ jobs:
             -   name: Run Rust Patcher
                 run: cargo run --release
             
-            -   name: Copy remaining SWFs
-                run: |
-                    mkdir -p loader/gamefiles
-                    if [ -f pocket-patches/Mobile.swf ]; then cp pocket-patches/Mobile.swf loader/; fi
-                    if [ -f pocket-patches/Desktop.swf ]; then cp pocket-patches/Desktop.swf loader/; fi
-            
             -   name: Keystore
                 run: |
                     keytool -genkey -v -keystore aqwpocket_keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias aqwpocket -storepass aqwpocket -keypass aqwpocket -dname "CN=AQW, OU=AQW, O=AQW, L=Unknown, ST=Unknown, C=US"
