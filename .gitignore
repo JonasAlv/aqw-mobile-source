@@ -14,6 +14,9 @@
 /patches/*/build/*
 
 # Generated / runtime files
+*.abc
+/loader/Mobile.swf
+/loader/Desktop.swf
 /loader/gamefiles/
 /patches-final/
 

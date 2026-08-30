@@ -18,6 +18,7 @@ export PATH=$JAVA_HOME/bin:$PATH
   loader/src/Pocket.as
 
 echo "Injecting updated code into Mobile.swf..."
+cp loader/Mobile_base.swf loader/Mobile.swf
 abcexport /tmp/Mobile_code.swf
 abcreplace loader/Mobile.swf 0 /tmp/Mobile_code-0.abc
 

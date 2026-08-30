@@ -69,6 +69,7 @@ jobs:
                       -output Mobile_code.swf \
                       loader/src/Pocket.as
                     abcexport Mobile_code.swf
+                    cp loader/Mobile_base.swf loader/Mobile.swf
                     abcreplace loader/Mobile.swf 0 Mobile_code-0.abc
 
             -   name: Inject updated code into Desktop.swf
@@ -82,6 +83,7 @@ jobs:
                       -output Desktop_code.swf \
                       loader/src/Pocket.as
                     abcexport Desktop_code.swf
+                    cp loader/Desktop_base.swf loader/Desktop.swf
                     abcreplace loader/Desktop.swf 0 Desktop_code-0.abc
 
             -   name: Keystore
