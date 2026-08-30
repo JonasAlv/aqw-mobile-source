@@ -50,8 +50,8 @@ jobs:
                     ./build_rabcdasm
                     sudo cp abcexport abcreplace rabcdasm rabcasm swfdecompress swf7zcompress swfbinexport swfbinreplace swflzmacompress /usr/local/bin/
 
-            -   name: Run Rust Patcher
-                run: cargo run --release
+            -   name: Run Python Patcher
+                run: python3 patcher.py
             
             -   name: Keystore
                 run: |

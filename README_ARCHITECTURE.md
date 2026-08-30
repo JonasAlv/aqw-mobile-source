@@ -19,8 +19,8 @@ Previously, the repository relied on a complex multi-repository structure:
 We have modernized the project into a single, standalone repository:
 - **No more pre-compiled SWFs in source control!** Only raw `.asasm` source code changes are tracked.
 - **`pocket-patches/`**: This directory now contains only the raw, human-readable `.copy.asasm` files representing the exact modifications we make to the game.
-- **Automated Rust Patcher**: A custom `cargo run` script downloads the *latest* vanilla game files directly from Artix Entertainment's servers, decompiles them on the fly, injects our `.copy.asasm` files, and recompiles the game.
-- **Automated CI/CD**: The GitHub Action now builds everything dynamically. When you trigger a release, the GitHub Action automatically downloads the `D` compiler, builds `RABCDAsm` from source, runs the Rust patcher, and generates the final APK using Adobe AIR.
+- **Automated Python Patcher**: A custom `python3 patcher.py` script downloads the *latest* vanilla game files directly from Artix Entertainment's servers, decompiles them on the fly, injects our `.copy.asasm` files, and recompiles the game.
+- **Automated CI/CD**: The GitHub Action now builds everything dynamically. When you trigger a release, the GitHub Action automatically downloads the `D` compiler, builds `RABCDAsm` from source, runs the Python patcher, and generates the final APK using Adobe AIR.
 
 ## Update System
 1. **GitHub Releases**: When the GitHub Action finishes, it uploads the APKs to a new GitHub Release on `JonasAlv/aqw-mobile`.
@@ -32,4 +32,4 @@ To edit the game logic (e.g., joystick or UI):
 1. Extract the `.asasm` file you want to edit.
 2. Place it in `pocket-patches/aqw/...` maintaining the correct folder structure.
 3. Name it ending in `.copy.asasm` (e.g., `Game.class.copy.asasm`).
-4. The Rust script will automatically find it, overwrite the vanilla file with yours, and compile it!
+4. The Python script will automatically find it, overwrite the vanilla file with yours, and compile it!
