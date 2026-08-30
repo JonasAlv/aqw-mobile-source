@@ -4,9 +4,9 @@ on:
     workflow_dispatch:
         inputs:
             version_prefix:
-                description: 'Version prefix (e.g., 3.1.2)'
+                description: 'Version prefix (e.g., 3.3.3)'
                 required: true
-                default: '3.1.2'
+                default: '3.3.3'
             prerelease:
                 description: 'Mark as pre-release'
                 required: true
