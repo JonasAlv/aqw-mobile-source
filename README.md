@@ -1,12 +1,3 @@
-# AQW Pocket 
-
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Rust](https://img.shields.io/badge/Rust-stable-orange.svg)](https://www.rust-lang.org/)
-[![ActionScript](https://img.shields.io/badge/ActionScript-3.0-orange.svg)](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/)
-[![Adobe AIR](https://img.shields.io/badge/Adobe%20AIR-51.3-red.svg)](https://airsdk.harman.com/)
-
-### Join our Discord  <a href="https://discord.gg/EXS5qM35ff" target="_blank"><img src="https://img.shields.io/discord/1477853380855468219?label=Discord&logo=discord"></a>
-
 AdventureQuest Worlds Mobile, AQW Pocket is a free, community-built alternative that runs the game natively on Android and Desktop.
 
 > **Disclaimer:** This is an unofficial community project, not affiliated with or endorsed by Artix Entertainment. AdventureQuest Worlds and all related assets are the property of Artix Entertainment. Use at your own risk.
