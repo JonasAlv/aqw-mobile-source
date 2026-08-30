@@ -17,7 +17,7 @@ package {
 			return "v" + appDesc.ns::versionNumber;
 		}
 
-		public static const GITHUB_RELEASES_URL:String = "https://api.github.com/repos/JonasAlv/patches/releases/latest";
+		public static const GITHUB_RELEASES_URL:String = "https://api.github.com/repos/JonasAlv/aqw-mobile/releases/latest";
 
 	}
 

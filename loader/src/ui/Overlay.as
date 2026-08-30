@@ -513,11 +513,11 @@ package ui {
 		}
 
 		private function onReportBug(e:MouseEvent):void {
-			navigateToURL(new URLRequest("https://github.com/JonasAlv/patches/issues"), "_blank");
+			navigateToURL(new URLRequest("https://github.com/JonasAlv/aqw-mobile/issues"), "_blank");
 		}
 
 		private function onUpdate(e:MouseEvent):void {
-			navigateToURL(new URLRequest("https://github.com/JonasAlv/patches/releases/latest"), "_blank");
+			navigateToURL(new URLRequest("https://github.com/JonasAlv/aqw-mobile/releases/latest"), "_blank");
 		}
 
 		private function onDiscord(e:MouseEvent):void {
