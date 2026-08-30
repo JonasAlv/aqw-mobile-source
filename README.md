@@ -1,0 +1,38 @@
+# AQW Pocket
+
+**AQW Pocket** is a free, community-built mobile and desktop client for AdventureQuest Worlds.
+
+> **Disclaimer:** This is an unofficial community project, not affiliated with or endorsed by Artix Entertainment. Use at your own risk.
+
+---
+
+## Download
+
+Grab the latest release from the [Releases](../../releases/latest) tab! **Only download from this official repository.**
+
+- **Android (Modern):** `armv8.apk` (Recommended)
+- **Android (Older):** `armv7.apk`
+- **Windows Desktop:** `windows.zip` (Just extract and run!)
+
+*Note: If the standard Android app runs poorly on your device, try the `-direct` or `-gpu` APK alternatives.*
+
+## Features
+
+- **Native App:** Runs natively on Android and Windows via Adobe AIR.
+- **Mobile Controls:** On-screen joystick, skills bar, and fully adjustable UI.
+- **Auto-Updates:** In-game notifications when a new GitHub release is available.
+- **Discord RPC:** Rich presence support on Desktop builds.
+
+<img width="75%" alt="Mobile UI" src="https://github.com/user-attachments/assets/a2fca19f-5c63-4857-b3dc-b6b87a94c848" />
+
+## Security & Architecture
+
+- **DMCA-Safe & 100% Open Source:** This public repository contains **zero** proprietary Artix Entertainment code. It strictly hosts the open-source ActionScript UI wrapper (`Pocket.as`). 
+- **Automated Private Patching:** The proprietary AE patches (which intercept loading, expose private state, and inject custom UIs) are housed in a secure, private repository. The public GitHub Action securely downloads the pre-compiled, patched `.swf` files from the private repo during the build process to generate the final APK.
+- **Secure Login:** Logins occur directly with Artix Entertainment servers. Your passwords are never stored.
+
+*(For developers and technical details on how the split-repository patching system works, see [README_ARCHITECTURE.md](README_ARCHITECTURE.md).)*
+
+---
+**Notes:** 
+- **GrapheneOS:** Keep "Disable DCL via memory" off; Adobe AIR's JIT requires it.

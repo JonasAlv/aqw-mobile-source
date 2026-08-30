@@ -1,0 +1,13 @@
+{
+	"config": "airmobile",
+	"compilerOptions": {
+		"source-path": [
+			"src"
+		],
+		"define": [
+			["POCKET::IS_DESKTOP", "false"],
+			["POCKET::IS_MOBILE", "true"]
+		]
+	},
+	"mainClass": "Pocket"
+}
