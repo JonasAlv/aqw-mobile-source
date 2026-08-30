@@ -50,15 +50,14 @@ jobs:
                     ./build_rabcdasm
                     sudo cp abcexport abcreplace rabcdasm rabcasm swfdecompress swf7zcompress swfbinexport swfbinreplace swflzmacompress /usr/local/bin/
 
-            -   name: Download base SWFs
-                run: |
-                    mkdir -p loader/gamefiles
-                    GAME_VERSION_JSON=$(wget -qO- https://game.aq.com/game/api/data/gameversion)
-                    GAME_SFILE=$(echo $GAME_VERSION_JSON | grep -o '"sFile":"[^"]*"' | cut -d'"' -f4)
-                    wget -q "https://game.aq.com/game/gamefiles/$GAME_SFILE" -O loader/gamefiles/game.swf
-                    wget -q "https://game.aq.com/game/gamefiles/news/Map-UI_r38.swf" -O loader/gamefiles/world-map.swf
-                    wget -q "https://game.aq.com/game/gamefiles/news/spiderbook3.swf" -O loader/gamefiles/book-of-lore.swf
-                    wget -q "https://game.aq.com/game/gamefiles/interface/CharSelect/charselect.swf" -O loader/gamefiles/character-select.swf
+            -   name: Download Patched SWFs from Private Repo
+                uses: dawidd6/action-download-artifact@v3
+                with:
+                    github_token: ${{ secrets.PAT_TOKEN }}
+                    repo: JonasAlv/pocket-patches
+                    branch: main
+                    name: patched-gamefiles
+                    path: loader/gamefiles/
             
             -   name: Setup AIR SDK (for compile)
                 uses: joshtynjala/setup-adobe-air-action@v2
