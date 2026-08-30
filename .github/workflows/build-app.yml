@@ -190,16 +190,16 @@ jobs:
                     name: ${{ needs.patch.outputs.VERSION }}${{ github.event.inputs.prerelease == 'true' && ' (test)' || '' }}
                     prerelease: ${{ github.event.inputs.prerelease }}
                     body: |
-                        ## Which file should I download?
+                        Enjoy the new update!
 
-                        ### Android
-                        * **armv8 (recommended)**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8.apk`
-                        * **armv8-direct (alternative)**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-direct.apk` (Best for modern devices if standard lags)
-                        * **armv8-gpu (legacy)**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-gpu.apk` (May cause visual glitches)
-                        * **armv7 (32-bit)**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv7.apk`
+                        ### 📱 Android
+                        * **armv8** (Recommended for most phones): `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8.apk`
+                        * **armv7** (For older phones): `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv7.apk`
+                        *(If the game is lagging, try the `-direct` or `-gpu` alternatives)*
 
-                        ### Windows
-                        * `AQWPocket-${{ needs.patch.outputs.VERSION }}-windows.zip`
+                        ### 💻 Windows
+                        * **Desktop App**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-windows.zip`
+                        *(Just unzip it and play, no need to install Adobe AIR!)*
                     files: |
                         AQWPocket-*.apk
                         AQWPocket-*.zip
