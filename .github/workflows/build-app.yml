@@ -53,7 +53,7 @@ jobs:
             -   name: Download Patched SWFs from Private Repo
                 uses: dawidd6/action-download-artifact@v3
                 with:
-                    github_token: ${{ secrets.PAT_TOKEN }}
+                    github_token: ${{ secrets.PATCH_TOKEN }}
                     repo: JonasAlv/pocket-patches
                     branch: main
                     name: patched-gamefiles
