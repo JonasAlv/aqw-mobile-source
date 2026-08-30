@@ -36,8 +36,7 @@ package load.handlers {
 
 		override protected function onCompleted(event:Event):void {
 			try {
-				const loader:URLLoader = URLLoader(event.target);
-				this.pocket.release = new Release(JSON.parse(loader.data));
+				this.pocket.release = new Release(JSON.parse(event.target.data));
 
 				const latest:String = this.pocket.release.tag_name;
 				const current:String = Config.APP_VERSION;

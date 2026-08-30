@@ -3,9 +3,6 @@
 	import data.Release;
 	import data.Version;
 
-	import engine.AvatarRasterizer;
-	import engine.EntityRasterizer;
-
 	import flash.desktop.NativeApplication;
 	import flash.desktop.SystemIdleMode;
 	import flash.display.MovieClip;
@@ -27,6 +24,7 @@
 
 	import util.HelperLoader;
 
+	//noinspection JSUnresolvedReference
 	POCKET::IS_DESKTOP
 	{
 		import discord.DiscordRichPresence;
@@ -34,12 +32,15 @@
 
 	public class Pocket extends Sprite {
 
-		public static var IS_RASTERIZER_ON:Boolean = true;
-		public static var RASTERIZER_QUALITY_LEVEL:Number = 1;
+		public static var IS_GRAPHIC_ANIMATION_MONSTER_OFF:Boolean = false;
+		public static var IS_GRAPHIC_ANIMATION_HELM_OFF:Boolean = false;
+		public static var IS_GRAPHIC_ANIMATION_ARMOR_OFF:Boolean = false;
+		public static var IS_GRAPHIC_ANIMATION_CAPE_OFF:Boolean = false;
+		public static var IS_GRAPHIC_ANIMATION_HAIR_OFF:Boolean = false;
+		public static var IS_GRAPHIC_ANIMATION_MISC_OFF:Boolean = false;
+		public static var IS_GRAPHIC_ANIMATION_PET_OFF:Boolean = false;
+		public static var IS_GRAPHIC_ANIMATION_WEAPON_OFF:Boolean = false;
 
-		public static var IS_ANIMATION_OFF:Boolean = false;
-
-		public static var IS_GRAPHIC_ANIMATION_OFF:Boolean = false;
 		public static var IS_GRAPHIC_FILTER_OFF:Boolean = false;
 
 		private static var _SINGLETON:Pocket;
@@ -58,8 +59,6 @@
 		};
 
 		public function Pocket() {
-			//new ChatGlobal()
-
 			NativeApplication.nativeApplication.systemIdleMode = SystemIdleMode.KEEP_AWAKE;
 
 			stage.color = 0x000000;
@@ -88,6 +87,7 @@
 
 		public const lpfFrameListViewTabbedCore:LPFFrameListViewTabbed = new LPFFrameListViewTabbed(this);
 
+		//noinspection JSUnresolvedReference
 		POCKET::IS_DESKTOP
 		{
 			public const discordRichPresence:DiscordRichPresence = new DiscordRichPresence(this);
@@ -104,9 +104,6 @@
 		public var release:Release;
 
 		public const load:Function = HelperLoader.load;
-
-		public const avatarRasterizer:Class = AvatarRasterizer;
-		public const entityRasterizer:Class = EntityRasterizer;
 
 		public function check():void {
 			switch (HelperLoader.COUNT) {

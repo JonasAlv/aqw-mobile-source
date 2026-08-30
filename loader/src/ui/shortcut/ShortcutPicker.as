@@ -243,7 +243,7 @@ package ui.shortcut {
 
 				var btn:ShortcutButton;
 
-				var is_visible:Boolean = null;
+				var is_visible:Boolean = false;
 
 				for (var actionName:String in pocket.gameUI.shortcutButtons) {
 					switch (actionName) {

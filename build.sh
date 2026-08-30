@@ -20,14 +20,22 @@ else
   echo "Found local patched gamefiles. Skipping vanilla download."
 fi
 
-echo "Compiling Mobile.swf from source..."
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 export PATH=$JAVA_HOME/bin:$PATH
+export AIR_HOME=/home/me/aqw-mobile-source/AIRSDK_Linux
+export PATH=$AIR_HOME/bin:$PATH
+
+echo "Compiling WorkerMain.swf..."
+mkdir -p loader/gamefiles/embed
+$AIR_HOME/bin/amxmlc loader/worker-src/WorkerMain.as -source-path+=loader/src -source-path+=loader/worker-src -output loader/gamefiles/embed/WorkerMain.swf -swf-version=18
+
+echo "Compiling Mobile.swf from source..."
 ./AIRSDK_Linux/bin/amxmlc \
   +configname=airmobile \
   -define+=POCKET::IS_DESKTOP,false \
   -define+=POCKET::IS_MOBILE,true \
-  -source-path loader/src \
+  -source-path+=loader/src \
+  -source-path+=loader/worker-src \
   -output /tmp/Mobile_code.swf \
   loader/src/Pocket.as
 

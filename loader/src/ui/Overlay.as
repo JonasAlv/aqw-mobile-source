@@ -20,6 +20,7 @@ package ui {
 	import ui.util.Scroll;
 
 	import util.Helper;
+	import util.HelperScroll;
 	import util.HelperSetting;
 
 	public class Overlay extends MovieClip {
@@ -54,8 +55,8 @@ package ui {
 		public var notifications:Sprite;
 
 		private var pocket:Pocket;
+		private var scrollHelper:HelperScroll;
 
-		//noinspection JSUnresolvedReference
 		public var menus:Vector.<Menu> = new <Menu> [
 			new Menu("General", new <Option>[
 				new Toggle(
@@ -114,6 +115,18 @@ package ui {
 						}
 					}
 				),
+				new Button(
+					null,
+					"Hide Pocket",
+					"Hide the Pocket overlay",
+					"Hide Pocket",
+					function (option:Button):void {
+						const pocket:Pocket = Pocket.SINGLETON;
+
+						pocket.gameUI.parent.removeChild(pocket.gameUI);
+						pocket.overlay.parent.removeChild(pocket.overlay);
+					}
+				),
 				new Check(
 					null,
 					false,
@@ -138,22 +151,107 @@ package ui {
 			]),
 			new Menu("Graphics", new <Option>[
 				new Check(
-					HelperSetting.OPTION_ANIMATION,
+					HelperSetting.OPTION_ANIMATION_MONSTER,
 					false,
-					"Disable Animations",
-					"Freeze SWF timelines to improve FPS. (May slow down loading)",
+					"Disable Monster Animations",
+					"Freeze monster animations to improve FPS in battle. (May slow down loading)",
 					true,
 					function (option:Check):void {
-						const pocket:Pocket = Pocket.SINGLETON;
-
-						Pocket.IS_GRAPHIC_ANIMATION_OFF = option.state;
-
-						if (pocket.game) {
-							pocket.game.MsgBox.notify("Animation setting saved. Join a new map/Relog to take effect.");
-						}
+						Pocket.IS_GRAPHIC_ANIMATION_MONSTER_OFF = option.state;
 					},
 					function (frame:String):void {
-						Pocket.IS_GRAPHIC_ANIMATION_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION);
+						Pocket.IS_GRAPHIC_ANIMATION_MONSTER_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_MONSTER);
+					}
+				),
+				new Check(
+					HelperSetting.OPTION_ANIMATION_HELM,
+					false,
+					"Disable Helm Animations",
+					"Freeze animations. (May slow down loading)",
+					true,
+					function (option:Check):void {
+						Pocket.IS_GRAPHIC_ANIMATION_HELM_OFF = option.state;
+					},
+					function (frame:String):void {
+						Pocket.IS_GRAPHIC_ANIMATION_HELM_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_HELM);
+					}
+				),
+				new Check(
+					HelperSetting.OPTION_ANIMATION_ARMOR,
+					false,
+					"Disable Armor Animations",
+					"Freeze animations. (May slow down loading)",
+					true,
+					function (option:Check):void {
+						Pocket.IS_GRAPHIC_ANIMATION_ARMOR_OFF = option.state;
+					},
+					function (frame:String):void {
+						Pocket.IS_GRAPHIC_ANIMATION_ARMOR_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_ARMOR);
+					}
+				),
+				new Check(
+					HelperSetting.OPTION_ANIMATION_CAPE,
+					false,
+					"Disable Cape Animations",
+					"Freeze animations. (May slow down loading)",
+					true,
+					function (option:Check):void {
+						Pocket.IS_GRAPHIC_ANIMATION_CAPE_OFF = option.state;
+					},
+					function (frame:String):void {
+						Pocket.IS_GRAPHIC_ANIMATION_CAPE_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_CAPE);
+					}
+				),
+				new Check(
+					HelperSetting.OPTION_ANIMATION_HAIR,
+					false,
+					"Disable Hair Animations",
+					"Freeze animations. (May slow down loading)",
+					true,
+					function (option:Check):void {
+						Pocket.IS_GRAPHIC_ANIMATION_HAIR_OFF = option.state;
+					},
+					function (frame:String):void {
+						Pocket.IS_GRAPHIC_ANIMATION_HAIR_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_HAIR);
+					}
+				),
+				new Check(
+					HelperSetting.OPTION_ANIMATION_WEAPON,
+					false,
+					"Disable Weapon Animations",
+					"Freeze animations. (May slow down loading)",
+					true,
+					function (option:Check):void {
+						Pocket.IS_GRAPHIC_ANIMATION_WEAPON_OFF = option.state;
+					},
+					function (frame:String):void {
+						Pocket.IS_GRAPHIC_ANIMATION_WEAPON_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_WEAPON);
+					}
+				),
+				new Check(
+					HelperSetting.OPTION_ANIMATION_MISC,
+					false,
+					"Disable Grounds Animations",
+					"Freeze animations. (May slow down loading)",
+					true,
+					function (option:Check):void {
+						Pocket.IS_GRAPHIC_ANIMATION_MISC_OFF = option.state;
+					},
+					function (frame:String):void {
+						Pocket.IS_GRAPHIC_ANIMATION_MISC_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_MISC);
+					}
+				),
+				new Check(
+					HelperSetting.OPTION_ANIMATION_PET,
+					false,
+					"Disable Pet Animations",
+					"Freeze animations. (May slow down loading)",
+					true,
+					function (option:Check):void {
+						Pocket.IS_GRAPHIC_ANIMATION_PET_OFF = option.state;
+					},
+					function (frame:String):void {
+						Pocket.IS_GRAPHIC_ANIMATION_PET_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_PET);
 					}
 				),
 				new Check(
@@ -292,7 +390,7 @@ package ui {
 						MouseWalkSimulatorController.IS_DASHING_ON = option.state;
 					},
 					function (frame:String):void {
-						MouseWalkSimulatorController.IS_DASHING_ON = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION);
+						MouseWalkSimulatorController.IS_DASHING_ON = HelperSetting.getBool(HelperSetting.OPTION_JOYSTICK_DASH);
 					}
 				)
 			]),
@@ -497,11 +595,15 @@ package ui {
 				heightTotal += option.height + 5;
 			}
 
-			/*new HelperScroll(
+			if (this.scrollHelper) {
+				this.scrollHelper.dispose();
+			}
+
+			this.scrollHelper = new HelperScroll(
 				this.contentScroll,
 				this.contentOptions,
 				this.contentMask
-			);*/
+			);
 		}
 
 		private function onShowPanel(mouseEvent:MouseEvent):void {
@@ -513,11 +615,11 @@ package ui {
 		}
 
 		private function onReportBug(e:MouseEvent):void {
-			navigateToURL(new URLRequest("https://github.com/JonasAlv/aqw-mobile-source/issues"), "_blank");
+			navigateToURL(new URLRequest("https://github.com/anthony-hyo/aqw-mobile/issues"), "_blank");
 		}
 
 		private function onUpdate(e:MouseEvent):void {
-			navigateToURL(new URLRequest("https://github.com/JonasAlv/aqw-mobile-source/releases/latest"), "_blank");
+			navigateToURL(new URLRequest("https://github.com/anthony-hyo/aqw-mobile/releases/latest"), "_blank");
 		}
 
 		private function onDiscord(e:MouseEvent):void {
