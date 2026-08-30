@@ -6,6 +6,22 @@ cd "$(dirname "$0")"
 echo "Running Python Patcher..."
 python3 patcher.py
 
+echo "Compiling Mobile.swf from source..."
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
+./AIRSDK_Linux/bin/amxmlc \
+  +configname=airmobile \
+  -define+=POCKET::IS_DESKTOP,false \
+  -define+=POCKET::IS_MOBILE,true \
+  -source-path loader/src \
+  -output /tmp/Mobile_code.swf \
+  loader/src/Pocket.as
+
+echo "Injecting updated code into Mobile.swf..."
+abcexport /tmp/Mobile_code.swf
+abcreplace loader/Mobile.swf 0 /tmp/Mobile_code-0.abc
+
+
 if [ ! -d "android_sdk" ]; then
     echo "Downloading Android SDK..."
     mkdir -p android_sdk/cmdline-tools
@@ -26,7 +42,7 @@ if [ ! -d "android_sdk" ]; then
     export PATH=$JAVA_HOME/bin:$PATH
     
     yes | ./android_sdk/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null 2>&1
-    ./android_sdk/cmdline-tools/latest/bin/sdkmanager "platforms;android-33" "build-tools;33.0.2" > /dev/null
+    ./android_sdk/cmdline-tools/latest/bin/sdkmanager "platforms;android-33" "build-tools;33.0.2" "platform-tools" > /dev/null
     echo "Android SDK installed successfully!"
 fi
 

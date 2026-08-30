@@ -53,6 +53,37 @@ jobs:
             -   name: Run Python Patcher
                 run: python3 patcher.py
             
+            -   name: Setup AIR SDK (for compile)
+                uses: joshtynjala/setup-adobe-air-action@v2
+                with:
+                    air-version: "51.3.1"
+                    accept-license: yes
+
+            -   name: Inject updated code into Mobile.swf
+                run: |
+                    amxmlc \
+                      +configname=airmobile \
+                      -define+=POCKET::IS_DESKTOP,false \
+                      -define+=POCKET::IS_MOBILE,true \
+                      -source-path loader/src \
+                      -output Mobile_code.swf \
+                      loader/src/Pocket.as
+                    abcexport Mobile_code.swf
+                    abcreplace loader/Mobile.swf 0 Mobile_code-0.abc
+
+            -   name: Inject updated code into Desktop.swf
+                run: |
+                    amxmlc \
+                      +configname=air \
+                      -define+=POCKET::IS_DESKTOP,true \
+                      -define+=POCKET::IS_MOBILE,false \
+                      -source-path loader/src \
+                      -external-library-path+=loader/libs/DiscordRPC.ane \
+                      -output Desktop_code.swf \
+                      loader/src/Pocket.as
+                    abcexport Desktop_code.swf
+                    abcreplace loader/Desktop.swf 0 Desktop_code-0.abc
+
             -   name: Keystore
                 run: |
                     keytool -genkey -v -keystore aqwpocket_keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias aqwpocket -storepass aqwpocket -keypass aqwpocket -dname "CN=AQW, OU=AQW, O=AQW, L=Unknown, ST=Unknown, C=US"

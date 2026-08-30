@@ -36,7 +36,8 @@ package load.handlers {
 
 		override protected function onCompleted(event:Event):void {
 			try {
-				this.pocket.version = new Version(JSON.parse(URLLoader(event.target).data));
+				const loader:URLLoader = URLLoader(event.target);
+				this.pocket.version = new Version(JSON.parse(loader.data));
 
 				const backgrounds:Array = [
 					"DageScorn.swf",
