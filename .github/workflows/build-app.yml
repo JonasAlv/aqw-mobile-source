@@ -85,24 +85,7 @@ jobs:
                     -   architecture: "armv8"
                         render-mode: "auto"
                         suffix: ""
-                    
-                    -   architecture: "armv8"
-                        render-mode: "direct"
-                        suffix: "-direct"
-                    
-                    -   architecture: "armv8"
-                        render-mode: "gpu"
-                        suffix: "-gpu"
-                    
                     -   architecture: "armv7"
-                        render-mode: "auto"
-                        suffix: ""
-                    
-                    -   architecture: "x64"
-                        render-mode: "auto"
-                        suffix: ""
-                    
-                    -   architecture: "x86"
                         render-mode: "auto"
                         suffix: ""
         
@@ -149,8 +132,60 @@ jobs:
                     name: build-${{ matrix.architecture }}${{ matrix.suffix }}
                     path: "*.apk"
 
+    build-windows:
+        needs: patch
+        runs-on: windows-latest
+        steps:
+            -   name: Download patched files
+                uses: actions/download-artifact@v4
+                with:
+                    name: patched-files
+            
+            -   name: Setup AIR SDK
+                uses: joshtynjala/setup-adobe-air-action@v2
+                with:
+                    air-version: "51.3.1"
+                    accept-license: yes
+            
+            -   name: Build Windows App
+                run: |
+                    adt -package -storetype PKCS12 -keystore aqwpocket_keystore.p12 -storepass aqwpocket -target bundle AQWPocket-${{ needs.patch.outputs.VERSION }}-windows loader/Desktop-app.xml -C loader Desktop.swf icons/icon-16x16.png icons/icon-32x32.png icons/icon-36x36.png icons/icon-48x48.png icons/icon-72x72.png icons/icon-96x96.png icons/icon-128x128.png icons/icon-144x144.png icons/icon-192x192.png gamefiles/game.swf gamefiles/world-map.swf gamefiles/book-of-lore.swf gamefiles/character-select.swf
+                    Compress-Archive -Path AQWPocket-${{ needs.patch.outputs.VERSION }}-windows -DestinationPath AQWPocket-${{ needs.patch.outputs.VERSION }}-windows.zip
+            
+            -   name: Upload
+                uses: actions/upload-artifact@v4
+                with:
+                    name: build-windows
+                    path: "*.zip"
+
+    build-linux:
+        needs: patch
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Download patched files
+                uses: actions/download-artifact@v4
+                with:
+                    name: patched-files
+            
+            -   name: Setup AIR SDK
+                uses: joshtynjala/setup-adobe-air-action@v2
+                with:
+                    air-version: "51.3.1"
+                    accept-license: yes
+            
+            -   name: Build Linux App
+                run: |
+                    adt -package -storetype PKCS12 -keystore aqwpocket_keystore.p12 -storepass aqwpocket -target bundle AQWPocket-${{ needs.patch.outputs.VERSION }}-linux loader/Desktop-app.xml -C loader Desktop.swf icons/icon-16x16.png icons/icon-32x32.png icons/icon-36x36.png icons/icon-48x48.png icons/icon-72x72.png icons/icon-96x96.png icons/icon-128x128.png icons/icon-144x144.png icons/icon-192x192.png gamefiles/game.swf gamefiles/world-map.swf gamefiles/book-of-lore.swf gamefiles/character-select.swf
+                    zip -r AQWPocket-${{ needs.patch.outputs.VERSION }}-linux.zip AQWPocket-${{ needs.patch.outputs.VERSION }}-linux
+            
+            -   name: Upload
+                uses: actions/upload-artifact@v4
+                with:
+                    name: build-linux
+                    path: "*.zip"
+
     publish:
-        needs: [patch, build-android]
+        needs: [patch, build-android, build-windows, build-linux]
         runs-on: ubuntu-latest
         permissions:
             contents: write
@@ -175,22 +210,14 @@ jobs:
                         ## Which file should I download?
 
                         ### Android
+                        * **armv8 (recommended)**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8.apk`
+                        * **armv7 (32-bit)**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv7.apk`
 
-                        * **armv8 (recommended)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8.apk`
-                        → For most modern devices
+                        ### Windows
+                        * `AQWPocket-${{ needs.patch.outputs.VERSION }}-windows.zip`
 
-                        * **armv8-direct (alternative)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-direct.apk`
-                        → Use if the recommended version has issues
-
-                        * **armv8-gpu (legacy)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-gpu.apk`
-                        → Not recommended; fallback only
-
-                        * **armv7 (32-bit)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv7.apk`
-                        → For older devices only
+                        ### Linux
+                        * `AQWPocket-${{ needs.patch.outputs.VERSION }}-linux.zip`
                     files: |
                         *.apk
                         *.zip
