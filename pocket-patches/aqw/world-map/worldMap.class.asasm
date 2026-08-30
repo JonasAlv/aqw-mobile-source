@@ -1,0 +1,1645 @@
+class
+ refid "worldMap"
+ instance QName(PackageNamespace(""), "worldMap")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("worldMap")
+  iinit
+   refid "worldMap/instance/init"
+   param QName(PackageNamespace(""), "Object")
+   body
+    maxstack 5
+    localcount 39
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal2
+
+     pushnull
+     coerce_s
+     setlocal3
+
+     pushundefined
+     coerce_a
+     setlocal            5
+
+     pushnull
+     coerce_s
+     setlocal            6
+
+     pushnull
+     coerce_s
+     setlocal            7
+
+     pushnull
+     coerce_s
+     setlocal            8
+
+     pushnull
+     coerce_s
+     setlocal            9
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            10
+
+     pushnan
+     setlocal            11
+
+     pushnull
+     coerce_s
+     setlocal            12
+
+     pushundefined
+     coerce_a
+     setlocal            13
+
+     pushundefined
+     coerce_a
+     setlocal            14
+
+     pushundefined
+     coerce_a
+     setlocal            15
+
+     pushundefined
+     coerce_a
+     setlocal            16
+
+     pushundefined
+     coerce_a
+     setlocal            17
+
+     pushundefined
+     coerce_a
+     setlocal            18
+
+     pushundefined
+     coerce_a
+     setlocal            19
+
+     pushundefined
+     coerce_a
+     setlocal            20
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            21
+
+     pushnull
+     coerce_s
+     setlocal            22
+
+     pushundefined
+     coerce_a
+     setlocal            23
+
+     pushundefined
+     coerce_a
+     setlocal            24
+
+     pushundefined
+     coerce_a
+     setlocal            25
+
+     pushundefined
+     coerce_a
+     setlocal            26
+
+     pushundefined
+     coerce_a
+     setlocal            27
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            28
+
+     pushnull
+     coerce_s
+     setlocal            29
+
+     pushnull
+     coerce_s
+     setlocal            30
+
+     pushundefined
+     coerce_a
+     setlocal            31
+
+     pushundefined
+     coerce_a
+     setlocal            32
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     setproperty         Multiname("areas", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     initproperty        QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     initproperty        QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     initproperty        QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+
+     pushstring          "m"
+     coerce_a
+     setlocal            4
+
+     pushbyte            0
+     setlocal            33
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     coerce_a
+     setlocal            34
+
+     jump                L437
+
+L123:
+     label
+     getlocal            34
+     getlocal            33
+     nextname
+     coerce_a
+     setlocal            5
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+     pushstring          "Object"
+     ifne                L437
+
+     getlocal            4
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getproperty         Multiname("regionID", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     add
+     coerce_s
+     setlocal3
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getproperty         Multiname("areas", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal3
+     callpropvoid        Multiname("push", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")]), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal3
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal3
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            5
+     setproperty         Multiname("mapTitle", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     setproperty         Multiname("nodes", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     pushbyte            0
+     setlocal            35
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     coerce_a
+     setlocal            36
+
+     jump                L433
+
+L187:
+     label
+     getlocal            36
+     getlocal            35
+     nextname
+     coerce_a
+     setlocal            17
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+     pushstring          "Array"
+     equals
+     dup
+     iffalse             L210
+
+     pop
+     getlocal            17
+     pushstring          "nodes"
+     equals
+     not
+L210:
+     iffalse             L433
+
+     pushbyte            0
+     coerce_a
+     setlocal            18
+
+     jump                L424
+
+L215:
+     label
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            18
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getproperty         Multiname("mapName", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getproperty         Multiname("regionID", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     add
+     coerce_s
+     setlocal2
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            18
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     setproperty         Multiname("area", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getproperty         Multiname("nodes", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal2
+     callpropvoid        Multiname("push", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")]), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     setproperty         Multiname("cuts", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     pushbyte            0
+     setlocal            37
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            18
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     coerce_a
+     setlocal            38
+
+     jump                L416
+
+L289:
+     label
+     getlocal            38
+     getlocal            37
+     nextname
+     coerce_a
+     setlocal            19
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            18
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            19
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+     pushstring          "Array"
+     equals
+     dup
+     iffalse             L316
+
+     pop
+     getlocal            19
+     pushstring          "cuts"
+     equals
+     not
+L316:
+     iffalse             L416
+
+     pushbyte            0
+     coerce_a
+     setlocal            20
+
+     jump                L403
+
+L321:
+     label
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            18
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            19
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            20
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            21
+
+     findpropstrict      QName(PackageNamespace(""), "trace")
+     getlocal2
+     pushstring          ":"
+     add
+     getlocal            21
+     getproperty         Multiname("qsIndex", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     add
+     pushstring          ":"
+     add
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getproperty         Multiname("qsValue", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     add
+     pushstring          "-"
+     add
+     getlocal            20
+     add
+     pushstring          "-----------------------------CUTS"
+     add
+     callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+     getlocal            21
+     getproperty         Multiname("qsIndex", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getproperty         Multiname("qsValue", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     ifne                L399
+
+     getlocal2
+     pushstring          "c"
+     add
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal            20
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     add
+     coerce_s
+     setlocal            22
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+     getlocal            22
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+     getlocal            22
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal2
+     setproperty         Multiname("node", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+     getlocal            22
+     getlocal            21
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getproperty         Multiname("cuts", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            22
+     callpropvoid        Multiname("push", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")]), 1
+
+L399:
+     getlocal            20
+     increment
+     coerce_a
+     setlocal            20
+
+L403:
+     getlocal            20
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            18
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            19
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getproperty         Multiname("length", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     iflt                L321
+
+L416:
+     hasnext2            38, 37
+     iftrue              L289
+
+     kill                38
+     kill                37
+     getlocal            18
+     increment
+     coerce_a
+     setlocal            18
+
+L424:
+     getlocal            18
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getproperty         Multiname("length", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     iflt                L215
+
+L433:
+     hasnext2            36, 35
+     iftrue              L187
+
+     kill                36
+     kill                35
+L437:
+     hasnext2            34, 33
+     iftrue              L123
+
+     kill                34
+     kill                33
+     pushstring          ","
+     setlocal            6
+
+     pushstring          ":"
+     setlocal            7
+
+     pushbyte            0
+     setlocal            33
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     coerce_a
+     setlocal            34
+
+     jump                L554
+
+L452:
+     label
+     getlocal            34
+     getlocal            33
+     nextname
+     coerce_a
+     setlocal            13
+
+     pushbyte            0
+     setlocal            35
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            13
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     coerce_a
+     setlocal            36
+
+     jump                L550
+
+L467:
+     label
+     getlocal            36
+     getlocal            35
+     nextname
+     coerce_a
+     dup
+     setlocal            23
+
+     pushstring          "description"
+     ifne                L550
+
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            13
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            23
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     coerce_s
+     dup
+     setlocal            8
+
+     getlocal            6
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            10
+
+     pushbyte            0
+     coerce_a
+     setlocal            24
+
+     jump                L543
+
+L495:
+     label
+     getlocal            10
+     getlocal            24
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     coerce_s
+     dup
+     setlocal            9
+
+     getlocal            7
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     convert_d
+     dup
+     setlocal            11
+
+     pushbyte            -1
+     ifngt               L529
+
+     getlocal            9
+     pushbyte            0
+     getlocal            11
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     coerce_s
+     setlocal            12
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            13
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            12
+     getlocal            9
+     getlocal            11
+     pushbyte            1
+     add
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "length")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     jump                L539
+
+L529:
+     getlocal            9
+     pushstring          ""
+     ifeq                L539
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            13
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            9
+     pushstring          ""
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+L539:
+     getlocal            24
+     increment
+     coerce_a
+     setlocal            24
+
+L543:
+     getlocal            24
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L495
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            10
+
+L550:
+     hasnext2            36, 35
+     iftrue              L467
+
+     kill                36
+     kill                35
+L554:
+     hasnext2            34, 33
+     iftrue              L452
+
+     kill                34
+     kill                33
+     pushbyte            0
+     setlocal            33
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     coerce_a
+     setlocal            34
+
+     jump                L667
+
+L565:
+     label
+     getlocal            34
+     getlocal            33
+     nextname
+     coerce_a
+     setlocal            14
+
+     pushbyte            0
+     setlocal            35
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal            14
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     coerce_a
+     setlocal            36
+
+     jump                L663
+
+L580:
+     label
+     getlocal            36
+     getlocal            35
+     nextname
+     coerce_a
+     dup
+     setlocal            25
+
+     pushstring          "strExtra"
+     ifne                L663
+
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal            14
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            25
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     coerce_s
+     dup
+     setlocal            8
+
+     getlocal            6
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            10
+
+     pushbyte            0
+     coerce_a
+     setlocal            26
+
+     jump                L656
+
+L608:
+     label
+     getlocal            10
+     getlocal            26
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     coerce_s
+     dup
+     setlocal            9
+
+     getlocal            7
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     convert_d
+     dup
+     setlocal            11
+
+     pushbyte            -1
+     ifngt               L642
+
+     getlocal            9
+     pushbyte            0
+     getlocal            11
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     coerce_s
+     setlocal            12
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal            14
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            12
+     getlocal            9
+     getlocal            11
+     pushbyte            1
+     add
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "length")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     jump                L652
+
+L642:
+     getlocal            9
+     pushstring          ""
+     ifeq                L652
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal            14
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            9
+     pushstring          ""
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+L652:
+     getlocal            26
+     increment
+     coerce_a
+     setlocal            26
+
+L656:
+     getlocal            26
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L608
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            10
+
+L663:
+     hasnext2            36, 35
+     iftrue              L580
+
+     kill                36
+     kill                35
+L667:
+     hasnext2            34, 33
+     iftrue              L565
+
+     kill                34
+     kill                33
+     pushbyte            0
+     setlocal            33
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     coerce_a
+     setlocal            34
+
+     jump                L885
+
+L678:
+     label
+     getlocal            34
+     getlocal            33
+     nextname
+     coerce_a
+     setlocal            15
+
+     pushbyte            0
+     setlocal            35
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     coerce_a
+     setlocal            36
+
+     jump                L881
+
+L693:
+     label
+     getlocal            36
+     getlocal            35
+     nextname
+     coerce_a
+     setlocal            27
+
+     jump                L840
+
+L700:
+     label
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            27
+     findpropstrict      QName(PackageNamespace(""), "Number")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            27
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     callproperty        QName(PackageNamespace(""), "Number"), 1
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     jump                L881
+
+L716:
+     label
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            27
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     typeof
+     pushstring          "string"
+     ifne                L761
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            27
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     pushstring          "False"
+     equals
+     dup
+     iftrue              L745
+
+     pop
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            27
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     pushstring          "false"
+     equals
+L745:
+     iffalse             L754
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            27
+     pushfalse
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     jump                L761
+
+L754:
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            27
+     pushtrue
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+L761:
+     jump                L881
+
+L762:
+     label
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            27
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     coerce_s
+     setlocal            8
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            28
+
+     getlocal            8
+     getlocal            6
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            28
+
+     pushbyte            0
+     coerce_a
+     setlocal            31
+
+     jump                L833
+
+L785:
+     label
+     getlocal            28
+     getlocal            31
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     coerce_s
+     dup
+     setlocal            29
+
+     getlocal            7
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     convert_d
+     dup
+     setlocal            11
+
+     pushbyte            -1
+     ifngt               L819
+
+     getlocal            29
+     pushbyte            0
+     getlocal            11
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     coerce_s
+     setlocal            30
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            30
+     getlocal            29
+     getlocal            11
+     pushbyte            1
+     add
+     getlocal            29
+     getproperty         QName(PackageNamespace(""), "length")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+     jump                L829
+
+L819:
+     getlocal            29
+     pushstring          ""
+     ifeq                L829
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            29
+     pushstring          ""
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+
+L829:
+     getlocal            31
+     increment
+     coerce_a
+     setlocal            31
+
+L833:
+     getlocal            31
+     getlocal            28
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L785
+
+     jump                L881
+
+L838:
+     label
+     jump                L881
+
+L840:
+     getlocal            27
+     setlocal            37
+
+     pushstring          "minLevel"
+     getlocal            37
+     ifstrictne          L847
+
+     pushbyte            0
+     jump                L879
+
+L847:
+     pushstring          "maxLevel"
+     getlocal            37
+     ifstrictne          L852
+
+     pushbyte            1
+     jump                L879
+
+L852:
+     pushstring          "qsValue"
+     getlocal            37
+     ifstrictne          L857
+
+     pushbyte            2
+     jump                L879
+
+L857:
+     pushstring          "questMin"
+     getlocal            37
+     ifstrictne          L862
+
+     pushbyte            3
+     jump                L879
+
+L862:
+     pushstring          "questMax"
+     getlocal            37
+     ifstrictne          L867
+
+     pushbyte            4
+     jump                L879
+
+L867:
+     pushstring          "bUpgrade"
+     getlocal            37
+     ifstrictne          L872
+
+     pushbyte            5
+     jump                L879
+
+L872:
+     pushstring          "strExtra"
+     getlocal            37
+     ifstrictne          L877
+
+     pushbyte            6
+     jump                L879
+
+L877:
+     jump                L878
+
+L878:
+     pushbyte            7
+L879:
+     kill                37
+     lookupswitch        L838, [L700, L700, L700, L700, L700, L716, L762, L838]
+
+L881:
+     hasnext2            36, 35
+     iftrue              L693
+
+     kill                36
+     kill                35
+L885:
+     hasnext2            34, 33
+     iftrue              L678
+
+     kill                34
+     kill                33
+     findpropstrict      QName(PackageNamespace(""), "trace")
+     pushstring          "Node Object---------"
+     callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+     pushbyte            0
+     setlocal            33
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+     coerce_a
+     setlocal            34
+
+     jump                L944
+
+L899:
+     label
+     getlocal            34
+     getlocal            33
+     nextname
+     coerce_a
+     setlocal            16
+
+     findpropstrict      QName(PackageNamespace(""), "trace")
+     getlocal            16
+     pushstring          ":"
+     add
+     callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+     pushbyte            0
+     setlocal            35
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+     getlocal            16
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     coerce_a
+     setlocal            36
+
+     jump                L937
+
+L919:
+     label
+     getlocal            36
+     getlocal            35
+     nextname
+     coerce_a
+     setlocal            32
+
+     findpropstrict      QName(PackageNamespace(""), "trace")
+     getlocal            32
+     pushstring          ":"
+     add
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+     getlocal            16
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     getlocal            32
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+     add
+     callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L937:
+     hasnext2            36, 35
+     iftrue              L919
+
+     kill                36
+     kill                35
+     findpropstrict      QName(PackageNamespace(""), "trace")
+     pushstring          "NodeEnds-------------"
+     callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L944:
+     hasnext2            34, 33
+     iftrue              L899
+
+     kill                34
+     kill                33
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "rootClass") end
+  trait slot QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject") type QName(PackageNamespace(""), "Object") end
+  trait getter QName(PackageInternalNs(""), "World")
+   method
+    refid "worldMap/instance/World/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageInternalNs(""), "Areas")
+   method
+    refid "worldMap/instance/Areas/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageInternalNs(""), "Nodes")
+   method
+    refid "worldMap/instance/Nodes/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageInternalNs(""), "Cutscenes")
+   method
+    refid "worldMap/instance/Cutscenes/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "specificArea")
+   method
+    refid "worldMap/instance/specificArea"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      pushnull
+      ifeq                L13
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      returnvalue
+
+L13:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "getAreaNameByTitle")
+   method
+    refid "worldMap/instance/getAreaNameByTitle"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      coerce_a
+      setlocal            4
+
+      jump                L34
+
+L12:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_a
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      getproperty         Multiname("mapTitle", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L34
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      getproperty         Multiname("mapTitle", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      getlocal1
+      ifne                L34
+
+      getlocal2
+      returnvalue
+
+L34:
+      hasnext2            4, 3
+      iftrue              L12
+
+      kill                4
+      kill                3
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "getAreaByTitle")
+   method
+    refid "worldMap/instance/getAreaByTitle"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      coerce_a
+      setlocal            4
+
+      jump                L37
+
+L12:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_a
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      getproperty         Multiname("mapTitle", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L37
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      getproperty         Multiname("mapTitle", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      getlocal1
+      ifne                L37
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      returnvalue
+
+L37:
+      hasnext2            4, 3
+      iftrue              L12
+
+      kill                4
+      kill                3
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "getAreaByLink")
+   method
+    refid "worldMap/instance/getAreaByLink"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      coerce_a
+      setlocal            4
+
+      jump                L37
+
+L12:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_a
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      getproperty         Multiname("strLink", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L37
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      getproperty         Multiname("strLink", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      getlocal1
+      ifne                L37
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      returnvalue
+
+L37:
+      hasnext2            4, 3
+      iftrue              L12
+
+      kill                4
+      kill                3
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "specificNode")
+   method
+    refid "worldMap/instance/specificNode"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      pushnull
+      ifeq                L13
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      returnvalue
+
+L13:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "specificCutscene")
+   method
+    refid "worldMap/instance/specificCutscene"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      pushnull
+      ifeq                L13
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap")])
+      returnvalue
+
+L13:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "worldMap/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

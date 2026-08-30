@@ -1,0 +1,2881 @@
+class
+ refid "fl.controls:SelectableList"
+ instance QName(PackageNamespace("fl.controls"), "SelectableList")
+  extends QName(PackageNamespace("fl.containers"), "BaseScrollPane")
+  implements Multiname("IFocusManagerComponent", [PackageNamespace("fl.managers")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls:SelectableList")
+  iinit
+   refid "fl.controls:SelectableList/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "activeCellRenderers")
+     newarray            0
+     initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "activeCellRenderers")
+
+     findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "availableCellRenderers")
+     newarray            0
+     initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "availableCellRenderers")
+
+     findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "invalidItems")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     pushtrue
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+     initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "invalidItems")
+
+     findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "renderedItems")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     pushtrue
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+     initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "renderedItems")
+
+     findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+     newarray            0
+     initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+
+     getlex              QName(PackageNamespace(""), "dataProvider")
+     pushnull
+     ifne                L30
+
+     findproperty        QName(PackageNamespace(""), "dataProvider")
+     findpropstrict      QName(PackageNamespace("fl.data"), "DataProvider")
+     constructprop       QName(PackageNamespace("fl.data"), "DataProvider"), 0
+     initproperty        QName(PackageNamespace(""), "dataProvider")
+
+L30:
+     findproperty        QName(PackageNamespace(""), "verticalScrollPolicy")
+     getlex              QName(PackageNamespace("fl.controls"), "ScrollPolicy")
+     getproperty         QName(PackageNamespace(""), "AUTO")
+     initproperty        QName(PackageNamespace(""), "verticalScrollPolicy")
+
+     findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "rendererStyles")
+     newobject           0
+     initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "rendererStyles")
+
+     findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "updatedRendererStyles")
+     newobject           0
+     initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "updatedRendererStyles")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "listHolder") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "list") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider") type QName(PackageNamespace("fl.data"), "DataProvider") end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "activeCellRenderers") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "availableCellRenderers") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "renderedItems") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "invalidItems") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "_horizontalScrollPosition") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "_verticalScrollPosition") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "_allowMultipleSelection") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectable") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "caretIndex") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "lastCaretIndex") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "preChangeItems") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "fl.controls:SelectableList"), "collectionItemImport") type QName(PackageNamespace("fl.data"), "SimpleCollectionItem") end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "rendererStyles") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(ProtectedNamespace("fl.controls:SelectableList"), "updatedRendererStyles") type QName(PackageNamespace(""), "Object") end
+  trait setter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    refid "fl.controls:SelectableList/instance/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "enabled")
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "list")
+      getlex              QName(ProtectedNamespace("fl.core:UIComponent"), "_enabled")
+      setproperty         QName(PackageNamespace(""), "mouseChildren")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "dataProvider")
+   method
+    refid "fl.controls:SelectableList/instance/dataProvider/getter"
+    returns QName(PackageNamespace("fl.data"), "DataProvider")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "dataProvider")
+   method
+    refid "fl.controls:SelectableList/instance/dataProvider/setter"
+    param QName(PackageNamespace("fl.data"), "DataProvider")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      pushnull
+      ifeq                L15
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeEvent")
+      getproperty         QName(PackageNamespace(""), "DATA_CHANGE")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "handleDataChange")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeEvent")
+      getproperty         QName(PackageNamespace(""), "PRE_DATA_CHANGE")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "onPreChange")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+L15:
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeEvent")
+      getproperty         QName(PackageNamespace(""), "DATA_CHANGE")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "handleDataChange")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeEvent")
+      getproperty         QName(PackageNamespace(""), "PRE_DATA_CHANGE")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "onPreChange")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      findpropstrict      QName(PackageNamespace(""), "clearSelection")
+      callpropvoid        QName(PackageNamespace(""), "clearSelection"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "invalidateList")
+      callpropvoid        QName(PackageNamespace(""), "invalidateList"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "maxHorizontalScrollPosition") flag OVERRIDE
+   method
+    refid "fl.controls:SelectableList/instance/maxHorizontalScrollPosition/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_maxHorizontalScrollPosition")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "maxHorizontalScrollPosition")
+   method
+    refid "fl.controls:SelectableList/instance/maxHorizontalScrollPosition/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_maxHorizontalScrollPosition")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_maxHorizontalScrollPosition")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "length")
+   method
+    refid "fl.controls:SelectableList/instance/length/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getproperty         QName(PackageNamespace(""), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "allowMultipleSelection")
+   method
+    refid "fl.controls:SelectableList/instance/allowMultipleSelection/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_allowMultipleSelection")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "allowMultipleSelection")
+   method
+    refid "fl.controls:SelectableList/instance/allowMultipleSelection/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_allowMultipleSelection")
+      ifne                L6
+
+      returnvoid
+
+L6:
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_allowMultipleSelection")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_allowMultipleSelection")
+
+      getlocal1
+      not
+      dup
+      iffalse             L18
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            1
+      greaterthan
+L18:
+      iffalse             L28
+
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "pop"), 0
+      newarray            1
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+L28:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selectable")
+   method
+    refid "fl.controls:SelectableList/instance/selectable/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectable")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selectable")
+   method
+    refid "fl.controls:SelectableList/instance/selectable/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectable")
+      ifne                L6
+
+      returnvoid
+
+L6:
+      getlocal1
+      iftrue              L11
+
+      findproperty        QName(PackageNamespace(""), "selectedIndices")
+      newarray            0
+      initproperty        QName(PackageNamespace(""), "selectedIndices")
+
+L11:
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectable")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectable")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selectedIndex")
+   method
+    refid "fl.controls:SelectableList/instance/selectedIndex/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifne                L8
+
+      pushbyte            -1
+      jump                L14
+
+L8:
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      convert_i
+L14:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selectedIndex")
+   method
+    refid "fl.controls:SelectableList/instance/selectedIndex/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "selectedIndices")
+      getlocal1
+      pushbyte            -1
+      ifne                L9
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      jump                L12
+
+L9:
+      getlocal1
+      newarray            1
+      coerce              QName(PackageNamespace(""), "Array")
+L12:
+      initproperty        QName(PackageNamespace(""), "selectedIndices")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selectedIndices")
+   method
+    refid "fl.controls:SelectableList/instance/selectedIndices/getter"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selectedIndices")
+   method
+    refid "fl.controls:SelectableList/instance/selectedIndices/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectable")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal1
+      pushnull
+      ifne                L12
+
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      jump                L15
+
+L12:
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+L15:
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SELECTED")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selectedItem")
+   method
+    refid "fl.controls:SelectableList/instance/selectedItem/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifne                L9
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      jump                L13
+
+L9:
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlex              QName(PackageNamespace(""), "selectedIndex")
+      callproperty        QName(PackageNamespace(""), "getItemAt"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+L13:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selectedItem")
+   method
+    refid "fl.controls:SelectableList/instance/selectedItem/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getItemIndex"), 1
+      convert_i
+      setlocal2
+
+      findproperty        QName(PackageNamespace(""), "selectedIndex")
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "selectedIndex")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selectedItems")
+   method
+    refid "fl.controls:SelectableList/instance/selectedItems/getter"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L21
+
+L9:
+      label
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "getItemAt"), 1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal2
+      increment
+      convert_u
+      setlocal2
+
+L21:
+      getlocal2
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L9
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selectedItems")
+   method
+    refid "fl.controls:SelectableList/instance/selectedItems/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal1
+      pushnull
+      ifne                L11
+
+      findproperty        QName(PackageNamespace(""), "selectedIndices")
+      pushnull
+      initproperty        QName(PackageNamespace(""), "selectedIndices")
+
+      returnvoid
+
+L11:
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L36
+
+L18:
+      label
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "getItemIndex"), 1
+      convert_i
+      dup
+      setlocal            4
+
+      pushbyte            -1
+      ifeq                L32
+
+      getlocal2
+      getlocal            4
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L32:
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L36:
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L18
+
+      findproperty        QName(PackageNamespace(""), "selectedIndices")
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "selectedIndices")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "rowCount")
+   method
+    refid "fl.controls:SelectableList/instance/rowCount/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clearSelection")
+   method
+    refid "fl.controls:SelectableList/instance/clearSelection"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "selectedIndex")
+      pushbyte            -1
+      initproperty        QName(PackageNamespace(""), "selectedIndex")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "itemToCellRenderer")
+   method
+    refid "fl.controls:SelectableList/instance/itemToCellRenderer"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace("fl.controls.listClasses"), "ICellRenderer")
+    body
+     maxstack 2
+     localcount 6
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("fl.controls.listClasses"), "ICellRenderer")
+      setlocal3
+
+      getlocal1
+      pushnull
+      ifeq                L40
+
+      pushbyte            0
+      setlocal            4
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "activeCellRenderers")
+      coerce_a
+      setlocal            5
+
+      jump                L36
+
+L17:
+      label
+      getlocal            5
+      getlocal            4
+      nextname
+      coerce_a
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "activeCellRenderers")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("fl.controls.listClasses"), "ICellRenderer")
+      astypelate
+      coerce              QName(PackageNamespace("fl.controls.listClasses"), "ICellRenderer")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "data")
+      getlocal1
+      ifne                L36
+
+      getlocal3
+      returnvalue
+
+L36:
+      hasnext2            5, 4
+      iftrue              L17
+
+      kill                5
+      kill                4
+L40:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addItem")
+   method
+    refid "fl.controls:SelectableList/instance/addItem"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "invalidateList")
+      callpropvoid        QName(PackageNamespace(""), "invalidateList"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addItemAt")
+   method
+    refid "fl.controls:SelectableList/instance/addItemAt"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "addItemAt"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "invalidateList")
+      callpropvoid        QName(PackageNamespace(""), "invalidateList"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeAll")
+   method
+    refid "fl.controls:SelectableList/instance/removeAll"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      callpropvoid        QName(PackageNamespace(""), "removeAll"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getItemAt")
+   method
+    refid "fl.controls:SelectableList/instance/getItemAt"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getItemAt"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeItem")
+   method
+    refid "fl.controls:SelectableList/instance/removeItem"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "removeItem"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeItemAt")
+   method
+    refid "fl.controls:SelectableList/instance/removeItemAt"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "removeItemAt"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "replaceItemAt")
+   method
+    refid "fl.controls:SelectableList/instance/replaceItemAt"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "replaceItemAt"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidateList")
+   method
+    refid "fl.controls:SelectableList/instance/invalidateList"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:SelectableList"), "_invalidateList")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:SelectableList"), "_invalidateList"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidateItem")
+   method
+    refid "fl.controls:SelectableList/instance/invalidateItem"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "renderedItems")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushnull
+      ifne                L8
+
+      returnvoid
+
+L8:
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "invalidItems")
+      getlocal1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidateItemAt")
+   method
+    refid "fl.controls:SelectableList/instance/invalidateItemAt"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getItemAt"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifeq                L13
+
+      findpropstrict      QName(PackageNamespace(""), "invalidateItem")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "invalidateItem"), 1
+
+L13:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "sortItems")
+   method
+    refid "fl.controls:SelectableList/instance/sortItems"
+    flag NEED_REST
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getproperty         QName(PackageNamespace(""), "sort")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "sortItemsOn")
+   method
+    refid "fl.controls:SelectableList/instance/sortItemsOn"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Object")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "sortOn"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "isItemSelected")
+   method
+    refid "fl.controls:SelectableList/instance/isItemSelected"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "selectedItems")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            -1
+      greaterthan
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "scrollToSelected")
+   method
+    refid "fl.controls:SelectableList/instance/scrollToSelected"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "scrollToIndex")
+      getlex              QName(PackageNamespace(""), "selectedIndex")
+      callpropvoid        QName(PackageNamespace(""), "scrollToIndex"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "scrollToIndex")
+   method
+    refid "fl.controls:SelectableList/instance/scrollToIndex"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getNextIndexAtLetter")
+   method
+    refid "fl.controls:SelectableList/instance/getNextIndexAtLetter"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_OPTIONAL
+    optional Integer(-1)
+    body
+     maxstack 3
+     localcount 8
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            6
+
+      pushnull
+      coerce_s
+      setlocal            7
+
+      getlex              QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifne                L15
+
+      pushbyte            -1
+      returnvalue
+
+L15:
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toUpperCase"), 0
+      coerce_s
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "length")
+      decrement
+      convert_i
+      setlocal3
+
+      pushbyte            0
+      convert_d
+      setlocal            4
+
+      jump                L74
+
+L27:
+      label
+      getlocal2
+      pushbyte            1
+      add
+      getlocal            4
+      add
+      convert_d
+      dup
+      setlocal            5
+
+      getlex              QName(PackageNamespace(""), "length")
+      decrement
+      ifngt               L44
+
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "length")
+      subtract
+      convert_d
+      setlocal            5
+
+L44:
+      findpropstrict      QName(PackageNamespace(""), "getItemAt")
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "getItemAt"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      dup
+      setlocal            6
+
+      pushnull
+      ifne                L53
+
+      jump                L77
+
+L53:
+      findpropstrict      QName(PackageNamespace(""), "itemToLabel")
+      getlocal            6
+      callproperty        QName(PackageNamespace(""), "itemToLabel"), 1
+      coerce_s
+      dup
+      setlocal            7
+
+      pushnull
+      ifne                L62
+
+      jump                L70
+
+L62:
+      getlocal            7
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toUpperCase"), 0
+      getlocal1
+      ifne                L70
+
+      getlocal            5
+      returnvalue
+
+L70:
+      getlocal            4
+      increment
+      convert_d
+      setlocal            4
+
+L74:
+      getlocal            4
+      getlocal3
+      iflt                L27
+
+L77:
+      pushbyte            -1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "itemToLabel")
+   method
+    refid "fl.controls:SelectableList/instance/itemToLabel"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushstring          "label"
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRendererStyle")
+   method
+    refid "fl.controls:SelectableList/instance/setRendererStyle"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "rendererStyles")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      ifne                L8
+
+      returnvoid
+
+L8:
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "updatedRendererStyles")
+      getlocal1
+      getlocal2
+      setproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "rendererStyles")
+      getlocal1
+      getlocal2
+      setproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "RENDERER_STYLES")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getRendererStyle")
+   method
+    refid "fl.controls:SelectableList/instance/getRendererStyle"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Object")
+    flag HAS_OPTIONAL
+    optional Integer(-1)
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "rendererStyles")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clearRendererStyle")
+   method
+    refid "fl.controls:SelectableList/instance/clearRendererStyle"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Integer(-1)
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "rendererStyles")
+      getlocal1
+      deleteproperty      MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "updatedRendererStyles")
+      getlocal1
+      pushnull
+      setproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "RENDERER_STYLES")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "configUI") flag OVERRIDE
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:configUI"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "configUI"), 0
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "listHolder")
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "listHolder")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "listHolder")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "listHolder")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentScrollRect")
+      setproperty         QName(PackageNamespace(""), "scrollRect")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "list")
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "list")
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "listHolder")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "list")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "_invalidateList")
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:_invalidateList"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "availableCellRenderers")
+      newarray            0
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "availableCellRenderers")
+
+      jump                L13
+
+L6:
+      label
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "list")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "activeCellRenderers")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "pop"), 0
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L13:
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "activeCellRenderers")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifgt                L6
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "handleDataChange")
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:handleDataChange"
+    param QName(PackageNamespace("fl.events"), "DataChangeEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "startIndex")
+      convert_i
+      setlocal2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "endIndex")
+      convert_i
+      setlocal3
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "changeType")
+      coerce_s
+      dup
+      setlocal            4
+
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "INVALIDATE_ALL")
+      ifne                L26
+
+      findpropstrict      QName(PackageNamespace(""), "clearSelection")
+      callpropvoid        QName(PackageNamespace(""), "clearSelection"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "invalidateList")
+      callpropvoid        QName(PackageNamespace(""), "invalidateList"), 0
+
+      jump                L147
+
+L26:
+      getlocal            4
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "INVALIDATE")
+      ifne                L51
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L45
+
+L34:
+      label
+      findpropstrict      QName(PackageNamespace(""), "invalidateItem")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "items")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "invalidateItem"), 1
+
+      getlocal            5
+      increment
+      convert_u
+      setlocal            5
+
+L45:
+      getlocal            5
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "items")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L34
+
+      jump                L147
+
+L51:
+      getlocal            4
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "ADD")
+      ifne                L84
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L79
+
+L59:
+      label
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      ifnge               L75
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal            5
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      getlocal3
+      subtract
+      add
+      setproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L75:
+      getlocal            5
+      increment
+      convert_u
+      setlocal            5
+
+L79:
+      getlocal            5
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L59
+
+      jump                L147
+
+L84:
+      getlocal            4
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "REMOVE")
+      ifne                L129
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L124
+
+L92:
+      label
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      ifnge               L120
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal3
+      ifnle               L108
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal            5
+      deleteproperty      MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pop
+      jump                L120
+
+L108:
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal            5
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      getlocal3
+      subtract
+      pushbyte            1
+      add
+      subtract
+      setproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L120:
+      getlocal            5
+      increment
+      convert_u
+      setlocal            5
+
+L124:
+      getlocal            5
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L92
+
+      jump                L147
+
+L129:
+      getlocal            4
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "REMOVE_ALL")
+      ifne                L136
+
+      findpropstrict      QName(PackageNamespace(""), "clearSelection")
+      callpropvoid        QName(PackageNamespace(""), "clearSelection"), 0
+
+      jump                L147
+
+L136:
+      getlocal            4
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "REPLACE")
+      ifne                L141
+
+      jump                L147
+
+L141:
+      findproperty        QName(PackageNamespace(""), "selectedItems")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "preChangeItems")
+      initproperty        QName(PackageNamespace(""), "selectedItems")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "preChangeItems")
+      pushnull
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "preChangeItems")
+
+L147:
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "handleCellRendererMouseEvent")
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:handleCellRendererMouseEvent"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("fl.controls.listClasses"), "ICellRenderer")
+      astypelate
+      coerce              QName(PackageNamespace("fl.controls.listClasses"), "ICellRenderer")
+      setlocal2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OVER")
+      ifne                L17
+
+      getlex              QName(PackageNamespace("fl.events"), "ListEvent")
+      getproperty         QName(PackageNamespace(""), "ITEM_ROLL_OVER")
+      coerce_s
+      jump                L20
+
+L17:
+      getlex              QName(PackageNamespace("fl.events"), "ListEvent")
+      getproperty         QName(PackageNamespace(""), "ITEM_ROLL_OUT")
+      coerce_s
+L20:
+      coerce_s
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ListEvent")
+      getlocal3
+      pushfalse
+      pushfalse
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "listData")
+      getproperty         QName(PackageNamespace(""), "column")
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "listData")
+      getproperty         QName(PackageNamespace(""), "row")
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "listData")
+      getproperty         QName(PackageNamespace(""), "index")
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "data")
+      constructprop       QName(PackageNamespace("fl.events"), "ListEvent"), 7
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "handleCellRendererClick")
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:handleCellRendererClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 8
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      getlex              QName(ProtectedNamespace("fl.core:UIComponent"), "_enabled")
+      iftrue              L10
+
+      returnvoid
+
+L10:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "currentTarget")
+      getlex              QName(PackageNamespace("fl.controls.listClasses"), "ICellRenderer")
+      astypelate
+      coerce              QName(PackageNamespace("fl.controls.listClasses"), "ICellRenderer")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "listData")
+      getproperty         QName(PackageNamespace(""), "index")
+      convert_u
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ListEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ListEvent")
+      getproperty         QName(PackageNamespace(""), "ITEM_CLICK")
+      pushfalse
+      pushtrue
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "listData")
+      getproperty         QName(PackageNamespace(""), "column")
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "listData")
+      getproperty         QName(PackageNamespace(""), "row")
+      getlocal3
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "data")
+      constructprop       QName(PackageNamespace("fl.events"), "ListEvent"), 7
+      callproperty        QName(PackageNamespace(""), "dispatchEvent"), 1
+      not
+      dup
+      iftrue              L44
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectable")
+      not
+L44:
+      iffalse             L46
+
+      returnvoid
+
+L46:
+      getlex              QName(PackageNamespace(""), "selectedIndices")
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      setlocal            4
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_allowMultipleSelection")
+      iftrue              L74
+
+      getlocal            4
+      pushbyte            -1
+      ifeq                L57
+
+      returnvoid
+
+L57:
+      getlocal2
+      pushtrue
+      setproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "selected")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal3
+      newarray            1
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "lastCaretIndex")
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "caretIndex")
+      getlocal3
+      dup
+      setlocal            7
+
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "caretIndex")
+
+      getlocal            7
+      kill                7
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "lastCaretIndex")
+
+      jump                L164
+
+L74:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "shiftKey")
+      iffalse             L127
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L86
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      convert_u
+      jump                L88
+
+L86:
+      getlocal3
+      convert_u
+L88:
+      convert_u
+      setlocal            6
+
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      newarray            0
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+
+      getlocal            6
+      getlocal3
+      ifngt               L111
+
+      getlocal            6
+      convert_i
+      setlocal            5
+
+      jump                L107
+
+L100:
+      label
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal            5
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            5
+      decrement_i
+      setlocal            5
+
+L107:
+      getlocal            5
+      getlocal3
+      ifge                L100
+
+      jump                L123
+
+L111:
+      getlocal            6
+      convert_i
+      setlocal            5
+
+      jump                L120
+
+L115:
+      label
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal            5
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      inclocal_i          5
+L120:
+      getlocal            5
+      getlocal3
+      ifle                L115
+
+L123:
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "caretIndex")
+      getlocal3
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "caretIndex")
+
+      jump                L164
+
+L127:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "ctrlKey")
+      iffalse             L151
+
+      getlocal            4
+      pushbyte            -1
+      ifeq                L141
+
+      getlocal2
+      pushfalse
+      setproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "selected")
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal            4
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      jump                L147
+
+L141:
+      getlocal2
+      pushtrue
+      setproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "selected")
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal3
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L147:
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "caretIndex")
+      getlocal3
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "caretIndex")
+
+      jump                L164
+
+L151:
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+      getlocal3
+      newarray            1
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_selectedIndices")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "lastCaretIndex")
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "caretIndex")
+      getlocal3
+      dup
+      setlocal            7
+
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "caretIndex")
+
+      getlocal            7
+      kill                7
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "lastCaretIndex")
+
+L164:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "handleCellRendererChange")
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:handleCellRendererChange"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "currentTarget")
+      getlex              QName(PackageNamespace("fl.controls.listClasses"), "ICellRenderer")
+      astypelate
+      coerce              QName(PackageNamespace("fl.controls.listClasses"), "ICellRenderer")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "listData")
+      getproperty         QName(PackageNamespace(""), "index")
+      convert_u
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_dataProvider")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "invalidateItemAt"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "handleCellRendererDoubleClick")
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:handleCellRendererDoubleClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.core:UIComponent"), "_enabled")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "currentTarget")
+      getlex              QName(PackageNamespace("fl.controls.listClasses"), "ICellRenderer")
+      astypelate
+      coerce              QName(PackageNamespace("fl.controls.listClasses"), "ICellRenderer")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "listData")
+      getproperty         QName(PackageNamespace(""), "index")
+      convert_u
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ListEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ListEvent")
+      getproperty         QName(PackageNamespace(""), "ITEM_DOUBLE_CLICK")
+      pushfalse
+      pushtrue
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "listData")
+      getproperty         QName(PackageNamespace(""), "column")
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "listData")
+      getproperty         QName(PackageNamespace(""), "row")
+      getlocal3
+      getlocal2
+      getproperty         QName(Namespace("fl.controls.listClasses:ICellRenderer"), "data")
+      constructprop       QName(PackageNamespace("fl.events"), "ListEvent"), 7
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "setHorizontalScrollPosition") flag OVERRIDE
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:setHorizontalScrollPosition"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_horizontalScrollPosition")
+      ifne                L6
+
+      returnvoid
+
+L6:
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_horizontalScrollPosition")
+      subtract
+      convert_d
+      setlocal3
+
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_horizontalScrollPosition")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_horizontalScrollPosition")
+
+      getlocal2
+      iffalse             L24
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ScrollEvent")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollBarDirection")
+      getproperty         QName(PackageNamespace(""), "HORIZONTAL")
+      getlocal3
+      getlocal1
+      constructprop       QName(PackageNamespace("fl.events"), "ScrollEvent"), 3
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "setVerticalScrollPosition") flag OVERRIDE
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:setVerticalScrollPosition"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_verticalScrollPosition")
+      ifne                L6
+
+      returnvoid
+
+L6:
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_verticalScrollPosition")
+      subtract
+      convert_d
+      setlocal3
+
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_verticalScrollPosition")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "_verticalScrollPosition")
+
+      getlocal2
+      iffalse             L24
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ScrollEvent")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollBarDirection")
+      getproperty         QName(PackageNamespace(""), "VERTICAL")
+      getlocal3
+      getlocal1
+      constructprop       QName(PackageNamespace("fl.events"), "ScrollEvent"), 3
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "draw") flag OVERRIDE
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "draw"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "drawLayout") flag OVERRIDE
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:drawLayout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "drawLayout"), 0
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentScrollRect")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "listHolder")
+      getproperty         QName(PackageNamespace(""), "scrollRect")
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentScrollRect")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentScrollRect")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableWidth")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentScrollRect")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "listHolder")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentScrollRect")
+      setproperty         QName(PackageNamespace(""), "scrollRect")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "updateRendererStyles")
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:updateRendererStyles"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 7
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "availableCellRenderers")
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "activeCellRenderers")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_u
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L58
+
+L18:
+      label
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("setStyle", [PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushnull
+      ifne                L26
+
+      jump                L54
+
+L26:
+      pushbyte            0
+      setlocal            5
+
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "updatedRendererStyles")
+      coerce_a
+      setlocal            6
+
+      jump                L46
+
+L32:
+      label
+      getlocal            6
+      getlocal            5
+      nextname
+      coerce_s
+      setlocal            4
+
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal            4
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "updatedRendererStyles")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        Multiname("setStyle", [PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
+
+L46:
+      hasnext2            6, 5
+      iftrue              L32
+
+      kill                6
+      kill                5
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        Multiname("drawNow", [PrivateNamespace(null, "fl.controls:SelectableList"), PackageNamespace(""), ProtectedNamespace("fl.controls:SelectableList"), PackageNamespace("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "fl.controls:SelectableList/instance"), PackageInternalNs("fl.controls"), StaticProtectedNs("fl.controls:SelectableList"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+
+L54:
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L58:
+      getlocal3
+      getlocal2
+      iflt                L18
+
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "updatedRendererStyles")
+      newobject           0
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "updatedRendererStyles")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "drawList")
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:drawList"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "keyDownHandler") flag OVERRIDE
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:keyDownHandler"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "selectable")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      jump                L56
+
+L6:
+      label
+      findpropstrict      QName(ProtectedNamespace("fl.controls:SelectableList"), "moveSelectionVertically")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "shiftKey")
+      convert_b
+      dup
+      iffalse             L18
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_allowMultipleSelection")
+      convert_b
+L18:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "ctrlKey")
+      convert_b
+      dup
+      iffalse             L26
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_allowMultipleSelection")
+      convert_b
+L26:
+      callpropvoid        QName(ProtectedNamespace("fl.controls:SelectableList"), "moveSelectionVertically"), 3
+
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "stopPropagation"), 0
+
+      jump                L111
+
+L30:
+      label
+      findpropstrict      QName(ProtectedNamespace("fl.controls:SelectableList"), "moveSelectionHorizontally")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "shiftKey")
+      convert_b
+      dup
+      iffalse             L42
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_allowMultipleSelection")
+      convert_b
+L42:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "ctrlKey")
+      convert_b
+      dup
+      iffalse             L50
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:SelectableList"), "_allowMultipleSelection")
+      convert_b
+L50:
+      callpropvoid        QName(ProtectedNamespace("fl.controls:SelectableList"), "moveSelectionHorizontally"), 3
+
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "stopPropagation"), 0
+
+      jump                L111
+
+L54:
+      label
+      jump                L111
+
+L56:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      setlocal2
+
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "UP")
+      getlocal2
+      ifstrictne          L65
+
+      pushbyte            0
+      jump                L109
+
+L65:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "DOWN")
+      getlocal2
+      ifstrictne          L71
+
+      pushbyte            1
+      jump                L109
+
+L71:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "END")
+      getlocal2
+      ifstrictne          L77
+
+      pushbyte            2
+      jump                L109
+
+L77:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "HOME")
+      getlocal2
+      ifstrictne          L83
+
+      pushbyte            3
+      jump                L109
+
+L83:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "PAGE_UP")
+      getlocal2
+      ifstrictne          L89
+
+      pushbyte            4
+      jump                L109
+
+L89:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "PAGE_DOWN")
+      getlocal2
+      ifstrictne          L95
+
+      pushbyte            5
+      jump                L109
+
+L95:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "LEFT")
+      getlocal2
+      ifstrictne          L101
+
+      pushbyte            6
+      jump                L109
+
+L101:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "RIGHT")
+      getlocal2
+      ifstrictne          L107
+
+      pushbyte            7
+      jump                L109
+
+L107:
+      jump                L108
+
+L108:
+      pushbyte            8
+L109:
+      kill                2
+      lookupswitch        L54, [L6, L6, L6, L6, L6, L6, L30, L30, L54]
+
+L111:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "moveSelectionHorizontally")
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:moveSelectionHorizontally"
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "moveSelectionVertically")
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:moveSelectionVertically"
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "initializeAccessibility") flag OVERRIDE
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:initializeAccessibility"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("fl.controls"), "SelectableList")
+      getproperty         QName(PackageNamespace(""), "createAccessibilityImplementation")
+      pushnull
+      ifeq                L9
+
+      getlex              QName(PackageNamespace("fl.controls"), "SelectableList")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "createAccessibilityImplementation"), 1
+
+L9:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:SelectableList"), "onPreChange")
+   method
+    refid "fl.controls:SelectableList/instance/fl.controls:SelectableList:onPreChange"
+    param QName(PackageNamespace("fl.events"), "DataChangeEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      jump                L10
+
+L3:
+      label
+      jump                L53
+
+L5:
+      label
+      findproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "preChangeItems")
+      getlex              QName(PackageNamespace(""), "selectedItems")
+      initproperty        QName(ProtectedNamespace("fl.controls:SelectableList"), "preChangeItems")
+
+      jump                L53
+
+L10:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "changeType")
+      setlocal2
+
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "REMOVE")
+      getlocal2
+      ifstrictne          L19
+
+      pushbyte            0
+      jump                L51
+
+L19:
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "ADD")
+      getlocal2
+      ifstrictne          L25
+
+      pushbyte            1
+      jump                L51
+
+L25:
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "INVALIDATE")
+      getlocal2
+      ifstrictne          L31
+
+      pushbyte            2
+      jump                L51
+
+L31:
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "REMOVE_ALL")
+      getlocal2
+      ifstrictne          L37
+
+      pushbyte            3
+      jump                L51
+
+L37:
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "REPLACE")
+      getlocal2
+      ifstrictne          L43
+
+      pushbyte            4
+      jump                L51
+
+L43:
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "INVALIDATE_ALL")
+      getlocal2
+      ifstrictne          L49
+
+      pushbyte            5
+      jump                L51
+
+L49:
+      jump                L50
+
+L50:
+      pushbyte            6
+L51:
+      kill                2
+      lookupswitch        L5, [L3, L3, L3, L3, L3, L3, L5]
+
+L53:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.controls:SelectableList/class/init"
+  body
+   maxstack 9
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "fl.controls:SelectableList"), "defaultStyles")
+    pushstring          "skin"
+    pushstring          "List_skin"
+    pushstring          "cellRenderer"
+    getlex              QName(PackageNamespace("fl.controls.listClasses"), "CellRenderer")
+    pushstring          "contentPadding"
+    pushnull
+    pushstring          "disabledAlpha"
+    pushnull
+    newobject           4
+    setproperty         QName(PrivateNamespace(null, "fl.controls:SelectableList"), "defaultStyles")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "fl.controls:SelectableList"), "defaultStyles") slotid 1 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   refid "fl.controls:SelectableList/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "mergeStyles")
+     getlex              QName(PrivateNamespace(null, "fl.controls:SelectableList"), "defaultStyles")
+     getlex              QName(PackageNamespace("fl.containers"), "BaseScrollPane")
+     callproperty        QName(PackageNamespace(""), "getStyleDefinition"), 0
+     callproperty        QName(PackageNamespace(""), "mergeStyles"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PackageNamespace(""), "createAccessibilityImplementation") slotid 2 type QName(PackageNamespace(""), "Function") end
+end ; class

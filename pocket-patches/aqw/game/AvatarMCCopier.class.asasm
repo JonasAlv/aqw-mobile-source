@@ -1,0 +1,2019 @@
+class
+ refid "AvatarMCCopier"
+ instance QName(PackageNamespace(""), "AvatarMCCopier")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("AvatarMCCopier")
+  iinit
+   refid "AvatarMCCopier/instance/init"
+   param QName(PackageNamespace("flash.display"), "MovieClip")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     newobject           0
+     initproperty        QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "objLinks")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world") end
+  trait slot QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "rootClass") end
+  trait slot QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "objLinks") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV") type QName(PackageNamespace(""), "Avatar") end
+  trait slot QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "completed") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "weaponQueued") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(PackageNamespace(""), "copyTo")
+   method
+    refid "AvatarMCCopier/instance/copyTo"
+    param QName(PackageNamespace("flash.display"), "MovieClip")
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 7
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal2
+
+      pushscope
+
+      getscopeobject      1
+      pushundefined
+      coerce_a
+      setslot             3
+
+      getscopeobject      1
+      pushundefined
+      coerce_a
+      setslot             4
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getlocal0
+      getscopeobject      1
+      getslot             1
+      initproperty        QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "MovieClip")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         QName(PackageNamespace(""), "parent")
+      callproperty        QName(PackageNamespace("flash.display"), "MovieClip"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getproperty         Multiname("myAvatar", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      setproperty         Multiname("pAV", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getproperty         Multiname("myAvatar", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      initproperty        QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("strGender", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      initproperty        QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+
+      getscopeobject      1
+      pushstring          "cape"
+      pushstring          "backhair"
+      pushstring          "robe"
+      pushstring          "backrobe"
+      newarray            4
+      coerce_a
+      setslot             2
+
+      pushbyte            0
+      setlocal3
+
+      getscopeobject      1
+      getslot             2
+      coerce_a
+      setlocal            4
+
+      jump                L84
+
+L56:
+      label
+      getscopeobject      1
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_a
+      setslot             3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getscopeobject      1
+      getslot             2
+      getscopeobject      1
+      getslot             3
+      getproperty         MultinameL([PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         MultinameL([PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      typeof
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L84
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getscopeobject      1
+      getslot             2
+      getscopeobject      1
+      getslot             3
+      getproperty         MultinameL([PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         MultinameL([PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+L84:
+      hasnext2            4, 3
+      iftrue              L56
+
+      kill                4
+      kill                3
+L88:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "dataLeaf")
+      getproperty         Multiname("showHelm", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      not
+      dup
+      iftrue              L113
+
+      pop
+      pushstring          "he"
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      in
+      not
+      dup
+      iffalse             L113
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("he", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushnull
+      equals
+L113:
+      iffalse             L117
+
+      getlocal0
+      pushnull
+      callpropvoid        QName(PackageNamespace(""), "onHairLoadComplete"), 1
+
+L117:
+      jump                L131
+
+L118:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L131:
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getproperty         Multiname("myAvatar", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("objData", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      coerce_a
+      setlocal            4
+
+      jump                L294
+
+L141:
+      label
+      getscopeobject      1
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_a
+      setslot             4
+
+L148:
+      jump                L236
+
+L149:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      pushstring          "strFile"
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      callproperty        Multiname("getFilePath", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 0
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             4
+      getproperty         MultinameL([PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("sFile", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      add
+      pushstring          "callBackA"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "onLoadWeaponComplete")
+      pushstring          "callBackB"
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "onLoadWeaponError")
+      newobject           3
+      callpropvoid        Multiname("queueLoad", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "weaponQueued")
+
+      jump                L268
+
+L178:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "dataLeaf")
+      getproperty         Multiname("showHelm", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      iffalse             L187
+
+      getlocal0
+      pushnull
+      callpropvoid        QName(PackageNamespace(""), "onLoadHelmComplete"), 1
+
+L187:
+      jump                L268
+
+L188:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "dataLeaf")
+      getproperty         Multiname("showCloak", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      iffalse             L197
+
+      getlocal0
+      pushnull
+      callpropvoid        QName(PackageNamespace(""), "onLoadCapeComplete"), 1
+
+L197:
+      jump                L268
+
+L198:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getproperty         Multiname("myAvatar", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("objData", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("co", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushnull
+      ifne                L219
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "objLinks")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("ar", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("sLink", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      setproperty         Multiname("ar", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      getlocal0
+      pushnull
+      callpropvoid        QName(PackageNamespace(""), "onLoadArmorComplete"), 1
+
+L219:
+      jump                L268
+
+L220:
+      label
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "objLinks")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("co", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("sLink", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      setproperty         Multiname("ar", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      getlocal0
+      pushnull
+      callpropvoid        QName(PackageNamespace(""), "onLoadArmorComplete"), 1
+
+      jump                L268
+
+L234:
+      label
+      jump                L268
+
+L236:
+      getscopeobject      1
+      getslot             4
+      setlocal            5
+
+      pushstring          "Weapon"
+      getlocal            5
+      ifstrictne          L244
+
+      pushbyte            0
+      jump                L266
+
+L244:
+      pushstring          "he"
+      getlocal            5
+      ifstrictne          L249
+
+      pushbyte            1
+      jump                L266
+
+L249:
+      pushstring          "ba"
+      getlocal            5
+      ifstrictne          L254
+
+      pushbyte            2
+      jump                L266
+
+L254:
+      pushstring          "ar"
+      getlocal            5
+      ifstrictne          L259
+
+      pushbyte            3
+      jump                L266
+
+L259:
+      pushstring          "co"
+      getlocal            5
+      ifstrictne          L264
+
+      pushbyte            4
+      jump                L266
+
+L264:
+      jump                L265
+
+L265:
+      pushbyte            5
+L266:
+      kill                5
+      lookupswitch        L234, [L149, L178, L188, L198, L220, L234]
+
+L268:
+      jump                L294
+
+L269:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal            5
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "[Avatar] ERR copier copyTo: "
+      getscopeobject      1
+      getslot             4
+      add
+      pushstring          " "
+      add
+      getscopeobject      2
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "message")
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      popscope
+      kill                5
+L294:
+      hasnext2            4, 3
+      iftrue              L141
+
+      kill                4
+      kill                3
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "weaponQueued")
+      iftrue              L303
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "signalComplete"), 0
+
+L303:
+      returnvoid
+     end ; code
+     try from L88 to L117 target L118 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+     try from L148 to L268 target L269 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+     trait slot QName(PackageInternalNs(""), "_mcChar") slotid 1 type QName(PackageNamespace("flash.display"), "MovieClip") end
+     trait slot QName(PackageInternalNs(""), "killList") slotid 2 end
+     trait slot QName(PackageInternalNs(""), "i") slotid 3 end
+     trait slot QName(PackageInternalNs(""), "sES") slotid 4 end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "signalComplete")
+   method
+    refid "AvatarMCCopier/instance/AvatarMCCopier/instance/signalComplete"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "completed")
+      iffalse             L6
+
+      returnvoid
+
+L6:
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "completed")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      pushstring          "cmd"
+      pushstring          "copyAvatarMCCompleted"
+      newobject           1
+      callpropvoid        Multiname("mapEventTrigger", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "forceComplete")
+   method
+    refid "AvatarMCCopier/instance/forceComplete"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "signalComplete"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "onLoadWeaponError")
+   method
+    refid "AvatarMCCopier/instance/AvatarMCCopier/instance/onLoadWeaponError"
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+L2:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("weapon", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+L7:
+      jump                L19
+
+L8:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L19:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "signalComplete"), 0
+
+      returnvoid
+     end ; code
+     try from L2 to L7 target L8 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "loadArmorPieces")
+   method
+    refid "AvatarMCCopier/instance/loadArmorPieces"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 26
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal2
+
+      pushscope
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setslot             3
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+L17:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+      add
+      pushstring          "Head"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      pushbyte            0
+      callpropvoid        Multiname("addChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            1
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L45:
+      jump                L80
+
+L46:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getscopeobject      1
+      getlex              QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      pushstring          "mcHead"
+      getlex              QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getlex              QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      pushbyte            0
+      callpropvoid        Multiname("addChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 2
+
+      getlex              QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            1
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      popscope
+      kill                3
+L80:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+      add
+      pushstring          "Chest"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("chest", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("chest", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L107:
+      jump                L121
+
+L108:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L121:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+      add
+      pushstring          "Hip"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("hip", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("hip", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L148:
+      jump                L162
+
+L149:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            2
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L162:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+      add
+      pushstring          "FootIdle"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("idlefoot", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("idlefoot", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L189:
+      jump                L203
+
+L190:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            3
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L203:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+      add
+      pushstring          "Foot"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("frontfoot", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("frontfoot", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("frontfoot", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backfoot", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backfoot", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L247:
+      jump                L261
+
+L248:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            4
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L261:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+      add
+      pushstring          "Shoulder"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("frontshoulder", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("frontshoulder", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backshoulder", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backshoulder", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L300:
+      jump                L314
+
+L301:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            5
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L314:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+      add
+      pushstring          "Hand"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("fronthand", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("fronthand", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backhand", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backhand", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L353:
+      jump                L367
+
+L354:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            6
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L367:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+      add
+      pushstring          "Thigh"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("frontthigh", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("frontthigh", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backthigh", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backthigh", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L406:
+      jump                L420
+
+L407:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            7
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L420:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+      add
+      pushstring          "Shin"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("frontshin", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("frontshin", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backshin", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backshin", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L459:
+      jump                L473
+
+L460:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            8
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L473:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+      add
+      pushstring          "Robe"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getscopeobject      1
+      getslot             2
+      pushnull
+      ifeq                L510
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("robe", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("robe", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("robe", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushtrue
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      jump                L515
+
+L510:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("robe", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+L515:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "strGender")
+      add
+      pushstring          "RobeBack"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getscopeobject      1
+      getslot             2
+      pushnull
+      ifeq                L552
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backrobe", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backrobe", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backrobe", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushtrue
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      jump                L557
+
+L552:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backrobe", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+L557:
+      returnvoid
+     end ; code
+     try from L17 to L45 target L46 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+     try from L80 to L107 target L108 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+     try from L121 to L148 target L149 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+     try from L162 to L189 target L190 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+     try from L203 to L247 target L248 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+     try from L261 to L300 target L301 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+     try from L314 to L353 target L354 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+     try from L367 to L406 target L407 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+     try from L420 to L459 target L460 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+     trait slot QName(PackageInternalNs(""), "strSkinLinkage") slotid 1 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs(""), "AssetClass") slotid 2 type QName(PackageNamespace(""), "Class") end
+     trait slot QName(PackageInternalNs(""), "child") slotid 3 type QName(PackageNamespace("flash.display"), "DisplayObject") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onLoadArmorComplete")
+   method
+    refid "AvatarMCCopier/instance/onLoadArmorComplete"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "objLinks")
+      getproperty         Multiname("ar", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      callpropvoid        QName(PackageNamespace(""), "loadArmorPieces"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onHairLoadComplete")
+   method
+    refid "AvatarMCCopier/instance/onHairLoadComplete"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "helmEquipped")
+      iffalse             L9
+
+      returnvoid
+
+L9:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("strHairName", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("strGender", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      add
+      pushstring          "Hair"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifeq                L57
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("hair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("numChildren", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      ifngt               L43
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("hair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L43:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("hair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getlocal2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("hair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushtrue
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      jump                L63
+
+L57:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("hair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+L63:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("strHairName", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("strGender", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      add
+      pushstring          "HairBack"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifeq                L107
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backhair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("numChildren", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      ifngt               L95
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backhair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L95:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backhair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getlocal2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backhair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushtrue
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      jump                L112
+
+L107:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backhair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+L112:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "loadWeapon")
+   method
+    refid "AvatarMCCopier/instance/loadWeapon"
+    param null
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 11
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      pushstring          "strFile"
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      callproperty        Multiname("getFilePath", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 0
+      getlocal1
+      add
+      pushstring          "callBackA"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "onLoadWeaponComplete")
+      pushstring          "callBackB"
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "onLoadWeaponError")
+      pushstring          "avt"
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      pushstring          "sES"
+      pushstring          "weapon"
+      newobject           5
+      callpropvoid        Multiname("queueLoad", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onLoadWeaponComplete")
+   method
+    refid "AvatarMCCopier/instance/onLoadWeaponComplete"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal2
+
+      pushscope
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+L13:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("weapon", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L18:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("Weapon", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("sLink", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("Weapon", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("sType", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushstring          "Gauntlet"
+      ifne                L83
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("fronthand", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      pushbyte            1
+      callpropvoid        Multiname("addChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("fronthand", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            1
+      callproperty        Multiname("getChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      pushdouble          0.8
+      setproperty         Multiname("scaleX", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("fronthand", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            1
+      callproperty        Multiname("getChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      pushdouble          0.8
+      setproperty         Multiname("scaleY", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("fronthand", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            1
+      callproperty        Multiname("getChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("fronthand", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            1
+      callproperty        Multiname("getChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getproperty         Multiname("scaleX", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            -1
+      multiply
+      setproperty         Multiname("scaleX", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("weapon", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      findpropstrict      QName(PackageNamespace("flash.display"), "MovieClip")
+      constructprop       QName(PackageNamespace("flash.display"), "MovieClip"), 0
+      setproperty         Multiname("mcWeapon", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      jump                L90
+
+L83:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("weapon", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L90:
+      jump                L111
+
+L91:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getlex              QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("weapon", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getscopeobject      1
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("content", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      popscope
+      kill                3
+L111:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("weapon", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushtrue
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+L116:
+      jump                L137
+
+L117:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "[Avatar] ERR copier onLoadWeaponComplete: "
+      getscopeobject      2
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "message")
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      popscope
+      kill                3
+L137:
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "signalComplete"), 0
+
+      returnvoid
+     end ; code
+     try from L18 to L90 target L91 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+     try from L13 to L116 target L117 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "errOuter") end
+     trait slot QName(PackageInternalNs(""), "e") slotid 1 type QName(PackageNamespace("flash.events"), "Event") end
+     trait slot QName(PackageInternalNs(""), "AssetClass") slotid 2 type QName(PackageNamespace(""), "Class") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onLoadCapeComplete")
+   method
+    refid "AvatarMCCopier/instance/onLoadCapeComplete"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("ba", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("sLink", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifeq                L43
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("cape", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("cape", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getlocal2
+      construct           0
+      setproperty         Multiname("cape", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("cape", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("cape", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("cape", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("cape", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushtrue
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      jump                L48
+
+L43:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("cape", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+L48:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "helmEquipped") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(PackageNamespace(""), "onLoadHelmComplete")
+   method
+    refid "AvatarMCCopier/instance/onLoadHelmComplete"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("he", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("sLink", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "objData")
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("he", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("sLink", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushstring          "_backhair"
+      add
+      callproperty        Multiname("getClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal3
+
+      getlocal2
+      pushnull
+      ifeq                L134
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("helm", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("numChildren", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      ifngt               L46
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("helm", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushbyte            0
+      callpropvoid        Multiname("removeChildAt", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+L46:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("helm", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "dataLeaf")
+      getproperty         Multiname("showHelm", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("hair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("helm", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      not
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      getlocal3
+      pushnull
+      ifeq                L105
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "dataLeaf")
+      getproperty         Multiname("showHelm", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      iffalse             L86
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backhair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushtrue
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backhair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getlocal3
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      jump                L104
+
+L86:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backhair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("hair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      coerce_a
+      dup
+      iffalse             L103
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "pMC")
+      getproperty         Multiname("bBackHair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      coerce_a
+L103:
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+L104:
+      jump                L123
+
+L105:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("backhair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("hair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      coerce_a
+      dup
+      iffalse             L122
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "pAV")
+      getproperty         QName(PackageNamespace(""), "pMC")
+      getproperty         Multiname("bBackHair", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      coerce_a
+L122:
+      setproperty         Multiname("visible", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+
+L123:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "mcChar")
+      getproperty         Multiname("head", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("helm", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getlocal2
+      construct           0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 1
+
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "helmEquipped")
+
+      jump                L144
+
+L134:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "AvatarMCCopier/instance#0"), "world")
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      getproperty         Multiname("chatF", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")])
+      pushstring          "warning"
+      pushstring          "Could not resolve Helm definition."
+      pushstring          "SERVER"
+      pushstring          ""
+      pushbyte            0
+      callpropvoid        Multiname("pushMsg", [PrivateNamespace(null, "AvatarMCCopier/instance#0"), PackageNamespace(""), PrivateNamespace(null, "AvatarMCCopier/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("AvatarMCCopier"), StaticProtectedNs("AvatarMCCopier")]), 5
+
+L144:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "AvatarMCCopier/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

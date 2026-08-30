@@ -1,0 +1,752 @@
+class
+ refid "LPFPanelListShopInvB"
+ instance QName(PackageNamespace(""), "LPFPanelListShopInvB")
+  extends QName(PackageNamespace(""), "LPFPanel")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("LPFPanelListShopInvB")
+  iinit
+   refid "LPFPanelListShopInvB/instance/init"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        Multiname("x", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushbyte            0
+     initproperty        Multiname("x", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     findproperty        Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushbyte            0
+     initproperty        Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     findproperty        Multiname("frames", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     newarray            0
+     initproperty        Multiname("frames", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     findproperty        Multiname("fData", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     newobject           0
+     initproperty        Multiname("fData", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "fOpen") flag OVERRIDE
+   method
+    refid "LPFPanelListShopInvB/instance/fOpen"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 31
+     localcount 5
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L32
+
+L5:
+      label
+      getlex              Multiname("frames", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mc", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L24
+
+      pop
+      getlex              Multiname("frames", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mc", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("fClose", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushnull
+      equals
+      not
+L24:
+      iffalse             L30
+
+      getlex              Multiname("frames", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mc", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("fClose", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+L30:
+      getlex              Multiname("frames", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("shift", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+L32:
+      getlex              Multiname("frames", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            0
+      ifgt                L5
+
+      findproperty        Multiname("fData", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      getproperty         Multiname("fData", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      initproperty        Multiname("fData", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal1
+      getproperty         Multiname("r", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      findproperty        Multiname("x", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      getproperty         Multiname("x", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      initproperty        Multiname("x", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal2
+      getproperty         Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            -1
+      ifngt               L57
+
+      findproperty        Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      getproperty         Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      initproperty        Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      jump                L85
+
+L57:
+      getlex              Multiname("fParent", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("numChildren", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      convert_i
+      dup
+      setlocal            4
+
+      pushbyte            1
+      ifngt               L82
+
+      findproperty        Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("fParent", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            4
+      pushbyte            2
+      subtract
+      callproperty        Multiname("getChildAt", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      getproperty         Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("fParent", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            4
+      pushbyte            2
+      subtract
+      callproperty        Multiname("getChildAt", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      getproperty         Multiname("height", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      add
+      pushbyte            10
+      add
+      initproperty        Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      jump                L85
+
+L82:
+      findproperty        Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            10
+      initproperty        Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L85:
+      findproperty        Multiname("w", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      getproperty         Multiname("w", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      initproperty        Multiname("w", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      findproperty        Multiname("h", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      getproperty         Multiname("h", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      initproperty        Multiname("h", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      findproperty        Multiname("xo", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("x", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      initproperty        Multiname("xo", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      findproperty        Multiname("yo", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      initproperty        Multiname("yo", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      pushstring          "closeType"
+      getlocal1
+      in
+      iffalse             L107
+
+      findproperty        Multiname("closeType", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      getproperty         Multiname("closeType", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      initproperty        Multiname("closeType", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L107:
+      pushstring          "hideDir"
+      getlocal1
+      in
+      iffalse             L115
+
+      findproperty        Multiname("hideDir", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      getproperty         Multiname("hideDir", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      initproperty        Multiname("hideDir", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L115:
+      pushstring          "hidePad"
+      getlocal1
+      in
+      iffalse             L123
+
+      findproperty        Multiname("hidePad", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      getproperty         Multiname("hidePad", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      initproperty        Multiname("hidePad", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L123:
+      newobject           0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      newobject           0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      getlocal3
+      findpropstrict      Multiname("LPFFrameBackdrop", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      constructprop       Multiname("LPFFrameBackdrop", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      setproperty         Multiname("frame", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushnull
+      setproperty         Multiname("fData", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "x"
+      pushbyte            14
+      pushstring          "y"
+      pushbyte            44
+      pushstring          "w"
+      getlex              Multiname("w", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            26
+      subtract
+      pushstring          "h"
+      pushshort           271
+      newobject           4
+      setproperty         Multiname("r", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      findpropstrict      Multiname("addFrame", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal3
+      callpropvoid        Multiname("addFrame", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      newobject           0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      getlocal3
+      findpropstrict      Multiname("LPFFrameBackdrop", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      constructprop       Multiname("LPFFrameBackdrop", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      setproperty         Multiname("frame", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushnull
+      setproperty         Multiname("fData", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "x"
+      pushbyte            14
+      pushstring          "y"
+      pushshort           320
+      pushstring          "w"
+      getlex              Multiname("w", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            26
+      subtract
+      pushstring          "h"
+      pushbyte            121
+      newobject           4
+      setproperty         Multiname("r", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      findpropstrict      Multiname("addFrame", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal3
+      callpropvoid        Multiname("addFrame", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      newobject           0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      getlocal3
+      findpropstrict      Multiname("LPFFrameListViewTabbed", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      constructprop       Multiname("LPFFrameListViewTabbed", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      setproperty         Multiname("frame", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "list"
+      getlex              Multiname("fData", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("items", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      newobject           1
+      setproperty         Multiname("fData", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "x"
+      pushbyte            20
+      pushstring          "y"
+      pushbyte            50
+      pushstring          "w"
+      pushshort           265
+      pushstring          "h"
+      pushshort           258
+      newobject           4
+      setproperty         Multiname("r", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      getlex              Multiname("fParent", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("MovieClip", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      callproperty        Multiname("getTabStates", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      setproperty         Multiname("tabStates", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "Note"
+      pushstring          "Resource"
+      pushstring          "Item"
+      pushstring          "Quest Item"
+      pushstring          "ServerUse"
+      pushstring          "Enhancement"
+      pushstring          "Sword"
+      pushstring          "Axe"
+      pushstring          "Gauntlet"
+      pushstring          "Dagger"
+      pushstring          "HandGun"
+      pushstring          "Rifle"
+      pushstring          "Gun"
+      pushstring          "Whip"
+      pushstring          "Bow"
+      pushstring          "Mace"
+      pushstring          "Polearm"
+      pushstring          "Staff"
+      pushstring          "Wand"
+      pushstring          "Class"
+      pushstring          "Armor"
+      pushstring          "Helm"
+      pushstring          "Cape"
+      pushstring          "Misc"
+      pushstring          "Earring"
+      pushstring          "Amulet"
+      pushstring          "Necklace"
+      pushstring          "Belt"
+      pushstring          "Ring"
+      pushstring          "Pet"
+      newarray            30
+      setproperty         Multiname("sortOrder", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "Weapon"
+      pushstring          "Sword"
+      pushstring          "Axe"
+      pushstring          "Gauntlet"
+      pushstring          "Dagger"
+      pushstring          "HandGun"
+      pushstring          "Rifle"
+      pushstring          "Gun"
+      pushstring          "Whip"
+      pushstring          "Bow"
+      pushstring          "Mace"
+      pushstring          "Polearm"
+      pushstring          "Staff"
+      pushstring          "Wand"
+      newarray            13
+      pushstring          "ar"
+      pushstring          "Class"
+      pushstring          "Armor"
+      newarray            2
+      pushstring          "he"
+      pushstring          "Helm"
+      newarray            1
+      pushstring          "ba"
+      pushstring          "Cape"
+      newarray            1
+      pushstring          "pe"
+      pushstring          "Pet"
+      newarray            1
+      pushstring          "am"
+      pushstring          "Misc"
+      pushstring          "Earring"
+      pushstring          "Amulet"
+      pushstring          "Necklace"
+      pushstring          "Belt"
+      pushstring          "Ring"
+      newarray            6
+      pushstring          "it"
+      pushstring          "Note"
+      pushstring          "Resource"
+      pushstring          "Item"
+      pushstring          "Quest Item"
+      pushstring          "ServerUse"
+      newarray            5
+      pushstring          "enh"
+      pushstring          "Enhancement"
+      newarray            1
+      pushstring          "House"
+      pushstring          "House"
+      newarray            1
+      pushstring          "Wall Item"
+      pushstring          "Wall Item"
+      newarray            1
+      pushstring          "Floor Item"
+      pushstring          "Floor Item"
+      newarray            1
+      newobject           11
+      setproperty         Multiname("filterMap", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "itemListB"
+      setproperty         Multiname("sName", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "listItemBSel"
+      setproperty         Multiname("itemEventType", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "listItemASel"
+      pushstring          "refreshInv"
+      pushstring          "refreshItems"
+      newarray            3
+      setproperty         Multiname("eventTypes", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "sES"
+      setproperty         Multiname("filter", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      getlex              Multiname("fParent", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("MovieClip", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      getproperty         Multiname("sMode", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "shopBuy"
+      equals
+      setproperty         Multiname("multiSelect", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      findpropstrict      Multiname("addFrame", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal3
+      callpropvoid        Multiname("addFrame", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      newobject           0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      getlocal3
+      findpropstrict      Multiname("LPFFrameEnhText", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      constructprop       Multiname("LPFFrameEnhText", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      setproperty         Multiname("frame", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushnull
+      setproperty         Multiname("fData", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "x"
+      pushbyte            18
+      pushstring          "y"
+      pushshort           321
+      pushstring          "w"
+      getlex              Multiname("w", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            20
+      subtract
+      pushstring          "h"
+      pushbyte            -1
+      newobject           4
+      setproperty         Multiname("r", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "listItemBSolo"
+      pushstring          "showItemListB"
+      pushstring          "refreshItems"
+      newarray            3
+      setproperty         Multiname("eventTypes", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      findpropstrict      Multiname("addFrame", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal3
+      callpropvoid        Multiname("addFrame", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      findpropstrict      Multiname("drawBG", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("drawBG", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+      getlex              Multiname("bg", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("btnClose", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("MouseEvent", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.events")])
+      getproperty         Multiname("CLICK", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("onCloseClick", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 5
+
+      pushstring          "showDragonLeft"
+      getlocal1
+      in
+      dup
+      iffalse             L378
+
+      pop
+      getlocal1
+      getproperty         Multiname("showDragonLeft", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushtrue
+      equals
+L378:
+      iffalse             L380
+
+      jump                L384
+
+L380:
+      getlex              Multiname("bg", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("dragonLeft", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L384:
+      pushstring          "showDragonRight"
+      getlocal1
+      in
+      dup
+      iffalse             L394
+
+      pop
+      getlocal1
+      getproperty         Multiname("showDragonRight", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushtrue
+      equals
+L394:
+      iffalse             L396
+
+      jump                L400
+
+L396:
+      getlex              Multiname("bg", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("dragonRight", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L400:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "fHide") flag OVERRIDE
+   method
+    refid "LPFPanelListShopInvB/instance/fHide"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 14
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+      setlocal1
+
+      findproperty        Multiname("isOpen", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      initproperty        Multiname("isOpen", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      findproperty        Multiname("visible", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      initproperty        Multiname("visible", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      jump                L51
+
+L12:
+      label
+      findproperty        Multiname("x", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("xo", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("w", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      subtract
+      getlex              Multiname("hidePad", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      subtract
+      initproperty        Multiname("x", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      jump                L83
+
+L21:
+      label
+      findproperty        Multiname("x", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("xo", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("w", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      add
+      getlex              Multiname("hidePad", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      add
+      initproperty        Multiname("x", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      jump                L83
+
+L30:
+      label
+      findproperty        Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("yo", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("h", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      subtract
+      getlex              Multiname("hidePad", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      subtract
+      initproperty        Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      jump                L83
+
+L39:
+      label
+      findproperty        Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("yo", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("h", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      add
+      getlex              Multiname("hidePad", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      add
+      initproperty        Multiname("y", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      jump                L83
+
+L48:
+      label
+L49:
+      label
+      jump                L83
+
+L51:
+      getlex              Multiname("hideDir", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("toLowerCase", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      setlocal3
+
+      pushstring          "left"
+      getlocal3
+      ifstrictne          L59
+
+      pushbyte            0
+      jump                L81
+
+L59:
+      pushstring          "right"
+      getlocal3
+      ifstrictne          L64
+
+      pushbyte            1
+      jump                L81
+
+L64:
+      pushstring          "top"
+      getlocal3
+      ifstrictne          L69
+
+      pushbyte            2
+      jump                L81
+
+L69:
+      pushstring          "bottom"
+      getlocal3
+      ifstrictne          L74
+
+      pushbyte            3
+      jump                L81
+
+L74:
+      pushstring          ""
+      getlocal3
+      ifstrictne          L79
+
+      pushbyte            4
+      jump                L81
+
+L79:
+      jump                L80
+
+L80:
+      pushbyte            5
+L81:
+      kill                3
+      lookupswitch        L49, [L12, L21, L30, L39, L48, L49]
+
+L83:
+      pushbyte            0
+      setlocal2
+
+      pushbyte            0
+      setlocal2
+
+      jump                L114
+
+L88:
+      label
+L89:
+      findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      findpropstrict      Multiname("getChildAt", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      callproperty        Multiname("getChildAt", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      callproperty        Multiname("MovieClip", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+      setlocal1
+
+      getlocal1
+      pushstring          "eventType"
+      pushstring          "clearState"
+      newobject           1
+      callpropvoid        Multiname("notify", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L101:
+      jump                L113
+
+L102:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L113:
+      inclocal_i          2
+L114:
+      getlocal2
+      getlex              Multiname("numChildren", [PrivateNamespace(null, "LPFPanelListShopInvB/instance"), PrivateNamespace(null, "LPFPanelListShopInvB"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanelListShopInvB"), StaticProtectedNs("LPFPanel"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      iflt                L88
+
+      returnvoid
+     end ; code
+     try from L89 to L101 target L102 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "LPFPanelListShopInvB/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

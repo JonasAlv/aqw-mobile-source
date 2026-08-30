@@ -1,0 +1,827 @@
+class
+ refid "ExternalCalls"
+ instance QName(PackageNamespace(""), "ExternalCalls")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ExternalCalls")
+  iinit
+   refid "ExternalCalls/instance/init"
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("flash.display"), "MovieClip")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlex              Multiname("Game", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+     getproperty         Multiname("ISWEB", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+     initproperty        Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+
+     getlocal0
+     getlocal2
+     initproperty        Multiname("sourceID", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+
+     getlocal0
+     getlocal0
+     getproperty         Multiname("sourceID", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+     pushstring          "FACEBOOK"
+     equals
+     initproperty        Multiname("isFBSource", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+
+     getlocal0
+     getlocal3
+     initproperty        Multiname("rootClass", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+
+     getlocal0
+     getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+     iffalse             L29
+
+     getlocal0
+     findpropstrict      Multiname("ExternalCallsWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+     getlocal2
+     getlocal3
+     constructprop       Multiname("ExternalCallsWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 2
+     initproperty        Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+
+L29:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "ExternalCalls/instance"), "isWeb") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "ExternalCalls/instance"), "sourceID") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "ExternalCalls/instance"), "isFBSource") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "ExternalCalls/instance"), "rootClass") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PrivateNamespace(null, "ExternalCalls/instance"), "conn") end
+  trait slot QName(PrivateNamespace(null, "ExternalCalls/instance"), "webCall") type QName(PackageNamespace(""), "ExternalCallsWeb") end
+  trait method QName(PackageNamespace(""), "setGameObject")
+   method
+    refid "ExternalCalls/instance/setGameObject"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iffalse             L9
+
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getlocal1
+      callpropvoid        Multiname("setGameObject", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+
+L9:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "showFeedDialog")
+   method
+    refid "ExternalCalls/instance/showFeedDialog"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("isFBSource", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iftrue              L6
+
+      returnvoid
+
+L6:
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iffalse             L15
+
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getlocal1
+      getlocal2
+      getlocal3
+      callpropvoid        Multiname("showFeedDialog", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 3
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "fbLogin")
+   method
+    refid "ExternalCalls/instance/fbLogin"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iffalse             L8
+
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      callpropvoid        Multiname("fbLogin", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 0
+
+L8:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "fbLoginWithPermissions")
+   method
+    refid "ExternalCalls/instance/fbLoginWithPermissions"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iffalse             L8
+
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      callpropvoid        Multiname("fbLoginWithPermissions", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 0
+
+L8:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "fbLogout")
+   method
+    refid "ExternalCalls/instance/fbLogout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iffalse             L8
+
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      callpropvoid        Multiname("fbLogout", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 0
+
+L8:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getFBUser")
+   method
+    refid "ExternalCalls/instance/getFBUser"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iffalse             L8
+
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      callpropvoid        Multiname("getFBUser", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 0
+
+L8:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "showIt")
+   method
+    refid "ExternalCalls/instance/showIt"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.net"), "URLLoader")
+      setlocal            5
+
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      convert_b
+      setlocal2
+
+      jump                L99
+
+L16:
+      label
+      findpropstrict      Multiname("navigateToURL", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      findpropstrict      Multiname("URLRequest", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      pushstring          "https://www.aq.com/aw-level10.asp"
+      constructprop       Multiname("URLRequest", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")]), 1
+      pushstring          "_blank"
+      callpropvoid        Multiname("navigateToURL", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")]), 2
+
+      pushfalse
+      setlocal2
+
+      jump                L120
+
+L26:
+      label
+      findpropstrict      Multiname("encodeURIComponent", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      findpropstrict      Multiname("String", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getproperty         Multiname("myAvatar", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getproperty         Multiname("objData", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getproperty         Multiname("UserID", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      callproperty        Multiname("String", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+      callproperty        Multiname("encodeURIComponent", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+      coerce_s
+      setlocal3
+
+      findpropstrict      Multiname("navigateToURL", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      findpropstrict      Multiname("URLRequest", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      pushstring          "https://www.aq.com/aw-welcome.asp?id="
+      getlocal3
+      add
+      constructprop       Multiname("URLRequest", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")]), 1
+      pushstring          "_blank"
+      callpropvoid        Multiname("navigateToURL", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")]), 2
+
+      findpropstrict      Multiname("URLRequest", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      pushstring          "https://www.aq.com/game/quest.asp?userid="
+      getlocal3
+      add
+      pushstring          "&qvalue=1"
+      add
+      constructprop       Multiname("URLRequest", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")]), 1
+      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+      dup
+      setlocal            4
+
+      getlex              Multiname("URLRequestMethod", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      getproperty         Multiname("GET", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      setproperty         Multiname("method", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+
+      findpropstrict      Multiname("URLLoader", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      constructprop       Multiname("URLLoader", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")]), 0
+      coerce              QName(PackageNamespace("flash.net"), "URLLoader")
+      dup
+      setlocal            5
+
+      getlex              Multiname("IOErrorEvent", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.events")])
+      getproperty         Multiname("IO_ERROR", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getlocal0
+      getproperty         Multiname("onQuestTrackError", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 5
+
+      getlocal            5
+      getlex              Multiname("SecurityErrorEvent", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.events")])
+      getproperty         Multiname("SECURITY_ERROR", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getlocal0
+      getproperty         Multiname("onQuestTrackSecurityError", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 5
+
+      getlocal            5
+      getlocal            4
+      callpropvoid        Multiname("load", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+
+      jump                L120
+
+L86:
+      label
+      jump                L120
+
+L88:
+      label
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iftrue              L98
+
+      findpropstrict      Multiname("navigateToURL", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      findpropstrict      Multiname("URLRequest", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      pushstring          "https://www.aq.com/aextras/offers/"
+      constructprop       Multiname("URLRequest", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")]), 1
+      pushstring          "_blank"
+      callpropvoid        Multiname("navigateToURL", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")]), 2
+
+L98:
+      jump                L120
+
+L99:
+      getlocal1
+      setlocal            6
+
+      pushstring          "level10"
+      getlocal            6
+      ifstrictne          L106
+
+      pushbyte            0
+      jump                L118
+
+L106:
+      pushstring          "signup"
+      getlocal            6
+      ifstrictne          L111
+
+      pushbyte            1
+      jump                L118
+
+L111:
+      pushstring          "login"
+      getlocal            6
+      ifstrictne          L116
+
+      pushbyte            2
+      jump                L118
+
+L116:
+      jump                L117
+
+L117:
+      pushbyte            3
+L118:
+      kill                6
+      lookupswitch        L88, [L16, L26, L86, L88]
+
+L120:
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iffalse             L127
+
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getlocal1
+      callpropvoid        Multiname("showIt", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+
+L127:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "callJSFunction")
+   method
+    refid "ExternalCalls/instance/callJSFunction"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iffalse             L9
+
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getlocal1
+      callpropvoid        Multiname("callJSFunction", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+
+L9:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getQueryString")
+   method
+    refid "ExternalCalls/instance/getQueryString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iffalse             L9
+
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      callproperty        Multiname("getQueryString", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 0
+      returnvalue
+
+L9:
+      pushstring          ""
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setToken")
+   method
+    refid "ExternalCalls/instance/setToken"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iffalse             L9
+
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getlocal1
+      callpropvoid        Multiname("setToken", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+
+L9:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setUpPayment")
+   method
+    refid "ExternalCalls/instance/setUpPayment"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iffalse             L10
+
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getlocal1
+      callpropvoid        Multiname("setUpPayment", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+
+      jump                L16
+
+L10:
+      findpropstrict      Multiname("navigateToURL", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      findpropstrict      Multiname("URLRequest", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      pushstring          "https://www.aq.com/order-now/direct/"
+      constructprop       Multiname("URLRequest", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")]), 1
+      pushstring          "_blank"
+      callpropvoid        Multiname("navigateToURL", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")]), 2
+
+L16:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "logQuestProgress")
+   method
+    refid "ExternalCalls/instance/logQuestProgress"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal3
+
+      pushscope
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             3
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             4
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+      setslot             5
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.net"), "URLLoader")
+      setslot             6
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getlocal2
+      setslot             2
+
+L28:
+      getscopeobject      1
+      findpropstrict      Multiname("encodeURIComponent", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      findpropstrict      Multiname("String", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getproperty         Multiname("myAvatar", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getproperty         Multiname("objData", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getproperty         Multiname("UserID", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      callproperty        Multiname("String", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+      callproperty        Multiname("encodeURIComponent", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+      coerce_s
+      setslot             3
+
+      getscopeobject      1
+      findpropstrict      Multiname("encodeURIComponent", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getscopeobject      1
+      getslot             2
+      callproperty        Multiname("encodeURIComponent", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+      coerce_s
+      setslot             4
+
+      getscopeobject      1
+      findpropstrict      Multiname("URLRequest", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      pushstring          "https://www.aq.com/game/quest.asp?userid="
+      getscopeobject      1
+      getslot             3
+      add
+      pushstring          "&qvalue="
+      add
+      getscopeobject      1
+      getslot             4
+      add
+      constructprop       Multiname("URLRequest", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")]), 1
+      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+      setslot             5
+
+      getscopeobject      1
+      getslot             5
+      getlex              Multiname("URLRequestMethod", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      getproperty         Multiname("GET", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      setproperty         Multiname("method", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+
+      getscopeobject      1
+      findpropstrict      Multiname("URLLoader", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")])
+      constructprop       Multiname("URLLoader", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.net")]), 0
+      coerce              QName(PackageNamespace("flash.net"), "URLLoader")
+      setslot             6
+
+      getscopeobject      1
+      getslot             6
+      getlex              Multiname("IOErrorEvent", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.events")])
+      getproperty         Multiname("IO_ERROR", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getlocal0
+      getproperty         Multiname("onQuestTrackError", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 5
+
+      getscopeobject      1
+      getslot             6
+      getlex              Multiname("SecurityErrorEvent", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls"), PackageNamespace("flash.events")])
+      getproperty         Multiname("SECURITY_ERROR", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      getlocal0
+      getproperty         Multiname("onQuestTrackSecurityError", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 5
+
+      getscopeobject      1
+      getslot             6
+      getscopeobject      1
+      getslot             5
+      callpropvoid        Multiname("load", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+
+L97:
+      jump                L118
+
+L98:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      findpropstrict      Multiname("trace", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      pushstring          "[Game] ERR quest tracking request: "
+      getscopeobject      2
+      getslot             1
+      getproperty         Multiname("message", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      add
+      callpropvoid        Multiname("trace", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+
+      popscope
+      kill                4
+L118:
+      returnvoid
+     end ; code
+     try from L28 to L97 target L98 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     trait slot QName(PackageInternalNs(""), "uid") slotid 1 type QName(PackageNamespace(""), "int") end
+     trait slot QName(PackageInternalNs(""), "qsVal") slotid 2 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs(""), "userIdEnc") slotid 3 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs(""), "qsValEnc") slotid 4 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs(""), "request") slotid 5 type QName(PackageNamespace("flash.net"), "URLRequest") end
+     trait slot QName(PackageInternalNs(""), "loader") slotid 6 type QName(PackageNamespace("flash.net"), "URLLoader") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "ExternalCalls/instance"), "onQuestTrackError")
+   method
+    refid "ExternalCalls/instance/ExternalCalls/instance/onQuestTrackError"
+    param QName(PackageNamespace("flash.events"), "IOErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      Multiname("trace", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      pushstring          "[Game] ERR quest tracking IO: "
+      getlocal1
+      getproperty         Multiname("text", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      add
+      callpropvoid        Multiname("trace", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "ExternalCalls/instance"), "onQuestTrackSecurityError")
+   method
+    refid "ExternalCalls/instance/ExternalCalls/instance/onQuestTrackSecurityError"
+    param QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      Multiname("trace", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      pushstring          "[Game] ERR quest tracking security: "
+      getlocal1
+      getproperty         Multiname("text", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      add
+      callpropvoid        Multiname("trace", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getGroup")
+   method
+    refid "ExternalCalls/instance/getGroup"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("isWeb", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      iffalse             L9
+
+      getlocal0
+      getproperty         Multiname("webCall", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")])
+      callproperty        Multiname("getGroup", [PrivateNamespace(null, "ExternalCalls/instance"), PrivateNamespace(null, "ExternalCalls"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("ExternalCalls"), StaticProtectedNs("ExternalCalls")]), 0
+      returnvalue
+
+L9:
+      pushbyte            1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "ExternalCalls/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

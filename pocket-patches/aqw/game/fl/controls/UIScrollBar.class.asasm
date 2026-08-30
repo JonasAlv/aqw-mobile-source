@@ -1,0 +1,1398 @@
+class
+ refid "fl.controls:UIScrollBar"
+ instance QName(PackageNamespace("fl.controls"), "UIScrollBar")
+  extends QName(PackageNamespace("fl.controls"), "ScrollBar")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls:UIScrollBar")
+  iinit
+   refid "fl.controls:UIScrollBar/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inScroll") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty") type QName(PackageNamespace(""), "String") end
+  trait slot QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetMaxScrollProperty") type QName(PackageNamespace(""), "String") end
+  trait setter QName(PackageNamespace(""), "minScrollPosition") flag OVERRIDE
+   method
+    refid "fl.controls:UIScrollBar/instance/minScrollPosition/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      pushbyte            0
+      ifnlt               L9
+
+      pushbyte            0
+      convert_d
+      jump                L11
+
+L9:
+      getlocal1
+      convert_d
+L11:
+      setsuper            QName(PackageNamespace(""), "minScrollPosition")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "maxScrollPosition") flag OVERRIDE
+   method
+    refid "fl.controls:UIScrollBar/instance/maxScrollPosition/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      convert_d
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushnull
+      ifeq                L16
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal2
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetMaxScrollProperty")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      convert_d
+      setlocal2
+
+L16:
+      getlocal0
+      getlocal2
+      setsuper            QName(PackageNamespace(""), "maxScrollPosition")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "scrollTarget")
+   method
+    refid "fl.controls:UIScrollBar/instance/scrollTarget/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "scrollTarget")
+   method
+    refid "fl.controls:UIScrollBar/instance/scrollTarget/setter"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 12
+     maxscopedepth 17
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal2
+
+      pushscope
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushnull
+      ifeq                L30
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "handleTargetChange")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getlex              QName(PackageNamespace("flash.events"), "TextEvent")
+      getproperty         QName(PackageNamespace(""), "TEXT_INPUT")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "handleTargetChange")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "SCROLL")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "handleTargetScroll")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+L30:
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getscopeobject      1
+      getslot             1
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             2
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             3
+
+      getscopeobject      1
+      pushfalse
+      setslot             4
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushnull
+      ifeq                L97
+
+L48:
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushstring          "blockProgression"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L58
+
+      getscopeobject      1
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushstring          "blockProgression"
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setslot             2
+
+L58:
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushstring          "direction"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L68
+
+      getscopeobject      1
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushstring          "direction"
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setslot             3
+
+L68:
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushstring          "pixelScrollV"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L75
+
+      getscopeobject      1
+      pushtrue
+      setslot             4
+
+L75:
+      jump                L97
+
+L76:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             2
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             3
+
+      popscope
+      kill                3
+L97:
+      getscopeobject      1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "direction")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollBarDirection")
+      getproperty         QName(PackageNamespace(""), "HORIZONTAL")
+      equals
+      setslot             5
+
+      getscopeobject      1
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "rotation")
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      convert_d
+      setslot             6
+
+      getscopeobject      1
+      getslot             5
+      convert_b
+      dup
+      iffalse             L128
+
+      pop
+      getscopeobject      1
+      getslot             2
+      pushstring          "rl"
+      equals
+      dup
+      iftrue              L128
+
+      pop
+      getscopeobject      1
+      getslot             3
+      pushstring          "rtl"
+      equals
+L128:
+      iffalse             L149
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getScaleY")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getScaleY"), 0
+      pushbyte            0
+      greaterthan
+      dup
+      iffalse             L139
+
+      pop
+      getlex              QName(PackageNamespace(""), "rotation")
+      pushbyte            90
+      equals
+L139:
+      iffalse             L145
+
+      findproperty        QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "width")
+      add
+      initproperty        QName(PackageNamespace(""), "x")
+
+L145:
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "setScaleY")
+      pushbyte            -1
+      callpropvoid        QName(ProtectedNamespace("fl.core:UIComponent"), "setScaleY"), 1
+
+      jump                L215
+
+L149:
+      getscopeobject      1
+      getslot             5
+      not
+      dup
+      iffalse             L159
+
+      pop
+      getscopeobject      1
+      getslot             2
+      pushstring          "rl"
+      equals
+L159:
+      dup
+      iffalse             L166
+
+      pop
+      getscopeobject      1
+      getslot             3
+      pushstring          "rtl"
+      equals
+L166:
+      iffalse             L188
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getScaleY")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getScaleY"), 0
+      pushbyte            0
+      greaterthan
+      dup
+      iffalse             L178
+
+      pop
+      getlex              QName(PackageNamespace(""), "rotation")
+      pushbyte            90
+      equals
+      not
+L178:
+      iffalse             L184
+
+      findproperty        QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "height")
+      add
+      initproperty        QName(PackageNamespace(""), "y")
+
+L184:
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "setScaleY")
+      pushbyte            -1
+      callpropvoid        QName(ProtectedNamespace("fl.core:UIComponent"), "setScaleY"), 1
+
+      jump                L215
+
+L188:
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getScaleY")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getScaleY"), 0
+      pushbyte            0
+      ifnlt               L212
+
+      getscopeobject      1
+      getslot             5
+      iffalse             L204
+
+      getlex              QName(PackageNamespace(""), "rotation")
+      pushbyte            90
+      ifne                L203
+
+      findproperty        QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "width")
+      subtract
+      initproperty        QName(PackageNamespace(""), "x")
+
+L203:
+      jump                L212
+
+L204:
+      getlex              QName(PackageNamespace(""), "rotation")
+      pushbyte            90
+      ifeq                L212
+
+      findproperty        QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "height")
+      subtract
+      initproperty        QName(PackageNamespace(""), "y")
+
+L212:
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "setScaleY")
+      pushbyte            1
+      callpropvoid        QName(ProtectedNamespace("fl.core:UIComponent"), "setScaleY"), 1
+
+L215:
+      findpropstrict      QName(PrivateNamespace(null, "fl.controls:UIScrollBar"), "setTargetScrollProperties")
+      getscopeobject      1
+      getslot             5
+      getscopeobject      1
+      getslot             2
+      getscopeobject      1
+      getslot             4
+      callpropvoid        QName(PrivateNamespace(null, "fl.controls:UIScrollBar"), "setTargetScrollProperties"), 3
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushnull
+      ifeq                L250
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "handleTargetChange")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getlex              QName(PackageNamespace("flash.events"), "TextEvent")
+      getproperty         QName(PackageNamespace(""), "TEXT_INPUT")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "handleTargetChange")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "SCROLL")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "handleTargetScroll")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+L250:
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+     try from L48 to L75 target L76 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     trait slot QName(PackageInternalNs("fl.controls"), "target") slotid 1 type QName(PackageNamespace("flash.display"), "DisplayObject") end
+     trait slot QName(PackageInternalNs("fl.controls"), "blockProg") slotid 2 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("fl.controls"), "textDir") slotid 3 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("fl.controls"), "hasPixelVS") slotid 4 type QName(PackageNamespace(""), "Boolean") end
+     trait slot QName(PackageInternalNs("fl.controls"), "scrollHoriz") slotid 5 type QName(PackageNamespace(""), "Boolean") end
+     trait slot QName(PackageInternalNs("fl.controls"), "rot") slotid 6 type QName(PackageNamespace(""), "Number") end
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "scrollTargetName")
+   method
+    refid "fl.controls:UIScrollBar/instance/scrollTargetName/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getproperty         QName(PackageNamespace(""), "name")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "scrollTargetName")
+   method
+    refid "fl.controls:UIScrollBar/instance/scrollTargetName/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 12
+     maxscopedepth 17
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal2
+
+      pushscope
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+L9:
+      findproperty        QName(PackageNamespace(""), "scrollTarget")
+      getlex              QName(PackageNamespace(""), "parent")
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace(""), "getChildByName"), 1
+      initproperty        QName(PackageNamespace(""), "scrollTarget")
+
+L15:
+      jump                L31
+
+L16:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "ScrollTarget not found, or is not a valid target"
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+
+L31:
+      returnvoid
+     end ; code
+     try from L9 to L15 target L16 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+     trait slot QName(PackageInternalNs("fl.controls"), "target") slotid 1 type QName(PackageNamespace(""), "String") end
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "direction") flag OVERRIDE
+   method
+    refid "fl.controls:UIScrollBar/instance/direction/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "direction")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "direction") flag OVERRIDE
+   method
+    refid "fl.controls:UIScrollBar/instance/direction/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("fl.core:UIComponent"), "isLivePreview")
+      iffalse             L8
+
+      returnvoid
+
+L8:
+      getlex              QName(PackageNamespace(""), "componentInspectorSetting")
+      not
+      dup
+      iffalse             L17
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushnull
+      equals
+      not
+L17:
+      iffalse             L24
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      findproperty        QName(PackageNamespace(""), "scrollTarget")
+      pushnull
+      initproperty        QName(PackageNamespace(""), "scrollTarget")
+
+L24:
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "direction")
+
+      getlocal2
+      pushnull
+      ifeq                L34
+
+      findproperty        QName(PackageNamespace(""), "scrollTarget")
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "scrollTarget")
+
+      jump                L36
+
+L34:
+      findpropstrict      QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateScrollTargetProperties")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateScrollTargetProperties"), 0
+
+L36:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "update")
+   method
+    refid "fl.controls:UIScrollBar/instance/update"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+      pushtrue
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateScrollTargetProperties")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateScrollTargetProperties"), 0
+
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+      pushfalse
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:UIScrollBar"), "draw") flag OVERRIDE
+   method
+    refid "fl.controls:UIScrollBar/instance/fl.controls:UIScrollBar:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid"), 1
+      iffalse             L9
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateScrollTargetProperties")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateScrollTargetProperties"), 0
+
+L9:
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.controls:ScrollBar"), "draw"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateScrollTargetProperties")
+   method
+    refid "fl.controls:UIScrollBar/instance/fl.controls:UIScrollBar:updateScrollTargetProperties"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 12
+     maxscopedepth 19
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             1
+
+      getscopeobject      1
+      pushfalse
+      setslot             2
+
+      getscopeobject      1
+      pushnan
+      setslot             3
+
+      getscopeobject      1
+      pushnan
+      setslot             4
+
+      getscopeobject      1
+      pushundefined
+      coerce_a
+      setslot             6
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushnull
+      ifne                L35
+
+      findpropstrict      QName(PackageNamespace(""), "setScrollProperties")
+      getlex              QName(PackageNamespace(""), "pageSize")
+      getlex              QName(PackageNamespace(""), "minScrollPosition")
+      getlex              QName(PackageNamespace(""), "maxScrollPosition")
+      callpropvoid        QName(PackageNamespace(""), "setScrollProperties"), 3
+
+      findproperty        QName(PackageNamespace(""), "scrollPosition")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "scrollPosition")
+
+      jump                L205
+
+L35:
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             1
+
+      getscopeobject      1
+      pushfalse
+      setslot             2
+
+L42:
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushstring          "blockProgression"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L52
+
+      getscopeobject      1
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushstring          "blockProgression"
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("http://ns.adobe.com/textLayout/internal/2008")])
+      coerce_s
+      setslot             1
+
+L52:
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushstring          "pixelScrollV"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L59
+
+      getscopeobject      1
+      pushtrue
+      setslot             2
+
+L59:
+      jump                L73
+
+L60:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L73:
+      findpropstrict      QName(PrivateNamespace(null, "fl.controls:UIScrollBar"), "setTargetScrollProperties")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "direction")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollBarDirection")
+      getproperty         QName(PackageNamespace(""), "HORIZONTAL")
+      equals
+      getscopeobject      1
+      getslot             1
+      getscopeobject      1
+      getslot             2
+      callpropvoid        QName(PrivateNamespace(null, "fl.controls:UIScrollBar"), "setTargetScrollProperties"), 3
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+      pushstring          "scrollH"
+      ifne                L139
+
+      getscopeobject      1
+      pushbyte            0
+      convert_d
+      setslot             4
+
+L91:
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushstring          "controller"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      convert_b
+      dup
+      iffalse             L104
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushstring          "controller"
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("http://ns.adobe.com/textLayout/internal/2008")])
+      pushstring          "compositionWidth"
+      callproperty        Multiname("hasOwnProperty", [PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
+      convert_b
+L104:
+      iffalse             L114
+
+      getscopeobject      1
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushstring          "controller"
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("http://ns.adobe.com/textLayout/internal/2008")])
+      pushstring          "compositionWidth"
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("http://ns.adobe.com/textLayout/internal/2008")])
+      convert_d
+      setslot             3
+
+      jump                L119
+
+L114:
+      getscopeobject      1
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getproperty         QName(PackageNamespace(""), "width")
+      convert_d
+      setslot             3
+
+L119:
+      jump                L138
+
+L120:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getscopeobject      1
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getproperty         QName(PackageNamespace(""), "width")
+      convert_d
+      setslot             3
+
+      popscope
+      kill                2
+L138:
+      jump                L191
+
+L139:
+      getscopeobject      1
+      getslot             1
+      pushnull
+      ifeq                L165
+
+      getscopeobject      1
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushstring          "pixelMinScrollV"
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("http://ns.adobe.com/textLayout/internal/2008")])
+      coerce_a
+      setslot             6
+
+      getscopeobject      1
+      getslot             6
+      getlex              QName(PackageNamespace(""), "int")
+      istypelate
+      iffalse             L160
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             6
+      convert_d
+      setslot             4
+
+      jump                L164
+
+L160:
+      getscopeobject      1
+      pushbyte            1
+      convert_d
+      setslot             4
+
+L164:
+      jump                L169
+
+L165:
+      getscopeobject      1
+      pushbyte            1
+      convert_d
+      setslot             4
+
+L169:
+      jump                L187
+
+L170:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            2
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getscopeobject      1
+      pushbyte            1
+      convert_d
+      setslot             4
+
+      popscope
+      kill                2
+L187:
+      getscopeobject      1
+      pushbyte            10
+      convert_d
+      setslot             3
+
+L191:
+      findpropstrict      QName(PackageNamespace(""), "setScrollProperties")
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             4
+      getlex              QName(PackageNamespace(""), "scrollTarget")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetMaxScrollProperty")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("http://ns.adobe.com/textLayout/internal/2008")])
+      callpropvoid        QName(PackageNamespace(""), "setScrollProperties"), 3
+
+      findproperty        QName(PackageNamespace(""), "scrollPosition")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("http://ns.adobe.com/textLayout/internal/2008")])
+      initproperty        QName(PackageNamespace(""), "scrollPosition")
+
+L205:
+      returnvoid
+     end ; code
+     try from L42 to L59 target L60 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e1") end
+     try from L91 to L119 target L120 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e2") end
+     try from L139 to L169 target L170 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e3") end
+     trait slot QName(PackageInternalNs("fl.controls"), "blockProg") slotid 1 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("fl.controls"), "hasPixelVS") slotid 2 type QName(PackageNamespace(""), "Boolean") end
+     trait slot QName(PackageInternalNs("fl.controls"), "pageSize") slotid 3 type QName(PackageNamespace(""), "Number") end
+     trait slot QName(PackageInternalNs("fl.controls"), "minScroll") slotid 4 type QName(PackageNamespace(""), "Number") end
+     trait const QName(PackageInternalNs("fl.controls"), "local_tlf_internal") slotid 5 value Namespace(Namespace("http://ns.adobe.com/textLayout/internal/2008")) end
+     trait slot QName(PackageInternalNs("fl.controls"), "minScrollVValue") slotid 6 end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setScrollProperties") flag OVERRIDE
+   method
+    refid "fl.controls:UIScrollBar/instance/setScrollProperties"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal3
+      convert_d
+      setlocal            5
+
+      getlocal2
+      pushbyte            0
+      ifnlt               L11
+
+      pushbyte            0
+      convert_d
+      jump                L13
+
+L11:
+      getlocal2
+      convert_d
+L13:
+      convert_d
+      setlocal            6
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      pushnull
+      ifeq                L26
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal3
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetMaxScrollProperty")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      convert_d
+      setlocal            5
+
+L26:
+      getlocal0
+      getlocal1
+      getlocal            6
+      getlocal            5
+      getlocal            4
+      callsupervoid       QName(PackageNamespace(""), "setScrollProperties"), 4
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setScrollPosition") flag OVERRIDE
+   method
+    refid "fl.controls:UIScrollBar/instance/setScrollPosition"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional True()
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callsupervoid       QName(PackageNamespace(""), "setScrollPosition"), 2
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      iftrue              L12
+
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inScroll")
+      pushfalse
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inScroll")
+
+      returnvoid
+
+L12:
+      findpropstrict      QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateTargetScroll")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateTargetScroll"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateTargetScroll")
+   method
+    refid "fl.controls:UIScrollBar/instance/fl.controls:UIScrollBar:updateTargetScroll"
+    param QName(PackageNamespace("fl.events"), "ScrollEvent")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+      iffalse             L5
+
+      returnvoid
+
+L5:
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+      getlex              QName(PackageNamespace(""), "scrollPosition")
+      setproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:UIScrollBar"), "handleTargetChange")
+   method
+    refid "fl.controls:UIScrollBar/instance/fl.controls:UIScrollBar:handleTargetChange"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+      pushtrue
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+
+      findpropstrict      QName(PackageNamespace(""), "setScrollPosition")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "setScrollPosition"), 2
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateScrollTargetProperties")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateScrollTargetProperties"), 0
+
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+      pushfalse
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:UIScrollBar"), "handleTargetScroll")
+   method
+    refid "fl.controls:UIScrollBar/instance/fl.controls:UIScrollBar:handleTargetScroll"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ScrollBar"), "inDrag")
+      iffalse             L5
+
+      returnvoid
+
+L5:
+      getlex              QName(PackageNamespace(""), "enabled")
+      iftrue              L8
+
+      returnvoid
+
+L8:
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+      pushtrue
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateScrollTargetProperties")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "updateScrollTargetProperties"), 0
+
+      findproperty        QName(PackageNamespace(""), "scrollPosition")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_scrollTarget")
+      getlex              QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:UIScrollBar"), PackageNamespace("fl.controls"), PackageNamespace(""), ProtectedNamespace("fl.controls:UIScrollBar"), PrivateNamespace(null, "fl.controls:UIScrollBar/instance"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:UIScrollBar"), StaticProtectedNs("fl.controls:ScrollBar"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      initproperty        QName(PackageNamespace(""), "scrollPosition")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+      pushfalse
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "inEdit")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "fl.controls:UIScrollBar"), "setTargetScrollProperties")
+   method
+    refid "fl.controls:UIScrollBar/instance/fl.controls:UIScrollBar/setTargetScrollProperties"
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushstring          "rl"
+      ifne                L29
+
+      getlocal1
+      iffalse             L22
+
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+      getlocal3
+      iffalse             L12
+
+      pushstring          "pixelScrollV"
+      jump                L13
+
+L12:
+      pushstring          "scrollV"
+L13:
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetMaxScrollProperty")
+      getlocal3
+      iffalse             L19
+
+      pushstring          "pixelMaxScrollV"
+      jump                L20
+
+L19:
+      pushstring          "maxScrollV"
+L20:
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetMaxScrollProperty")
+
+      jump                L28
+
+L22:
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+      pushstring          "scrollH"
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetMaxScrollProperty")
+      pushstring          "maxScrollH"
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetMaxScrollProperty")
+
+L28:
+      jump                L52
+
+L29:
+      getlocal1
+      iffalse             L38
+
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+      pushstring          "scrollH"
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetMaxScrollProperty")
+      pushstring          "maxScrollH"
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetMaxScrollProperty")
+
+      jump                L52
+
+L38:
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+      getlocal3
+      iffalse             L43
+
+      pushstring          "pixelScrollV"
+      jump                L44
+
+L43:
+      pushstring          "scrollV"
+L44:
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetScrollProperty")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetMaxScrollProperty")
+      getlocal3
+      iffalse             L50
+
+      pushstring          "pixelMaxScrollV"
+      jump                L51
+
+L50:
+      pushstring          "maxScrollV"
+L51:
+      initproperty        QName(ProtectedNamespace("fl.controls:UIScrollBar"), "_targetMaxScrollProperty")
+
+L52:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.controls:UIScrollBar/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "fl.controls:UIScrollBar"), "defaultStyles")
+    newobject           0
+    setproperty         QName(PrivateNamespace(null, "fl.controls:UIScrollBar"), "defaultStyles")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "fl.controls:UIScrollBar"), "defaultStyles") slotid 1 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   refid "fl.controls:UIScrollBar/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+     getlex              QName(PrivateNamespace(null, "fl.controls:UIScrollBar"), "defaultStyles")
+     getlex              QName(PackageNamespace("fl.controls"), "ScrollBar")
+     callproperty        QName(PackageNamespace(""), "getStyleDefinition"), 0
+     callproperty        QName(PackageNamespace(""), "mergeStyles"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

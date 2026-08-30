@@ -1,0 +1,1563 @@
+class
+ refid "FBListener"
+ instance QName(PackageNamespace(""), "FBListener")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("FBListener")
+  iinit
+   refid "FBListener/instance/init"
+   param QName(PackageNamespace("flash.display"), "MovieClip")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      Multiname("Loader", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.display")])
+     constructprop       Multiname("Loader", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.display")]), 0
+     initproperty        QName(PrivateNamespace(null, "FBListener/instance"), "imgLoader")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+     getlex              Multiname("Security", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.system")])
+     pushstring          "fbcdn-profile-a.akamaihd.net"
+     callpropvoid        Multiname("allowDomain", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+     getlex              Multiname("Security", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.system")])
+     pushstring          "https://fbcdn-profile-a.akamaihd.net/crossdomain.xml"
+     callpropvoid        Multiname("loadPolicyFile", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "FBListener/instance"), "rootClass") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PrivateNamespace(null, "FBListener/instance"), "fbID") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PrivateNamespace(null, "FBListener/instance"), "strToken") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "FBListener/instance"), "fbName") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "FBListener/instance"), "fbEmail") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "FBListener/instance"), "fbIP") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "FBListener/instance"), "imgURL") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "FBListener/instance"), "fbImg") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PrivateNamespace(null, "FBListener/instance"), "fbDOB") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "FBListener/instance"), "imgLoader") type QName(PackageNamespace("flash.display"), "Loader") end
+  trait slot QName(PrivateNamespace(null, "FBListener/instance"), "imgLoaded") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(PackageNamespace(""), "consoleLog")
+   method
+    refid "FBListener/instance/consoleLog"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      Multiname("trace", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal1
+      callpropvoid        Multiname("trace", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "handleFBEvent")
+   method
+    refid "FBListener/instance/handleFBEvent"
+    param QName(PackageNamespace(""), "String")
+    param null
+    flag NEED_ACTIVATION
+    body
+     maxstack 8
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal3
+
+      pushscope
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setslot             3
+
+      getscopeobject      1
+      pushnan
+      setslot             4
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             5
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+      setslot             6
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.net"), "URLVariables")
+      setslot             7
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getlocal2
+      setslot             2
+
+      getlocal0
+      pushstring          "fb callback received, cmd: "
+      getscopeobject      1
+      getslot             1
+      add
+      callpropvoid        Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      jump                L617
+
+L38:
+      label
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("params", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("FBID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      iffalse             L47
+
+      getlex              Multiname("ExternalInterface", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "GetCurrentUser"
+      callpropvoid        Multiname("call", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+L47:
+      jump                L649
+
+L48:
+      label
+      getlocal0
+      pushstring          "FBData::::::::>>>>> "
+      getscopeobject      1
+      getslot             2
+      add
+      callpropvoid        Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             2
+      pushstring          ","
+      callproperty        Multiname("split", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setslot             3
+
+      getlocal0
+      findpropstrict      Multiname("Number", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getscopeobject      1
+      getslot             3
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("Number", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      initproperty        Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getscopeobject      1
+      getslot             3
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      initproperty        Multiname("fbName", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getscopeobject      1
+      getslot             3
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      initproperty        Multiname("fbEmail", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getscopeobject      1
+      getslot             3
+      pushbyte            4
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      initproperty        Multiname("strToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getscopeobject      1
+      getslot             3
+      pushbyte            5
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      initproperty        Multiname("fbIP", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      pushstring          "HANDLE FB EVENT USER DATA:   fbID: "
+      getlocal0
+      getproperty         Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      add
+      pushstring          " strToken: "
+      add
+      getlocal0
+      getproperty         Multiname("strToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      add
+      pushstring          " fbName: "
+      add
+      getlocal0
+      getproperty         Multiname("fbName", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      add
+      pushstring          " fbEMail: "
+      add
+      getlocal0
+      getproperty         Multiname("fbEmail", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      add
+      pushstring          " fbIP: "
+      add
+      getlocal0
+      getproperty         Multiname("fbIP", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      add
+      callpropvoid        Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+L120:
+      getlocal0
+      getproperty         Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushbyte            0
+      greaterthan
+      dup
+      iffalse             L133
+
+      pop
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("sfc", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushnull
+      equals
+      not
+L133:
+      dup
+      iffalse             L141
+
+      pop
+      getlocal0
+      getproperty         Multiname("strToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushnull
+      equals
+      not
+L141:
+      iffalse             L163
+
+      getlocal0
+      pushstring          "!!   fb sfc sendxt   !!"
+      callpropvoid        Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("sfc", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "zm"
+      pushstring          "fbCmd"
+      pushstring          "linkAccount"
+      getlocal0
+      getproperty         Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("fbName", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("fbEmail", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("fbIP", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      newarray            5
+      pushstring          "str"
+      pushbyte            1
+      callpropvoid        Multiname("sendXtMessage", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 5
+
+L163:
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("mcO", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushnull
+      ifeq                L172
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("mcO", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callpropvoid        Multiname("checkFBStatus", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+
+L172:
+      jump                L189
+
+L173:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      findpropstrict      Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "Something null happened"
+      callpropvoid        Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      popscope
+      kill                4
+L189:
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      findpropstrict      Multiname("Object", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      constructprop       Multiname("Object", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+      setproperty         Multiname("Me", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("Me", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("id", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("Me", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("fbName", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("name", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("Me", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("fbEmail", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("email", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+L208:
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("Me", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getscopeobject      1
+      getslot             3
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("birthday", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+L215:
+      jump                L236
+
+L216:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("Me", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "5/5/2001"
+      setproperty         Multiname("birthday", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      findpropstrict      Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "Facebook Birthday is undefined"
+      callpropvoid        Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      popscope
+      kill                4
+L236:
+      getlocal0
+      getproperty         Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      iffalse             L257
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushtrue
+      setproperty         Multiname("isLoggedIn", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("FBConnectCallback", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushnull
+      ifeq                L257
+
+      getlocal0
+      pushstring          "======> FBConnectCallback <======"
+      callpropvoid        Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callpropvoid        Multiname("FBConnectCallback", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushnull
+      setproperty         Multiname("FBConnectCallback", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+L257:
+      jump                L649
+
+L258:
+      label
+      getscopeobject      1
+      getscopeobject      1
+      getslot             2
+      pushstring          ","
+      callproperty        Multiname("split", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setslot             3
+
+      getlocal0
+      findpropstrict      Multiname("Number", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getscopeobject      1
+      getslot             3
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("Number", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      initproperty        Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getscopeobject      1
+      getslot             3
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      initproperty        Multiname("fbName", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getscopeobject      1
+      getslot             3
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      initproperty        Multiname("fbEmail", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getscopeobject      1
+      getslot             3
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      initproperty        Multiname("fbDOB", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getscopeobject      1
+      getslot             3
+      pushbyte            4
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      initproperty        Multiname("strToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getscopeobject      1
+      getslot             3
+      pushbyte            5
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      initproperty        Multiname("fbIP", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getscopeobject      1
+      getslot             3
+      pushbyte            6
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      initproperty        Multiname("imgURL", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushtrue
+      setproperty         Multiname("isLoggedIn", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      findpropstrict      Multiname("Object", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      constructprop       Multiname("Object", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+      setproperty         Multiname("Me", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("Me", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("id", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("Me", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("fbName", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("name", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("Me", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("fbEmail", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("email", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+L332:
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("Me", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getscopeobject      1
+      getslot             3
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("birthday", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+L339:
+      jump                L360
+
+L340:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            2
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("Me", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "5/5/2001"
+      setproperty         Multiname("birthday", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      findpropstrict      Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "Facebook Birthday is undefined"
+      callpropvoid        Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      popscope
+      kill                4
+L360:
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("FBConnectCallback", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushnull
+      ifeq                L375
+
+      getlocal0
+      pushstring          "======> FBConnectCallback <======"
+      callpropvoid        Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callpropvoid        Multiname("FBConnectCallback", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushnull
+      setproperty         Multiname("FBConnectCallback", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+L375:
+      jump                L649
+
+L376:
+      label
+      getscopeobject      1
+      getslot             2
+      pushstring          "status:undefined"
+      callproperty        Multiname("indexOf", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      pushbyte            -1
+      ifngt               L384
+
+      returnvoid
+
+L384:
+      getscopeobject      1
+      getscopeobject      1
+      getslot             2
+      pushstring          ";"
+      callproperty        Multiname("split", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setslot             3
+
+      getlocal0
+      findpropstrict      Multiname("Number", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getscopeobject      1
+      getslot             3
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          ":"
+      callproperty        Multiname("split", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("Number", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      initproperty        Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      findpropstrict      Multiname("String", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getscopeobject      1
+      getslot             3
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          ":"
+      callproperty        Multiname("split", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("String", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      initproperty        Multiname("strToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      pushstring          "fbLogin received = fbData = "
+      getscopeobject      1
+      getslot             2
+      add
+      callpropvoid        Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      getlocal0
+      getproperty         Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushbyte            1
+      ifnlt               L426
+
+      jump                L649
+
+L426:
+      getlex              Multiname("ExternalInterface", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "GetCurrentUserLogin"
+      callpropvoid        Multiname("call", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("mcConnDetail", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "Authenticating Account Info..."
+      callpropvoid        Multiname("showConn", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      getscopeobject      1
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("rand", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+      convert_d
+      setslot             4
+
+      getscopeobject      1
+      pushstring          "cf-userlogin.asp?ran="
+      getscopeobject      1
+      getslot             4
+      add
+      coerce_s
+      setslot             5
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loaderInfo", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("url", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("toLowerCase", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+      pushstring          "file://"
+      callproperty        Multiname("indexOf", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      pushbyte            0
+      greaterequals
+      dup
+      iftrue              L468
+
+      pop
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loaderInfo", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("url", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("toLowerCase", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+      pushstring          "cdn.aq.com"
+      callproperty        Multiname("indexOf", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      pushbyte            0
+      greaterequals
+L468:
+      dup
+      iftrue              L480
+
+      pop
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loaderInfo", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("url", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("toLowerCase", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+      pushstring          "aqworldscdn.aq.com"
+      callproperty        Multiname("indexOf", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      pushbyte            0
+      greaterequals
+L480:
+      iffalse             L489
+
+      getscopeobject      1
+      pushstring          "https://www.aq.com/game/"
+      getscopeobject      1
+      getslot             5
+      add
+      coerce_s
+      setslot             5
+
+      jump                L501
+
+L489:
+      getscopeobject      1
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("params", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loginURL", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "?ran="
+      add
+      getscopeobject      1
+      getslot             4
+      add
+      coerce_s
+      setslot             5
+
+L501:
+      getscopeobject      1
+      findpropstrict      Multiname("URLRequest", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.net")])
+      getscopeobject      1
+      getslot             5
+      constructprop       Multiname("URLRequest", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.net")]), 1
+      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+      setslot             6
+
+      getscopeobject      1
+      findpropstrict      Multiname("URLVariables", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.net")])
+      constructprop       Multiname("URLVariables", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.net")]), 0
+      coerce              QName(PackageNamespace("flash.net"), "URLVariables")
+      setslot             7
+
+      getscopeobject      1
+      getslot             7
+      getlocal0
+      getproperty         Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("fbid", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getscopeobject      1
+      getslot             7
+      getlocal0
+      getproperty         Multiname("strToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("fbtoken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getscopeobject      1
+      getslot             6
+      getscopeobject      1
+      getslot             7
+      setproperty         Multiname("data", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getscopeobject      1
+      getslot             6
+      getlex              Multiname("URLRequestMethod", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.net")])
+      getproperty         Multiname("POST", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("method", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushtrue
+      setproperty         Multiname("isLoggedIn", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("strToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("AccessToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callpropvoid        Multiname("SaveToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loginLoader", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlex              Multiname("Event", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.events")])
+      getproperty         Multiname("COMPLETE", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("onLoginComplete", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 2
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loginLoader", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlex              Multiname("Event", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.events")])
+      getproperty         Multiname("COMPLETE", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("onLoginComplete", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 2
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loginLoader", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlex              Multiname("IOErrorEvent", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.events")])
+      getproperty         Multiname("IO_ERROR", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("onLoginError", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 5
+
+L572:
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loginLoader", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getscopeobject      1
+      getslot             6
+      callpropvoid        Multiname("load", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+L578:
+      jump                L595
+
+L579:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            3
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      findpropstrict      Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "Unable to load URL"
+      callpropvoid        Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      popscope
+      kill                4
+L595:
+      jump                L649
+
+L596:
+      label
+      getlocal0
+      pushbyte            0
+      initproperty        Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      pushstring          ""
+      initproperty        Multiname("strToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlex              Multiname("FacebookConnect", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callpropvoid        Multiname("ClearToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("mcO", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushnull
+      ifeq                L614
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("mcO", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callpropvoid        Multiname("checkFBStatus", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+
+L614:
+      jump                L649
+
+L615:
+      label
+      jump                L649
+
+L617:
+      getscopeobject      1
+      getslot             1
+      setlocal            4
+
+      pushstring          "linkAccount"
+      getlocal            4
+      ifstrictne          L625
+
+      pushbyte            0
+      jump                L647
+
+L625:
+      pushstring          "GetCurrentUserComplete"
+      getlocal            4
+      ifstrictne          L630
+
+      pushbyte            1
+      jump                L647
+
+L630:
+      pushstring          "GetCurrentUserLogin"
+      getlocal            4
+      ifstrictne          L635
+
+      pushbyte            2
+      jump                L647
+
+L635:
+      pushstring          "fbLogin"
+      getlocal            4
+      ifstrictne          L640
+
+      pushbyte            3
+      jump                L647
+
+L640:
+      pushstring          "Logout"
+      getlocal            4
+      ifstrictne          L645
+
+      pushbyte            4
+      jump                L647
+
+L645:
+      jump                L646
+
+L646:
+      pushbyte            5
+L647:
+      kill                4
+      lookupswitch        L615, [L38, L48, L258, L376, L596, L615]
+
+L649:
+      returnvoid
+     end ; code
+     try from L120 to L172 target L173 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L208 to L215 target L216 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L332 to L339 target L340 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L572 to L578 target L579 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+     trait slot QName(PackageInternalNs(""), "cmd") slotid 1 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs(""), "fbData") slotid 2 end
+     trait slot QName(PackageInternalNs(""), "tokens") slotid 3 type QName(PackageNamespace(""), "Array") end
+     trait slot QName(PackageInternalNs(""), "rand") slotid 4 type QName(PackageNamespace(""), "Number") end
+     trait slot QName(PackageInternalNs(""), "url") slotid 5 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs(""), "request") slotid 6 type QName(PackageNamespace("flash.net"), "URLRequest") end
+     trait slot QName(PackageInternalNs(""), "variables") slotid 7 type QName(PackageNamespace("flash.net"), "URLVariables") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "FBListener/instance"), "imgComplete")
+   method
+    refid "FBListener/instance/FBListener/instance/imgComplete"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      Multiname("Bitmap", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.display")])
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("content", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("Bitmap", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.display")]), 1
+      initproperty        Multiname("fbImg", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getproperty         Multiname("fbImg", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushbyte            62
+      setproperty         Multiname("width", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getproperty         Multiname("fbImg", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushbyte            60
+      setproperty         Multiname("height", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      pushtrue
+      initproperty        Multiname("imgLoaded", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "FBListener/instance"), "imgError")
+   method
+    refid "FBListener/instance/FBListener/instance/imgError"
+    param QName(PackageNamespace("flash.events"), "IOErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      Multiname("trace", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "[Game] ERR FBListener image load: "
+      getlocal1
+      getproperty         Multiname("text", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      add
+      callpropvoid        Multiname("trace", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      getlocal0
+      pushfalse
+      initproperty        Multiname("imgLoaded", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "handleEvent")
+   method
+    refid "FBListener/instance/handleEvent"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      jump                L43
+
+L3:
+      label
+      getlocal1
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "false"
+      ifne                L13
+
+      getlex              Multiname("ExternalInterface", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "fbLogout"
+      pushstring          "Logout"
+      callpropvoid        Multiname("call", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 2
+
+L13:
+      jump                L61
+
+L14:
+      label
+      getlocal1
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "true"
+      ifne                L27
+
+      getlex              Multiname("ExternalInterface", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "fbLogout"
+      pushstring          "Logout"
+      callpropvoid        Multiname("call", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 2
+
+      getlocal0
+      pushbyte            0
+      initproperty        Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+L27:
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("mcO", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushnull
+      ifeq                L40
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("mcO", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callpropvoid        Multiname("checkFBStatus", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("mcO", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callpropvoid        Multiname("closeUnlink", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+
+L40:
+      jump                L61
+
+L41:
+      label
+      jump                L61
+
+L43:
+      getlocal1
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setlocal2
+
+      pushstring          "Link"
+      getlocal2
+      ifstrictne          L52
+
+      pushbyte            0
+      jump                L59
+
+L52:
+      pushstring          "unlink"
+      getlocal2
+      ifstrictne          L57
+
+      pushbyte            1
+      jump                L59
+
+L57:
+      jump                L58
+
+L58:
+      pushbyte            2
+L59:
+      kill                2
+      lookupswitch        L41, [L3, L14, L41]
+
+L61:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "doFBLogin")
+   method
+    refid "FBListener/instance/doFBLogin"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "String")
+    flag NEED_ACTIVATION
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal3
+
+      pushscope
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getlocal2
+      setslot             2
+
+      getlocal0
+      getscopeobject      1
+      getslot             1
+      initproperty        Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getscopeobject      1
+      getslot             2
+      initproperty        Multiname("strToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getproperty         Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushbyte            1
+      ifnlt               L25
+
+      returnvoid
+
+L25:
+      getlex              Multiname("ExternalInterface", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "GetCurrentUserLogin"
+      callpropvoid        Multiname("call", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("mcConnDetail", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "Authenticating Account Info..."
+      callpropvoid        Multiname("showConn", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      getscopeobject      1
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("rand", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+      convert_d
+      setslot             3
+
+      getscopeobject      1
+      pushstring          "cf-userlogin.asp?ran="
+      getscopeobject      1
+      getslot             3
+      add
+      coerce_s
+      setslot             4
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loaderInfo", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("url", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("toLowerCase", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+      pushstring          "file://"
+      callproperty        Multiname("indexOf", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      pushbyte            0
+      greaterequals
+      dup
+      iftrue              L67
+
+      pop
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loaderInfo", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("url", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("toLowerCase", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+      pushstring          "cdn.aq.com"
+      callproperty        Multiname("indexOf", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      pushbyte            0
+      greaterequals
+L67:
+      dup
+      iftrue              L79
+
+      pop
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loaderInfo", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("url", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callproperty        Multiname("toLowerCase", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 0
+      pushstring          "aqworldscdn.aq.com"
+      callproperty        Multiname("indexOf", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+      pushbyte            0
+      greaterequals
+L79:
+      iffalse             L88
+
+      getscopeobject      1
+      pushstring          "https://www.aq.com/game/"
+      getscopeobject      1
+      getslot             4
+      add
+      coerce_s
+      setslot             4
+
+      jump                L100
+
+L88:
+      getscopeobject      1
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("params", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loginURL", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "?ran="
+      add
+      getscopeobject      1
+      getslot             3
+      add
+      coerce_s
+      setslot             4
+
+L100:
+      getscopeobject      1
+      findpropstrict      Multiname("URLRequest", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.net")])
+      getscopeobject      1
+      getslot             4
+      constructprop       Multiname("URLRequest", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.net")]), 1
+      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+      setslot             5
+
+      getscopeobject      1
+      findpropstrict      Multiname("URLVariables", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.net")])
+      constructprop       Multiname("URLVariables", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.net")]), 0
+      coerce              QName(PackageNamespace("flash.net"), "URLVariables")
+      setslot             6
+
+      getscopeobject      1
+      getslot             6
+      getlocal0
+      getproperty         Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("fbid", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getscopeobject      1
+      getslot             6
+      getlocal0
+      getproperty         Multiname("strToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("fbtoken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getscopeobject      1
+      getslot             5
+      getscopeobject      1
+      getslot             6
+      setproperty         Multiname("data", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getscopeobject      1
+      getslot             5
+      getlex              Multiname("URLRequestMethod", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.net")])
+      getproperty         Multiname("POST", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      setproperty         Multiname("method", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loginLoader", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlex              Multiname("Event", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.events")])
+      getproperty         Multiname("COMPLETE", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("onLoginComplete", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 2
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loginLoader", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlex              Multiname("Event", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.events")])
+      getproperty         Multiname("COMPLETE", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("onLoginComplete", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 2
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loginLoader", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlex              Multiname("IOErrorEvent", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener"), PackageNamespace("flash.events")])
+      getproperty         Multiname("IO_ERROR", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("onLoginError", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 5
+
+L162:
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getproperty         Multiname("loginLoader", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      getscopeobject      1
+      getslot             5
+      callpropvoid        Multiname("load", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+L168:
+      jump                L185
+
+L169:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      findpropstrict      Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "Unable to load URL"
+      callpropvoid        Multiname("consoleLog", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 1
+
+      popscope
+      kill                4
+L185:
+      returnvoid
+     end ; code
+     try from L162 to L168 target L169 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+     trait slot QName(PackageInternalNs(""), "ID") slotid 1 type QName(PackageNamespace(""), "Number") end
+     trait slot QName(PackageInternalNs(""), "Token") slotid 2 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs(""), "rand") slotid 3 type QName(PackageNamespace(""), "Number") end
+     trait slot QName(PackageInternalNs(""), "url") slotid 4 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs(""), "request") slotid 5 type QName(PackageNamespace("flash.net"), "URLRequest") end
+     trait slot QName(PackageInternalNs(""), "variables") slotid 6 type QName(PackageNamespace("flash.net"), "URLVariables") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "fbLogout")
+   method
+    refid "FBListener/instance/fbLogout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushbyte            0
+      initproperty        Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      getlocal0
+      pushstring          ""
+      initproperty        Multiname("strToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "logoutFromFB")
+   method
+    refid "FBListener/instance/logoutFromFB"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              Multiname("ExternalInterface", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushstring          "fbLogout"
+      pushstring          "Logout"
+      callpropvoid        Multiname("call", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")]), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "isLoggedIn")
+   method
+    refid "FBListener/instance/isLoggedIn/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      pushbyte            0
+      greaterthan
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "ID")
+   method
+    refid "FBListener/instance/ID/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("fbID", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "Token")
+   method
+    refid "FBListener/instance/Token/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("strToken", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "Loaded")
+   method
+    refid "FBListener/instance/Loaded/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("imgLoaded", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "FBImage")
+   method
+    refid "FBListener/instance/FBImage/getter"
+    returns QName(PackageNamespace("flash.display"), "Bitmap")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("fbImg", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "Name")
+   method
+    refid "FBListener/instance/Name/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("fbName", [PrivateNamespace(null, "FBListener/instance"), PrivateNamespace(null, "FBListener"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.external"), ProtectedNamespace("FBListener"), StaticProtectedNs("FBListener")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "FBListener/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

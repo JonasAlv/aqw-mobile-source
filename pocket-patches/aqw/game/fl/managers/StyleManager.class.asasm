@@ -1,0 +1,1133 @@
+class
+ refid "fl.managers:StyleManager"
+ instance QName(PackageNamespace("fl.managers"), "StyleManager")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.managers:StyleManager")
+  iinit
+   refid "fl.managers:StyleManager/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "styleToClassesHash")
+     newobject           0
+     initproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "styleToClassesHash")
+
+     findproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToInstancesDict")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     pushtrue
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+     initproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToInstancesDict")
+
+     findproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToStylesDict")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     pushtrue
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+     initproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToStylesDict")
+
+     findproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToDefaultStylesDict")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     pushtrue
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+     initproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToDefaultStylesDict")
+
+     findproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "globalStyles")
+     getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+     callproperty        QName(PackageNamespace(""), "getStyleDefinition"), 0
+     initproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "globalStyles")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "fl.managers:StyleManager"), "styleToClassesHash") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToInstancesDict") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToStylesDict") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToDefaultStylesDict") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PrivateNamespace(null, "fl.managers:StyleManager"), "globalStyles") type QName(PackageNamespace(""), "Object") end
+ end ; instance
+ cinit
+  refid "fl.managers:StyleManager/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "fl.managers:StyleManager"), "_instance") slotid 1 type QName(PackageNamespace("fl.managers"), "StyleManager") end
+ trait method QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance") flag FINAL dispid 3
+  method
+   refid "fl.managers:StyleManager/class/fl.managers:StyleManager/getInstance"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "fl.managers:StyleManager"), "_instance")
+     pushnull
+     ifne                L9
+
+     findproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "_instance")
+     getlocal0
+     construct           0
+     setproperty         QName(PrivateNamespace(null, "fl.managers:StyleManager"), "_instance")
+
+L9:
+     getlex              QName(PrivateNamespace(null, "fl.managers:StyleManager"), "_instance")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "registerInstance") flag FINAL dispid 4
+  method
+   refid "fl.managers:StyleManager/class/registerInstance"
+   param QName(PackageNamespace("fl.core"), "UIComponent")
+   returns QName(PackageNamespace(""), "void")
+   flag NEED_ACTIVATION
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 13
+    code
+     getlocal0
+     pushscope
+
+     newactivation
+     dup
+     setlocal2
+
+     pushscope
+
+     getscopeobject      1
+     pushnull
+     coerce              QName(PackageNamespace(""), "Class")
+     setslot             4
+
+     getscopeobject      1
+     pushnull
+     coerce              QName(PackageNamespace(""), "Object")
+     setslot             5
+
+     getscopeobject      1
+     pushnull
+     coerce              QName(PackageNamespace(""), "Object")
+     setslot             6
+
+     getscopeobject      1
+     pushnull
+     coerce_s
+     setslot             7
+
+     getscopeobject      1
+     getlocal1
+     setslot             1
+
+     getscopeobject      1
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance")
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance"), 0
+     coerce              QName(PackageNamespace("fl.managers"), "StyleManager")
+     setslot             2
+
+     getscopeobject      1
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef")
+     getscopeobject      1
+     getslot             1
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef"), 1
+     coerce              QName(PackageNamespace(""), "Class")
+     setslot             3
+
+     getscopeobject      1
+     getslot             3
+     pushnull
+     ifne                L42
+
+     returnvoid
+
+L42:
+     getscopeobject      1
+     getslot             2
+     getproperty         QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToInstancesDict")
+     getscopeobject      1
+     getslot             3
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     pushnull
+     ifne                L225
+
+     getscopeobject      1
+     getslot             2
+     getproperty         QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToInstancesDict")
+     getscopeobject      1
+     getslot             3
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     pushtrue
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+     setproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+
+     getscopeobject      1
+     getscopeobject      1
+     getslot             3
+     coerce              QName(PackageNamespace(""), "Class")
+     setslot             4
+
+     jump                L150
+
+L65:
+     label
+     getscopeobject      1
+     getslot             4
+     pushstring          "getStyleDefinition"
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     pushnull
+     ifeq                L85
+
+     getscopeobject      1
+     getscopeobject      1
+     getslot             4
+     dup
+     setlocal3
+
+     pushstring          "getStyleDefinition"
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getlocal3
+     call                0
+     kill                3
+     coerce              QName(PackageNamespace(""), "Object")
+     setslot             5
+
+     jump                L154
+
+L85:
+     getscopeobject      1
+     getscopeobject      1
+     getslot             1
+     getproperty         QName(PackageNamespace(""), "loaderInfo")
+     getproperty         QName(PackageNamespace(""), "applicationDomain")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedSuperclassName")
+     getscopeobject      1
+     getslot             4
+     callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedSuperclassName"), 1
+     callproperty        QName(PackageNamespace(""), "getDefinition"), 1
+     getlex              QName(PackageNamespace(""), "Class")
+     astypelate
+     coerce              QName(PackageNamespace(""), "Class")
+     setslot             4
+
+L99:
+     jump                L150
+
+L100:
+     getlocal0
+     pushscope
+
+     getlocal2
+     pushscope
+
+     newcatch            0
+     dup
+     setlocal3
+
+     dup
+     pushscope
+
+     swap
+     setslot             1
+
+L111:
+     getscopeobject      1
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getDefinitionByName")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedSuperclassName")
+     getscopeobject      1
+     getslot             4
+     callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedSuperclassName"), 1
+     callproperty        QName(PackageNamespace("flash.utils"), "getDefinitionByName"), 1
+     getlex              QName(PackageNamespace(""), "Class")
+     astypelate
+     coerce              QName(PackageNamespace(""), "Class")
+     setslot             4
+
+L122:
+     jump                L148
+
+L123:
+     getlocal0
+     pushscope
+
+     getlocal2
+     pushscope
+
+     getlocal3
+     pushscope
+
+     newcatch            1
+     dup
+     setlocal            4
+
+     dup
+     pushscope
+
+     swap
+     setslot             1
+
+     getscopeobject      1
+     getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+     callproperty        QName(PackageNamespace(""), "getStyleDefinition"), 0
+     coerce              QName(PackageNamespace(""), "Object")
+     setslot             5
+
+     kill                4
+     kill                3
+     popscope
+     kill                4
+     popscope
+     kill                3
+     jump                L154
+
+L148:
+     popscope
+     kill                3
+L150:
+     getscopeobject      1
+     getslot             5
+     pushnull
+     ifeq                L65
+
+L154:
+     getscopeobject      1
+     getscopeobject      1
+     getslot             2
+     getproperty         QName(PrivateNamespace(null, "fl.managers:StyleManager"), "styleToClassesHash")
+     coerce              QName(PackageNamespace(""), "Object")
+     setslot             6
+
+     pushbyte            0
+     setlocal3
+
+     getscopeobject      1
+     getslot             5
+     coerce_a
+     setlocal            4
+
+     jump                L198
+
+L167:
+     label
+     getscopeobject      1
+     getlocal            4
+     getlocal3
+     nextname
+     coerce_s
+     setslot             7
+
+     getscopeobject      1
+     getslot             6
+     getscopeobject      1
+     getslot             7
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     pushnull
+     ifne                L189
+
+     getscopeobject      1
+     getslot             6
+     getscopeobject      1
+     getslot             7
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     pushtrue
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+     setproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+
+L189:
+     getscopeobject      1
+     getslot             6
+     getscopeobject      1
+     getslot             7
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getscopeobject      1
+     getslot             3
+     pushtrue
+     setproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+
+L198:
+     hasnext2            4, 3
+     iftrue              L167
+
+     kill                4
+     kill                3
+     getscopeobject      1
+     getslot             2
+     getproperty         QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToDefaultStylesDict")
+     getscopeobject      1
+     getslot             3
+     getscopeobject      1
+     getslot             5
+     setproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+
+     getscopeobject      1
+     getslot             2
+     getproperty         QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToStylesDict")
+     getscopeobject      1
+     getslot             3
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     pushnull
+     ifne                L225
+
+     getscopeobject      1
+     getslot             2
+     getproperty         QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToStylesDict")
+     getscopeobject      1
+     getslot             3
+     newobject           0
+     setproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+
+L225:
+     getscopeobject      1
+     getslot             2
+     getproperty         QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToInstancesDict")
+     getscopeobject      1
+     getslot             3
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getscopeobject      1
+     getslot             1
+     pushtrue
+     setproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "setSharedStyles")
+     getscopeobject      1
+     getslot             1
+     callpropvoid        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "setSharedStyles"), 1
+
+     returnvoid
+    end ; code
+    try from L85 to L99 target L100 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "err") end
+    try from L111 to L122 target L123 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    trait slot QName(PackageInternalNs("fl.managers"), "instance") slotid 1 type QName(PackageNamespace("fl.core"), "UIComponent") end
+    trait slot QName(PackageInternalNs("fl.managers"), "inst") slotid 2 type QName(PackageNamespace("fl.managers"), "StyleManager") end
+    trait slot QName(PackageInternalNs("fl.managers"), "classDef") slotid 3 type QName(PackageNamespace(""), "Class") end
+    trait slot QName(PackageInternalNs("fl.managers"), "target") slotid 4 type QName(PackageNamespace(""), "Class") end
+    trait slot QName(PackageInternalNs("fl.managers"), "defaultStyles") slotid 5 type QName(PackageNamespace(""), "Object") end
+    trait slot QName(PackageInternalNs("fl.managers"), "styleToClasses") slotid 6 type QName(PackageNamespace(""), "Object") end
+    trait slot QName(PackageInternalNs("fl.managers"), "n") slotid 7 type QName(PackageNamespace(""), "String") end
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "fl.managers:StyleManager"), "setSharedStyles") flag FINAL dispid 5
+  method
+   refid "fl.managers:StyleManager/class/fl.managers:StyleManager/setSharedStyles"
+   param QName(PackageNamespace("fl.core"), "UIComponent")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 8
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal            5
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance")
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance"), 0
+     coerce              QName(PackageNamespace("fl.managers"), "StyleManager")
+     setlocal2
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef")
+     getlocal1
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef"), 1
+     coerce              QName(PackageNamespace(""), "Class")
+     setlocal3
+
+     getlocal2
+     getproperty         QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToDefaultStylesDict")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            4
+
+     pushbyte            0
+     setlocal            6
+
+     getlocal            4
+     coerce_a
+     setlocal            7
+
+     jump                L39
+
+L26:
+     label
+     getlocal            7
+     getlocal            6
+     nextname
+     coerce_s
+     setlocal            5
+
+     getlocal1
+     getlocal            5
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getSharedStyle")
+     getlocal1
+     getlocal            5
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getSharedStyle"), 2
+     callpropvoid        QName(PackageNamespace(""), "setSharedStyle"), 2
+
+L39:
+     hasnext2            7, 6
+     iftrue              L26
+
+     kill                7
+     kill                6
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getSharedStyle") flag FINAL dispid 6
+  method
+   refid "fl.managers:StyleManager/class/fl.managers:StyleManager/getSharedStyle"
+   param QName(PackageNamespace("fl.core"), "UIComponent")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 2
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef")
+     getlocal1
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef"), 1
+     coerce              QName(PackageNamespace(""), "Class")
+     setlocal3
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance")
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance"), 0
+     coerce              QName(PackageNamespace("fl.managers"), "StyleManager")
+     dup
+     setlocal            4
+
+     getproperty         QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToStylesDict")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace(""), "Object")
+     dup
+     setlocal            5
+
+     pushnull
+     ifeq                L24
+
+     getlocal            5
+     returnvalue
+
+L24:
+     getlocal            4
+     getproperty         QName(PrivateNamespace(null, "fl.managers:StyleManager"), "globalStyles")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace(""), "Object")
+     dup
+     setlocal            5
+
+     pushnull
+     ifeq                L35
+
+     getlocal            5
+     returnvalue
+
+L35:
+     getlocal            4
+     getproperty         QName(PrivateNamespace(null, "fl.managers:StyleManager"), "classToDefaultStylesDict")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getComponentStyle") flag FINAL dispid 7
+  method
+   refid "fl.managers:StyleManager/class/getComponentStyle"
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef")
+     getlocal1
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef"), 1
+     coerce              QName(PackageNamespace(""), "Class")
+     setlocal3
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance")
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance"), 0
+     getproperty         Multiname("classToStylesDict", [PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace(""), "Object")
+     dup
+     setlocal            4
+
+     pushnull
+     ifne                L20
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Object")
+     jump                L24
+
+L20:
+     getlocal            4
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace(""), "Object")
+L24:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "clearComponentStyle") flag FINAL dispid 8
+  method
+   refid "fl.managers:StyleManager/class/clearComponentStyle"
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef")
+     getlocal1
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef"), 1
+     coerce              QName(PackageNamespace(""), "Class")
+     setlocal3
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance")
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance"), 0
+     getproperty         Multiname("classToStylesDict", [PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace(""), "Object")
+     dup
+     setlocal            4
+
+     pushnull
+     equals
+     not
+     dup
+     iffalse             L27
+
+     pop
+     getlocal            4
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     pushnull
+     equals
+     not
+L27:
+     iffalse             L36
+
+     getlocal            4
+     getlocal2
+     deleteproperty      MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     pop
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "invalidateComponentStyle")
+     getlocal3
+     getlocal2
+     callpropvoid        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "invalidateComponentStyle"), 2
+
+L36:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "setComponentStyle") flag FINAL dispid 9
+  method
+   refid "fl.managers:StyleManager/class/setComponentStyle"
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Object")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef")
+     getlocal1
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef"), 1
+     coerce              QName(PackageNamespace(""), "Class")
+     setlocal            4
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance")
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance"), 0
+     getproperty         Multiname("classToStylesDict", [PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace(""), "Object")
+     dup
+     setlocal            5
+
+     pushnull
+     ifne                L29
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance")
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance"), 0
+     getproperty         Multiname("classToStylesDict", [PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getlocal            4
+     newobject           0
+     dup
+     setlocal            6
+
+     setproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+
+     getlocal            6
+     kill                6
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            5
+
+L29:
+     getlocal            5
+     getlocal3
+     ifne                L33
+
+     returnvoid
+
+L33:
+     getlocal            5
+     getlocal2
+     getlocal3
+     setproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "invalidateComponentStyle")
+     getlocal            4
+     getlocal2
+     callpropvoid        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "invalidateComponentStyle"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getClassDef") flag FINAL dispid 10
+  method
+   refid "fl.managers:StyleManager/class/fl.managers:StyleManager/getClassDef"
+   param QName(PackageNamespace(""), "Object")
+   returns QName(PackageNamespace(""), "Class")
+   flag NEED_ACTIVATION
+   body
+    maxstack 3
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 13
+    code
+     getlocal0
+     pushscope
+
+     newactivation
+     dup
+     setlocal2
+
+     pushscope
+
+     getscopeobject      1
+     getlocal1
+     setslot             1
+
+     getscopeobject      1
+     getslot             1
+     getlex              QName(PackageNamespace(""), "Class")
+     istypelate
+     iffalse             L19
+
+     getscopeobject      1
+     getslot             1
+     getlex              QName(PackageNamespace(""), "Class")
+     astypelate
+     returnvalue
+
+L19:
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getDefinitionByName")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+     getscopeobject      1
+     getslot             1
+     callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+     callproperty        QName(PackageNamespace("flash.utils"), "getDefinitionByName"), 1
+     getlex              QName(PackageNamespace(""), "Class")
+     astypelate
+     returnvalue
+
+L28:
+     getlocal0
+     pushscope
+
+     getlocal2
+     pushscope
+
+     newcatch            0
+     dup
+     setlocal3
+
+     dup
+     pushscope
+
+     swap
+     setslot             1
+
+     getscopeobject      1
+     getslot             1
+     getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+     istypelate
+     iffalse             L71
+
+L44:
+     getscopeobject      1
+     getslot             1
+     getproperty         Multiname("loaderInfo", [PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("applicationDomain", [PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+     getscopeobject      1
+     getslot             1
+     callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+     callproperty        Multiname("getDefinition", [PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")]), 1
+     getlex              QName(PackageNamespace(""), "Class")
+     astypelate
+     returnvalue
+
+L56:
+     getlocal0
+     pushscope
+
+     getlocal2
+     pushscope
+
+     getlocal3
+     pushscope
+
+     newcatch            1
+     dup
+     setlocal            4
+
+     dup
+     pushscope
+
+     swap
+     setslot             1
+
+     popscope
+     kill                4
+L71:
+     popscope
+     kill                3
+     pushnull
+     returnvalue
+    end ; code
+    try from L19 to L28 target L28 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    try from L44 to L56 target L56 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    trait slot QName(PackageInternalNs("fl.managers"), "component") slotid 1 type QName(PackageNamespace(""), "Object") end
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "fl.managers:StyleManager"), "invalidateStyle") flag FINAL dispid 11
+  method
+   refid "fl.managers:StyleManager/class/fl.managers:StyleManager/invalidateStyle"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal3
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance")
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance"), 0
+     getproperty         Multiname("styleToClassesHash", [PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+     setlocal2
+
+     getlocal2
+     pushnull
+     ifne                L16
+
+     returnvoid
+
+L16:
+     pushbyte            0
+     setlocal            4
+
+     getlocal2
+     coerce_a
+     setlocal            5
+
+     jump                L34
+
+L22:
+     label
+     getlocal            5
+     getlocal            4
+     nextname
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal3
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "invalidateComponentStyle")
+     findpropstrict      QName(PackageNamespace(""), "Class")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "Class"), 1
+     getlocal1
+     callpropvoid        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "invalidateComponentStyle"), 2
+
+L34:
+     hasnext2            5, 4
+     iftrue              L22
+
+     kill                5
+     kill                4
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "fl.managers:StyleManager"), "invalidateComponentStyle") flag FINAL dispid 12
+  method
+   refid "fl.managers:StyleManager/class/fl.managers:StyleManager/invalidateComponentStyle"
+   param QName(PackageNamespace(""), "Class")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 8
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            4
+
+     pushnull
+     coerce              QName(PackageNamespace("fl.core"), "UIComponent")
+     setlocal            5
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance")
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance"), 0
+     getproperty         Multiname("classToInstancesDict", [PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+     setlocal3
+
+     getlocal3
+     pushnull
+     ifne                L19
+
+     returnvoid
+
+L19:
+     pushbyte            0
+     setlocal            6
+
+     getlocal3
+     coerce_a
+     setlocal            7
+
+     jump                L47
+
+L25:
+     label
+     getlocal            7
+     getlocal            6
+     nextname
+     coerce              QName(PackageNamespace(""), "Object")
+     dup
+     setlocal            4
+
+     getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+     astypelate
+     coerce              QName(PackageNamespace("fl.core"), "UIComponent")
+     dup
+     setlocal            5
+
+     pushnull
+     ifne                L40
+
+     jump                L47
+
+L40:
+     getlocal            5
+     getlocal2
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getSharedStyle")
+     getlocal            5
+     getlocal2
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getSharedStyle"), 2
+     callpropvoid        QName(PackageNamespace(""), "setSharedStyle"), 2
+
+L47:
+     hasnext2            7, 6
+     iftrue              L25
+
+     kill                7
+     kill                6
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "setStyle") flag FINAL dispid 13
+  method
+   refid "fl.managers:StyleManager/class/setStyle"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Object")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance")
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance"), 0
+     getproperty         Multiname("globalStyles", [PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal3
+
+     getlocal3
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getlocal2
+     strictequals
+     dup
+     iffalse             L19
+
+     pop
+     getlocal2
+     getlex              QName(PackageNamespace("flash.text"), "TextFormat")
+     istypelate
+     not
+L19:
+     iffalse             L21
+
+     returnvoid
+
+L21:
+     getlocal3
+     getlocal1
+     getlocal2
+     setproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "invalidateStyle")
+     getlocal1
+     callpropvoid        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "invalidateStyle"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "clearStyle") flag FINAL dispid 14
+  method
+   refid "fl.managers:StyleManager/class/clearStyle"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "setStyle")
+     getlocal1
+     pushnull
+     callpropvoid        QName(PackageNamespace(""), "setStyle"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getStyle") flag FINAL dispid 15
+  method
+   refid "fl.managers:StyleManager/class/getStyle"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance")
+     callproperty        QName(PrivateNamespace(null, "fl.managers:StyleManager"), "getInstance"), 0
+     getproperty         Multiname("globalStyles", [PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "fl.managers:StyleManager"), PackageNamespace(""), PackageNamespace("fl.managers"), PrivateNamespace(null, "fl.managers:StyleManager/class"), PackageInternalNs("fl.managers"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("fl.managers:StyleManager"), StaticProtectedNs("fl.managers:StyleManager"), StaticProtectedNs("Object")])
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

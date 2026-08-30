@@ -1,0 +1,1325 @@
+class
+ refid "LoaderMC"
+ instance QName(PackageNamespace(""), "LoaderMC")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("LoaderMC")
+  iinit
+   refid "LoaderMC/instance/init"
+   param QName(PackageNamespace("flash.display"), "MovieClip")
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     newobject           0
+     initproperty        QName(PackageNamespace(""), "history")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getproperty         Multiname("btnCancel", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              Multiname("MouseEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("CLICK", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal0
+     getproperty         Multiname("onCancelClick", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+     getlocal0
+     getlocal1
+     initproperty        Multiname("rootClass", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "btnCancel") type QName(PackageNamespace("flash.display"), "SimpleButton") end
+  trait slot QName(PackageNamespace(""), "mcPct") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "strLoad") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageInternalNs(""), "mcDest") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageInternalNs(""), "isEvent") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "LoaderMC/instance"), "rootClass") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "history") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace(null, "LoaderMC/instance"), "_file") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "LoaderMC/instance"), "loadSeq") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait method QName(PackageNamespace(""), "loadFile")
+   method
+    refid "LoaderMC/instance/loadFile"
+    param QName(PackageNamespace("flash.display"), "MovieClip")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 10
+     localcount 9
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal2
+      setproperty         Multiname("_file", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      findpropstrict      Multiname("Date", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      constructprop       Multiname("Date", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      callproperty        Multiname("getTime", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      convert_d
+      setlocal            5
+
+      getlocal2
+      pushstring          "https://"
+      callproperty        Multiname("indexOf", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      pushbyte            -1
+      equals
+      dup
+      iffalse             L23
+
+      pop
+      getlocal2
+      pushstring          "http://"
+      callproperty        Multiname("indexOf", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      pushbyte            -1
+      equals
+L23:
+      dup
+      iffalse             L31
+
+      pop
+      getlocal2
+      pushstring          "file://"
+      callproperty        Multiname("indexOf", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      pushbyte            -1
+      equals
+L31:
+      iffalse             L38
+
+      getlex              Multiname("Game", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("serverFilePath", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      add
+      coerce_s
+      setlocal2
+
+L38:
+      getlocal0
+      getlocal            4
+      setproperty         Multiname("isEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      pushstring          "Inline Asset"
+      ifeq                L50
+
+      findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("Game", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("root", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      getlocal0
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L50:
+      getlocal0
+      getlocal1
+      setproperty         Multiname("mcDest", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      findpropstrict      Multiname("Loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      constructprop       Multiname("Loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      coerce_a
+      dup
+      setlocal            6
+
+      getproperty         Multiname("uncaughtErrorEvents", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("UncaughtErrorEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("UNCAUGHT_ERROR", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onContentError", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 5
+
+      getlocal            6
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("Event", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("INIT", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadComplete", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 5
+
+      getlocal            6
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("Event", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("COMPLETE", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadComplete", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 5
+
+      getlocal            6
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("ProgressEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("PROGRESS", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadProgress", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 5
+
+      getlocal            6
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("IOErrorEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("IO_ERROR", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadError", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 5
+
+      getlocal            6
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("SecurityErrorEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("SECURITY_ERROR", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadSecurityError", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 5
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      pushstring          "#"
+      add
+      getlocal0
+      dup
+      setlocal            7
+
+      getproperty         Multiname("loadSeq", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      increment_i
+      dup
+      setlocal            8
+
+      getlocal            7
+      getlocal            8
+      setproperty         Multiname("loadSeq", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      kill                8
+      kill                7
+      add
+      pushstring          "ts"
+      getlocal            5
+      pushstring          "ldr"
+      getlocal            6
+      pushstring          "dest"
+      getlocal1
+      pushstring          "evt"
+      getlocal            4
+      newobject           4
+      setproperty         MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      findpropstrict      Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "[Load] LoaderMC loadFile: "
+      getlocal2
+      add
+      callpropvoid        Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("pocket", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            6
+      getlex              Multiname("Game", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      callproperty        Multiname("vurl", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      findpropstrict      Multiname("LoaderContext", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      findpropstrict      Multiname("ApplicationDomain", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("ApplicationDomain", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("currentDomain", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      constructprop       Multiname("ApplicationDomain", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      constructprop       Multiname("LoaderContext", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+      callpropvoid        Multiname("load", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.system"), PackageNamespace("flash.events"), PackageNamespace("flash.net"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "LoaderMC/instance"), "onContentError")
+   method
+    refid "LoaderMC/instance/LoaderMC/instance/onContentError"
+    param QName(PackageNamespace("flash.events"), "UncaughtErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Error")
+      setlocal2
+
+      getlocal1
+      callpropvoid        Multiname("preventDefault", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+      getlocal1
+      callpropvoid        Multiname("stopImmediatePropagation", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+L9:
+      getlocal1
+      getproperty         Multiname("error", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("Error", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      astypelate
+      coerce              QName(PackageNamespace(""), "Error")
+      setlocal2
+
+      findpropstrict      Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "[Load] ERR LoaderMC suppressed: "
+      getlocal2
+      pushnull
+      ifeq                L24
+
+      getlocal2
+      getproperty         Multiname("message", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_a
+      jump                L29
+
+L24:
+      findpropstrict      Multiname("String", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      getproperty         Multiname("error", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("String", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      coerce_a
+L29:
+      add
+      callpropvoid        Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L31:
+      jump                L43
+
+L32:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L43:
+      returnvoid
+     end ; code
+     try from L9 to L31 target L32 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e2") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "LoaderMC/instance"), "onFileLoadComplete")
+   method
+    refid "LoaderMC/instance/LoaderMC/instance/onFileLoadComplete"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 9
+     initscopedepth 10
+     maxscopedepth 15
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal            6
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_a
+      setlocal2
+
+      findpropstrict      Multiname("Loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("Loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      coerce              QName(PackageNamespace("flash.display"), "Loader")
+      setlocal3
+
+      getlocal0
+      getproperty         Multiname("mcDest", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+      setlocal            4
+
+      getlocal0
+      getproperty         Multiname("isEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      convert_b
+      setlocal            5
+
+L25:
+      pushbyte            0
+      setlocal            7
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_a
+      setlocal            8
+
+      jump                L71
+
+L32:
+      label
+      getlocal            8
+      getlocal            7
+      nextname
+      coerce_s
+      setlocal            6
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ldr", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal3
+      ifne                L71
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("dest", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushnull
+      ifeq                L59
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("dest", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+      setlocal            4
+
+L59:
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("evt", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      convert_b
+      setlocal            5
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            6
+      deleteproperty      MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pop
+L71:
+      hasnext2            8, 7
+      iftrue              L32
+
+      kill                8
+      kill                7
+L75:
+      jump                L87
+
+L76:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            7
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                7
+L87:
+      getlocal3
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("Event", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("INIT", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadComplete", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+      getlocal3
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("Event", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("COMPLETE", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadComplete", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+      getlocal3
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("ProgressEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("PROGRESS", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadProgress", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+      getlocal3
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("IOErrorEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("IO_ERROR", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadError", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+      getlocal3
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("SecurityErrorEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("SECURITY_ERROR", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadSecurityError", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+L122:
+      getlocal3
+      getproperty         Multiname("content", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L134
+
+      pop
+      getlocal            4
+      pushnull
+      equals
+      not
+L134:
+      iffalse             L139
+
+      getlocal            4
+      getlocal3
+      getproperty         Multiname("content", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L139:
+      jump                L151
+
+L140:
+      getlocal0
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal            7
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                7
+L151:
+      getlocal            5
+      convert_b
+      dup
+      iffalse             L160
+
+      pop
+      getlocal2
+      pushnull
+      equals
+      not
+L160:
+      iffalse             L173
+
+      findpropstrict      Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "[Load] LoaderMC fileLoaded event -> world"
+      callpropvoid        Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      getlocal2
+      pushstring          "cmd"
+      pushstring          "fileLoaded"
+      pushstring          "args"
+      pushstring          "loc"
+      pushstring          "default"
+      newobject           1
+      newobject           2
+      callpropvoid        Multiname("mapEventTrigger", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L173:
+      getlocal0
+      pushfalse
+      initproperty        Multiname("isEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      pushnull
+      initproperty        Multiname("mcDest", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L179:
+      findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      getlex              Multiname("parent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      getlocal0
+      callpropvoid        Multiname("removeChild", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L184:
+      jump                L196
+
+L185:
+      getlocal0
+      pushscope
+
+      newcatch            2
+      dup
+      setlocal            7
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                7
+L196:
+      returnvoid
+     end ; code
+     try from L25 to L75 target L76 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L122 to L139 target L140 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L179 to L184 target L185 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "LoaderMC/instance"), "onFileLoadProgress")
+   method
+    refid "LoaderMC/instance/LoaderMC/instance/onFileLoadProgress"
+    param QName(PackageNamespace("flash.events"), "ProgressEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              Multiname("Math", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      getproperty         Multiname("bytesLoaded", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      getproperty         Multiname("bytesTotal", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      divide
+      pushbyte            100
+      multiply
+      callproperty        Multiname("floor", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      convert_i
+      setlocal2
+
+      getlocal1
+      getproperty         Multiname("bytesTotal", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            0
+      ifnle               L19
+
+      pushbyte            0
+      setlocal2
+
+L19:
+      getlocal0
+      getproperty         Multiname("strLoad", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "Loading!"
+      setproperty         Multiname("text", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      getproperty         Multiname("mcPct", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      pushstring          "%"
+      add
+      setproperty         Multiname("text", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "LoaderMC/instance"), "onFileLoadError")
+   method
+    refid "LoaderMC/instance/LoaderMC/instance/onFileLoadError"
+    param QName(PackageNamespace("flash.events"), "IOErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "[Load] ERR LoaderMC IO: "
+      getlocal1
+      getproperty         Multiname("text", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      add
+      callpropvoid        Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      getlocal0
+      getproperty         Multiname("strLoad", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "Load Error"
+      setproperty         Multiname("text", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      findpropstrict      Multiname("Loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("Loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      callpropvoid        Multiname("signalEventLoadDone", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      getlocal0
+      findpropstrict      Multiname("Loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("Loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      callpropvoid        Multiname("cleanupLoader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "LoaderMC/instance"), "onFileLoadSecurityError")
+   method
+    refid "LoaderMC/instance/LoaderMC/instance/onFileLoadSecurityError"
+    param QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "[Load] ERR LoaderMC security: "
+      getlocal1
+      getproperty         Multiname("text", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      add
+      callpropvoid        Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      getlocal0
+      getproperty         Multiname("strLoad", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "Security Error"
+      setproperty         Multiname("text", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      findpropstrict      Multiname("Loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("Loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      callpropvoid        Multiname("signalEventLoadDone", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      getlocal0
+      findpropstrict      Multiname("Loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("Loader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      callpropvoid        Multiname("cleanupLoader", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "LoaderMC/instance"), "signalEventLoadDone")
+   method
+    refid "LoaderMC/instance/LoaderMC/instance/signalEventLoadDone"
+    param QName(PackageNamespace("flash.display"), "Loader")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 8
+     initscopedepth 10
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      setlocal2
+
+      pushfalse
+      setlocal3
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      pushundefined
+      coerce_a
+      setlocal            5
+
+L12:
+      pushfalse
+      setlocal2
+
+      pushfalse
+      setlocal3
+
+      pushbyte            0
+      setlocal            6
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_a
+      setlocal            7
+
+      jump                L46
+
+L23:
+      label
+      getlocal            7
+      getlocal            6
+      nextname
+      coerce_s
+      setlocal            4
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ldr", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      ifne                L46
+
+      pushtrue
+      setlocal3
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("evt", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      iffalse             L46
+
+      pushtrue
+      setlocal2
+
+L46:
+      hasnext2            7, 6
+      iftrue              L23
+
+      kill                7
+      kill                6
+      getlocal3
+      iftrue              L56
+
+      getlocal0
+      getproperty         Multiname("isEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      convert_b
+      setlocal2
+
+L56:
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_a
+      setlocal            5
+
+      getlocal2
+      convert_b
+      dup
+      iffalse             L70
+
+      pop
+      getlocal            5
+      pushnull
+      equals
+      not
+L70:
+      iffalse             L83
+
+      findpropstrict      Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "[Load] LoaderMC fileLoaded event (error path) -> world"
+      callpropvoid        Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      getlocal            5
+      pushstring          "cmd"
+      pushstring          "fileLoaded"
+      pushstring          "args"
+      pushstring          "loc"
+      pushstring          "default"
+      newobject           1
+      newobject           2
+      callpropvoid        Multiname("mapEventTrigger", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L83:
+      jump                L95
+
+L84:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            6
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                6
+L95:
+      returnvoid
+     end ; code
+     try from L12 to L83 target L84 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "LoaderMC/instance"), "cleanupLoader")
+   method
+    refid "LoaderMC/instance/LoaderMC/instance/cleanupLoader"
+    param QName(PackageNamespace("flash.display"), "Loader")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 14
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+L5:
+      getlocal1
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("Event", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("INIT", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadComplete", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+      getlocal1
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("Event", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("COMPLETE", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadComplete", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+      getlocal1
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("ProgressEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("PROGRESS", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadProgress", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+      getlocal1
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("IOErrorEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("IO_ERROR", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadError", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+      getlocal1
+      getproperty         Multiname("contentLoaderInfo", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("SecurityErrorEvent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("SECURITY_ERROR", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("onFileLoadSecurityError", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_a
+      setlocal            4
+
+      jump                L66
+
+L47:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_s
+      setlocal2
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ldr", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      ifne                L66
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      deleteproperty      MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pop
+      jump                L68
+
+L66:
+      hasnext2            4, 3
+      iftrue              L47
+
+L68:
+      kill                4
+      kill                3
+L70:
+      jump                L82
+
+L71:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L82:
+      getlocal0
+      pushnull
+      initproperty        Multiname("mcDest", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L85:
+      findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      getlex              Multiname("parent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      getlocal0
+      callpropvoid        Multiname("removeChild", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L90:
+      jump                L102
+
+L91:
+      getlocal0
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+L102:
+      returnvoid
+     end ; code
+     try from L5 to L70 target L71 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L85 to L90 target L91 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "closeHistory")
+   method
+    refid "LoaderMC/instance/closeHistory"
+    param QName(PackageNamespace("flash.display"), "MovieClip")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 10
+     maxscopedepth 15
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "Loader")
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_a
+      setlocal            5
+
+      jump                L122
+
+L15:
+      label
+      getlocal            5
+      getlocal            4
+      nextname
+      coerce_s
+      setlocal2
+
+      getlocal1
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L36
+
+      pop
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("dest", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      equals
+      not
+L36:
+      iffalse             L38
+
+      jump                L122
+
+L38:
+      findpropstrict      Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "[Load] LoaderMC closeHistory killing: "
+      getlocal2
+      add
+      callpropvoid        Multiname("trace", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L43:
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ldr", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("close", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+L49:
+      jump                L61
+
+L50:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            6
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                6
+L61:
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ldr", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace("flash.display"), "Loader")
+      setlocal3
+
+      getlocal3
+      getproperty         Multiname("content", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L80
+
+      pop
+      getlocal3
+      getproperty         Multiname("content", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      istypelate
+L80:
+      iffalse             L86
+
+      findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      getlocal3
+      getproperty         Multiname("content", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      callpropvoid        Multiname("stop", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+L86:
+      jump                L98
+
+L87:
+      getlocal0
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal            6
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                6
+L98:
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ldr", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushtrue
+      callpropvoid        Multiname("unloadAndStop", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L105:
+      jump                L117
+
+L106:
+      getlocal0
+      pushscope
+
+      newcatch            2
+      dup
+      setlocal            6
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                6
+L117:
+      getlocal0
+      getproperty         Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      deleteproperty      MultinameL([PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pop
+L122:
+      hasnext2            5, 4
+      iftrue              L15
+
+      kill                5
+      kill                4
+      getlocal1
+      pushnull
+      ifne                L132
+
+      getlocal0
+      newobject           0
+      initproperty        Multiname("history", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L132:
+      returnvoid
+     end ; code
+     try from L43 to L49 target L50 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L61 to L86 target L87 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L98 to L105 target L106 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "LoaderMC/instance"), "onCancelClick")
+   method
+    refid "LoaderMC/instance/LoaderMC/instance/onCancelClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      getlex              Multiname("Game", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("root", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      callpropvoid        Multiname("logout", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+      findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+      getlex              Multiname("parent", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("MovieClip", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+      getlocal0
+      callpropvoid        Multiname("removeChild", [PrivateNamespace(null, "LoaderMC/instance"), PackageNamespace(""), PrivateNamespace(null, "LoaderMC"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), ProtectedNamespace("LoaderMC"), StaticProtectedNs("LoaderMC"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "LoaderMC/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

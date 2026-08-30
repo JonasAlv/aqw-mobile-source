@@ -1,0 +1,40 @@
+package ui.option
+{
+   import flash.display.Sprite;
+   import flash.text.TextField;
+   
+   public class Option extends Sprite
+   {
+      
+      public var nameTxt:TextField;
+      
+      public var infoTxt:TextField;
+      
+      public var key:String;
+      
+      public var onChange:Function;
+      
+      public var onFrameChange:Function;
+      
+      public var onOverlayStateChange:Function;
+      
+      public function Option(key:String, name:String, info:String, visible:Boolean = true, onChange:Function = null, onFrameChange:Function = null, onOverlayStateChange:Function = null)
+      {
+         super();
+         this.visible = visible;
+         this.key = key;
+         this.onChange = onChange;
+         this.onFrameChange = onFrameChange;
+         this.onOverlayStateChange = onOverlayStateChange;
+         if(name != null)
+         {
+            this.nameTxt.text = name;
+         }
+         if(info != null)
+         {
+            this.infoTxt.htmlText = info;
+         }
+      }
+   }
+}
+

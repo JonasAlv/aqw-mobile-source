@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "types:LoaderError/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("LoaderError", [PackageNamespace("types")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              Multiname("Object", [PackageNamespace(""), PrivateNamespace(null, "types:LoaderError#0"), PackageNamespace("types"), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin")])
+    newclass            "types:LoaderError"
+    popscope
+    initproperty        QName(PackageNamespace("types"), "LoaderError")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("types"), "LoaderError")
+  #include "LoaderError.class.asasm"
+ end ; trait
+end ; script

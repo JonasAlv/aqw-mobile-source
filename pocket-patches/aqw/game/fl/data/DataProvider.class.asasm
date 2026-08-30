@@ -1,0 +1,1379 @@
+class
+ refid "fl.data:DataProvider"
+ instance QName(PackageNamespace("fl.data"), "DataProvider")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.data:DataProvider")
+  iinit
+   refid "fl.data:DataProvider/instance/init"
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     pushnull
+     ifne                L11
+
+     findproperty        QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+     newarray            0
+     initproperty        QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+
+     jump                L16
+
+L11:
+     findproperty        QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+     findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "getDataFromObject")
+     getlocal1
+     callproperty        QName(ProtectedNamespace("fl.data:DataProvider"), "getDataFromObject"), 1
+     initproperty        QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+
+L16:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("fl.data:DataProvider"), "data") type QName(PackageNamespace(""), "Array") end
+  trait getter QName(PackageNamespace(""), "length")
+   method
+    refid "fl.data:DataProvider/instance/length/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidateItemAt")
+   method
+    refid "fl.data:DataProvider/instance/invalidateItemAt"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex")
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex"), 2
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "INVALIDATE")
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      newarray            1
+      getlocal1
+      getlocal1
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidateItem")
+   method
+    refid "fl.data:DataProvider/instance/invalidateItem"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getItemIndex")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getItemIndex"), 1
+      convert_u
+      setlocal2
+
+      getlocal2
+      pushbyte            -1
+      ifne                L11
+
+      returnvoid
+
+L11:
+      findpropstrict      QName(PackageNamespace(""), "invalidateItemAt")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "invalidateItemAt"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidate")
+   method
+    refid "fl.data:DataProvider/instance/invalidate"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "DataChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeEvent")
+      getproperty         QName(PackageNamespace(""), "DATA_CHANGE")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "INVALIDATE_ALL")
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      constructprop       QName(PackageNamespace("fl.events"), "DataChangeEvent"), 5
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addItemAt")
+   method
+    refid "fl.data:DataProvider/instance/addItemAt"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex")
+      getlocal2
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex"), 2
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "ADD")
+      getlocal1
+      newarray            1
+      getlocal2
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent"), 4
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal2
+      pushbyte            0
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 3
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "ADD")
+      getlocal1
+      newarray            1
+      getlocal2
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addItem")
+   method
+    refid "fl.data:DataProvider/instance/addItem"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "ADD")
+      getlocal1
+      newarray            1
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent"), 4
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "ADD")
+      getlocal1
+      newarray            1
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addItemsAt")
+   method
+    refid "fl.data:DataProvider/instance/addItemsAt"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex")
+      getlocal2
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex"), 2
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "getDataFromObject")
+      getlocal1
+      callproperty        QName(ProtectedNamespace("fl.data:DataProvider"), "getDataFromObject"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "ADD")
+      getlocal3
+      getlocal2
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent"), 4
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice")
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal2
+      pushbyte            0
+      newarray            2
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "ADD")
+      getlocal3
+      getlocal2
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addItems")
+   method
+    refid "fl.data:DataProvider/instance/addItems"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "addItemsAt")
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PackageNamespace(""), "addItemsAt"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "concat")
+   method
+    refid "fl.data:DataProvider/instance/concat"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "addItems")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addItems"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "merge")
+   method
+    refid "fl.data:DataProvider/instance/merge"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            6
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "getDataFromObject")
+      getlocal1
+      callproperty        QName(ProtectedNamespace("fl.data:DataProvider"), "getDataFromObject"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_u
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_u
+      setlocal            4
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "ADD")
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal            4
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+      getlocal            4
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent"), 4
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L54
+
+L36:
+      label
+      getlocal2
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            6
+
+      findpropstrict      QName(PackageNamespace(""), "getItemIndex")
+      getlocal            6
+      callproperty        QName(PackageNamespace(""), "getItemIndex"), 1
+      pushbyte            -1
+      ifne                L50
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal            6
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L50:
+      getlocal            5
+      increment
+      convert_u
+      setlocal            5
+
+L54:
+      getlocal            5
+      getlocal3
+      iflt                L36
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal            4
+      ifngt               L76
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "ADD")
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal            4
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+      getlocal            4
+      getlocal0
+      getproperty         QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent"), 4
+
+      jump                L83
+
+L76:
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "ADD")
+      newarray            0
+      pushbyte            -1
+      pushbyte            -1
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent"), 4
+
+L83:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getItemAt")
+   method
+    refid "fl.data:DataProvider/instance/getItemAt"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex")
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex"), 2
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getItemIndex")
+   method
+    refid "fl.data:DataProvider/instance/getItemIndex"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeItemAt")
+   method
+    refid "fl.data:DataProvider/instance/removeItemAt"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex")
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex"), 2
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "REMOVE")
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal1
+      getlocal1
+      pushbyte            1
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+      getlocal1
+      getlocal1
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent"), 4
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal1
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "REMOVE")
+      getlocal2
+      getlocal1
+      getlocal1
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent"), 4
+
+      getlocal2
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeItem")
+   method
+    refid "fl.data:DataProvider/instance/removeItem"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getItemIndex")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getItemIndex"), 1
+      convert_i
+      setlocal2
+
+      getlocal2
+      pushbyte            -1
+      ifeq                L14
+
+      findpropstrict      QName(PackageNamespace(""), "removeItemAt")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "removeItemAt"), 1
+      returnvalue
+
+L14:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeAll")
+   method
+    refid "fl.data:DataProvider/instance/removeAll"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "REMOVE_ALL")
+      getlocal1
+      pushbyte            0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent"), 4
+
+      findproperty        QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      newarray            0
+      initproperty        QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "REMOVE_ALL")
+      getlocal1
+      pushbyte            0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "replaceItem")
+   method
+    refid "fl.data:DataProvider/instance/replaceItem"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getItemIndex")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getItemIndex"), 1
+      convert_i
+      setlocal3
+
+      getlocal3
+      pushbyte            -1
+      ifeq                L15
+
+      findpropstrict      QName(PackageNamespace(""), "replaceItemAt")
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "replaceItemAt"), 2
+      returnvalue
+
+L15:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "replaceItemAt")
+   method
+    refid "fl.data:DataProvider/instance/replaceItemAt"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex")
+      getlocal2
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex"), 2
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      newarray            1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "REPLACE")
+      getlocal3
+      getlocal2
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent"), 4
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal2
+      getlocal1
+      setproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "REPLACE")
+      getlocal3
+      getlocal2
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent"), 4
+
+      getlocal3
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "sort")
+   method
+    refid "fl.data:DataProvider/instance/sort"
+    flag NEED_REST
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "SORT")
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent"), 4
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort")
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "SORT")
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent"), 4
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "sortOn")
+   method
+    refid "fl.data:DataProvider/instance/sortOn"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "Object")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "SORT")
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent"), 4
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getlocal1
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sortOn"), 2
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      findpropstrict      QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeType")
+      getproperty         QName(PackageNamespace(""), "SORT")
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      callpropvoid        QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent"), 4
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clone")
+   method
+    refid "fl.data:DataProvider/instance/clone"
+    returns QName(PackageNamespace("fl.data"), "DataProvider")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("fl.data"), "DataProvider")
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      constructprop       QName(PackageNamespace("fl.data"), "DataProvider"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toArray")
+   method
+    refid "fl.data:DataProvider/instance/toArray"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "fl.data:DataProvider/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "DataProvider ["
+      getlex              QName(ProtectedNamespace("fl.data:DataProvider"), "data")
+      pushstring          " , "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.data:DataProvider"), "getDataFromObject")
+   method
+    refid "fl.data:DataProvider/instance/fl.data:DataProvider:getDataFromObject"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 5
+     localcount 17
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "XMLList")
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "XMLList")
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal            10
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "XMLList")
+      setlocal            11
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal            12
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "Array")
+      istypelate
+      iffalse             L99
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "Array")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L96
+
+      getlocal3
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "String")
+      istypelate
+      dup
+      iftrue              L61
+
+      pop
+      getlocal3
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "Number")
+      istypelate
+L61:
+      iffalse             L96
+
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L90
+
+L69:
+      label
+      pushstring          "label"
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      pushstring          "data"
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      newobject           2
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            5
+
+      getlocal2
+      getlocal            5
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L90:
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L69
+
+      getlocal2
+      returnvalue
+
+L96:
+      getlocal1
+      callproperty        Multiname("concat", [PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      returnvalue
+
+L99:
+      getlocal1
+      getlex              QName(PackageNamespace("fl.data"), "DataProvider")
+      istypelate
+      iffalse             L106
+
+      getlocal1
+      callproperty        Multiname("toArray", [PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      returnvalue
+
+L106:
+      getlocal1
+      getlex              QName(PackageNamespace(""), "XML")
+      istypelate
+      iffalse             L201
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "XML")
+      astypelate
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal            6
+
+      newarray            0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      getlocal            6
+      getproperty         Multiname(null, [PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "XMLList")
+      setlocal            7
+
+      pushbyte            0
+      setlocal            13
+
+      getlocal            7
+      coerce_a
+      setlocal            14
+
+      jump                L195
+
+L128:
+      label
+      getlocal            14
+      getlocal            13
+      nextvalue
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal            8
+
+      newobject           0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal            8
+      callproperty        Multiname("attributes", [PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      coerce              QName(PackageNamespace(""), "XMLList")
+      setlocal            9
+
+      pushbyte            0
+      setlocal            15
+
+      getlocal            9
+      coerce_a
+      setlocal            16
+
+      jump                L159
+
+L147:
+      label
+      getlocal            16
+      getlocal            15
+      nextvalue
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal            10
+
+      getlocal1
+      getlocal            10
+      callproperty        Multiname("localName", [PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      getlocal            10
+      callproperty        Multiname("toString", [PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      setproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L159:
+      hasnext2            16, 15
+      iftrue              L147
+
+      kill                16
+      kill                15
+      getlocal            8
+      getproperty         Multiname(null, [PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "XMLList")
+      setlocal            11
+
+      pushbyte            0
+      setlocal            15
+
+      getlocal            11
+      coerce_a
+      setlocal            16
+
+      jump                L188
+
+L173:
+      label
+      getlocal            16
+      getlocal            15
+      nextvalue
+      coerce              QName(PackageNamespace(""), "XML")
+      dup
+      setlocal            12
+
+      callproperty        Multiname("hasSimpleContent", [PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      iffalse             L188
+
+      getlocal1
+      getlocal            12
+      callproperty        Multiname("localName", [PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      getlocal            12
+      callproperty        Multiname("toString", [PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      setproperty         MultinameL([PrivateNamespace(null, "fl.data:DataProvider/instance#0"), ProtectedNamespace("fl.data:DataProvider"), PackageNamespace(""), PrivateNamespace(null, "fl.data:DataProvider/instance#1"), PackageNamespace("fl.data"), PackageInternalNs("fl.data"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.data:DataProvider"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L188:
+      hasnext2            16, 15
+      iftrue              L173
+
+      kill                16
+      kill                15
+      getlocal2
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L195:
+      hasnext2            14, 13
+      iftrue              L128
+
+      kill                14
+      kill                13
+      getlocal2
+      returnvalue
+
+L201:
+      findpropstrict      QName(PackageNamespace(""), "TypeError")
+      pushstring          "Error: Type Coercion failed: cannot convert "
+      getlocal1
+      add
+      pushstring          " to Array or DataProvider."
+      add
+      constructprop       QName(PackageNamespace(""), "TypeError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.data:DataProvider"), "checkIndex")
+   method
+    refid "fl.data:DataProvider/instance/fl.data:DataProvider:checkIndex"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal2
+      greaterthan
+      dup
+      iftrue              L11
+
+      pop
+      getlocal1
+      pushbyte            0
+      lessthan
+L11:
+      iffalse             L24
+
+      findpropstrict      QName(PackageNamespace(""), "RangeError")
+      pushstring          "DataProvider index ("
+      getlocal1
+      add
+      pushstring          ") is not in acceptable range (0 - "
+      add
+      getlocal2
+      add
+      pushstring          ")"
+      add
+      constructprop       QName(PackageNamespace(""), "RangeError"), 1
+      throw
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchChangeEvent")
+   method
+    refid "fl.data:DataProvider/instance/fl.data:DataProvider:dispatchChangeEvent"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "DataChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeEvent")
+      getproperty         QName(PackageNamespace(""), "DATA_CHANGE")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      constructprop       QName(PackageNamespace("fl.events"), "DataChangeEvent"), 5
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.data:DataProvider"), "dispatchPreChangeEvent")
+   method
+    refid "fl.data:DataProvider/instance/fl.data:DataProvider:dispatchPreChangeEvent"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "DataChangeEvent")
+      getlex              QName(PackageNamespace("fl.events"), "DataChangeEvent")
+      getproperty         QName(PackageNamespace(""), "PRE_DATA_CHANGE")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      constructprop       QName(PackageNamespace("fl.events"), "DataChangeEvent"), 5
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.data:DataProvider/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,3746 @@
+class
+ refid "fl.controls:ColorPicker"
+ instance QName(PackageNamespace("fl.controls"), "ColorPicker")
+  extends QName(PackageNamespace("fl.core"), "UIComponent")
+  implements Multiname("IFocusManagerComponent", [PackageNamespace("fl.managers")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls:ColorPicker")
+  iinit
+   refid "fl.controls:ColorPicker/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "textField") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "customColors") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorHash") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "paletteBG") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "selectedSwatch") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "rollOverColor") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "_editable") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "_showTextField") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "doOpen") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton") type QName(PackageNamespace("fl.controls"), "BaseButton") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatches") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex") type QName(PackageNamespace(""), "int") end
+  trait slot QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex") type QName(PackageNamespace(""), "int") end
+  trait getter QName(PackageNamespace(""), "selectedColor")
+   method
+    refid "fl.controls:ColorPicker/instance/selectedColor/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      pushnull
+      ifne                L7
+
+      pushbyte            0
+      returnvalue
+
+L7:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      getproperty         QName(PackageNamespace(""), "transform")
+      getproperty         QName(PackageNamespace(""), "colorTransform")
+      getproperty         QName(PackageNamespace(""), "color")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selectedColor")
+   method
+    refid "fl.controls:ColorPicker/instance/selectedColor/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.core:UIComponent"), "_enabled")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "rollOverColor")
+      pushbyte            -1
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "rollOverColor")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      pushbyte            0
+      dup
+      setlocal3
+
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+      getlocal3
+      kill                3
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+
+      findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+      constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 0
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "color")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorWellColor")
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorWellColor"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "hexValue")
+   method
+    refid "fl.controls:ColorPicker/instance/hexValue/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      pushnull
+      ifne                L9
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorToString")
+      pushbyte            0
+      callproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorToString"), 1
+      returnvalue
+
+L9:
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorToString")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      getproperty         QName(PackageNamespace(""), "transform")
+      getproperty         QName(PackageNamespace(""), "colorTransform")
+      getproperty         QName(PackageNamespace(""), "color")
+      callproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorToString"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    refid "fl.controls:ColorPicker/instance/enabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "enabled")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    refid "fl.controls:ColorPicker/instance/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "enabled")
+
+      getlocal1
+      iftrue              L9
+
+      findpropstrict      QName(PackageNamespace(""), "close")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+L9:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "editable")
+   method
+    refid "fl.controls:ColorPicker/instance/editable/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "_editable")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "editable")
+   method
+    refid "fl.controls:ColorPicker/instance/editable/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "_editable")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "_editable")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "showTextField")
+   method
+    refid "fl.controls:ColorPicker/instance/showTextField/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "_showTextField")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "showTextField")
+   method
+    refid "fl.controls:ColorPicker/instance/showTextField/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "_showTextField")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "_showTextField")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "colors")
+   method
+    refid "fl.controls:ColorPicker/instance/colors/getter"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "customColors")
+      pushnull
+      ifeq                L8
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "customColors")
+      coerce              QName(PackageNamespace(""), "Array")
+      jump                L12
+
+L8:
+      getglobalscope
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "defaultColors")
+      coerce              QName(PackageNamespace(""), "Array")
+L12:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "colors")
+   method
+    refid "fl.controls:ColorPicker/instance/colors/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "customColors")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "customColors")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "imeMode")
+   method
+    refid "fl.controls:ColorPicker/instance/imeMode/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.core:UIComponent"), "_imeMode")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "imeMode")
+   method
+    refid "fl.controls:ColorPicker/instance/imeMode/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "_imeMode")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "_imeMode")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "open")
+   method
+    refid "fl.controls:ColorPicker/instance/open"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.core:UIComponent"), "_enabled")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "doOpen")
+      pushtrue
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "doOpen")
+
+      getlex              QName(PackageNamespace(""), "focusManager")
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManager")
+      setlocal1
+
+      getlocal1
+      iffalse             L16
+
+      getlocal1
+      pushfalse
+      setproperty         QName(Namespace("fl.managers:IFocusManager"), "defaultButtonEnabled")
+
+L16:
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "close")
+   method
+    refid "fl.controls:ColorPicker/instance/close"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+      iffalse             L17
+
+      getlex              QName(PackageNamespace(""), "focusManager")
+      getproperty         QName(Namespace("fl.managers:IFocusManager"), "form")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+      pushfalse
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CLOSE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L17:
+      getlex              QName(PackageNamespace(""), "focusManager")
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManager")
+      setlocal1
+
+      getlocal1
+      iffalse             L25
+
+      getlocal1
+      pushtrue
+      setproperty         QName(Namespace("fl.managers:IFocusManager"), "defaultButtonEnabled")
+
+L25:
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "removeStageListener")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "removeStageListener"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "cleanUpSelected")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "cleanUpSelected"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "fl.controls:ColorPicker"), "addCloseListener")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker/addCloseListener"
+    param QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlex              QName(PrivateNamespace(null, "fl.controls:ColorPicker"), "addCloseListener")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+      iftrue              L10
+
+      returnvoid
+
+L10:
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "addStageListener")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "addStageListener"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "onStageClick")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:onStageClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      not
+      dup
+      iffalse             L19
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      not
+L19:
+      iffalse             L25
+
+      findproperty        QName(PackageNamespace(""), "selectedColor")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      initproperty        QName(PackageNamespace(""), "selectedColor")
+
+      findpropstrict      QName(PackageNamespace(""), "close")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+L25:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "setStyles")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:setStyles"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "colorWell"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifeq                L20
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance")
+      getlocal2
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance"), 1
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+
+L20:
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      findpropstrict      QName(PackageNamespace(""), "getChildIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      callproperty        QName(PackageNamespace(""), "getChildIndex"), 1
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "copyStylesToChild")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      getlex              QName(StaticProtectedNs("fl.controls:ColorPicker"), "POPUP_BUTTON_STYLES")
+      callpropvoid        QName(ProtectedNamespace("fl.core:UIComponent"), "copyStylesToChild"), 2
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      callpropvoid        QName(PackageNamespace(""), "drawNow"), 0
+
+      getlocal1
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L43
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      convert_b
+L43:
+      dup
+      iffalse             L50
+
+      pop
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      equals
+      not
+L50:
+      iffalse             L54
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L54:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "cleanUpSelected")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:cleanUpSelected"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      convert_b
+      dup
+      iffalse             L11
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      convert_b
+L11:
+      iffalse             L15
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "onPopupButtonClick")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:onPopupButtonClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+      iffalse             L7
+
+      findpropstrict      QName(PackageNamespace(""), "close")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+      jump                L9
+
+L7:
+      findpropstrict      QName(PackageNamespace(""), "open")
+      callpropvoid        QName(PackageNamespace(""), "open"), 0
+
+L9:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "draw") flag OVERRIDE
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid"), 2
+      iffalse             L25
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setStyles")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setStyles"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawPalette")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawPalette"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setEmbedFonts")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setEmbedFonts"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 2
+
+L25:
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid"), 1
+      iffalse             L34
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawSwatchHighlight")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawSwatchHighlight"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorDisplay")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorDisplay"), 0
+
+L34:
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid"), 1
+      iffalse             L51
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setTextEditable")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setTextEditable"), 0
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "doOpen")
+      iffalse             L48
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "doOpen")
+      pushfalse
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "doOpen")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "showPalette")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "showPalette"), 0
+
+L48:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      getlex              QName(PackageNamespace(""), "enabled")
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L51:
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "isInvalid"), 2
+      iffalse             L70
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      getlex              QName(PackageNamespace(""), "width")
+      getlex              QName(PackageNamespace(""), "height")
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      callpropvoid        QName(PackageNamespace(""), "drawNow"), 0
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      getlex              QName(PackageNamespace(""), "width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      getlex              QName(PackageNamespace(""), "height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+L70:
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "draw"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "showPalette")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:showPalette"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+      iffalse             L7
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "positionPalette")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "positionPalette"), 0
+
+      returnvoid
+
+L7:
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlex              QName(PrivateNamespace(null, "fl.controls:ColorPicker"), "addCloseListener")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(PackageNamespace(""), "focusManager")
+      getproperty         QName(Namespace("fl.managers:IFocusManager"), "form")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+      pushtrue
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "positionPalette")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "positionPalette"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "OPEN")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace(""), "textField")
+      setproperty         QName(PackageNamespace(""), "focus")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "selectedSwatch")
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal1
+
+      getlocal1
+      pushnull
+      ifne                L44
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "findSwatch")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      callproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "findSwatch"), 1
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal1
+
+L44:
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight")
+      getlocal1
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "setEmbedFonts")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:setEmbedFonts"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "embedFonts"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal1
+      pushnull
+      ifeq                L13
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "embedFonts")
+
+L13:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawSwatchHighlight")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:drawSwatchHighlight"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "cleanUpSelected")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "cleanUpSelected"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "swatchSelectedSkin"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "swatchPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setlocal2
+
+      getlocal1
+      pushnull
+      ifeq                L48
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance")
+      getlocal1
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance"), 1
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "swatchWidth"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      pushbyte            2
+      add
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "swatchHeight"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      pushbyte            2
+      add
+      setproperty         QName(PackageNamespace(""), "height")
+
+L48:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawPalette")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:drawPalette"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+      iffalse             L8
+
+      getlex              QName(PackageNamespace(""), "focusManager")
+      getproperty         QName(Namespace("fl.managers:IFocusManager"), "form")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L8:
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawTextField")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawTextField"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawSwatches")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawSwatches"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawBG")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawBG"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawTextField")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:drawTextField"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 7
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "showTextField")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "backgroundPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setlocal1
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "textPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setlocal2
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "textFieldSkin"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance"), 1
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      pushnull
+      ifeq                L41
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      getlocal1
+      dup
+      setlocal            6
+
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal            6
+      kill                6
+      setproperty         QName(PackageNamespace(""), "x")
+
+L41:
+      getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+      callproperty        QName(PackageNamespace(""), "getStyleDefinition"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "enabled")
+      iffalse             L53
+
+      getlocal3
+      getproperty         Multiname("defaultTextFormat", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("flash.text"), "TextFormat")
+      astypelate
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      jump                L58
+
+L53:
+      getlocal3
+      getproperty         Multiname("defaultDisabledTextFormat", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("flash.text"), "TextFormat")
+      astypelate
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+L58:
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "textFormat"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace("flash.text"), "TextFormat")
+      astypelate
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      dup
+      setlocal            5
+
+      pushnull
+      ifeq                L77
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+      jump                L80
+
+L77:
+      getlocal            4
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal            5
+
+L80:
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal            5
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setEmbedFonts")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setEmbedFonts"), 0
+
+      getlex              QName(PackageNamespace(""), "textField")
+      pushstring          "A-Fa-f0-9#"
+      setproperty         QName(PackageNamespace(""), "restrict")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      pushbyte            6
+      setproperty         QName(PackageNamespace(""), "maxChars")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlex              QName(PackageNamespace(""), "textField")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(PackageNamespace(""), "textField")
+      pushstring          " #888888 "
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "textHeight")
+      pushbyte            3
+      add
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "textWidth")
+      pushbyte            3
+      add
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      getlocal2
+      add
+      dup
+      setlocal            6
+
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal            6
+      kill                6
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "width")
+      getlocal2
+      pushbyte            2
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlocal2
+      pushbyte            2
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "height")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setTextEditable")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setTextEditable"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawSwatches")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:drawSwatches"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 11
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal            10
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "backgroundPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "showTextField")
+      iffalse             L23
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      getproperty         QName(PackageNamespace(""), "height")
+      add
+      getlocal1
+      add
+      convert_d
+      jump                L25
+
+L23:
+      getlocal1
+      convert_d
+L25:
+      convert_d
+      setlocal2
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatches")
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatches")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatches")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatches")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatches")
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "columnCount"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "uint")
+      astypelate
+      convert_u
+      setlocal3
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "swatchPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "uint")
+      astypelate
+      convert_u
+      setlocal            4
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "swatchWidth"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setlocal            5
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "swatchHeight"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setlocal            6
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorHash")
+      newobject           0
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorHash")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      newarray            0
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+
+      getlex              QName(PackageNamespace(""), "Math")
+      pushshort           1024
+      getlex              QName(PackageNamespace(""), "colors")
+      getproperty         QName(PackageNamespace(""), "length")
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      convert_u
+      setlocal            7
+
+      pushbyte            -1
+      setlocal            8
+
+      pushbyte            0
+      convert_u
+      setlocal            9
+
+      jump                L153
+
+L87:
+      label
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "createSwatch")
+      getlex              QName(PackageNamespace(""), "colors")
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "createSwatch"), 1
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      dup
+      setlocal            10
+
+      getlocal            5
+      getlocal            4
+      add
+      getlocal            9
+      getlocal3
+      modulo
+      multiply
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "x")
+      pushbyte            0
+      ifne                L114
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getlocal            10
+      newarray            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      inclocal_i          8
+      jump                L119
+
+L114:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal            10
+      callpropvoid        Multiname("push", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
+
+L119:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorHash")
+      getlex              QName(PackageNamespace(""), "colors")
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "swatch"
+      getlocal            10
+      pushstring          "row"
+      getlocal            8
+      pushstring          "col"
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      decrement
+      newobject           3
+      setproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal            10
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            9
+      getlocal3
+      divide
+      callproperty        QName(PackageNamespace(""), "floor"), 1
+      getlocal            6
+      getlocal            4
+      add
+      multiply
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatches")
+      getlocal            10
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal            9
+      increment
+      convert_u
+      setlocal            9
+
+L153:
+      getlocal            9
+      getlocal            7
+      iflt                L87
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "drawBG")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:drawBG"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "background"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal1
+      pushnull
+      ifeq                L17
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "paletteBG")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance")
+      getlocal1
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getDisplayObjectInstance"), 1
+      getlex              QName(PackageNamespace("flash.display"), "Sprite")
+      astypelate
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "paletteBG")
+
+L17:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "paletteBG")
+      pushnull
+      ifne                L21
+
+      returnvoid
+
+L21:
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "backgroundPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      convert_d
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "paletteBG")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace(""), "showTextField")
+      iffalse             L36
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      getproperty         QName(PackageNamespace(""), "width")
+      convert_d
+      jump                L38
+
+L36:
+      pushbyte            0
+      convert_d
+L38:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatches")
+      getproperty         QName(PackageNamespace(""), "width")
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      getlocal2
+      pushbyte            2
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "paletteBG")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatches")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatches")
+      getproperty         QName(PackageNamespace(""), "height")
+      add
+      getlocal2
+      add
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "paletteBG")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "positionPalette")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:positionPalette"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 7
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 16
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             2
+
+      getscopeobject      1
+      pushnan
+      setslot             4
+
+      getscopeobject      1
+      pushnan
+      setslot             5
+
+      getscopeobject      1
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      pushbyte            0
+      dup
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+      callproperty        QName(PackageNamespace(""), "localToGlobal"), 1
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setslot             1
+
+      getscopeobject      1
+      getlex              QName(PackageNamespace(""), "focusManager")
+      getproperty         QName(Namespace("fl.managers:IFocusManager"), "form")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setslot             2
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             2
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace(""), "globalToLocal"), 1
+      coerce              QName(PackageNamespace("flash.geom"), "Point")
+      setslot             1
+
+      getscopeobject      1
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "backgroundPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setslot             3
+
+L46:
+      getscopeobject      1
+      getlex              QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "stageHeight")
+      convert_d
+      setslot             4
+
+      getscopeobject      1
+      getlex              QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "stageWidth")
+      convert_d
+      setslot             5
+
+L56:
+      jump                L82
+
+L57:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             2
+      getproperty         QName(PackageNamespace(""), "height")
+      convert_d
+      setslot             4
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             2
+      getproperty         QName(PackageNamespace(""), "width")
+      convert_d
+      setslot             5
+
+      popscope
+      kill                2
+L82:
+      getscopeobject      1
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getproperty         QName(PackageNamespace(""), "width")
+      add
+      getscopeobject      1
+      getslot             5
+      ifngt               L102
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getscopeobject      1
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            0
+      lshift
+      setproperty         QName(PackageNamespace(""), "x")
+
+      jump                L115
+
+L102:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getscopeobject      1
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      getproperty         QName(PackageNamespace(""), "width")
+      add
+      getscopeobject      1
+      getslot             3
+      add
+      pushbyte            0
+      lshift
+      setproperty         QName(PackageNamespace(""), "x")
+
+L115:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlex              QName(PackageNamespace(""), "Math")
+      getscopeobject      1
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "y")
+      getscopeobject      1
+      getslot             4
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      pushbyte            0
+      lshift
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+     try from L46 to L56 target L57 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "se") end
+     trait slot QName(PackageInternalNs("fl.controls"), "p") slotid 1 type QName(PackageNamespace("flash.geom"), "Point") end
+     trait slot QName(PackageInternalNs("fl.controls"), "myForm") slotid 2 type QName(PackageNamespace("flash.display"), "DisplayObjectContainer") end
+     trait slot QName(PackageInternalNs("fl.controls"), "padding") slotid 3 type QName(PackageNamespace(""), "Number") end
+     trait slot QName(PackageInternalNs("fl.controls"), "theStageHeight") slotid 4 type QName(PackageNamespace(""), "Number") end
+     trait slot QName(PackageInternalNs("fl.controls"), "theStageWidth") slotid 5 type QName(PackageNamespace(""), "Number") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "setTextEditable")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:setTextEditable"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "showTextField")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "editable")
+      iffalse             L12
+
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldType")
+      getproperty         QName(PackageNamespace(""), "INPUT")
+      coerce_s
+      jump                L15
+
+L12:
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldType")
+      getproperty         QName(PackageNamespace(""), "DYNAMIC")
+      coerce_s
+L15:
+      setproperty         QName(PackageNamespace(""), "type")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "editable")
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "keyUpHandler") flag OVERRIDE
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:keyUpHandler"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal            5
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+      iftrue              L14
+
+      returnvoid
+
+L14:
+      findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+      constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 0
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "editable")
+      convert_b
+      dup
+      iffalse             L25
+
+      pop
+      getlex              QName(PackageNamespace(""), "showTextField")
+      convert_b
+L25:
+      iffalse             L74
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "text")
+      coerce_s
+      dup
+      setlocal            4
+
+      pushstring          "#"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            -1
+      ifngt               L53
+
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "^\\s+|\\s+$"
+      pushstring          "g"
+      construct           2
+      pushstring          ""
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      coerce_s
+      dup
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "#"
+      pushstring          "g"
+      construct           2
+      pushstring          ""
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      coerce_s
+      setlocal            4
+
+L53:
+      findpropstrict      QName(PackageNamespace(""), "parseInt")
+      getlocal            4
+      pushbyte            16
+      callproperty        QName(PackageNamespace(""), "parseInt"), 2
+      convert_u
+      setlocal2
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "findSwatch")
+      getlocal2
+      callproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "findSwatch"), 1
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal            5
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight")
+      getlocal            5
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight"), 1
+
+      getlocal3
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "color")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorWellColor")
+      getlocal3
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorWellColor"), 1
+
+      jump                L80
+
+L74:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "rollOverColor")
+      convert_u
+      setlocal2
+
+      getlocal3
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "color")
+
+L80:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      ifeq                L86
+
+      returnvoid
+
+L86:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ColorPickerEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ColorPickerEvent")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      getlocal2
+      constructprop       QName(PackageNamespace("fl.events"), "ColorPickerEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "rollOverColor")
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorText")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "color")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorText"), 1
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "rollOverColor")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "color")
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "rollOverColor")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ColorPickerEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ColorPickerEvent")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      getlex              QName(PackageNamespace(""), "selectedColor")
+      constructprop       QName(PackageNamespace("fl.events"), "ColorPickerEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "close")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "positionTextField")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:positionTextField"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "showTextField")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "backgroundPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setlocal1
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "textPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "paletteBG")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal1
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "paletteBG")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal1
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal2
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "textFieldBG")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal2
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorDisplay")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:setColorDisplay"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getproperty         QName(PackageNamespace(""), "length")
+      iftrue              L6
+
+      returnvoid
+
+L6:
+      findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+      pushbyte            0
+      dup
+      dup
+      pushbyte            1
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      pushbyte            16
+      rshift
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      pushbyte            8
+      rshift
+      pushshort           255
+      bitand
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      pushshort           255
+      bitand
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 8
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+      setlocal1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorWellColor")
+      getlocal1
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorWellColor"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorText")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorText"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "findSwatch")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      callproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "findSwatch"), 1
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal2
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight")
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight"), 1
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_b
+      dup
+      iffalse             L51
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorHash")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      equals
+L51:
+      iffalse             L54
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "cleanUpSelected")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "cleanUpSelected"), 0
+
+L54:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:setSwatchHighlight"
+    param QName(PackageNamespace("flash.display"), "Sprite")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushnull
+      ifne                L13
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iffalse             L12
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L12:
+      returnvoid
+
+L13:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      not
+      dup
+      iffalse             L24
+
+      pop
+      getlex              QName(PackageNamespace(""), "colors")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      greaterthan
+L24:
+      iffalse             L29
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      jump                L33
+
+L29:
+      getlex              QName(PackageNamespace(""), "colors")
+      getproperty         QName(PackageNamespace(""), "length")
+      iftrue              L33
+
+      returnvoid
+
+L33:
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "swatchPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      getproperty         QName(PackageNamespace(""), "numChildren")
+      decrement
+      callpropvoid        QName(PackageNamespace(""), "setChildIndex"), 2
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatches")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "x")
+      add
+      decrement
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchSelectedSkin")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatches")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "y")
+      add
+      decrement
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal1
+      pushstring          "color"
+      callproperty        QName(PackageNamespace(""), "getChildByName"), 1
+      getproperty         QName(PackageNamespace(""), "transform")
+      getproperty         QName(PackageNamespace(""), "colorTransform")
+      getproperty         QName(PackageNamespace(""), "color")
+      coerce_a
+      setlocal3
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorHash")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("col", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorHash")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("row", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "findSwatch")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:findSwatch"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace("flash.display"), "Sprite")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getproperty         QName(PackageNamespace(""), "length")
+      iftrue              L7
+
+      pushnull
+      returnvalue
+
+L7:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorHash")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifeq                L18
+
+      getlocal2
+      getproperty         Multiname("swatch", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      returnvalue
+
+L18:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "onSwatchClick")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:onSwatchClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      pushstring          "color"
+      callproperty        Multiname("getChildByName", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
+      getproperty         Multiname("transform", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("colorTransform", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+      setlocal2
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "color")
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ColorPickerEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ColorPickerEvent")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      getlex              QName(PackageNamespace(""), "selectedColor")
+      constructprop       QName(PackageNamespace("fl.events"), "ColorPickerEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "close")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "onSwatchOver")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:onSwatchOver"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      pushstring          "color"
+      callproperty        Multiname("getChildByName", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
+      getlex              QName(PackageNamespace("fl.controls"), "BaseButton")
+      astypelate
+      coerce              QName(PackageNamespace("fl.controls"), "BaseButton")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "transform")
+      getproperty         QName(PackageNamespace(""), "colorTransform")
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+      setlocal3
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorWellColor")
+      getlocal3
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorWellColor"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.display"), "Sprite")
+      astypelate
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorText")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "color")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorText"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ColorPickerEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ColorPickerEvent")
+      getproperty         QName(PackageNamespace(""), "ITEM_ROLL_OVER")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "color")
+      constructprop       QName(PackageNamespace("fl.events"), "ColorPickerEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "onSwatchOut")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:onSwatchOut"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("transform", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("colorTransform", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ColorPickerEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ColorPickerEvent")
+      getproperty         QName(PackageNamespace(""), "ITEM_ROLL_OUT")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "color")
+      constructprop       QName(PackageNamespace("fl.events"), "ColorPickerEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorText")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:setColorText"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      pushnull
+      ifne                L6
+
+      returnvoid
+
+L6:
+      getlex              QName(PackageNamespace(""), "textField")
+      pushstring          "#"
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorToString")
+      getlocal1
+      callproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorToString"), 1
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorToString")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:colorToString"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            16
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+      coerce_s
+      setlocal2
+
+      jump                L14
+
+L8:
+      label
+      pushstring          "0"
+      getlocal2
+      add
+      coerce_s
+      setlocal2
+
+L14:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            6
+      iflt                L8
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorWellColor")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:setColorWellColor"
+    param QName(PackageNamespace("flash.geom"), "ColorTransform")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorWell")
+      getproperty         QName(PackageNamespace(""), "transform")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "createSwatch")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:createSwatch"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace("flash.display"), "Sprite")
+    body
+     maxstack 10
+     localcount 8
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("fl.controls"), "BaseButton")
+      constructprop       QName(PackageNamespace("fl.controls"), "BaseButton"), 0
+      coerce              QName(PackageNamespace("fl.controls"), "BaseButton")
+      setlocal3
+
+      getlocal3
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "focusEnabled")
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "swatchWidth"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setlocal            4
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "swatchHeight"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setlocal            5
+
+      getlocal3
+      getlocal            4
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "transform")
+      findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+      pushbyte            0
+      dup
+      dup
+      pushbyte            1
+      getlocal1
+      pushbyte            16
+      rshift
+      getlocal1
+      pushbyte            8
+      rshift
+      pushshort           255
+      bitand
+      getlocal1
+      pushshort           255
+      bitand
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 8
+      setproperty         QName(PackageNamespace(""), "colorTransform")
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "copyStylesToChild")
+      getlocal3
+      getlex              QName(StaticProtectedNs("fl.controls:ColorPicker"), "SWATCH_STYLES")
+      callpropvoid        QName(ProtectedNamespace("fl.core:UIComponent"), "copyStylesToChild"), 2
+
+      getlocal3
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "drawNow"), 0
+
+      getlocal3
+      pushstring          "color"
+      setproperty         QName(PackageNamespace(""), "name")
+
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue")
+      pushstring          "swatchPadding"
+      callproperty        QName(ProtectedNamespace("fl.core:UIComponent"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      convert_d
+      setlocal            6
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      coerce              QName(PackageNamespace("flash.display"), "Graphics")
+      dup
+      setlocal            7
+
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlocal            7
+      getlocal            6
+      negate
+      getlocal            6
+      negate
+      getlocal            4
+      getlocal            6
+      pushbyte            2
+      multiply
+      add
+      getlocal            5
+      getlocal            6
+      pushbyte            2
+      multiply
+      add
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlocal            7
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlocal2
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "onSwatchClick")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlocal2
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "onSwatchOver")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlocal2
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OUT")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "onSwatchOut")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "addStageListener")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:addStageListener"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "focusManager")
+      getproperty         QName(Namespace("fl.managers:IFocusManager"), "form")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "onStageClick")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "removeStageListener")
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:removeStageListener"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "focusManager")
+      getproperty         QName(Namespace("fl.managers:IFocusManager"), "form")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "onStageClick")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "focusInHandler") flag OVERRIDE
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:focusInHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "focusInHandler"), 1
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "setIMEMode")
+      pushtrue
+      callpropvoid        QName(ProtectedNamespace("fl.core:UIComponent"), "setIMEMode"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "focusOutHandler") flag OVERRIDE
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:focusOutHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "relatedObject")
+      getlex              QName(PackageNamespace(""), "textField")
+      ifne                L9
+
+      findpropstrict      QName(PackageNamespace(""), "setFocus")
+      callpropvoid        QName(PackageNamespace(""), "setFocus"), 0
+
+      returnvoid
+
+L9:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+      iffalse             L13
+
+      findpropstrict      QName(PackageNamespace(""), "close")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+L13:
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "focusOutHandler"), 1
+      findpropstrict      QName(ProtectedNamespace("fl.core:UIComponent"), "setIMEMode")
+      pushfalse
+      callpropvoid        QName(ProtectedNamespace("fl.core:UIComponent"), "setIMEMode"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOurFocus") flag OVERRIDE
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:isOurFocus"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "textField")
+      equals
+      dup
+      iftrue              L12
+
+      pop
+      getlocal0
+      getlocal1
+      callsuper           QName(ProtectedNamespace("fl.core:UIComponent"), "isOurFocus"), 1
+      convert_b
+L12:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "keyDownHandler") flag OVERRIDE
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:keyDownHandler"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal3
+
+      jump                L10
+
+L6:
+      label
+      returnvoid
+
+L8:
+      label
+      jump                L29
+
+L10:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      setlocal            4
+
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "SHIFT")
+      getlocal            4
+      ifstrictne          L19
+
+      pushbyte            0
+      jump                L27
+
+L19:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "CONTROL")
+      getlocal            4
+      ifstrictne          L25
+
+      pushbyte            1
+      jump                L27
+
+L25:
+      jump                L26
+
+L26:
+      pushbyte            2
+L27:
+      kill                4
+      lookupswitch        L8, [L6, L6, L8]
+
+L29:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "ctrlKey")
+      iffalse             L63
+
+      jump                L43
+
+L33:
+      label
+      findpropstrict      QName(PackageNamespace(""), "open")
+      callpropvoid        QName(PackageNamespace(""), "open"), 0
+
+      jump                L62
+
+L37:
+      label
+      findpropstrict      QName(PackageNamespace(""), "close")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+      jump                L62
+
+L41:
+      label
+      jump                L62
+
+L43:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      setlocal            4
+
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "DOWN")
+      getlocal            4
+      ifstrictne          L52
+
+      pushbyte            0
+      jump                L60
+
+L52:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "UP")
+      getlocal            4
+      ifstrictne          L58
+
+      pushbyte            1
+      jump                L60
+
+L58:
+      jump                L59
+
+L59:
+      pushbyte            2
+L60:
+      kill                4
+      lookupswitch        L41, [L33, L37, L41]
+
+L62:
+      returnvoid
+
+L63:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+      iftrue              L109
+
+      jump                L72
+
+L66:
+      label
+      findpropstrict      QName(PackageNamespace(""), "open")
+      callpropvoid        QName(PackageNamespace(""), "open"), 0
+
+      returnvoid
+
+L70:
+      label
+      jump                L109
+
+L72:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      setlocal            4
+
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "UP")
+      getlocal            4
+      ifstrictne          L81
+
+      pushbyte            0
+      jump                L107
+
+L81:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "DOWN")
+      getlocal            4
+      ifstrictne          L87
+
+      pushbyte            1
+      jump                L107
+
+L87:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "LEFT")
+      getlocal            4
+      ifstrictne          L93
+
+      pushbyte            2
+      jump                L107
+
+L93:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "RIGHT")
+      getlocal            4
+      ifstrictne          L99
+
+      pushbyte            3
+      jump                L107
+
+L99:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "SPACE")
+      getlocal            4
+      ifstrictne          L105
+
+      pushbyte            4
+      jump                L107
+
+L105:
+      jump                L106
+
+L106:
+      pushbyte            5
+L107:
+      kill                4
+      lookupswitch        L70, [L66, L66, L66, L66, L66, L70]
+
+L109:
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      pushstring          "#"
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      equals
+      dup
+      iftrue              L125
+
+      pop
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "text")
+      pushstring          "#"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            -1
+      greaterthan
+L125:
+      iffalse             L128
+
+      pushbyte            7
+      jump                L129
+
+L128:
+      pushbyte            6
+L129:
+      setproperty         QName(PackageNamespace(""), "maxChars")
+
+      jump                L300
+
+L131:
+      label
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "findSwatch")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      callproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "findSwatch"), 1
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal3
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight")
+      getlocal3
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight"), 1
+
+      returnvoid
+
+L141:
+      label
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      pushbyte            0
+      dup
+      setlocal            4
+
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+      getlocal            4
+      kill                4
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+
+      jump                L373
+
+L152:
+      label
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      decrement
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+      jump                L373
+
+L168:
+      label
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+      jump                L373
+
+L175:
+      label
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      pushbyte            0
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+      jump                L373
+
+L180:
+      label
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "isOpen")
+      iffalse             L186
+
+      findproperty        QName(PackageNamespace(""), "selectedColor")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "_selectedColor")
+      initproperty        QName(PackageNamespace(""), "selectedColor")
+
+L186:
+      findpropstrict      QName(PackageNamespace(""), "close")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+      returnvoid
+
+L189:
+      label
+      returnvoid
+
+L191:
+      label
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            -1
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      decrement
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      pushbyte            -1
+      ifne                L207
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+L207:
+      jump                L373
+
+L208:
+      label
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      pushbyte            1
+      add
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getproperty         QName(PackageNamespace(""), "length")
+      ifne                L225
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      pushbyte            0
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+L225:
+      jump                L373
+
+L226:
+      label
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      pushbyte            1
+      add
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      ifne                L263
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      pushbyte            0
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      pushbyte            1
+      add
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getproperty         QName(PackageNamespace(""), "length")
+      ifne                L263
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      pushbyte            0
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+L263:
+      jump                L373
+
+L264:
+      label
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            -1
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      decrement
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      pushbyte            -1
+      ifne                L297
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      decrement
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            -1
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      decrement
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      pushbyte            -1
+      ifne                L297
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+
+L297:
+      jump                L373
+
+L298:
+      label
+      returnvoid
+
+L300:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      setlocal            4
+
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "TAB")
+      getlocal            4
+      ifstrictne          L309
+
+      pushbyte            0
+      jump                L371
+
+L309:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "HOME")
+      getlocal            4
+      ifstrictne          L315
+
+      pushbyte            1
+      jump                L371
+
+L315:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "END")
+      getlocal            4
+      ifstrictne          L321
+
+      pushbyte            2
+      jump                L371
+
+L321:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "PAGE_DOWN")
+      getlocal            4
+      ifstrictne          L327
+
+      pushbyte            3
+      jump                L371
+
+L327:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "PAGE_UP")
+      getlocal            4
+      ifstrictne          L333
+
+      pushbyte            4
+      jump                L371
+
+L333:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "ESCAPE")
+      getlocal            4
+      ifstrictne          L339
+
+      pushbyte            5
+      jump                L371
+
+L339:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      getlocal            4
+      ifstrictne          L345
+
+      pushbyte            6
+      jump                L371
+
+L345:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "UP")
+      getlocal            4
+      ifstrictne          L351
+
+      pushbyte            7
+      jump                L371
+
+L351:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "DOWN")
+      getlocal            4
+      ifstrictne          L357
+
+      pushbyte            8
+      jump                L371
+
+L357:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "RIGHT")
+      getlocal            4
+      ifstrictne          L363
+
+      pushbyte            9
+      jump                L371
+
+L363:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "LEFT")
+      getlocal            4
+      ifstrictne          L369
+
+      pushbyte            10
+      jump                L371
+
+L369:
+      jump                L370
+
+L370:
+      pushbyte            11
+L371:
+      kill                4
+      lookupswitch        L298, [L131, L141, L152, L168, L175, L180, L189, L191, L208, L226, L264, L298]
+
+L373:
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "color"
+      callproperty        Multiname("getChildByName", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
+      getproperty         Multiname("transform", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("colorTransform", [PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("flash.geom"), "ColorTransform")
+      setlocal2
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "rollOverColor")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "color")
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "rollOverColor")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorWellColor")
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorWellColor"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currRowIndex")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "currColIndex")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls:ColorPicker"), StaticProtectedNs("fl.controls:ColorPicker"), PackageNamespace(""), ProtectedNamespace("fl.controls:ColorPicker"), PrivateNamespace(null, "fl.controls:ColorPicker/instance/fl.controls:ColorPicker"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setSwatchHighlight"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorText")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "color")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:ColorPicker"), "setColorText"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:ColorPicker"), "configUI") flag OVERRIDE
+   method
+    refid "fl.controls:ColorPicker/instance/fl.controls:ColorPicker:configUI"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "configUI"), 0
+      findproperty        QName(PackageNamespace(""), "tabChildren")
+      pushfalse
+      initproperty        QName(PackageNamespace(""), "tabChildren")
+
+      getglobalscope
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "defaultColors")
+      pushnull
+      ifne                L72
+
+      getglobalscope
+      getslot             1
+      newarray            0
+      setproperty         QName(PackageNamespace(""), "defaultColors")
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L69
+
+L23:
+      label
+      getglobalscope
+      getslot             1
+      getproperty         QName(PackageNamespace(""), "defaultColors")
+      getlocal1
+      pushbyte            6
+      divide
+      pushbyte            3
+      modulo
+      pushbyte            0
+      lshift
+      getlocal1
+      pushbyte            108
+      divide
+      pushbyte            0
+      lshift
+      pushbyte            3
+      multiply
+      add
+      pushbyte            51
+      multiply
+      pushbyte            16
+      lshift
+      getlocal1
+      pushbyte            6
+      modulo
+      pushbyte            51
+      multiply
+      pushbyte            8
+      lshift
+      bitor
+      getlocal1
+      pushbyte            18
+      divide
+      pushbyte            0
+      lshift
+      pushbyte            6
+      modulo
+      pushbyte            51
+      multiply
+      bitor
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L69:
+      getlocal1
+      pushshort           216
+      iflt                L23
+
+L72:
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorHash")
+      newobject           0
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "colorHash")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+      newarray            0
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchMap")
+
+      findproperty        QName(PackageNamespace(""), "textField")
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      initproperty        QName(PackageNamespace(""), "textField")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "tabEnabled")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      findpropstrict      QName(PackageNamespace("fl.controls"), "BaseButton")
+      constructprop       QName(PackageNamespace("fl.controls"), "BaseButton"), 0
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "focusEnabled")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "useHandCursor")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "autoRepeat")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      pushbyte            25
+      dup
+      callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "onPopupButtonClick")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "swatchButton")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      initproperty        QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "tabChildren")
+
+      getlex              QName(ProtectedNamespace("fl.controls:ColorPicker"), "palette")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "cacheAsBitmap")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.controls:ColorPicker/class/init"
+  body
+   maxstack 43
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "fl.controls:ColorPicker"), "defaultStyles")
+    pushstring          "upSkin"
+    pushstring          "ColorPicker_upSkin"
+    pushstring          "disabledSkin"
+    pushstring          "ColorPicker_disabledSkin"
+    pushstring          "overSkin"
+    pushstring          "ColorPicker_overSkin"
+    pushstring          "downSkin"
+    pushstring          "ColorPicker_downSkin"
+    pushstring          "colorWell"
+    pushstring          "ColorPicker_colorWell"
+    pushstring          "swatchSkin"
+    pushstring          "ColorPicker_swatchSkin"
+    pushstring          "swatchSelectedSkin"
+    pushstring          "ColorPicker_swatchSelectedSkin"
+    pushstring          "swatchWidth"
+    pushbyte            10
+    pushstring          "swatchHeight"
+    pushbyte            10
+    pushstring          "columnCount"
+    pushbyte            18
+    pushstring          "swatchPadding"
+    pushbyte            1
+    pushstring          "textFieldSkin"
+    pushstring          "ColorPicker_textFieldSkin"
+    pushstring          "textFieldWidth"
+    pushnull
+    pushstring          "textFieldHeight"
+    pushnull
+    pushstring          "textPadding"
+    pushbyte            3
+    pushstring          "background"
+    pushstring          "ColorPicker_backgroundSkin"
+    pushstring          "backgroundPadding"
+    pushbyte            5
+    pushstring          "textFormat"
+    pushnull
+    pushstring          "focusRectSkin"
+    pushnull
+    pushstring          "focusRectPadding"
+    pushnull
+    pushstring          "embedFonts"
+    pushfalse
+    newobject           21
+    setproperty         QName(PrivateNamespace(null, "fl.controls:ColorPicker"), "defaultStyles")
+
+    findproperty        QName(StaticProtectedNs("fl.controls:ColorPicker"), "POPUP_BUTTON_STYLES")
+    pushstring          "disabledSkin"
+    pushstring          "disabledSkin"
+    pushstring          "downSkin"
+    pushstring          "downSkin"
+    pushstring          "overSkin"
+    pushstring          "overSkin"
+    pushstring          "upSkin"
+    pushstring          "upSkin"
+    newobject           4
+    initproperty        QName(StaticProtectedNs("fl.controls:ColorPicker"), "POPUP_BUTTON_STYLES")
+
+    findproperty        QName(StaticProtectedNs("fl.controls:ColorPicker"), "SWATCH_STYLES")
+    pushstring          "disabledSkin"
+    pushstring          "swatchSkin"
+    pushstring          "downSkin"
+    pushstring          "swatchSkin"
+    pushstring          "overSkin"
+    pushstring          "swatchSkin"
+    pushstring          "upSkin"
+    pushstring          "swatchSkin"
+    newobject           4
+    initproperty        QName(StaticProtectedNs("fl.controls:ColorPicker"), "SWATCH_STYLES")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "defaultColors") slotid 1 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PrivateNamespace(null, "fl.controls:ColorPicker"), "defaultStyles") slotid 2 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   refid "fl.controls:ColorPicker/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "fl.controls:ColorPicker"), "defaultStyles")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait const QName(StaticProtectedNs("fl.controls:ColorPicker"), "POPUP_BUTTON_STYLES") slotid 3 type QName(PackageNamespace(""), "Object") end
+ trait const QName(StaticProtectedNs("fl.controls:ColorPicker"), "SWATCH_STYLES") slotid 4 type QName(PackageNamespace(""), "Object") end
+end ; class

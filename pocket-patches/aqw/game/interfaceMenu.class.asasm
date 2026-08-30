@@ -1,0 +1,798 @@
+class
+ refid "interfaceMenu"
+ instance QName(PackageNamespace(""), "interfaceMenu")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("interfaceMenu")
+  iinit
+   refid "interfaceMenu/instance/init"
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("flash.display"), "MovieClip")
+   body
+    maxstack 6
+    localcount 8
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+     setlocal            4
+
+     pushbyte            0
+     convert_u
+     setlocal            5
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal2
+     initproperty        Multiname("btnOpen", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal0
+     getlocal3
+     initproperty        Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal0
+     findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "interfaceMenu/instance"), PackageNamespace("flash.display"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     constructprop       Multiname("MovieClip", [PrivateNamespace(null, "interfaceMenu/instance"), PackageNamespace("flash.display"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+     initproperty        Multiname("mcMenu", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     findpropstrict      Multiname("menuBottom", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     constructprop       Multiname("menuBottom", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+     getlex              Multiname("MovieClip", [PrivateNamespace(null, "interfaceMenu/instance"), PackageNamespace("flash.display"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     astypelate
+     coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+     dup
+     dup
+     setlocal            4
+
+     getproperty         Multiname("height", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     decrement
+     setproperty         Multiname("height", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlocal            4
+     getproperty         Multiname("width", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     decrement
+     setproperty         Multiname("width", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlocal            4
+     getproperty         Multiname("x", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushbyte            43
+     subtract
+     setproperty         Multiname("x", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlocal            4
+     getproperty         Multiname("y", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushdouble          10.7
+     subtract
+     setproperty         Multiname("y", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal0
+     getlocal            4
+     getproperty         Multiname("y", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushbyte            2
+     subtract
+     initproperty        Multiname("currentPos", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal0
+     getproperty         Multiname("mcMenu", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            4
+     callpropvoid        Multiname("addChild", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+     findpropstrict      Multiname("menuListItem", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     constructprop       Multiname("menuListItem", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+     getlex              Multiname("MovieClip", [PrivateNamespace(null, "interfaceMenu/instance"), PackageNamespace("flash.display"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     astypelate
+     coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+     dup
+     dup
+     setlocal            4
+
+     getproperty         Multiname("x", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushbyte            17
+     add
+     setproperty         Multiname("x", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlocal0
+     getproperty         Multiname("h", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("height", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlocal0
+     getproperty         Multiname("w", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("width", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getproperty         Multiname("mTxt", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal1
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("txt", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("text", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlocal0
+     getproperty         Multiname("currentPos", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal0
+     getproperty         Multiname("h", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushbyte            1
+     rshift
+     subtract
+     pushbyte            1
+     add
+     setproperty         Multiname("y", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlex              Multiname("MouseEvent", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.events")])
+     getproperty         Multiname("CLICK", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal0
+     getproperty         Multiname("onClick", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 5
+
+     getlocal            4
+     pushtrue
+     setproperty         Multiname("buttonMode", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     pushfalse
+     setproperty         Multiname("mouseChildren", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlocal1
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("fct", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("name", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal0
+     getlocal            4
+     getproperty         Multiname("y", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     initproperty        Multiname("currentPos", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal0
+     getproperty         Multiname("mcMenu", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            4
+     callpropvoid        Multiname("addChild", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+     pushbyte            1
+     convert_u
+     setlocal            5
+
+     jump                L199
+
+L129:
+     label
+     findpropstrict      Multiname("menuListItem", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     constructprop       Multiname("menuListItem", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+     getlex              Multiname("MovieClip", [PrivateNamespace(null, "interfaceMenu/instance"), PackageNamespace("flash.display"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     astypelate
+     coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+     dup
+     dup
+     setlocal            4
+
+     getproperty         Multiname("x", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushbyte            17
+     add
+     setproperty         Multiname("x", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlocal0
+     getproperty         Multiname("h", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("height", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlocal0
+     getproperty         Multiname("w", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("width", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlocal0
+     getproperty         Multiname("currentPos", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal0
+     getproperty         Multiname("h", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     subtract
+     pushbyte            1
+     add
+     setproperty         Multiname("y", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal0
+     getlocal            4
+     getproperty         Multiname("y", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     initproperty        Multiname("currentPos", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getproperty         Multiname("mTxt", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal1
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("txt", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("text", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlex              Multiname("MouseEvent", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.events")])
+     getproperty         Multiname("CLICK", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal0
+     getproperty         Multiname("onClick", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 5
+
+     getlocal            4
+     pushtrue
+     setproperty         Multiname("buttonMode", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     pushfalse
+     setproperty         Multiname("mouseChildren", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlocal1
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("fct", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("name", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal0
+     getproperty         Multiname("mcMenu", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            4
+     callpropvoid        Multiname("addChild", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+     getlocal            5
+     increment
+     convert_u
+     setlocal            5
+
+L199:
+     getlocal            5
+     getlocal1
+     getproperty         Multiname("length", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     decrement
+     iflt                L129
+
+     findpropstrict      Multiname("menuTop", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     constructprop       Multiname("menuTop", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+     getlex              Multiname("MovieClip", [PrivateNamespace(null, "interfaceMenu/instance"), PackageNamespace("flash.display"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     astypelate
+     coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+     dup
+     setlocal            4
+
+     dup
+     setlocal            6
+
+     getproperty         Multiname("height", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     decrement
+     setlocal            7
+
+     getlocal            6
+     getlocal            7
+     setproperty         Multiname("height", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     kill                7
+     kill                6
+     getlocal            4
+     dup
+     setlocal            6
+
+     getproperty         Multiname("width", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     decrement
+     setlocal            7
+
+     getlocal            6
+     getlocal            7
+     setproperty         Multiname("width", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     kill                7
+     kill                6
+     getlocal            4
+     getlocal0
+     getproperty         Multiname("currentPos", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            4
+     getproperty         Multiname("height", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     subtract
+     setproperty         Multiname("y", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getproperty         Multiname("txt", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal1
+     getlocal1
+     getproperty         Multiname("length", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     decrement
+     getproperty         MultinameL([PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("txt", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("text", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal            4
+     getlocal            4
+     getproperty         Multiname("x", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushbyte            17
+     add
+     setproperty         Multiname("x", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal0
+     getproperty         Multiname("mcMenu", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            4
+     callpropvoid        Multiname("addChild", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "mcMenu") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PrivateNamespace(null, "interfaceMenu/instance"), "currentPos") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "interfaceMenu/instance"), "h") type QName(PackageNamespace(""), "Number") value Double(25.2) end
+  trait slot QName(PrivateNamespace(null, "interfaceMenu/instance"), "w") type QName(PackageNamespace(""), "Number") value Double(118.25) end
+  trait slot QName(PackageNamespace(""), "btnOpen") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace(null, "interfaceMenu/instance"), "rootClass") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait method QName(PrivateNamespace(null, "interfaceMenu/instance"), "onClick")
+   method
+    refid "interfaceMenu/instance/interfaceMenu/instance/onClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Function")
+      setlocal3
+
+      getlocal1
+      getproperty         Multiname("currentTarget", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("name", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "."
+      callproperty        Multiname("split", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      jump                L45
+
+L13:
+      label
+      getlocal0
+      getlocal1
+      getproperty         Multiname("currentTarget", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("name", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace(""), "Function")
+      setlocal3
+
+      jump                L67
+
+L22:
+      label
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace(""), "Function")
+      setlocal3
+
+      jump                L67
+
+L32:
+      label
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         MultinameL([PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace(""), "Function")
+      setlocal3
+
+      jump                L67
+
+L43:
+      label
+      jump                L67
+
+L45:
+      getlocal2
+      getproperty         Multiname("length", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      setlocal            4
+
+      pushbyte            1
+      getlocal            4
+      ifstrictne          L53
+
+      pushbyte            0
+      jump                L65
+
+L53:
+      pushbyte            2
+      getlocal            4
+      ifstrictne          L58
+
+      pushbyte            1
+      jump                L65
+
+L58:
+      pushbyte            3
+      getlocal            4
+      ifstrictne          L63
+
+      pushbyte            2
+      jump                L65
+
+L63:
+      jump                L64
+
+L64:
+      pushbyte            3
+L65:
+      kill                4
+      lookupswitch        L43, [L13, L22, L32, L43]
+
+L67:
+      getlocal3
+      getglobalscope
+      call                0
+      pop
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "interfaceMenu/instance"), "gotoMyHouse")
+   method
+    refid "interfaceMenu/instance/interfaceMenu/instance/gotoMyHouse"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("strMapName", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("toLowerCase", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      pushstring          "house"
+      equals
+      dup
+      iffalse             L17
+
+      pop
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("isMyHouse", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      convert_b
+L17:
+      iffalse             L24
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "Enter"
+      pushstring          "Spawn"
+      callpropvoid        Multiname("moveToCell", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+L24:
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("isHouseEquipped", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      iffalse             L38
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("sfc", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("myUserName", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("gotoHouse", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      jump                L45
+
+L38:
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "buyhouse"
+      pushstring          "Enter"
+      pushstring          "Spawn"
+      callpropvoid        Multiname("gotoTown", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 3
+
+L45:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "interfaceMenu/instance"), "gotoCentaur")
+   method
+    refid "interfaceMenu/instance/interfaceMenu/instance/gotoCentaur"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "buyhouse"
+      pushstring          "Enter"
+      pushstring          "Spawn"
+      callpropvoid        Multiname("gotoTown", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "interfaceMenu/instance"), "toggleHouseInventory")
+   method
+    refid "interfaceMenu/instance/interfaceMenu/instance/toggleHouseInventory"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("uiLock", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      iftrue              L30
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ui", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mcPopup", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("currentLabel", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "HouseInventory"
+      ifne                L24
+
+      findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "interfaceMenu/instance"), PackageNamespace("flash.display"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ui", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mcPopup", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "mcInventory"
+      callproperty        Multiname("getChildByName", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      callproperty        Multiname("MovieClip", [PrivateNamespace(null, "interfaceMenu/instance"), PackageNamespace("flash.display"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      callpropvoid        Multiname("fClose", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+      jump                L30
+
+L24:
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ui", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mcPopup", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "HouseInventory"
+      callpropvoid        Multiname("fOpen", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L30:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "interfaceMenu/instance"), "charPage")
+   method
+    refid "interfaceMenu/instance/interfaceMenu/instance/charPage"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("myAvatar", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("objData", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("strUsername", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_s
+      setlocal1
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("params", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("strSourceID", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "BBGames"
+      ifne                L25
+
+      findpropstrict      Multiname("navigateToURL", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.net")])
+      findpropstrict      Multiname("URLRequest", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.net")])
+      pushstring          "https://www.aq.com/embed/bbgames/aw-character.asp?id="
+      getlocal1
+      add
+      constructprop       Multiname("URLRequest", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.net")]), 1
+      pushstring          "_blank"
+      callpropvoid        Multiname("navigateToURL", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.net")]), 2
+
+      jump                L33
+
+L25:
+      findpropstrict      Multiname("navigateToURL", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.net")])
+      findpropstrict      Multiname("URLRequest", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.net")])
+      pushstring          "https://www.aq.com/aw-character.asp?id="
+      getlocal1
+      add
+      constructprop       Multiname("URLRequest", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.net")]), 1
+      pushstring          "_blank"
+      callpropvoid        Multiname("navigateToURL", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.net")]), 2
+
+L33:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "interfaceMenu/instance"), "toggleTempInventory")
+   method
+    refid "interfaceMenu/instance/interfaceMenu/instance/toggleTempInventory"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("uiLock", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      iftrue              L26
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ui", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mcPopup", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("currentLabel", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "Temp"
+      ifne                L20
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ui", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mcPopup", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("onClose", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+      jump                L26
+
+L20:
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ui", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mcPopup", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "Temp"
+      callpropvoid        Multiname("fOpen", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "interfaceMenu/instance"), "toggleInventory")
+   method
+    refid "interfaceMenu/instance/interfaceMenu/instance/toggleInventory"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("world", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("uiLock", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      iftrue              L41
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ui", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mcPopup", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("currentLabel", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "Inventory"
+      equals
+      dup
+      iftrue              L24
+
+      pop
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ui", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mcPopup", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("currentLabel", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "HouseInventory"
+      equals
+L24:
+      iffalse             L35
+
+      findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "interfaceMenu/instance"), PackageNamespace("flash.display"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ui", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mcPopup", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "mcInventory"
+      callproperty        Multiname("getChildByName", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      callproperty        Multiname("MovieClip", [PrivateNamespace(null, "interfaceMenu/instance"), PackageNamespace("flash.display"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      callpropvoid        Multiname("fClose", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+      jump                L41
+
+L35:
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ui", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mcPopup", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "Inventory"
+      callpropvoid        Multiname("fOpen", [PrivateNamespace(null, "interfaceMenu/instance"), PrivateNamespace(null, "interfaceMenu"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("interfaceMenu"), StaticProtectedNs("interfaceMenu"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L41:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "interfaceMenu/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

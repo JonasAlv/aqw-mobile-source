@@ -1,0 +1,197 @@
+method
+ refid "Game/instance/init/inline_method#19"
+ param QName(PackageNamespace("it.gotoandplay.smartfoxserver"), "SFSEvent")
+ body
+  maxstack 4
+  localcount 8
+  initscopedepth 11
+  maxscopedepth 11
+  code
+   pushundefined
+   coerce_a
+   setlocal2
+
+   pushundefined
+   coerce_a
+   setlocal3
+
+   pushnull
+   coerce              QName(PackageNamespace("flash.display"), "MovieClip")
+   setlocal            4
+
+   pushundefined
+   coerce_a
+   setlocal            5
+
+   pushundefined
+   coerce_a
+   setlocal            6
+
+   getlex              Multiname("sfcSocial", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   iffalse             L133
+
+   getlocal1
+   getproperty         Multiname("params", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getproperty         Multiname("sender", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   coerce_a
+   setlocal2
+
+   getlocal1
+   getproperty         Multiname("params", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getproperty         Multiname("obj", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   coerce_a
+   setlocal3
+
+   jump                L111
+
+L28:
+   label
+   getlex              Multiname("world", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getproperty         Multiname("CHARS", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getlocal3
+   getproperty         Multiname("oName", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   callproperty        Multiname("getChildByName", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+   pushnull
+   ifeq                L56
+
+   findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+   getlex              Multiname("world", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getproperty         Multiname("CHARS", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getlocal3
+   getproperty         Multiname("oName", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   callproperty        Multiname("getChildByName", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+   callproperty        Multiname("MovieClip", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+   getlocal2
+   callproperty        Multiname("getName", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+   setproperty         Multiname("userName", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+   findpropstrict      Multiname("MovieClip", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")])
+   getlex              Multiname("world", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getproperty         Multiname("CHARS", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getlocal3
+   getproperty         Multiname("oName", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   callproperty        Multiname("getChildByName", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+   callproperty        Multiname("MovieClip", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("flash.display")]), 1
+   getlocal3
+   getproperty         Multiname("oFrame", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   callpropvoid        Multiname("gotoAndPlay", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L56:
+   jump                L133
+
+L57:
+   label
+   getlocal3
+   getproperty         Multiname("cell", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getlex              Multiname("world", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getproperty         Multiname("strFrame", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   ifne                L95
+
+   findpropstrict      Multiname("ModalMC", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   constructprop       Multiname("ModalMC", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+   coerce_a
+   setlocal            5
+
+   newobject           0
+   coerce_a
+   dup
+   setlocal            6
+
+   pushstring          "Would you care to dance?"
+   setproperty         Multiname("strBody", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+   getlocal            6
+   newobject           0
+   setproperty         Multiname("params", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+   getlocal            6
+   getproperty         Multiname("params", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   pushstring          "/dance"
+   setproperty         Multiname("emote1", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+   getlocal            6
+   getproperty         Multiname("params", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getlocal2
+   setproperty         Multiname("sender", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+   getlocal            6
+   getlex              Multiname("world", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getproperty         Multiname("danceRequest", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   setproperty         Multiname("callback", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+   getlex              Multiname("ui", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getproperty         Multiname("ModalStack", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getlocal            5
+   callpropvoid        Multiname("addChild", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+   getlocal            5
+   getlocal            6
+   callpropvoid        Multiname("init", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L95:
+   jump                L133
+
+L96:
+   label
+   getlocal3
+   getproperty         Multiname("cell", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getlex              Multiname("world", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getproperty         Multiname("strFrame", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   ifne                L108
+
+   getlex              Multiname("chatF", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   pushstring          "/cry"
+   pushstring          "emotea"
+   getlex              Multiname("sfc", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getproperty         Multiname("myUserName", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   callpropvoid        Multiname("submitMsg", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 3
+
+L108:
+   jump                L133
+
+L109:
+   label
+   jump                L133
+
+L111:
+   getlocal3
+   getproperty         Multiname("typ", [PrivateNamespace(null, "Game#0"), PackageNamespace(""), PrivateNamespace(null, "Game#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), PackageNamespace("flash.external"), PackageNamespace("it.gotoandplay.smartfoxserver"), PackageNamespace("liteAssets.draw"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   setlocal            7
+
+   pushstring          "flourish"
+   getlocal            7
+   ifstrictne          L119
+
+   pushbyte            0
+   jump                L131
+
+L119:
+   pushstring          "danceRequest"
+   getlocal            7
+   ifstrictne          L124
+
+   pushbyte            1
+   jump                L131
+
+L124:
+   pushstring          "danceDenied"
+   getlocal            7
+   ifstrictne          L129
+
+   pushbyte            2
+   jump                L131
+
+L129:
+   jump                L130
+
+L130:
+   pushbyte            3
+L131:
+   kill                7
+   lookupswitch        L109, [L28, L57, L96, L109]
+
+L133:
+   returnvoid
+  end ; code
+ end ; body
+end ; method

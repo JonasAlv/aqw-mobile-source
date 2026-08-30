@@ -1,0 +1,35 @@
+# Build output
+/target
+*.apk
+*.zip
+*.tar.gz
+
+# IDE
+/.idea/
+/.vscode/
+*.iml
+
+# Assets
+*.fla
+/patches/*/build/*
+
+# Generated / runtime files
+/loader/gamefiles/
+/patches-final/
+
+/patches/*
+
+# Build tools & SDKs
+/AIRSDK_Linux/
+/android_sdk/
+/extracted_apk/
+
+# Secrets & Keystores (CRITICAL)
+*.jks
+*.p12
+*.keystore
+.env
+
+# OS Files
+.DS_Store
+Thumbs.db

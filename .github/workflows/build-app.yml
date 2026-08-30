@@ -1,0 +1,194 @@
+name: Build Pocket
+
+on:
+    workflow_dispatch:
+        inputs:
+            version_prefix:
+                description: 'Version prefix (e.g. 1.0.0, 1.1.0, 2.0.0)'
+                required: true
+                default: '2.0.0'
+            
+            prerelease:
+                description: 'Mark as pre-release'
+                required: true
+                default: 'true'
+                type: choice
+                options:
+                    - 'true'
+                    - 'false'
+
+jobs:
+    patch:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        outputs:
+            VERSION: ${{ steps.version.outputs.VERSION }}
+            VERSION_NUMBER: ${{ steps.version.outputs.VERSION_NUMBER }}
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v7
+            
+            -   name: Checkout custom
+                uses: actions/checkout@v7
+                with:
+                    repository: JonasAlv/patches
+                    path: pocket-patches
+            
+            -   name: Set version
+                id: version
+                run: |
+                    echo "VERSION=v${{ github.event.inputs.version_prefix }}" >> $GITHUB_OUTPUT
+                    echo "VERSION_NUMBER=${{ github.event.inputs.version_prefix }}" >> $GITHUB_OUTPUT
+                    echo "IS_PRERELEASE=${{ github.event.inputs.prerelease }}" >> $GITHUB_OUTPUT
+            
+            -   name: Copy pre-patched SWFs
+                run: |
+                    mkdir -p loader/gamefiles
+                    if [ -f pocket-patches/Mobile.swf ]; then cp pocket-patches/Mobile.swf loader/; fi
+                    if [ -f pocket-patches/Desktop.swf ]; then cp pocket-patches/Desktop.swf loader/; fi
+                    for f in game.swf world-map.swf book-of-lore.swf character-select.swf; do
+                        if [ -f "pocket-patches/$f" ]; then cp "pocket-patches/$f" loader/gamefiles/; fi
+                    done
+            
+            -   name: Keystore
+                run: |
+                    keytool -genkey -v -keystore aqwpocket_keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias aqwpocket -storepass aqwpocket -keypass aqwpocket -dname "CN=AQW, OU=AQW, O=AQW, L=Unknown, ST=Unknown, C=US"
+                    keytool -importkeystore -srckeystore aqwpocket_keystore.jks -srcstorepass aqwpocket -srcalias aqwpocket -destkeystore aqwpocket_keystore.p12 -deststoretype PKCS12 -deststorepass aqwpocket -destkeypass aqwpocket
+            
+            -   name: Inject version
+                run: |
+                    sed -i "s|<versionNumber>.*</versionNumber>|<versionNumber>${{ steps.version.outputs.VERSION_NUMBER }}</versionNumber>|" loader/Mobile-app.xml
+                    sed -i "s|<versionLabel>.*</versionLabel>|<versionLabel>${{ steps.version.outputs.VERSION_NUMBER }}</versionLabel>|" loader/Mobile-app.xml
+                    sed -i "s|<versionNumber>.*</versionNumber>|<versionNumber>${{ steps.version.outputs.VERSION_NUMBER }}</versionNumber>|" loader/Desktop-app.xml
+                    sed -i "s|<versionLabel>.*</versionLabel>|<versionLabel>${{ steps.version.outputs.VERSION_NUMBER }}</versionLabel>|" loader/Desktop-app.xml
+            
+            -   name: Upload patched files
+                uses: actions/upload-artifact@v7
+                with:
+                    name: patched-files
+                    path: |
+                        loader/
+                        aqwpocket_keystore.jks
+                        aqwpocket_keystore.p12
+    
+    build-android:
+        needs: patch
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        strategy:
+            matrix:
+                include:
+                    -   architecture: "armv8"
+                        render-mode: "auto"
+                        suffix: ""
+                    
+                    -   architecture: "armv8"
+                        render-mode: "direct"
+                        suffix: "-direct"
+                    
+                    -   architecture: "armv8"
+                        render-mode: "gpu"
+                        suffix: "-gpu"
+                    
+                    -   architecture: "armv7"
+                        render-mode: "auto"
+                        suffix: ""
+                    
+                    -   architecture: "x64"
+                        render-mode: "auto"
+                        suffix: ""
+                    
+                    -   architecture: "x86"
+                        render-mode: "auto"
+                        suffix: ""
+        
+        steps:
+            -   name: Download patched files
+                uses: actions/download-artifact@v8
+                with:
+                    name: patched-files
+            
+            -   name: Setup AIR SDK
+                uses: joshtynjala/setup-adobe-air-action@v2
+                with:
+                    air-version: "51.3.1"
+                    accept-license: yes
+            
+            -   name: Build APK
+                run: |
+                    sed -i "s|<renderMode>.*</renderMode>|<renderMode>${{ matrix.render-mode }}</renderMode>|" loader/Mobile-app.xml
+                    adt -package \
+                      -target apk-captive-runtime \
+                      -arch ${{ matrix.architecture }} \
+                      -storetype JKS \
+                      -keystore aqwpocket_keystore.jks \
+                      -storepass aqwpocket \
+                      -keypass aqwpocket \
+                      AQWPocket-${{ needs.patch.outputs.VERSION }}-${{ matrix.architecture }}${{ matrix.suffix }}.apk \
+                      loader/Mobile-app.xml \
+                      -C loader \
+                        Mobile.swf \
+                        icons/icon-36x36.png \
+                        icons/icon-48x48.png \
+                        icons/icon-72x72.png \
+                        icons/icon-96x96.png \
+                        icons/icon-144x144.png \
+                        icons/icon-192x192.png \
+                        gamefiles/game.swf \
+                        gamefiles/world-map.swf \
+                        gamefiles/book-of-lore.swf \
+                        gamefiles/character-select.swf
+            
+            -   name: Upload
+                uses: actions/upload-artifact@v7
+                with:
+                    name: build-${{ matrix.architecture }}${{ matrix.suffix }}
+                    path: "*.apk"
+
+    publish:
+        needs: [patch, build-android]
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v7
+                
+            -   name: Download builds
+                uses: actions/download-artifact@v7
+                with:
+                    pattern: build-*
+                    merge-multiple: true
+            
+            -   name: Release
+                uses: softprops/action-gh-release@v2
+                with:
+                    tag_name: ${{ needs.patch.outputs.VERSION }}
+                    name: ${{ needs.patch.outputs.VERSION }}${{ github.event.inputs.prerelease == 'true' && ' (test)' || '' }}
+                    prerelease: ${{ github.event.inputs.prerelease }}
+                    body: |
+                        ## Which file should I download?
+
+                        ### Android
+
+                        * **armv8 (recommended)**
+                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8.apk`
+                        → For most modern devices
+
+                        * **armv8-direct (alternative)**
+                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-direct.apk`
+                        → Use if the recommended version has issues
+
+                        * **armv8-gpu (legacy)**
+                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-gpu.apk`
+                        → Not recommended; fallback only
+
+                        * **armv7 (32-bit)**
+                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv7.apk`
+                        → For older devices only
+                    files: |
+                        *.apk
+                        *.zip

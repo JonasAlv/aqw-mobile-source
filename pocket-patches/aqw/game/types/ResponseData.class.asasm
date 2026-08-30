@@ -1,0 +1,180 @@
+class
+ refid "types:ResponseData"
+ instance QName(PackageNamespace("types"), "ResponseData")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("types:ResponseData")
+  iinit
+   refid "types:ResponseData/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     pushstring          ""
+     initproperty        Multiname("messageType", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+
+     getlocal0
+     newobject           0
+     initproperty        Multiname("data", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+
+     getlocal0
+     pushstring          ""
+     initproperty        Multiname("error", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+
+     getlocal0
+     pushfalse
+     initproperty        Multiname("success", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "messageType") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "data") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageNamespace(""), "error") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "success") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "toObject")
+   method
+    refid "types:ResponseData/instance/toObject"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 8
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "messageType"
+      getlocal0
+      getproperty         Multiname("messageType", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+      pushstring          "data"
+      getlocal0
+      getproperty         Multiname("data", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+      pushstring          "error"
+      getlocal0
+      getproperty         Multiname("error", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+      pushstring          "success"
+      getlocal0
+      getproperty         Multiname("success", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+      newobject           4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "types:ResponseData/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "fromObject") flag FINAL dispid 3
+  method
+   refid "types:ResponseData/class/fromObject"
+   param QName(PackageNamespace(""), "Object")
+   returns QName(PackageNamespace("types"), "ResponseData")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     construct           0
+     coerce              QName(PackageNamespace("types"), "ResponseData")
+     setlocal2
+
+     getlocal1
+     iffalse             L54
+
+     getlocal2
+     findpropstrict      Multiname("String", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+     getlocal1
+     getproperty         Multiname("messageType", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+     coerce_a
+     dup
+     iftrue              L18
+
+     pop
+     pushstring          ""
+     coerce_a
+L18:
+     callproperty        Multiname("String", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")]), 1
+     setproperty         Multiname("messageType", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+
+     getlocal2
+     getlocal1
+     getproperty         Multiname("data", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+     coerce              QName(PackageNamespace(""), "Object")
+     dup
+     iftrue              L29
+
+     pop
+     newobject           0
+     coerce              QName(PackageNamespace(""), "Object")
+L29:
+     setproperty         Multiname("data", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+
+     getlocal2
+     findpropstrict      Multiname("String", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+     getlocal1
+     getproperty         Multiname("error", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+     coerce_a
+     dup
+     iftrue              L40
+
+     pop
+     pushstring          ""
+     coerce_a
+L40:
+     callproperty        Multiname("String", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")]), 1
+     setproperty         Multiname("error", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+
+     getlocal2
+     findpropstrict      Multiname("Boolean", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+     getlocal1
+     getproperty         Multiname("success", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+     coerce_a
+     dup
+     iftrue              L52
+
+     pop
+     pushfalse
+     coerce_a
+L52:
+     callproperty        Multiname("Boolean", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")]), 1
+     setproperty         Multiname("success", [PrivateNamespace(null, "types:ResponseData#1"), PackageNamespace("types"), PrivateNamespace(null, "types:ResponseData#0"), PackageNamespace(""), PackageInternalNs("types"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("types:ResponseData"), StaticProtectedNs("types:ResponseData")])
+
+L54:
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

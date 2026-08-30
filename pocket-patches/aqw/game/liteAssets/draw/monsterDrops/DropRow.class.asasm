@@ -1,0 +1,46 @@
+class
+ refid "liteAssets.draw:monsterDrops/DropRow"
+ instance QName(PrivateNamespace(null, "liteAssets.draw:monsterDrops#1"), "DropRow")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("monsterDrops.as$424:DropRow")
+  iinit
+   refid "liteAssets.draw:monsterDrops/DropRow/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "itemData") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageNamespace(""), "hi") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait slot QName(PackageNamespace(""), "baseAlpha") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "rowH") type QName(PackageNamespace(""), "Number") value Integer(30) end
+ end ; instance
+ cinit
+  refid "liteAssets.draw:monsterDrops/DropRow/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

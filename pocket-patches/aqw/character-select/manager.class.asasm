@@ -1,0 +1,950 @@
+class
+ refid "manager"
+ instance QName(PackageNamespace(""), "manager")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("manager")
+  iinit
+   refid "manager/instance/init"
+   param QName(PackageNamespace("flash.display"), "MovieClip")
+   param QName(PackageNamespace("flash.display"), "MovieClip")
+   body
+    maxstack 11
+    localcount 12
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     pushundefined
+     coerce_a
+     setlocal            4
+
+     pushfalse
+     setlocal            5
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            6
+
+     pushnull
+     coerce_s
+     setlocal            7
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            8
+
+     pushbyte            0
+     convert_u
+     setlocal            9
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace(null, "manager/instance#0"), "r")
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "manager/instance#0"), "r")
+
+     findproperty        QName(PrivateNamespace(null, "manager/instance#0"), "m")
+     getlocal2
+     initproperty        QName(PrivateNamespace(null, "manager/instance#0"), "m")
+
+     findproperty        QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+     getlex              QName(PackageNamespace("flash.net"), "SharedObject")
+     pushstring          "AQWChars"
+     pushstring          "/"
+     pushfalse
+     callproperty        QName(PackageNamespace(""), "getLocal"), 3
+     initproperty        QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+
+     pushbyte            0
+     setlocal3
+
+     pushbyte            0
+     setlocal            10
+
+     getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+     getproperty         QName(PackageNamespace(""), "data")
+     getproperty         Multiname("users", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce_a
+     setlocal            11
+
+     jump                L51
+
+L44:
+     label
+     getlocal            11
+     getlocal            10
+     nextname
+     coerce_a
+     setlocal            4
+
+     inclocal_i          3
+L51:
+     hasnext2            11, 10
+     iftrue              L44
+
+     kill                11
+     kill                10
+     pushfalse
+     setlocal            5
+
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            6
+
+     findproperty        QName(PackageNamespace(""), "displayAvts")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PackageNamespace(""), "displayAvts")
+
+     pushbyte            0
+     setlocal            10
+
+     getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+     getproperty         QName(PackageNamespace(""), "data")
+     getproperty         Multiname("users", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce_a
+     setlocal            11
+
+     jump                L162
+
+L73:
+     label
+     getlocal            11
+     getlocal            10
+     nextname
+     coerce_s
+     setlocal            7
+
+     getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+     getproperty         QName(PackageNamespace(""), "data")
+     getproperty         Multiname("users", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            7
+     getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PackageNamespace(""), "Object")
+     astypelate
+     coerce              QName(PackageNamespace(""), "Object")
+     dup
+     setlocal            8
+
+     not
+     dup
+     iftrue              L96
+
+     pop
+     getlocal            8
+     getproperty         Multiname("data", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     not
+L96:
+     dup
+     iftrue              L102
+
+     pop
+     getlocal            8
+     getproperty         Multiname("server", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     not
+L102:
+     dup
+     iftrue              L108
+
+     pop
+     getlocal            8
+     getproperty         Multiname("loginInfo", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     not
+L108:
+     iffalse             L118
+
+     getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+     getproperty         QName(PackageNamespace(""), "data")
+     getproperty         Multiname("users", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            7
+     deleteproperty      MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pop
+     pushtrue
+     setlocal            5
+
+     jump                L162
+
+L118:
+     getlocal            8
+     getproperty         Multiname("index", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushbyte            -1
+     ifne                L131
+
+     getlocal            8
+     getlocal3
+     decrement
+     setproperty         Multiname("index", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     findpropstrict      QName(PackageNamespace(""), "setCharIndex")
+     getlocal            7
+     getlocal3
+     decrement
+     callpropvoid        QName(PackageNamespace(""), "setCharIndex"), 2
+
+L131:
+     getlocal            6
+     getlocal            8
+     getproperty         Multiname("index", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     pushbyte            -1
+     ifngt               L139
+
+     pushtrue
+     setlocal            5
+
+L139:
+     getlex              QName(PackageNamespace(""), "displayAvts")
+     pushstring          "index"
+     getlocal            8
+     getproperty         Multiname("index", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushstring          "data"
+     getlocal            8
+     getproperty         Multiname("data", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushstring          "mc"
+     pushnull
+     pushstring          "server"
+     getlocal            8
+     getproperty         Multiname("server", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushstring          "loginInfo"
+     getlocal            8
+     getproperty         Multiname("loginInfo", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     newobject           5
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     getlocal            5
+     iftrue              L162
+
+     getlocal            6
+     getlocal            8
+     getproperty         Multiname("index", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L162:
+     hasnext2            11, 10
+     iftrue              L73
+
+     kill                11
+     kill                10
+     getlocal            5
+     iffalse             L194
+
+     pushbyte            0
+     convert_u
+     setlocal            9
+
+     jump                L190
+
+L172:
+     label
+     getlex              QName(PackageNamespace(""), "displayAvts")
+     getlocal            9
+     getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            9
+     setproperty         Multiname("index", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     findpropstrict      QName(PackageNamespace(""), "setCharIndex")
+     getlex              QName(PackageNamespace(""), "displayAvts")
+     getlocal            9
+     getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("data", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("strUsername", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            9
+     callpropvoid        QName(PackageNamespace(""), "setCharIndex"), 2
+
+     getlocal            9
+     increment
+     convert_u
+     setlocal            9
+
+L190:
+     getlocal            9
+     getlex              QName(PackageNamespace(""), "displayAvts")
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L172
+
+L194:
+     getlex              QName(PackageNamespace(""), "displayAvts")
+     pushstring          "index"
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sortOn"), 1
+
+     getlex              QName(PrivateNamespace(null, "manager/instance#0"), "m")
+     getproperty         Multiname("managecharsui", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PackageNamespace(""), "displayAvts")
+     callpropvoid        Multiname("init", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+     getlex              QName(PrivateNamespace(null, "manager/instance#0"), "m")
+     getproperty         Multiname("charoptionsui", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PackageNamespace(""), "displayAvts")
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("loginInfo", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("bAsk", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PackageNamespace(""), "Boolean")
+     astypelate
+     callpropvoid        Multiname("init", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "manager/instance#0"), "r") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PrivateNamespace(null, "manager/instance#0"), "m") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "displayAvts") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "manager/instance#0"), "characters") type QName(PackageNamespace("flash.net"), "SharedObject") end
+  trait getter QName(PackageNamespace(""), "count")
+   method
+    refid "manager/instance/count/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "displayAvts")
+      getproperty         QName(PackageNamespace(""), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getCharByName")
+   method
+    refid "manager/instance/getCharByName"
+    param QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      coerce_s
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+      getproperty         QName(PackageNamespace(""), "data")
+      getproperty         Multiname("users", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace(""), "Object")
+      astypelate
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "save")
+   method
+    refid "manager/instance/save"
+    param QName(PackageNamespace(""), "String")
+    param null
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      coerce_s
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "count")
+      pushbyte            5
+      ifnlt               L15
+
+      findpropstrict      QName(PackageNamespace(""), "saveCharByName")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "saveCharByName"), 2
+
+      pushtrue
+      returnvalue
+
+L15:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setAsk")
+   method
+    refid "manager/instance/setAsk"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      coerce_s
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+      getproperty         QName(PackageNamespace(""), "data")
+      getproperty         Multiname("users", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace(""), "Object")
+      astypelate
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace(""), "Object")
+      astypelate
+      getproperty         Multiname("loginInfo", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      setproperty         Multiname("bAsk", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+      callpropvoid        QName(PackageNamespace(""), "flush"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setCharIndex")
+   method
+    refid "manager/instance/setCharIndex"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      coerce_s
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+      getproperty         QName(PackageNamespace(""), "data")
+      getproperty         Multiname("users", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace(""), "Object")
+      astypelate
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace(""), "Object")
+      astypelate
+      getlocal2
+      setproperty         Multiname("index", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+      callpropvoid        QName(PackageNamespace(""), "flush"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "saveCharByName")
+   method
+    refid "manager/instance/saveCharByName"
+    param QName(PackageNamespace(""), "String")
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      coerce_s
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+      getproperty         QName(PackageNamespace(""), "data")
+      getproperty         Multiname("users", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace(""), "Object")
+      astypelate
+      getlocal1
+      getlocal2
+      setproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+      callpropvoid        QName(PackageNamespace(""), "flush"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "delCharByName")
+   method
+    refid "manager/instance/delCharByName"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      coerce_s
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+      getproperty         QName(PackageNamespace(""), "data")
+      getproperty         Multiname("users", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace(""), "Object")
+      astypelate
+      getlocal1
+      pushnull
+      setproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+      getproperty         QName(PackageNamespace(""), "data")
+      getproperty         Multiname("users", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace(""), "Object")
+      astypelate
+      getlocal1
+      deleteproperty      MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pop
+      getlex              QName(PrivateNamespace(null, "manager/instance#0"), "characters")
+      callpropvoid        QName(PackageNamespace(""), "flush"), 0
+
+      getlex              QName(PackageNamespace(""), "displayAvts")
+      getlocal2
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "createAvt")
+   method
+    refid "manager/instance/createAvt"
+    param null
+    body
+     maxstack 4
+     localcount 8
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace(""), "selAvatarMC")
+      getlex              QName(PrivateNamespace(null, "manager/instance#0"), "r")
+      callproperty        Multiname("getFilePath", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      constructprop       QName(PackageNamespace(""), "selAvatarMC"), 1
+      coerce_a
+      setlocal2
+
+      getlocal2
+      pushstring          "hold"
+      callpropvoid        Multiname("gotoAndPlay", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      getlocal2
+      pushstring          "selavt"
+      getlex              QName(PackageNamespace(""), "Math")
+      callproperty        QName(PackageNamespace(""), "random"), 0
+      add
+      setproperty         Multiname("name", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal2
+      getproperty         Multiname("pAV", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      setproperty         Multiname("objData", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal2
+      getproperty         Multiname("pAV", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal2
+      setproperty         Multiname("pMC", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal2
+      getlocal1
+      getproperty         Multiname("strGender", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      setproperty         Multiname("strGender", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal1
+      getproperty         Multiname("strHairFilename", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "undefined"
+      ifeq                L38
+
+      getlocal2
+      callpropvoid        Multiname("loadHair", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+L38:
+      pushfalse
+      setlocal3
+
+      pushbyte            0
+      setlocal            5
+
+      getlocal1
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce_a
+      setlocal            6
+
+      jump                L245
+
+L47:
+      label
+      getlocal            6
+      getlocal            5
+      nextname
+      coerce_s
+      setlocal            4
+
+      jump                L209
+
+L54:
+      label
+      getlocal1
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "Weapon"
+      getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("sFile", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "undefined"
+      ifne                L73
+
+      getlocal2
+      getproperty         Multiname("mcChar", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("weapon", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal2
+      getproperty         Multiname("mcChar", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("weaponOff", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      jump                L245
+
+L73:
+      getlocal2
+      callpropvoid        Multiname("loadWeapon", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+      getlocal1
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "Weapon"
+      getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("strWeaponType", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "Dagger"
+      ifne                L85
+
+      getlocal2
+      callpropvoid        Multiname("loadWeaponOff", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+      jump                L90
+
+L85:
+      getlocal2
+      getproperty         Multiname("mcChar", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("weaponOff", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L90:
+      jump                L245
+
+L91:
+      label
+      getlocal1
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "he"
+      getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("sFile", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "undefined"
+      equals
+      dup
+      iftrue              L115
+
+      pop
+      getlocal1
+      pushstring          "showHelm"
+      callproperty        Multiname("hasOwnProperty", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      coerce_a
+      convert_b
+      dup
+      iffalse             L115
+
+      pop
+      getlocal1
+      getproperty         Multiname("showHelm", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      not
+      coerce_a
+      convert_b
+L115:
+      iffalse             L129
+
+      getlocal2
+      getproperty         Multiname("mcChar", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("head", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("helm", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal2
+      getproperty         Multiname("mcChar", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("head", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("hair", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushtrue
+      setproperty         Multiname("visible", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      jump                L245
+
+L129:
+      getlocal2
+      callpropvoid        Multiname("loadHelm", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+      jump                L245
+
+L132:
+      label
+      getlocal1
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "ba"
+      getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("sFile", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "undefined"
+      equals
+      dup
+      iftrue              L156
+
+      pop
+      getlocal1
+      pushstring          "showCloak"
+      callproperty        Multiname("hasOwnProperty", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      coerce_a
+      convert_b
+      dup
+      iffalse             L156
+
+      pop
+      getlocal1
+      getproperty         Multiname("showCloak", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      not
+      coerce_a
+      convert_b
+L156:
+      iffalse             L163
+
+      getlocal2
+      getproperty         Multiname("mcChar", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("cape", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      jump                L245
+
+L163:
+      getlocal2
+      callpropvoid        Multiname("loadCape", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+      jump                L245
+
+L166:
+      label
+      getlocal            4
+      pushstring          "co"
+      ifne                L172
+
+      pushtrue
+      setlocal3
+
+L172:
+      getlocal3
+      convert_b
+      dup
+      iffalse             L180
+
+      pop
+      getlocal            4
+      pushstring          "ar"
+      equals
+L180:
+      iffalse             L182
+
+      jump                L245
+
+L182:
+      getlocal2
+      getlocal1
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("sFile", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("sLink", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("loadArmor", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+      jump                L245
+
+L195:
+      label
+      getlocal1
+      getproperty         Multiname("eqp", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "mi"
+      getproperty         MultinameL([PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("sFile", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushstring          "undefined"
+      ifne                L204
+
+      jump                L245
+
+L204:
+      getlocal2
+      callpropvoid        Multiname("loadMisc", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+
+      jump                L245
+
+L207:
+      label
+      jump                L245
+
+L209:
+      getlocal            4
+      setlocal            7
+
+      pushstring          "Weapon"
+      getlocal            7
+      ifstrictne          L216
+
+      pushbyte            0
+      jump                L243
+
+L216:
+      pushstring          "he"
+      getlocal            7
+      ifstrictne          L221
+
+      pushbyte            1
+      jump                L243
+
+L221:
+      pushstring          "ba"
+      getlocal            7
+      ifstrictne          L226
+
+      pushbyte            2
+      jump                L243
+
+L226:
+      pushstring          "ar"
+      getlocal            7
+      ifstrictne          L231
+
+      pushbyte            3
+      jump                L243
+
+L231:
+      pushstring          "co"
+      getlocal            7
+      ifstrictne          L236
+
+      pushbyte            4
+      jump                L243
+
+L236:
+      pushstring          "mi"
+      getlocal            7
+      ifstrictne          L241
+
+      pushbyte            5
+      jump                L243
+
+L241:
+      jump                L242
+
+L242:
+      pushbyte            6
+L243:
+      kill                7
+      lookupswitch        L207, [L54, L91, L132, L166, L166, L195, L207]
+
+L245:
+      hasnext2            6, 5
+      iftrue              L47
+
+      kill                6
+      kill                5
+      getlocal2
+      getlocal2
+      getproperty         Multiname("scaleX", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            3
+      multiply
+      setproperty         Multiname("scaleX", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal2
+      getlocal2
+      getproperty         Multiname("scaleY", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushbyte            3
+      multiply
+      setproperty         Multiname("scaleY", [PrivateNamespace(null, "manager/instance#0"), PackageNamespace(""), PrivateNamespace(null, "manager/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("manager"), StaticProtectedNs("manager"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "manager/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,252 @@
+class
+ refid "liteAssets.listOptionsItem:listOptionsItemExtra"
+ instance QName(PackageNamespace("liteAssets.listOptionsItem"), "listOptionsItemExtra")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra")
+  iinit
+   refid "liteAssets.listOptionsItem:listOptionsItemExtra/instance/init"
+   param QName(PackageNamespace("flash.display"), "MovieClip")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        Multiname("rootClass", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal0
+     getlocal3
+     initproperty        Multiname("sDesc", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal0
+     getproperty         Multiname("chkActive", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("checkmark", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal2
+     setproperty         Multiname("visible", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlocal0
+     getproperty         Multiname("chkActive", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              Multiname("MouseEvent", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("CLICK", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal0
+     getproperty         Multiname("onToggle", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 5
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "txtName") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "chkActive") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "sDesc") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "rootClass") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait method QName(PackageNamespace(""), "confirmAction")
+   method
+    refid "liteAssets.listOptionsItem:listOptionsItemExtra/instance/confirmAction"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("accept", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      iffalse             L15
+
+      getlocal0
+      pushtrue
+      initproperty        Multiname("bypass", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      getproperty         Multiname("chkActive", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      findpropstrict      Multiname("MouseEvent", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              Multiname("MouseEvent", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("CLICK", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      constructprop       Multiname("MouseEvent", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+      callpropvoid        Multiname("dispatchEvent", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageInternalNs("liteAssets.listOptionsItem"), "bypass") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(PackageNamespace(""), "onToggle")
+   method
+    refid "liteAssets.listOptionsItem:listOptionsItemExtra/instance/onToggle"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 6
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal2
+
+      pushundefined
+      coerce_a
+      setlocal3
+
+      pushundefined
+      coerce_a
+      setlocal            4
+
+      jump                L58
+
+L12:
+      label
+      getlocal0
+      getproperty         Multiname("chkActive", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("checkmark", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("visible", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      not
+      dup
+      iftrue              L24
+
+      pop
+      getlocal0
+      getproperty         Multiname("bypass", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      convert_b
+L24:
+      iffalse             L26
+
+      jump                L71
+
+L26:
+      findpropstrict      Multiname("ModalMC", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      constructprop       Multiname("ModalMC", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      coerce_a
+      setlocal3
+
+      newobject           0
+      coerce_a
+      dup
+      setlocal            4
+
+      pushstring          "Turning this off means that you will not go to player support for unaccepted drops! Are you sure?"
+      setproperty         Multiname("strBody", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal            4
+      newobject           0
+      setproperty         Multiname("params", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal            4
+      getlocal0
+      getproperty         Multiname("confirmAction", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      setproperty         Multiname("callback", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal            4
+      pushstring          "red,medium"
+      setproperty         Multiname("glow", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ui", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("ModalStack", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal3
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      getlocal3
+      getlocal            4
+      callpropvoid        Multiname("init", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      returnvoid
+
+L56:
+      label
+      jump                L71
+
+L58:
+      getlocal0
+      getproperty         Multiname("txtName", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("text", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      setlocal            5
+
+      pushstring          "Quantity Warnings"
+      getlocal            5
+      ifstrictne          L67
+
+      pushbyte            0
+      jump                L69
+
+L67:
+      jump                L68
+
+L68:
+      pushbyte            1
+L69:
+      kill                5
+      lookupswitch        L56, [L12, L56]
+
+L71:
+      getlocal0
+      pushfalse
+      initproperty        Multiname("bypass", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      getproperty         Multiname("chkActive", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("checkmark", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("chkActive", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("checkmark", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("visible", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      not
+      setproperty         Multiname("visible", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlex              Multiname("optionHandler", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("liteAssets.handlers")])
+      getlocal0
+      getproperty         Multiname("rootClass", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         Multiname("txtName", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("text", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        Multiname("cmd", [PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra/instance"), PrivateNamespace(null, "liteAssets.listOptionsItem:listOptionsItemExtra"), PackageNamespace(""), PackageNamespace("liteAssets.listOptionsItem"), PackageInternalNs("liteAssets.listOptionsItem"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("fl.controls"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), ProtectedNamespace("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("liteAssets.listOptionsItem:listOptionsItemExtra"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "liteAssets.listOptionsItem:listOptionsItemExtra/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

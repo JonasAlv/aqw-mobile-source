@@ -1,0 +1,49 @@
+script
+ sinit
+  refid "liteAssets.draw:targetAuras/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 8
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("targetAuras", [PackageNamespace("liteAssets.draw")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              Multiname("Sprite", [PrivateNamespace(null, "liteAssets.draw:targetAuras#0"), PackageNamespace(""), PackageNamespace("liteAssets.draw"), PackageInternalNs("liteAssets.draw"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.events"), PackageNamespace("flash.geom"), PackageNamespace("flash.text")])
+    newclass            "liteAssets.draw:targetAuras"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("liteAssets.draw"), "targetAuras")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("liteAssets.draw"), "targetAuras")
+  #include "targetAuras.class.asasm"
+ end ; trait
+end ; script

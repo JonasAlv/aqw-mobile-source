@@ -1,0 +1,1467 @@
+class
+ refid "worldMap"
+ instance QName(PackageNamespace(""), "worldMap")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("worldMap")
+  iinit
+   refid "worldMap/instance/init"
+   param QName(PackageNamespace(""), "Object")
+   body
+    maxstack 5
+    localcount 37
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal2
+
+     pushnull
+     coerce_s
+     setlocal3
+
+     pushundefined
+     coerce_a
+     setlocal            5
+
+     pushnull
+     coerce_s
+     setlocal            6
+
+     pushnull
+     coerce_s
+     setlocal            7
+
+     pushnull
+     coerce_s
+     setlocal            8
+
+     pushnull
+     coerce_s
+     setlocal            9
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            10
+
+     pushnan
+     setlocal            11
+
+     pushnull
+     coerce_s
+     setlocal            12
+
+     pushundefined
+     coerce_a
+     setlocal            13
+
+     pushundefined
+     coerce_a
+     setlocal            14
+
+     pushundefined
+     coerce_a
+     setlocal            15
+
+     pushundefined
+     coerce_a
+     setlocal            16
+
+     pushundefined
+     coerce_a
+     setlocal            17
+
+     pushundefined
+     coerce_a
+     setlocal            18
+
+     pushundefined
+     coerce_a
+     setlocal            19
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            20
+
+     pushnull
+     coerce_s
+     setlocal            21
+
+     pushundefined
+     coerce_a
+     setlocal            22
+
+     pushundefined
+     coerce_a
+     setlocal            23
+
+     pushundefined
+     coerce_a
+     setlocal            24
+
+     pushundefined
+     coerce_a
+     setlocal            25
+
+     pushundefined
+     coerce_a
+     setlocal            26
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            27
+
+     pushnull
+     coerce_s
+     setlocal            28
+
+     pushnull
+     coerce_s
+     setlocal            29
+
+     pushundefined
+     coerce_a
+     setlocal            30
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     setproperty         Multiname("areas", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     findproperty        QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     initproperty        QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+
+     findproperty        QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     initproperty        QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+
+     findproperty        QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     initproperty        QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+
+     pushstring          "m"
+     coerce_a
+     setlocal            4
+
+     pushbyte            0
+     setlocal            31
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     coerce_a
+     setlocal            32
+
+     jump                L382
+
+L115:
+     label
+     getlocal            32
+     getlocal            31
+     nextname
+     coerce_a
+     setlocal            5
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+     pushstring          "Object"
+     ifne                L382
+
+     getlocal            4
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("regionID", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     add
+     coerce_s
+     setlocal3
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getproperty         Multiname("areas", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal3
+     callpropvoid        Multiname("push", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal3
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal3
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("regionName", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("mapTitle", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     setproperty         Multiname("nodes", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     pushbyte            0
+     setlocal            33
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce_a
+     setlocal            34
+
+     jump                L378
+
+L173:
+     label
+     getlocal            34
+     getlocal            33
+     nextname
+     coerce_a
+     setlocal            16
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            16
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+     pushstring          "Array"
+     equals
+     dup
+     iffalse             L195
+
+     pop
+     getlocal            16
+     pushstring          "nodes"
+     equals
+     not
+L195:
+     iffalse             L378
+
+     pushbyte            0
+     coerce_a
+     setlocal            17
+
+     jump                L370
+
+L200:
+     label
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            16
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("mapName", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("regionID", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     add
+     coerce_s
+     setlocal2
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            16
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     setproperty         Multiname("area", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("nodes", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal2
+     callpropvoid        Multiname("push", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     setproperty         Multiname("cuts", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     pushbyte            0
+     setlocal            35
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            16
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce_a
+     setlocal            36
+
+     jump                L362
+
+L265:
+     label
+     getlocal            36
+     getlocal            35
+     nextname
+     coerce_a
+     setlocal            18
+
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            16
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            18
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+     pushstring          "Array"
+     equals
+     dup
+     iffalse             L291
+
+     pop
+     getlocal            18
+     pushstring          "cuts"
+     equals
+     not
+L291:
+     iffalse             L362
+
+     pushbyte            0
+     coerce_a
+     setlocal            19
+
+     jump                L350
+
+L296:
+     label
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            16
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            18
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            19
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce              QName(PackageNamespace(""), "Object")
+     dup
+     setlocal            20
+
+     getproperty         Multiname("qsIndex", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("qsValue", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     ifne                L346
+
+     getlocal2
+     pushstring          "c"
+     add
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal            19
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     add
+     coerce_s
+     setlocal            21
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+     getlocal            21
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+     getlocal            21
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal2
+     setproperty         Multiname("node", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+     getlocal            21
+     getlocal            20
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("cuts", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            21
+     callpropvoid        Multiname("push", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L346:
+     getlocal            19
+     increment
+     coerce_a
+     setlocal            19
+
+L350:
+     getlocal            19
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            16
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            18
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("length", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     iflt                L296
+
+L362:
+     hasnext2            36, 35
+     iftrue              L265
+
+     kill                36
+     kill                35
+     getlocal            17
+     increment
+     coerce_a
+     setlocal            17
+
+L370:
+     getlocal            17
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            16
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getproperty         Multiname("length", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     iflt                L200
+
+L378:
+     hasnext2            34, 33
+     iftrue              L173
+
+     kill                34
+     kill                33
+L382:
+     hasnext2            32, 31
+     iftrue              L115
+
+     kill                32
+     kill                31
+     pushstring          ","
+     setlocal            6
+
+     pushstring          ":"
+     setlocal            7
+
+     pushbyte            0
+     setlocal            31
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     coerce_a
+     setlocal            32
+
+     jump                L494
+
+L396:
+     label
+     getlocal            32
+     getlocal            31
+     nextname
+     coerce_a
+     setlocal            13
+
+     pushbyte            0
+     setlocal            33
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            13
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce_a
+     setlocal            34
+
+     jump                L490
+
+L410:
+     label
+     getlocal            34
+     getlocal            33
+     nextname
+     coerce_a
+     dup
+     setlocal            22
+
+     pushstring          "description"
+     ifne                L490
+
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            13
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            22
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     coerce_s
+     dup
+     setlocal            8
+
+     getlocal            6
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            10
+
+     pushbyte            0
+     coerce_a
+     setlocal            23
+
+     jump                L483
+
+L437:
+     label
+     getlocal            10
+     getlocal            23
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce_s
+     dup
+     setlocal            9
+
+     getlocal            7
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     convert_d
+     dup
+     setlocal            11
+
+     pushbyte            -1
+     ifngt               L470
+
+     getlocal            9
+     pushbyte            0
+     getlocal            11
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     coerce_s
+     setlocal            12
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            13
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            12
+     getlocal            9
+     getlocal            11
+     pushbyte            1
+     add
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "length")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     jump                L479
+
+L470:
+     getlocal            9
+     pushstring          ""
+     ifeq                L479
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+     getlocal            13
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            9
+     pushstring          ""
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L479:
+     getlocal            23
+     increment
+     coerce_a
+     setlocal            23
+
+L483:
+     getlocal            23
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L437
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            10
+
+L490:
+     hasnext2            34, 33
+     iftrue              L410
+
+     kill                34
+     kill                33
+L494:
+     hasnext2            32, 31
+     iftrue              L396
+
+     kill                32
+     kill                31
+     pushbyte            0
+     setlocal            31
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     coerce_a
+     setlocal            32
+
+     jump                L602
+
+L504:
+     label
+     getlocal            32
+     getlocal            31
+     nextname
+     coerce_a
+     setlocal            14
+
+     pushbyte            0
+     setlocal            33
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal            14
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce_a
+     setlocal            34
+
+     jump                L598
+
+L518:
+     label
+     getlocal            34
+     getlocal            33
+     nextname
+     coerce_a
+     dup
+     setlocal            24
+
+     pushstring          "strExtra"
+     ifne                L598
+
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal            14
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            24
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     coerce_s
+     dup
+     setlocal            8
+
+     getlocal            6
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            10
+
+     pushbyte            0
+     coerce_a
+     setlocal            25
+
+     jump                L591
+
+L545:
+     label
+     getlocal            10
+     getlocal            25
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce_s
+     dup
+     setlocal            9
+
+     getlocal            7
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     convert_d
+     dup
+     setlocal            11
+
+     pushbyte            -1
+     ifngt               L578
+
+     getlocal            9
+     pushbyte            0
+     getlocal            11
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     coerce_s
+     setlocal            12
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal            14
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            12
+     getlocal            9
+     getlocal            11
+     pushbyte            1
+     add
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "length")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     jump                L587
+
+L578:
+     getlocal            9
+     pushstring          ""
+     ifeq                L587
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+     getlocal            14
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            9
+     pushstring          ""
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L587:
+     getlocal            25
+     increment
+     coerce_a
+     setlocal            25
+
+L591:
+     getlocal            25
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L545
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            10
+
+L598:
+     hasnext2            34, 33
+     iftrue              L518
+
+     kill                34
+     kill                33
+L602:
+     hasnext2            32, 31
+     iftrue              L504
+
+     kill                32
+     kill                31
+     pushbyte            0
+     setlocal            31
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     coerce_a
+     setlocal            32
+
+     jump                L808
+
+L612:
+     label
+     getlocal            32
+     getlocal            31
+     nextname
+     coerce_a
+     setlocal            15
+
+     pushbyte            0
+     setlocal            33
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce_a
+     setlocal            34
+
+     jump                L804
+
+L626:
+     label
+     getlocal            34
+     getlocal            33
+     nextname
+     coerce_a
+     setlocal            26
+
+     jump                L763
+
+L633:
+     label
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            26
+     findpropstrict      QName(PackageNamespace(""), "Number")
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            26
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PackageNamespace(""), "Number"), 1
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     jump                L804
+
+L647:
+     label
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            26
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     typeof
+     pushstring          "string"
+     ifne                L687
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            26
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushstring          "False"
+     equals
+     dup
+     iftrue              L673
+
+     pop
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            26
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushstring          "false"
+     equals
+L673:
+     iffalse             L681
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            26
+     pushfalse
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     jump                L687
+
+L681:
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            26
+     pushtrue
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L687:
+     jump                L804
+
+L688:
+     label
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            26
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     coerce_s
+     setlocal            8
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            27
+
+     getlocal            8
+     getlocal            6
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            27
+
+     pushbyte            0
+     coerce_a
+     setlocal            30
+
+     jump                L756
+
+L710:
+     label
+     getlocal            27
+     getlocal            30
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce_s
+     dup
+     setlocal            28
+
+     getlocal            7
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+     convert_d
+     dup
+     setlocal            11
+
+     pushbyte            -1
+     ifngt               L743
+
+     getlocal            28
+     pushbyte            0
+     getlocal            11
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     coerce_s
+     setlocal            29
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            29
+     getlocal            28
+     getlocal            11
+     pushbyte            1
+     add
+     getlocal            28
+     getproperty         QName(PackageNamespace(""), "length")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+     jump                L752
+
+L743:
+     getlocal            28
+     pushstring          ""
+     ifeq                L752
+
+     getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+     getlocal            15
+     getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlocal            28
+     pushstring          ""
+     setproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L752:
+     getlocal            30
+     increment
+     coerce_a
+     setlocal            30
+
+L756:
+     getlocal            30
+     getlocal            27
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L710
+
+     jump                L804
+
+L761:
+     label
+     jump                L804
+
+L763:
+     getlocal            26
+     setlocal            35
+
+     pushstring          "minLevel"
+     getlocal            35
+     ifstrictne          L770
+
+     pushbyte            0
+     jump                L802
+
+L770:
+     pushstring          "maxLevel"
+     getlocal            35
+     ifstrictne          L775
+
+     pushbyte            1
+     jump                L802
+
+L775:
+     pushstring          "qsValue"
+     getlocal            35
+     ifstrictne          L780
+
+     pushbyte            2
+     jump                L802
+
+L780:
+     pushstring          "questMin"
+     getlocal            35
+     ifstrictne          L785
+
+     pushbyte            3
+     jump                L802
+
+L785:
+     pushstring          "questMax"
+     getlocal            35
+     ifstrictne          L790
+
+     pushbyte            4
+     jump                L802
+
+L790:
+     pushstring          "bUpgrade"
+     getlocal            35
+     ifstrictne          L795
+
+     pushbyte            5
+     jump                L802
+
+L795:
+     pushstring          "strExtra"
+     getlocal            35
+     ifstrictne          L800
+
+     pushbyte            6
+     jump                L802
+
+L800:
+     jump                L801
+
+L801:
+     pushbyte            7
+L802:
+     kill                35
+     lookupswitch        L761, [L633, L633, L633, L633, L633, L647, L688, L761]
+
+L804:
+     hasnext2            34, 33
+     iftrue              L626
+
+     kill                34
+     kill                33
+L808:
+     hasnext2            32, 31
+     iftrue              L612
+
+     kill                32
+     kill                31
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "rootClass") end
+  trait slot QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject") type QName(PackageNamespace(""), "Object") end
+  trait getter QName(PackageInternalNs(""), "World")
+   method
+    refid "worldMap/instance/World/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "worldObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageInternalNs(""), "Areas")
+   method
+    refid "worldMap/instance/Areas/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageInternalNs(""), "Nodes")
+   method
+    refid "worldMap/instance/Nodes/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageInternalNs(""), "Cutscenes")
+   method
+    refid "worldMap/instance/Cutscenes/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "specificArea")
+   method
+    refid "worldMap/instance/specificArea"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushnull
+      ifeq                L11
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      returnvalue
+
+L11:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "getAreaNameByTitle")
+   method
+    refid "worldMap/instance/getAreaNameByTitle"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      coerce_a
+      setlocal            4
+
+      jump                L31
+
+L11:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_a
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mapTitle", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L31
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mapTitle", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      ifne                L31
+
+      getlocal2
+      returnvalue
+
+L31:
+      hasnext2            4, 3
+      iftrue              L11
+
+      kill                4
+      kill                3
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "getAreaByTitle")
+   method
+    refid "worldMap/instance/getAreaByTitle"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      coerce_a
+      setlocal            4
+
+      jump                L33
+
+L11:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_a
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mapTitle", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L33
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("mapTitle", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      ifne                L33
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      returnvalue
+
+L33:
+      hasnext2            4, 3
+      iftrue              L11
+
+      kill                4
+      kill                3
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "getAreaByLink")
+   method
+    refid "worldMap/instance/getAreaByLink"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      coerce_a
+      setlocal            4
+
+      jump                L33
+
+L11:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_a
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("strLink", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L33
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getproperty         Multiname("strLink", [PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal1
+      ifne                L33
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "areaObject")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      returnvalue
+
+L33:
+      hasnext2            4, 3
+      iftrue              L11
+
+      kill                4
+      kill                3
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "specificNode")
+   method
+    refid "worldMap/instance/specificNode"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushnull
+      ifeq                L11
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "nodeObject")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      returnvalue
+
+L11:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "specificCutscene")
+   method
+    refid "worldMap/instance/specificCutscene"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      pushnull
+      ifeq                L11
+
+      getlex              QName(PrivateNamespace(null, "worldMap/instance#0"), "cutsceneObject")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "worldMap/instance#0"), PackageNamespace(""), PrivateNamespace(null, "worldMap/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.text"), ProtectedNamespace("worldMap"), StaticProtectedNs("worldMap"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      returnvalue
+
+L11:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "worldMap/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class
