@@ -55,6 +55,7 @@ jobs:
                 with:
                     github_token: ${{ secrets.PATCH_TOKEN }}
                     repo: JonasAlv/pocket-patches
+                    workflow: build-patches.yml
                     branch: main
                     name: patched-gamefiles
                     path: loader/gamefiles/
