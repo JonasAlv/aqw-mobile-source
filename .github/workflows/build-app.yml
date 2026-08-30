@@ -1,12 +1,12 @@
-name: Build Pocket
+name: Build App
 
 on:
     workflow_dispatch:
         inputs:
             version_prefix:
-                description: 'Version prefix (e.g. 1.0.0, 1.1.0, 2.0.0)'
+                description: 'Version prefix (e.g., 3.1.2)'
                 required: true
-                default: '2.0.0'
+                default: '3.1.2'
             
             prerelease:
                 description: 'Mark as pre-release'
@@ -27,13 +27,7 @@ jobs:
             VERSION_NUMBER: ${{ steps.version.outputs.VERSION_NUMBER }}
         steps:
             -   name: Checkout
-                uses: actions/checkout@v7
-            
-            -   name: Checkout custom
-                uses: actions/checkout@v7
-                with:
-                    repository: JonasAlv/patches
-                    path: pocket-patches
+                uses: actions/checkout@v4
             
             -   name: Set version
                 id: version
@@ -42,14 +36,27 @@ jobs:
                     echo "VERSION_NUMBER=${{ github.event.inputs.version_prefix }}" >> $GITHUB_OUTPUT
                     echo "IS_PRERELEASE=${{ github.event.inputs.prerelease }}" >> $GITHUB_OUTPUT
             
-            -   name: Copy pre-patched SWFs
+            -   name: Setup D Compiler
+                uses: dlang-community/setup-dlang@v1
+                with:
+                    compiler: dmd-latest
+                    
+            -   name: Build and Install RABCDAsm
+                run: |
+                    git clone https://github.com/CyberShadow/RABCDAsm.git /tmp/RABCDAsm
+                    cd /tmp/RABCDAsm
+                    dmd build_rabcdasm.d
+                    ./build_rabcdasm
+                    sudo cp abcexport abcreplace rabcdasm rabcasm swfdecompress swf7zcompress swfbinexport swfbinreplace swflzmacompress /usr/local/bin/
+
+            -   name: Run Rust Patcher
+                run: cargo run --release
+            
+            -   name: Copy remaining SWFs
                 run: |
                     mkdir -p loader/gamefiles
                     if [ -f pocket-patches/Mobile.swf ]; then cp pocket-patches/Mobile.swf loader/; fi
                     if [ -f pocket-patches/Desktop.swf ]; then cp pocket-patches/Desktop.swf loader/; fi
-                    for f in game.swf world-map.swf book-of-lore.swf character-select.swf; do
-                        if [ -f "pocket-patches/$f" ]; then cp "pocket-patches/$f" loader/gamefiles/; fi
-                    done
             
             -   name: Keystore
                 run: |
@@ -64,7 +71,7 @@ jobs:
                     sed -i "s|<versionLabel>.*</versionLabel>|<versionLabel>${{ steps.version.outputs.VERSION_NUMBER }}</versionLabel>|" loader/Desktop-app.xml
             
             -   name: Upload patched files
-                uses: actions/upload-artifact@v7
+                uses: actions/upload-artifact@v4
                 with:
                     name: patched-files
                     path: |
@@ -106,7 +113,7 @@ jobs:
         
         steps:
             -   name: Download patched files
-                uses: actions/download-artifact@v8
+                uses: actions/download-artifact@v4
                 with:
                     name: patched-files
             
@@ -142,7 +149,7 @@ jobs:
                         gamefiles/character-select.swf
             
             -   name: Upload
-                uses: actions/upload-artifact@v7
+                uses: actions/upload-artifact@v4
                 with:
                     name: build-${{ matrix.architecture }}${{ matrix.suffix }}
                     path: "*.apk"
@@ -155,10 +162,10 @@ jobs:
         
         steps:
             -   name: Checkout
-                uses: actions/checkout@v7
+                uses: actions/checkout@v4
                 
             -   name: Download builds
-                uses: actions/download-artifact@v7
+                uses: actions/download-artifact@v4
                 with:
                     pattern: build-*
                     merge-multiple: true
