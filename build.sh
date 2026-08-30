@@ -3,8 +3,18 @@ set -e
 
 cd "$(dirname "$0")"
 
-echo "Running Python Patcher..."
-python3 patcher.py
+echo "Downloading pre-compiled game files..."
+mkdir -p loader/gamefiles
+
+# Fetching the main game swf version to construct the URL
+GAME_VERSION_JSON=$(wget -qO- https://game.aq.com/game/api/data/gameversion)
+GAME_SFILE=$(echo $GAME_VERSION_JSON | grep -o '"sFile":"[^"]*"' | cut -d'"' -f4)
+
+# Download the vanilla SWFs directly (User will replace these URLs with their private pre-patched URLs later)
+wget -q "https://game.aq.com/game/gamefiles/$GAME_SFILE" -O loader/gamefiles/game.swf
+wget -q "https://game.aq.com/game/gamefiles/news/Map-UI_r38.swf" -O loader/gamefiles/world-map.swf
+wget -q "https://game.aq.com/game/gamefiles/news/spiderbook3.swf" -O loader/gamefiles/book-of-lore.swf
+wget -q "https://game.aq.com/game/gamefiles/interface/CharSelect/charselect.swf" -O loader/gamefiles/character-select.swf
 
 echo "Compiling Mobile.swf from source..."
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
