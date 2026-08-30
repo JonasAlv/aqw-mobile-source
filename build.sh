@@ -3,6 +3,9 @@ set -e
 
 cd "$(dirname "$0")"
 
+echo "Running Python Patcher..."
+python3 patcher.py
+
 if [ ! -d "android_sdk" ]; then
     echo "Downloading Android SDK..."
     mkdir -p android_sdk/cmdline-tools
