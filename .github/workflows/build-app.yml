@@ -192,12 +192,12 @@ jobs:
                     body: |
                         Enjoy the new update!
 
-                        ### 📱 Android
+                        ### Android
                         * **armv8** (Recommended for most phones): `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8.apk`
                         * **armv7** (For older phones): `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv7.apk`
                         *(If the game is lagging, try the `-direct` or `-gpu` alternatives)*
 
-                        ### 💻 Windows
+                        ### Windows
                         * **Desktop App**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-windows.zip`
                         *(Just unzip it and play, no need to install Adobe AIR!)*
                     files: |
