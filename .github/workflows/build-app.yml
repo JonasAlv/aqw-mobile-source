@@ -1,15 +1,12 @@
 name: Build App
-
 on:
     workflow_dispatch:
         inputs:
             version_prefix:
                 description: 'Version prefix (e.g., 3.1.2)'
                 required: true
-                default: '3.1.2'
             
             prerelease:
-                description: 'Mark as pre-release'
                 required: true
                 default: 'true'
                 type: choice
@@ -31,7 +28,6 @@ jobs:
             
             -   name: Set version
                 id: version
-                run: |
                     echo "VERSION=v${{ github.event.inputs.version_prefix }}" >> $GITHUB_OUTPUT
                     echo "VERSION_NUMBER=${{ github.event.inputs.version_prefix }}" >> $GITHUB_OUTPUT
                     echo "IS_PRERELEASE=${{ github.event.inputs.prerelease }}" >> $GITHUB_OUTPUT
@@ -47,12 +43,6 @@ jobs:
                     cd /tmp/RABCDAsm
                     dmd build_rabcdasm.d
                     ./build_rabcdasm
-                    sudo cp abcexport abcreplace rabcdasm rabcasm swfdecompress swf7zcompress swfbinexport swfbinreplace swflzmacompress /usr/local/bin/
-
-            -   name: Run Rust Patcher
-                run: cargo run --release
-            
-            -   name: Keystore
                 run: |
                     keytool -genkey -v -keystore aqwpocket_keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias aqwpocket -storepass aqwpocket -keypass aqwpocket -dname "CN=AQW, OU=AQW, O=AQW, L=Unknown, ST=Unknown, C=US"
                     keytool -importkeystore -srckeystore aqwpocket_keystore.jks -srcstorepass aqwpocket -srcalias aqwpocket -destkeystore aqwpocket_keystore.p12 -deststoretype PKCS12 -deststorepass aqwpocket -destkeypass aqwpocket
@@ -60,14 +50,6 @@ jobs:
             -   name: Inject version
                 run: |
                     sed -i "s|<versionNumber>.*</versionNumber>|<versionNumber>${{ steps.version.outputs.VERSION_NUMBER }}</versionNumber>|" loader/Mobile-app.xml
-                    sed -i "s|<versionLabel>.*</versionLabel>|<versionLabel>${{ steps.version.outputs.VERSION_NUMBER }}</versionLabel>|" loader/Mobile-app.xml
-                    sed -i "s|<versionNumber>.*</versionNumber>|<versionNumber>${{ steps.version.outputs.VERSION_NUMBER }}</versionNumber>|" loader/Desktop-app.xml
-                    sed -i "s|<versionLabel>.*</versionLabel>|<versionLabel>${{ steps.version.outputs.VERSION_NUMBER }}</versionLabel>|" loader/Desktop-app.xml
-            
-            -   name: Upload patched files
-                uses: actions/upload-artifact@v4
-                with:
-                    name: patched-files
                     path: |
                         loader/
                         aqwpocket_keystore.jks
@@ -83,7 +65,6 @@ jobs:
                 include:
                     -   architecture: "armv8"
                         render-mode: "auto"
-                        suffix: ""
                     
                     -   architecture: "armv8"
                         render-mode: "direct"
@@ -126,7 +107,6 @@ jobs:
                       -storetype JKS \
                       -keystore aqwpocket_keystore.jks \
                       -storepass aqwpocket \
-                      -keypass aqwpocket \
                       AQWPocket-${{ needs.patch.outputs.VERSION }}-${{ matrix.architecture }}${{ matrix.suffix }}.apk \
                       loader/Mobile-app.xml \
                       -C loader \
@@ -163,7 +143,6 @@ jobs:
                 with:
                     pattern: build-*
                     merge-multiple: true
-            
             -   name: Release
                 uses: softprops/action-gh-release@v2
                 with:
@@ -177,11 +156,9 @@ jobs:
 
                         * **armv8 (recommended)**
                         `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8.apk`
-                        → For most modern devices
 
                         * **armv8-direct (alternative)**
                         `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-direct.apk`
-                        → Use if the recommended version has issues
 
                         * **armv8-gpu (legacy)**
                         `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-gpu.apk`
