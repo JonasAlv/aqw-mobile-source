@@ -1,4 +1,4 @@
-﻿package {
+package {
 
 	import data.Release;
 	import data.Version;
@@ -62,6 +62,7 @@
 			NativeApplication.nativeApplication.systemIdleMode = SystemIdleMode.KEEP_AWAKE;
 
 			stage.color = 0x000000;
+			stage.quality = "low";
 
 			this.versionTxt.text = "Version " + Config.APP_VERSION;
 

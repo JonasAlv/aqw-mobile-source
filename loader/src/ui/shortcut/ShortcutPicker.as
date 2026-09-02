@@ -18,6 +18,8 @@ package ui.shortcut {
 	import util.HelperScroll;
 	import util.HelperSetting;
 
+	import game.combat.AutoCombat;
+
 	public class ShortcutPicker extends Sprite {
 
 		public static const ACTIONS:Vector.<Action> = new <Action>[
@@ -32,6 +34,13 @@ package ui.shortcut {
 			new Action("Hide Monsters"),
 			new Action("Hide Players"),
 			new Action("Hide UI"),
+
+			new Action("Auto Combat (Smart)", function (pocket:Pocket):void {
+				AutoCombat.toggleSmart(pocket);
+			}),
+			new Action("Auto Combat (Custom)", function (pocket:Pocket):void {
+				AutoCombat.toggleCustom(pocket);
+			}),
 
 			new Action("Auto Attack", function (pocket:Pocket):void {
 				if (!pocket.game) {

@@ -134,7 +134,9 @@ package controller {
 			}
 
 			const parent:DisplayObjectContainer = widgetEntry.target.parent;
-
+			if (parent == null) {
+				return;
+			}
 			const handle:Handle = new Handle();
 
 			handle.x = widgetEntry.target.x;

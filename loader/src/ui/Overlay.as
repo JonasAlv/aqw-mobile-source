@@ -22,6 +22,8 @@ package ui {
 	import util.Helper;
 	import util.HelperScroll;
 	import util.HelperSetting;
+	import game.combat.AutoCombat;
+
 
 	public class Overlay extends MovieClip {
 
@@ -36,6 +38,7 @@ package ui {
 			this.pocket.addChild(this);
 
 			this.notifications = Sprite(addChild(new Sprite()));
+			
 		}
 
 		public var showPanelBtn:SimpleButton;
@@ -271,6 +274,41 @@ package ui {
 					},
 					function (frame:String):void {
 						Pocket.IS_GRAPHIC_FILTER_OFF = HelperSetting.getBool(HelperSetting.OPTION_FILTER);
+					}
+				)
+			]),
+			new Menu("Auto Combat", new <Option>[
+				new Button(
+					null,
+					"Smart Auto Combat",
+					"Automatically use skills based on your equipped class",
+					"Toggle",
+					function (option:Button):void {
+						const pocket:Pocket = Pocket.SINGLETON;
+						pocket.overlay.gotoAndStop("Init");
+						AutoCombat.toggleSmart(pocket);
+					}
+				),
+				new Button(
+					null,
+					"Custom Auto Combat",
+					"Use your custom configured skill rotation",
+					"Toggle",
+					function (option:Button):void {
+						const pocket:Pocket = Pocket.SINGLETON;
+						pocket.overlay.gotoAndStop("Init");
+						AutoCombat.toggleCustom(pocket);
+					}
+				),
+				new Button(
+					null,
+					"Config Custom",
+					"Set skill rotation for Custom Auto Combat",
+					"Configure",
+					function (option:Button):void {
+						const pocket:Pocket = Pocket.SINGLETON;
+						pocket.overlay.gotoAndStop("Init"); // Close the settings menu safely
+						AutoCombat.showPrompt(pocket); // Show the prompt directly
 					}
 				)
 			]),

@@ -44,3 +44,6 @@ out_performance/
 build_cache/
 out_source/
 out_source_performance/
+
+# Temporary working directories
+tmp*

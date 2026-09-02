@@ -69,7 +69,7 @@ def copy_dir(src: Path, dst: Path):
             shutil.copy2(item, dst / item.name)
 
 def merge_patches(name: str):
-    src = Path(f"pocket-patches/aqw/{name}")
+    src = Path(f"pocket-patches/pocket-patches/aqw/{name}")
     dst = Path(f"patches/{name}/bytecodes")
     if src.exists():
         if dst.exists():

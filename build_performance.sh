@@ -10,14 +10,20 @@ mkdir -p loader/gamefiles
 mkdir -p out_performance
 mkdir -p "$CACHE_DIR"
 
-echo "Checking GitHub for the latest upstream release..."
-LATEST_ASSET_URL=$(curl -s $API_URL | grep "browser_download_url" | grep -i "armv8\.apk" | head -n 1 | cut -d '"' -f 4)
-LATEST_VERSION=$(basename "$LATEST_ASSET_URL")
-
 if [ -f "$CACHE_DIR/current_version.txt" ]; then
     CACHED_VERSION=$(cat "$CACHE_DIR/current_version.txt")
 else
     CACHED_VERSION=""
+fi
+
+echo "Checking GitHub for the latest upstream release..."
+LATEST_ASSET_URL=$(curl -s $API_URL | grep "browser_download_url" | grep -i "armv8\.apk" | head -n 1 | cut -d '"' -f 4)
+
+if [ -z "$LATEST_ASSET_URL" ]; then
+    echo "Failed to fetch from GitHub API (rate limit or empty). Using cached version."
+    LATEST_VERSION=$CACHED_VERSION
+else
+    LATEST_VERSION=$(basename "$LATEST_ASSET_URL")
 fi
 
 if [ "$LATEST_VERSION" != "$CACHED_VERSION" ] || [ ! -f "$CACHE_DIR/pristine_swfs/game.swf" ]; then
