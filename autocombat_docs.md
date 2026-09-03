@@ -28,3 +28,11 @@ This document outlines the technical implementation details for the custom Auto 
 - **The Issue:** The game registers UI elements (like skill bar icons) for the layout editor. However, when changing maps or reloading UI, some elements are destroyed and lose their `parent` container, but remain in the layout tracking array. When the layout loop iterated over these orphaned objects and attempted to attach a handle (`parent.addChild(handle)`), it threw a null reference exception, crashing the loop before it could finish adding handles to the rest of the UI.
 - **The Fix:** We injected simple `null` checks (`if (parent == null) { return; }`) into the `showHandles` and `onMouseMove` functions. This safely skips orphaned elements, allowing the loop to successfully attach handles to all valid UI buttons.
 
+
+## 4. Auto Quest Turn-in System
+**Goal:** Create a lightweight, safe mechanism to repeatedly turn in completed quests to automate farming tasks alongside Auto Combat.
+
+**Implementation (`AutoQuest.as`):**
+- **Safe Native Function:** We hook directly into the client's native `world.tryQuestComplete()` function. By checking if a quest's status is officially flagged as `"c"` (complete) by the client, we ensure we only attempt turn-ins when requirements are legitimately met, preventing server bans.
+- **Multiple IDs & Choice Rewards:** The user can input a comma-separated list of Quest IDs. If a quest requires a specific item choice as a reward, the user can append it using a colon (e.g., `1234:5678`), allowing the system to pass the selected Item ID to the server.
+- **Anti-Spam Defenses:** When multiple quests complete simultaneously, the system staggers their turn-ins by `break`ing the loop after one successful request. Additionally, a strict 6-second cooldown map (`_lastTurnIns`) per quest ID prevents duplicate network packets from firing during server lag, fully eliminating the "Slow down" red message warnings.

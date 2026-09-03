@@ -23,6 +23,7 @@ package ui {
 	import util.HelperScroll;
 	import util.HelperSetting;
 	import game.combat.AutoCombat;
+	import game.combat.AutoQuest;
 
 
 	public class Overlay extends MovieClip {
@@ -309,6 +310,17 @@ package ui {
 						const pocket:Pocket = Pocket.SINGLETON;
 						pocket.overlay.gotoAndStop("Init"); // Close the settings menu safely
 						AutoCombat.showPrompt(pocket); // Show the prompt directly
+					}
+				),
+				new Button(
+					null,
+					"Auto Quest ID",
+					"Automatically turns in a specific quest when ready",
+					"Toggle",
+					function (option:Button):void {
+						const pocket:Pocket = Pocket.SINGLETON;
+						pocket.overlay.gotoAndStop("Init");
+						AutoQuest.toggle(pocket);
 					}
 				)
 			]),
