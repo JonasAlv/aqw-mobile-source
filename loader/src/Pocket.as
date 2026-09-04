@@ -9,10 +9,10 @@
 	import flash.display.Sprite;
 	import flash.text.TextField;
 
-	import game.Game;
-	import game.LPFFrameListViewTabbed;
+	import game.Core;
 	import game.Network;
-	import game.World;
+
+	import load.LoadManager;
 
 	import load.handlers.BackgroundLoad;
 	import load.handlers.GameLoad;
@@ -82,10 +82,7 @@
 
 		public var game:MovieClip;
 
-		public const gameCore:Game = new Game(this);
-		public const worldCore:World = new World(this);
-
-		public const lpfFrameListViewTabbedCore:LPFFrameListViewTabbed = new LPFFrameListViewTabbed(this);
+		public const gameCore:Core = new Core(this);
 
 		//noinspection JSUnresolvedReference
 		POCKET::IS_DESKTOP
@@ -103,7 +100,8 @@
 		public var version:Version;
 		public var release:Release;
 
-		public const load:Function = HelperLoader.load;
+		public const load:Function = LoadManager.load;
+		public const loadManager:LoadManager = new LoadManager();
 
 		public function check():void {
 			switch (HelperLoader.COUNT) {
