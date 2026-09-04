@@ -9,6 +9,18 @@ REPO="https://github.com/anthony-hyo/aqw-mobile.git"
 API_URL="https://api.github.com/repos/anthony-hyo/aqw-mobile/releases/latest"
 POCKET_PATCHES_DIR="pocket-patches"
 
+
+# Ensure working directory is clean
+if [[ -n $(git status -s) ]]; then
+    echo "Error: You have uncommitted changes. Please commit or stash them before running this script."
+    exit 1
+fi
+
+CURRENT_BRANCH=$(git branch --show-current)
+
+echo "Switching to main branch to cleanly receive upstream updates..."
+git checkout main
+
 echo "Cleaning up old upstream check..."
 rm -rf $DIR
 mkdir -p $DIR/releases
@@ -74,15 +86,24 @@ done < modified_files.txt
 
 cd ..
 # ==========================================
-# 4. Clean Up
+# 4. Clean Up & Commit
 # ==========================================
 echo "Cleaning up temporary files..."
 rm -rf $DIR
 
+echo "Committing upstream changes to main branch..."
+git add loader/src/ loader/worker-src/ pocket-patches/
+git commit -m "chore: sync with upstream repository" || echo "No changes from upstream to commit."
+
+echo "Switching back to your custom branch ($CURRENT_BRANCH)..."
+git checkout $CURRENT_BRANCH
+
 echo "=================================================="
 echo "Upstream Sync Complete!"
-echo "- 'loader/' has been updated with Anthony's latest code."
-echo "- Harman AIR SDK compatibility fixes were automatically re-applied."
-echo "- 'pocket-patches/' has been synced with his latest game.swf patches."
-echo "You can now review and commit the changes in both repositories!"
+echo "- The 'main' branch has been updated with the latest upstream code."
+echo "- You have been safely returned to '$CURRENT_BRANCH'."
+echo ""
+echo "To apply these new upstream updates to your custom features, simply run:"
+echo "    git merge main"
 echo "=================================================="
+
