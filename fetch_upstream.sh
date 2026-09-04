@@ -86,24 +86,19 @@ done < modified_files.txt
 
 cd ..
 # ==========================================
-# 4. Clean Up & Commit
+# 4. Clean Up & Manual Review
 # ==========================================
 echo "Cleaning up temporary files..."
 rm -rf $DIR
 
-echo "Committing upstream changes to main branch..."
-git add loader/src/ loader/worker-src/ pocket-patches/
-git commit -m "chore: sync with upstream repository" || echo "No changes from upstream to commit."
-
-echo "Switching back to your custom branch ($CURRENT_BRANCH)..."
-git checkout $CURRENT_BRANCH
-
 echo "=================================================="
-echo "Upstream Sync Complete!"
-echo "- The 'main' branch has been updated with the latest upstream code."
-echo "- You have been safely returned to '$CURRENT_BRANCH'."
+echo "Upstream Fetch Complete!"
+echo "- The 'main' branch has been updated with the latest upstream code in your working directory."
+echo "- You are currently on the 'main' branch with uncommitted changes."
 echo ""
-echo "To apply these new upstream updates to your custom features, simply run:"
-echo "    git merge main"
+echo "Next steps:"
+echo "1. Review the changes in loader/src/ and pocket-patches/"
+echo "2. Run 'git commit' to save them to the 'main' branch."
+echo "3. Switch back to your custom branch: git checkout $CURRENT_BRANCH"
+echo "4. Merge the updates safely: git merge main"
 echo "=================================================="
-
