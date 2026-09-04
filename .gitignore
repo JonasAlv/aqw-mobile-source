@@ -44,3 +44,5 @@ out_performance/
 build_cache/
 out_source/
 out_source_performance/
+tmp_patch2/
+tmp_test.as
