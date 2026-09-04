@@ -47,3 +47,5 @@ out_source_performance/
 
 # Temporary working directories
 tmp*
+tmp_patch2/
+tmp_test.as
