@@ -60,6 +60,7 @@ package {
 
 		public function Pocket() {
 			NativeApplication.nativeApplication.systemIdleMode = SystemIdleMode.KEEP_AWAKE;
+			NativeApplication.nativeApplication.executeInBackground = true;
 
 			stage.color = 0x000000;
 			stage.quality = "low";
