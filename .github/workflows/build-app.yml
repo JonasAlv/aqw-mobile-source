@@ -294,18 +294,18 @@ jobs:
                     name: ${{ needs.patch.outputs.VERSION }}${{ github.event.inputs.prerelease == 'true' && ' (test)' || '' }}
                     prerelease: ${{ github.event.inputs.prerelease }}
                     body: |
-                        Enjoy the new update!
+                        Enjoy the new performance-tweaked update!
+
+                        > **Recommendation:** We highly recommend downloading the **-gpu** version for your device. It offloads rendering to your graphics chip for a massive framerate boost! If you experience visual glitches, simply swap to the standard or -direct versions below.
 
                         ### Android
-                        * **armv8** (Recommended for most phones): `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-armv8.apk`
-                        * **armv7** (For older phones): `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-armv7.apk`
-                        *(If the game is lagging, try the `-direct` or `-gpu` alternatives)*
+                        * **armv8 GPU (Best for modern phones)**: `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-armv8-gpu.apk`
+                        * **armv7 GPU (Best for older phones)**: `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-armv7-gpu.apk`
+                        *(Other fallback variants are attached in the Assets list below)*
 
                         ### Windows
-                        * **Desktop App**: `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows.zip`
-                        * **Desktop App (GPU)**: `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows-gpu.zip`
-                        * **Desktop App (Direct)**: `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows-direct.zip`
-                        *(Just unzip it and play, no need to install Adobe AIR!)*
+                        * **Desktop App GPU (Recommended)**: `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows-gpu.zip`
+                        *(Just unzip and play, no need to install Adobe AIR! Other variants attached below)*
                     files: |
                         AQWPocket-*.apk
                         AQWPocket-*.zip
