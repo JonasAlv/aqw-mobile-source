@@ -39,6 +39,7 @@ cp -r $DIR/source/loader/worker-src/* loader/worker-src/ 2>/dev/null || true
 # Re-apply Harman AIR SDK compatibility fixes for URLLoader
 echo "Applying Harman AIR SDK compatibility fixes to loader source..."
 sed -i 's/URLLoader(e.target).data/e.target.data/g' loader/src/util/HelperLoader.as 2>/dev/null || true
+sed -i 's/URLLoader(event.target).data/event.target.data/g' loader/src/load/LoadManager.as 2>/dev/null || true
 sed -i 's/URLLoader(event.target).data/event.target.data/g' loader/src/load/handlers/UpdateLoad.as 2>/dev/null || true
 sed -i 's/URLLoader(event.target).data/event.target.data/g' loader/src/load/handlers/VersionLoad.as 2>/dev/null || true
 

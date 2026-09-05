@@ -221,7 +221,7 @@ package load {
 			urlLoader.dataFormat = URLLoaderDataFormat.BINARY;
 
 			urlLoader.addEventListener(Event.COMPLETE, function (event:Event):void {
-				const rawBytes:ByteArray = URLLoader(event.target).data as ByteArray;
+				const rawBytes:ByteArray = event.target.data as ByteArray;
 
 				const categoryCheck:Function = resolveCategoryCheck(loadData.url);
 				const animationOn:Boolean = categoryCheck != null && categoryCheck();
