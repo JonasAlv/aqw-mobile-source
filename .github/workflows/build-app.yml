@@ -54,7 +54,7 @@ jobs:
                 run: |
                     echo "Downloading upstream Anthony's APK for pre-patched game files..."
                     mkdir -p loader/gamefiles
-                    wget -q "https://github.com/anthony-hyo/aqw-mobile/releases/download/v3.3.6/AQWPocket-v3.3.6-armv8.apk" -O upstream.apk
+                    wget -q "https://github.com/anthony-hyo/aqw-mobile/releases/download/v${{ github.event.inputs.version_prefix }}/AQWPocket-v${{ github.event.inputs.version_prefix }}-armv8.apk" -O upstream.apk
                     unzip -p upstream.apk assets/gamefiles/game.swf > loader/gamefiles/game.swf
                     unzip -p upstream.apk assets/gamefiles/world-map.swf > loader/gamefiles/world-map.swf
                     unzip -p upstream.apk assets/gamefiles/book-of-lore.swf > loader/gamefiles/book-of-lore.swf
@@ -89,6 +89,10 @@ jobs:
                     with open("game-0/Game.class.asasm", "w") as f:
                         f.writelines(lines)
                     '
+                    
+                    echo "Disabling Hit-Testing (mouseEnabled = false) on heavy Aura particles..."
+                    sed -i '/constructsuper      0/a \     getlocal0\n     pushfalse\n     initproperty        QName(PackageNamespace(""), "mouseEnabled")\n     getlocal0\n     pushfalse\n     initproperty        QName(PackageNamespace(""), "mouseChildren")' game-0/liteAssets/draw/playerAuras.class.asasm
+                    sed -i '/constructsuper      0/a \     getlocal0\n     pushfalse\n     initproperty        QName(PackageNamespace(""), "mouseEnabled")\n     getlocal0\n     pushfalse\n     initproperty        QName(PackageNamespace(""), "mouseChildren")' game-0/liteAssets/draw/targetAuras.class.asasm
                     
                     echo "Recompiling game.swf..."
                     rabcasm game-0/game-0.main.asasm
@@ -166,9 +170,24 @@ jobs:
         strategy:
             matrix:
                 include:
-                    -   architecture: "armv8"
-                        render-mode: "auto"
-                        suffix: ""
+                    - architecture: "armv8"
+                      render-mode: "auto"
+                      suffix: ""
+                    - architecture: "armv8"
+                      render-mode: "gpu"
+                      suffix: "-gpu"
+                    - architecture: "armv8"
+                      render-mode: "direct"
+                      suffix: "-direct"
+                    - architecture: "armv7"
+                      render-mode: "auto"
+                      suffix: ""
+                    - architecture: "armv7"
+                      render-mode: "gpu"
+                      suffix: "-gpu"
+                    - architecture: "armv7"
+                      render-mode: "direct"
+                      suffix: "-direct"
         
         steps:
             -   name: Download patched files
@@ -192,7 +211,7 @@ jobs:
                       -keystore aqwpocket_keystore.jks \
                       -storepass aqwpocket \
                       -keypass aqwpocket \
-                      AQWPocket-${{ needs.patch.outputs.VERSION }}-${{ matrix.architecture }}${{ matrix.suffix }}.apk \
+                      AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-${{ matrix.architecture }}${{ matrix.suffix }}.apk \
                       loader/Mobile-app.xml \
                       -C loader \
                         Mobile.swf \
@@ -231,8 +250,8 @@ jobs:
             -   name: Build Windows App
                 run: |
                     adt -certificate -cn AQWPocket -validityPeriod 25 2048-RSA desktop.p12 aqwpocket
-                    adt -package -storetype PKCS12 -keystore desktop.p12 -storepass aqwpocket -target bundle -arch x64 AQWPocket-${{ needs.patch.outputs.VERSION }}-windows loader/Desktop-app.xml -extdir loader/libs -C loader Desktop.swf icons/icon-16x16.png icons/icon-32x32.png icons/icon-36x36.png icons/icon-48x48.png icons/icon-72x72.png icons/icon-96x96.png icons/icon-128x128.png icons/icon-144x144.png icons/icon-192x192.png gamefiles/game.swf gamefiles/world-map.swf gamefiles/book-of-lore.swf gamefiles/character-select.swf
-                    Compress-Archive -Path AQWPocket-${{ needs.patch.outputs.VERSION }}-windows -DestinationPath AQWPocket-${{ needs.patch.outputs.VERSION }}-windows.zip
+                    adt -package -storetype PKCS12 -keystore desktop.p12 -storepass aqwpocket -target bundle -arch x64 AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows loader/Desktop-app.xml -extdir loader/libs -C loader Desktop.swf icons/icon-16x16.png icons/icon-32x32.png icons/icon-36x36.png icons/icon-48x48.png icons/icon-72x72.png icons/icon-96x96.png icons/icon-128x128.png icons/icon-144x144.png icons/icon-192x192.png gamefiles/game.swf gamefiles/world-map.swf gamefiles/book-of-lore.swf gamefiles/character-select.swf
+                    Compress-Archive -Path AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows -DestinationPath AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows.zip
             
             -   name: Upload
                 uses: actions/upload-artifact@v4
@@ -268,12 +287,12 @@ jobs:
                         Enjoy the new update!
 
                         ### Android
-                        * **armv8** (Recommended for most phones): `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8.apk`
-                        * **armv7** (For older phones): `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv7.apk`
+                        * **armv8** (Recommended for most phones): `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-armv8.apk`
+                        * **armv7** (For older phones): `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-armv7.apk`
                         *(If the game is lagging, try the `-direct` or `-gpu` alternatives)*
 
                         ### Windows
-                        * **Desktop App**: `AQWPocket-${{ needs.patch.outputs.VERSION }}-windows.zip`
+                        * **Desktop App**: `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows.zip`
                         *(Just unzip it and play, no need to install Adobe AIR!)*
                     files: |
                         AQWPocket-*.apk
