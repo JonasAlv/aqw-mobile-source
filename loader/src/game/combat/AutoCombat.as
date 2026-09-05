@@ -298,6 +298,10 @@ package game.combat {
 			var icon:* = _pocket.game.ui.mcInterface.actBar.getChildByName("i" + idx);
 			if (icon != null && icon.actObj != null) {
 				
+				if (icon.actObj.isOK === false) {
+					return false; // Skill is not unlocked yet
+				}
+
 				// We MUST use uoTreeLeaf for live player stats (MP/HP)
 				// avatar.dataLeaf only updates for monsters, not the local player
 				var pStats:* = null;
