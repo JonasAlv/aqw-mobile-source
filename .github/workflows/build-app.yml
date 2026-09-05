@@ -235,6 +235,15 @@ jobs:
     build-windows:
         needs: patch
         runs-on: windows-latest
+        strategy:
+            matrix:
+                include:
+                    - render-mode: "auto"
+                      suffix: ""
+                    - render-mode: "gpu"
+                      suffix: "-gpu"
+                    - render-mode: "direct"
+                      suffix: "-direct"
         steps:
             -   name: Download patched files
                 uses: actions/download-artifact@v4
@@ -249,14 +258,15 @@ jobs:
             
             -   name: Build Windows App
                 run: |
+                    (Get-Content loader\Desktop-app.xml) -replace '<renderMode>.*</renderMode>', '<renderMode>${{ matrix.render-mode }}</renderMode>' | Set-Content loader\Desktop-app.xml
                     adt -certificate -cn AQWPocket -validityPeriod 25 2048-RSA desktop.p12 aqwpocket
-                    adt -package -storetype PKCS12 -keystore desktop.p12 -storepass aqwpocket -target bundle -arch x64 AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows loader/Desktop-app.xml -extdir loader/libs -C loader Desktop.swf icons/icon-16x16.png icons/icon-32x32.png icons/icon-36x36.png icons/icon-48x48.png icons/icon-72x72.png icons/icon-96x96.png icons/icon-128x128.png icons/icon-144x144.png icons/icon-192x192.png gamefiles/game.swf gamefiles/world-map.swf gamefiles/book-of-lore.swf gamefiles/character-select.swf
-                    Compress-Archive -Path AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows -DestinationPath AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows.zip
+                    adt -package -storetype PKCS12 -keystore desktop.p12 -storepass aqwpocket -target bundle -arch x64 AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows${{ matrix.suffix }} loader/Desktop-app.xml -extdir loader/libs -C loader Desktop.swf icons/icon-16x16.png icons/icon-32x32.png icons/icon-36x36.png icons/icon-48x48.png icons/icon-72x72.png icons/icon-96x96.png icons/icon-128x128.png icons/icon-144x144.png icons/icon-192x192.png gamefiles/game.swf gamefiles/world-map.swf gamefiles/book-of-lore.swf gamefiles/character-select.swf
+                    Compress-Archive -Path AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows${{ matrix.suffix }} -DestinationPath AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows${{ matrix.suffix }}.zip
             
             -   name: Upload
                 uses: actions/upload-artifact@v4
                 with:
-                    name: build-windows
+                    name: build-windows${{ matrix.suffix }}
                     path: "AQWPocket-*.zip"
 
 
@@ -293,6 +303,8 @@ jobs:
 
                         ### Windows
                         * **Desktop App**: `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows.zip`
+                        * **Desktop App (GPU)**: `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows-gpu.zip`
+                        * **Desktop App (Direct)**: `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-windows-direct.zip`
                         *(Just unzip it and play, no need to install Adobe AIR!)*
                     files: |
                         AQWPocket-*.apk
