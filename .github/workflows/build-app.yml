@@ -4,13 +4,13 @@ on:
     workflow_dispatch:
         inputs:
             version_prefix:
-                description: 'Version prefix (e.g., 3.3.4)'
+                description: 'Version prefix (e.g., 1.0.0)'
                 required: true
-                default: '3.3.4'
+                default: ''
             prerelease:
                 description: 'Mark as pre-release'
                 required: true
-                default: 'true'
+                default: 'false'
                 type: choice
                 options:
                     - 'true'
@@ -50,9 +50,9 @@ jobs:
                     ./build_rabcdasm
                     sudo cp abcexport abcreplace rabcdasm rabcasm swfdecompress swf7zcompress swfbinexport swfbinreplace swflzmacompress /usr/local/bin/
 
-            -   name: Download pre-patched gamefiles from Anthony's upstream APK
+            -   name: Download pre-patched gamefiles
                 run: |
-                    echo "Downloading upstream Anthony's APK for pre-patched game files..."
+                    echo "Downloading pre-patched game files..."
                     mkdir -p loader/gamefiles
                     wget -q "https://github.com/anthony-hyo/aqw-mobile/releases/download/v${{ github.event.inputs.version_prefix }}/AQWPocket-v${{ github.event.inputs.version_prefix }}-armv8.apk" -O upstream.apk
                     unzip -p upstream.apk assets/gamefiles/game.swf > loader/gamefiles/game.swf
@@ -294,9 +294,9 @@ jobs:
                     name: ${{ needs.patch.outputs.VERSION }}${{ github.event.inputs.prerelease == 'true' && ' (test)' || '' }}
                     prerelease: ${{ github.event.inputs.prerelease }}
                     body: |
-                        Enjoy the new performance-tweaked update!
+                        Enjoy the new update!
 
-                        > **Recommendation:** We highly recommend downloading the **-gpu** version for your device. It offloads rendering to your graphics chip for a massive framerate boost! If you experience visual glitches, simply swap to the standard or -direct versions below.
+                        > **Recommendation:** I recommend downloading the **-gpu** version for your device. It offloads rendering to your graphics chip for a massive framerate boost! If you experience visual glitches, simply swap to the standard or -direct versions below.
 
                         ### Android
                         * **armv8 GPU (Best for modern phones)**: `AQWPocket-${{ needs.patch.outputs.VERSION_NUMBER }}-mod-armv8-gpu.apk`
