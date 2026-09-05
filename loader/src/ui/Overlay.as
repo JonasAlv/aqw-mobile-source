@@ -341,17 +341,6 @@ package ui {
 				),
 				new Button(
 					null,
-					"Config Custom",
-					"Set skill rotation for Custom Auto Combat",
-					"Configure",
-					function (option:Button):void {
-						const pocket:Pocket = Pocket.SINGLETON;
-						pocket.overlay.gotoAndStop("Init"); // Close the settings menu safely
-						AutoCombat.showPrompt(pocket); // Show the prompt directly
-					}
-				),
-				new Button(
-					null,
 					"Auto Quest ID",
 					"Automatically turns in a specific quest when ready",
 					"Toggle",
