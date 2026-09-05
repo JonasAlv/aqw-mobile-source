@@ -14,7 +14,7 @@
     <visible>true</visible>
     <fullScreen>true</fullScreen>
     <aspectRatio>landscape</aspectRatio>
-    <renderMode>auto</renderMode>
+    <renderMode>direct</renderMode>
     <width>960</width>
     <height>550</height>
     <maximizable>true</maximizable>
@@ -37,6 +37,7 @@
   <android>
     <manifestAdditions><![CDATA[<manifest>
 <uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.WAKE_LOCK"/>
       
 <application
   android:hardwareAccelerated="true"
