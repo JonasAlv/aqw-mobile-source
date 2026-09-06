@@ -1,0 +1,51 @@
+# Build output
+/target
+*.apk
+*.zip
+*.tar.gz
+
+# IDE
+/.idea/
+/.vscode/
+*.iml
+
+# Assets
+*.fla
+/patches/*/build/*
+
+# Generated / runtime files
+*.abc
+/loader/Mobile.swf
+/loader/Desktop.swf
+/loader/gamefiles/
+/patches-final/
+
+/patches/*
+
+# Build tools & SDKs
+/AIRSDK_Linux/
+/android_sdk/
+/extracted_apk/
+
+# Secrets & Keystores (CRITICAL)
+*.jks
+*.p12
+*.keystore
+.env
+
+# OS Files
+.DS_Store
+Thumbs.db
+upstream_check/
+*.sh
+out/
+out_performance/
+/pocket-patches/
+build_cache/
+out_source/
+out_source_performance/
+
+# Temporary working directories
+tmp*
+tmp_patch2/
+tmp_test.as
