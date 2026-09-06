@@ -3,6 +3,7 @@
 *.apk
 *.zip
 *.tar.gz
+air-aqw
 
 # IDE
 /.idea/
