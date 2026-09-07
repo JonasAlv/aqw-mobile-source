@@ -109,8 +109,8 @@ jobs:
 
             -   name: Compile WorkerMain.swf
                 run: |
-                    mkdir -p loader/gamefiles/embed
-                    amxmlc loader/worker-src/WorkerMain.as -source-path+=loader/src -source-path+=loader/worker-src -output loader/gamefiles/embed/WorkerMain.swf -swf-version=18
+                    mkdir -p loader/assets/embed
+                    amxmlc loader/worker-src/WorkerMain.as -source-path+=loader/src -source-path+=loader/worker-src -output loader/assets/embed/WorkerMain.swf -swf-version=18
 
             -   name: Inject updated code into Mobile.swf
                 run: |
