@@ -213,6 +213,19 @@ package ui {
 					function (frame:String):void {
 						Pocket.SINGLETON.config.option_disable_cutscenes = HelperSetting.getBool(HelperSetting.OPTION_DISABLE_CUTSCENES);
 					}
+				),
+				new Check(
+					HelperSetting.OPTION_SLOW_WALK,
+					false,
+					"Slow Walk",
+					"Move slower when gently pushing the joystick, and at full speed when pushed further.",
+					true,
+					function (option:Check):void {
+						Pocket.SINGLETON.config.option_slow_walk = option.state;
+					},
+					function (frame:String):void {
+						Pocket.SINGLETON.config.option_slow_walk = HelperSetting.getBool(HelperSetting.OPTION_SLOW_WALK);
+					}
 				)
 			]),
 			new Menu("Graphics", new <Option>[

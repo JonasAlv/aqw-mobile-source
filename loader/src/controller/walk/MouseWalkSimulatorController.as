@@ -70,7 +70,11 @@ package controller.walk {
             }
 
             if (directionMagnitude < WALK_MAX_THRESHOLD) {
-                moveSpeed = Math.max(baseSpeed * 0.3, baseSpeed * (directionMagnitude / WALK_MAX_THRESHOLD));
+                if (Pocket.SINGLETON.config.option_slow_walk) {
+                    moveSpeed = Math.max(baseSpeed * 0.3, baseSpeed * (directionMagnitude / WALK_MAX_THRESHOLD));
+                } else {
+                    moveSpeed = baseSpeed;
+                }
             } else if (directionMagnitude >= WALK_MAX_THRESHOLD && directionMagnitude < DASH_THRESHOLD) {
                 moveSpeed = baseSpeed;
             } else if (IS_DASHING_ON && !this.pocket.game.world.justRan2) {

@@ -33,6 +33,7 @@ package {
 		public var option_language:String = "en";
 		public var option_skill_tooltips:Boolean = true;
 		public var option_disable_cutscenes:Boolean = false;
+		public var option_slow_walk:Boolean = false;
 
 	}
 

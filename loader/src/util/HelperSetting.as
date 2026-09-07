@@ -20,6 +20,7 @@ package util {
 		
 		public static const OPTION_SKILL_TOOLTIPS:String = "option_skill_tooltips";
 		public static const OPTION_DISABLE_CUTSCENES:String = "option_disable_cutscenes";
+		public static const OPTION_SLOW_WALK:String = "option_slow_walk";
 
 		public static const OPTION_SHORTCUTS:String = "shortcut_buttons";
 
