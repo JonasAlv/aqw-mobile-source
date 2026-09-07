@@ -3,12 +3,15 @@
 *.apk
 *.zip
 *.tar.gz
-air-aqw
 
 # IDE
 /.idea/
 /.vscode/
 *.iml
+
+# Sub-repositories
+air-aqw/
+pocket-patches/
 
 # Assets
 *.fla
@@ -20,8 +23,6 @@ air-aqw
 /loader/Desktop.swf
 /loader/gamefiles/
 /patches-final/
-
-/patches/*
 
 # Build tools & SDKs
 /AIRSDK_Linux/
@@ -37,16 +38,7 @@ air-aqw
 # OS Files
 .DS_Store
 Thumbs.db
-upstream_check/
-*.sh
-out/
-out_performance/
-/pocket-patches/
-build_cache/
-out_source/
-out_source_performance/
 
-# Temporary working directories
-tmp*
-tmp_patch2/
-tmp_test.as
+# Temporary build folders
+out/
+build_cache/
