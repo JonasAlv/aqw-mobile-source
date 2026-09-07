@@ -4,8 +4,17 @@ package ui.shortcut {
 
 	import flash.display.SimpleButton;
 	import flash.display.Sprite;
-	import flash.events.MouseEvent;
 	import flash.text.TextField;
+
+	//noinspection JSUnresolvedReference
+	POCKET::IS_MOBILE {
+		import flash.events.TouchEvent;
+	}
+
+	//noinspection JSUnresolvedReference
+	POCKET::IS_DESKTOP {
+		import flash.events.MouseEvent;
+	}
 
 	public class ShortcutButton extends Sprite {
 
@@ -23,7 +32,15 @@ package ui.shortcut {
 			this.mouseChildren = true;
 			this.mouseEnabled = false;
 
-			this.shortcutBtn.addEventListener(MouseEvent.CLICK, onClick, false, 0, true);
+			//noinspection JSUnresolvedReference
+			POCKET::IS_MOBILE {
+				this.shortcutBtn.addEventListener(TouchEvent.TOUCH_TAP, onClick, false, 0, true);
+			}
+
+			//noinspection JSUnresolvedReference
+			POCKET::IS_DESKTOP {
+				this.shortcutBtn.addEventListener(MouseEvent.CLICK, onClick, false, 0, true);
+			}
 		}
 
 		public var shortcutBtn:SimpleButton;
@@ -32,7 +49,7 @@ package ui.shortcut {
 		private var pocket:Pocket;
 		private var actionName:String;
 
-		private function onClick(e:MouseEvent):void {
+		private function onClick(e:*):void {
 			if (!this.pocket.game) {
 				return;
 			}

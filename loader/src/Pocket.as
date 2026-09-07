@@ -24,8 +24,13 @@
 	import util.HelperLoader;
 
 	//noinspection JSUnresolvedReference
-	POCKET::IS_DESKTOP
-	{
+	POCKET::IS_MOBILE {
+		import flash.ui.Multitouch;
+		import flash.ui.MultitouchInputMode;
+	}
+
+	//noinspection JSUnresolvedReference
+	POCKET::IS_DESKTOP {
 		import discord.DiscordRichPresence;
 	}
 
@@ -48,6 +53,11 @@
 
 		public function Pocket() {
 			NativeApplication.nativeApplication.systemIdleMode = SystemIdleMode.KEEP_AWAKE;
+
+			//noinspection JSUnresolvedReference
+			POCKET::IS_MOBILE {
+				Multitouch.inputMode = MultitouchInputMode.TOUCH_POINT;
+			}
 
 			stage.color = 0x000000;
 
@@ -73,8 +83,7 @@
 		public const gameCore:Core = new Core(this);
 
 		//noinspection JSUnresolvedReference
-		POCKET::IS_DESKTOP
-		{
+		POCKET::IS_DESKTOP {
 			public const discordRichPresence:DiscordRichPresence = new DiscordRichPresence(this);
 		}
 
