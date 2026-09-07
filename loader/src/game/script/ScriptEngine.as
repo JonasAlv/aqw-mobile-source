@@ -1,6 +1,13 @@
 package game.script {
 	import flash.events.TimerEvent;
 	import game.Network;
+	import flash.display.Sprite;
+	import flash.text.TextField;
+	import flash.text.TextFieldType;
+	import flash.text.TextFormat;
+	import flash.text.TextFormatAlign;
+	import flash.events.MouseEvent;
+	import ui.util.BasicButton;
 	import flash.utils.Timer;
 	
 	import game.combat.AutoCombat;
@@ -27,6 +34,103 @@ package game.script {
 		public function ScriptEngine() {
 			_timer = new Timer(500); // Check every 500ms
 			_timer.addEventListener(TimerEvent.TIMER, onTick, false, 0, true);
+		}
+
+		
+		private static var _promptContainer:Sprite;
+		private static var _promptInput:TextField;
+		
+		public static function showPastePrompt(pocket:*):void {
+			if (_promptContainer != null) {
+				hidePastePrompt();
+			}
+			
+			if (pocket && pocket.overlay) {
+				pocket.overlay.notification("Opening Script Paste Window...");
+			}
+			
+			try {
+				var stageWidth:Number = pocket.stage.stageWidth;
+				var stageHeight:Number = pocket.stage.stageHeight;
+				
+				_promptContainer = new Sprite();
+				_promptContainer.graphics.beginFill(0x000000, 0.7);
+				_promptContainer.graphics.drawRect(0, 0, stageWidth, stageHeight);
+				_promptContainer.graphics.endFill();
+				
+				var bg:Sprite = new Sprite();
+				bg.graphics.beginFill(0x222222, 1);
+				bg.graphics.lineStyle(2, 0x555555);
+				bg.graphics.drawRoundRect(0, 0, 500, 300, 10, 10);
+				bg.graphics.endFill();
+				bg.x = (stageWidth - 500) / 2;
+				bg.y = (stageHeight - 300) / 2;
+				_promptContainer.addChild(bg);
+				
+				var title:TextField = new TextField();
+				var tfTitle:TextFormat = new TextFormat("_sans", 16, 0xFFFFFF, true);
+				tfTitle.align = TextFormatAlign.CENTER;
+				title.defaultTextFormat = tfTitle;
+				title.text = "Paste Script Here";
+				title.width = 500;
+				title.y = bg.y + 10;
+				title.x = bg.x;
+				title.selectable = false;
+				title.mouseEnabled = false;
+				_promptContainer.addChild(title);
+				
+				var inputBg:Sprite = new Sprite();
+				inputBg.graphics.beginFill(0xFFFFFF, 1);
+				inputBg.graphics.drawRect(0, 0, 460, 180);
+				inputBg.graphics.endFill();
+				inputBg.x = bg.x + 20;
+				inputBg.y = bg.y + 40;
+				_promptContainer.addChild(inputBg);
+				
+				_promptInput = new TextField();
+				_promptInput.type = TextFieldType.INPUT;
+				var tfInput:TextFormat = new TextFormat("_sans", 12, 0x000000, false);
+				_promptInput.defaultTextFormat = tfInput;
+				_promptInput.text = "";
+				_promptInput.width = 460;
+				_promptInput.height = 180;
+				_promptInput.x = bg.x + 20;
+				_promptInput.y = bg.y + 40;
+				_promptInput.multiline = true;
+				_promptInput.wordWrap = true;
+				_promptContainer.addChild(_promptInput);
+				
+				var startBtn:BasicButton = new BasicButton("Load Script");
+				startBtn.x = bg.x + 120;
+				startBtn.y = bg.y + 240;
+				startBtn.addEventListener(MouseEvent.CLICK, function(e:MouseEvent):void {
+					var text:String = _promptInput.text;
+					hidePastePrompt();
+					SINGLETON.loadScript(text, pocket);
+					if (pocket && pocket.overlay) pocket.overlay.notification("Script loaded successfully!");
+				});
+				_promptContainer.addChild(startBtn);
+				
+				var cancelBtn:BasicButton = new BasicButton("Cancel");
+				cancelBtn.x = bg.x + 300;
+				cancelBtn.y = bg.y + 240;
+				cancelBtn.addEventListener(MouseEvent.CLICK, function(e:MouseEvent):void {
+					hidePastePrompt();
+				});
+				_promptContainer.addChild(cancelBtn);
+				
+				pocket.stage.addChild(_promptContainer);
+			} catch (err:Error) {
+				if (pocket && pocket.overlay) pocket.overlay.notification("Error: " + err.message);
+			}
+		}
+		
+		public static function hidePastePrompt():void {
+			if (_promptContainer != null && _promptContainer.parent != null) {
+				_promptContainer.parent.removeChild(_promptContainer);
+			}
+			_promptContainer = null;
+			_promptInput = null;
 		}
 
 		public function loadScript(scriptText:String, pocket:*):void {

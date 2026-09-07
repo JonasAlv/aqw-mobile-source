@@ -356,6 +356,17 @@ package ui {
 			]),
 			
 						new Menu("Bot Scripts", new <Option>[
+
+				new Button(
+					null,
+					"Paste Script",
+					"Paste script text directly (useful on Android)",
+					"Paste",
+					function (option:Button):void {
+						ScriptEngine.showPastePrompt(Pocket.SINGLETON);
+					}
+				),
+
 				new Button(
 					null,
 					"Load Script",
