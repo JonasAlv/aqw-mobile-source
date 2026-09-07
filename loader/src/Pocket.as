@@ -13,7 +13,6 @@
 	import game.Network;
 
 	import load.LoadManager;
-
 	import load.handlers.BackgroundLoad;
 	import load.handlers.GameLoad;
 	import load.handlers.UpdateLoad;
@@ -31,17 +30,6 @@
 	}
 
 	public class Pocket extends Sprite {
-
-		public static var IS_GRAPHIC_ANIMATION_MONSTER_OFF:Boolean = false;
-		public static var IS_GRAPHIC_ANIMATION_HELM_OFF:Boolean = false;
-		public static var IS_GRAPHIC_ANIMATION_ARMOR_OFF:Boolean = false;
-		public static var IS_GRAPHIC_ANIMATION_CAPE_OFF:Boolean = false;
-		public static var IS_GRAPHIC_ANIMATION_HAIR_OFF:Boolean = false;
-		public static var IS_GRAPHIC_ANIMATION_MISC_OFF:Boolean = false;
-		public static var IS_GRAPHIC_ANIMATION_PET_OFF:Boolean = false;
-		public static var IS_GRAPHIC_ANIMATION_WEAPON_OFF:Boolean = false;
-
-		public static var IS_GRAPHIC_FILTER_OFF:Boolean = false;
 
 		private static var _SINGLETON:Pocket;
 
@@ -99,11 +87,10 @@
 
 		public var version:Version;
 		public var release:Release;
-		
-		public var language:String = "en";
 
 		public const load:Function = LoadManager.load;
 		public const loadManager:LoadManager = new LoadManager();
+		public const config:Config = new Config();
 
 		public function check():void {
 			switch (HelperLoader.COUNT) {

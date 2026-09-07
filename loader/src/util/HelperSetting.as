@@ -17,6 +17,9 @@ package util {
 		public static const OPTION_LANGUAGE:String = "option_language";
 		public static const OPTION_LOCK_ORIENTATION:String = "option_lock_orientation";
 		public static const OPTION_DISCORD_RPC:String = "option_discord_rpc";
+		
+		public static const OPTION_SKILL_TOOLTIPS:String = "option_skill_tooltips";
+		public static const OPTION_DISABLE_CUTSCENES:String = "option_disable_cutscenes";
 
 		public static const OPTION_SHORTCUTS:String = "shortcut_buttons";
 
