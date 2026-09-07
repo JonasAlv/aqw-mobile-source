@@ -1,32 +1,20 @@
 package game {
 
-	import flash.events.Event;
-
 	import ui.option.Menu;
 	import ui.option.Option;
+	import flash.events.Event;
 
 	public class Core {
-
-		POCKET::IS_DESKTOP {
-			private static const TICK_DISCORD_RPC:int = 150; // ~5s at 30 FPS | 5s × 30 = 150
-		}
 
 		public function Core(pocket:Pocket) {
 			this.pocket = pocket;
 			this.itemPagination = new ItemPagination(this.pocket);
 
-			POCKET::IS_DESKTOP {
-				this.pocket.addEventListener(Event.ENTER_FRAME, this.onEnterFrame, false, 0, true);
-			}
 		}
 
 		private var pocket:Pocket;
 
 		public var itemPagination:ItemPagination;
-
-		POCKET::IS_DESKTOP {
-			private var _tickDiscordRPC:int = 0;
-		}
 
 		public var currentFrame:String = "Game";
 
@@ -58,16 +46,6 @@ package game {
 			this.pocket.game.setChildIndex(this.pocket.gameUI, this.pocket.game.numChildren - 1);
 		}
 
-		public function onEnterFrame(event:Event):void {
-			POCKET::IS_DESKTOP {
-				// Low priority
-				if (++_tickDiscordRPC >= TICK_DISCORD_RPC) {
-					_tickDiscordRPC = 0;
-					this.pocket.discordRichPresence.refreshPresence();
-				}
-			}
-		}
 
 	}
-
 }

@@ -10,7 +10,7 @@ package util {
 
 	public class SWFWorkerClient {
 
-		[Embed(source="../../gamefiles/embed/WorkerMain.swf", mimeType="application/octet-stream")]
+		[Embed(source="../../assets/embed/WorkerMain.swf", mimeType="application/octet-stream")]
 		private static const WorkerSWF:Class;
 
 		private static var _instance:SWFWorkerClient;

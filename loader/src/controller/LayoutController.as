@@ -27,6 +27,11 @@ package controller {
 		private var dragOffsetX:Number = 0;
 		private var dragOffsetY:Number = 0;
 
+		//noinspection JSUnresolvedReference
+		POCKET::IS_MOBILE {
+			private var activeTouchID:int = -1;
+		}
+
 		public function register(id:String, target:Sprite, defaultPositionX:Number, defaultPositionY:Number, defaultScaleX:Number, defaultScaleY:Number):void {
 			this.widgets.push(new WidgetEntry(id, target, defaultPositionX, defaultPositionY, defaultScaleX, defaultScaleY));
 		}
@@ -71,7 +76,15 @@ package controller {
 					saveButton.x = 480 - (saveButton.width >> 1);
 					saveButton.y = 10;
 
-					saveButton.addEventListener(MouseEvent.CLICK, Pocket.SINGLETON.gameUI.hideEditLayout, false, 0, true);
+					//noinspection JSUnresolvedReference
+					POCKET::IS_MOBILE {
+						saveButton.addEventListener(TouchEvent.TOUCH_TAP, Pocket.SINGLETON.gameUI.hideEditLayout, false, 0, true);
+					}
+
+					//noinspection JSUnresolvedReference
+					POCKET::IS_DESKTOP {
+						saveButton.addEventListener(MouseEvent.CLICK, Pocket.SINGLETON.gameUI.hideEditLayout, false, 0, true);
+					}
 
 					Pocket.SINGLETON.gameUI.addChild(saveButton);
 				}
@@ -81,7 +94,16 @@ package controller {
 				const saveButton2:DisplayObject = Pocket.SINGLETON.gameUI.getChildByName("LayoutSaveButton");
 
 				if (saveButton2 != null && saveButton2.parent != null) {
-					saveButton2.removeEventListener(MouseEvent.CLICK, Pocket.SINGLETON.gameUI.hideEditLayout);
+					//noinspection JSUnresolvedReference
+					POCKET::IS_MOBILE {
+						saveButton2.removeEventListener(TouchEvent.TOUCH_TAP, Pocket.SINGLETON.gameUI.hideEditLayout);
+					}
+
+					//noinspection JSUnresolvedReference
+					POCKET::IS_DESKTOP {
+						saveButton2.removeEventListener(MouseEvent.CLICK, Pocket.SINGLETON.gameUI.hideEditLayout);
+					}
+
 					saveButton2.parent.removeChild(saveButton2);
 				}
 			}
@@ -134,21 +156,27 @@ package controller {
 			}
 
 			const parent:DisplayObjectContainer = widgetEntry.target.parent;
-			if (parent == null) {
-				return;
-			}
+
 			const handle:Handle = new Handle();
 
 			handle.x = widgetEntry.target.x;
 			handle.y = widgetEntry.target.y;
 
 			parent.addChild(handle);
-			handle.visible = true;
-			parent.setChildIndex(handle, parent.numChildren - 1);
 
-			handle.drag.addEventListener(MouseEvent.MOUSE_DOWN, onHandleDown, false, 0, true);
-			handle.up.addEventListener(MouseEvent.CLICK, onResizeUp, false, 0, true);
-			handle.down.addEventListener(MouseEvent.CLICK, onResizeDown, false, 0, true);
+			//noinspection JSUnresolvedReference
+			POCKET::IS_MOBILE {
+				handle.drag.addEventListener(TouchEvent.TOUCH_BEGIN, onHandleTouchBegin, false, 0, true);
+				handle.up.addEventListener(TouchEvent.TOUCH_TAP, onResizeUp, false, 0, true);
+				handle.down.addEventListener(TouchEvent.TOUCH_TAP, onResizeDown, false, 0, true);
+			}
+
+			//noinspection JSUnresolvedReference
+			POCKET::IS_DESKTOP {
+				handle.drag.addEventListener(MouseEvent.MOUSE_DOWN, onHandleMouseDown, false, 0, true);
+				handle.up.addEventListener(MouseEvent.CLICK, onResizeUp, false, 0, true);
+				handle.down.addEventListener(MouseEvent.CLICK, onResizeDown, false, 0, true);
+			}
 
 			widgetEntry.handle = handle;
 		}
@@ -167,9 +195,19 @@ package controller {
 				return;
 			}
 
-			widgetEntry.handle.drag.removeEventListener(MouseEvent.MOUSE_DOWN, onHandleDown);
-			widgetEntry.handle.up.removeEventListener(MouseEvent.CLICK, onResizeUp);
-			widgetEntry.handle.down.removeEventListener(MouseEvent.CLICK, onResizeDown);
+			//noinspection JSUnresolvedReference
+			POCKET::IS_MOBILE {
+				widgetEntry.handle.drag.removeEventListener(TouchEvent.TOUCH_BEGIN, onHandleTouchBegin);
+				widgetEntry.handle.up.removeEventListener(TouchEvent.TOUCH_TAP, onResizeUp);
+				widgetEntry.handle.down.removeEventListener(TouchEvent.TOUCH_TAP, onResizeDown);
+			}
+
+			//noinspection JSUnresolvedReference
+			POCKET::IS_DESKTOP {
+				widgetEntry.handle.drag.removeEventListener(MouseEvent.MOUSE_DOWN, onHandleMouseDown);
+				widgetEntry.handle.up.removeEventListener(MouseEvent.CLICK, onResizeUp);
+				widgetEntry.handle.down.removeEventListener(MouseEvent.CLICK, onResizeDown);
+			}
 
 			if (widgetEntry.handle.parent) {
 				widgetEntry.handle.parent.removeChild(widgetEntry.handle);
@@ -190,67 +228,145 @@ package controller {
 			return null;
 		}
 
-		private function onHandleDown(mouseEvent:MouseEvent):void {
-			current = entryForHandle(SimpleButton(mouseEvent.currentTarget));
+		//noinspection JSUnresolvedReference
+		POCKET::IS_MOBILE {
 
-			if (current == null) {
-				return;
+			private function onHandleTouchBegin(e:TouchEvent):void {
+				if (this.activeTouchID != -1) {
+					return;
+				}
+
+				current = entryForHandle(SimpleButton(e.currentTarget));
+
+				if (current == null) {
+					return;
+				}
+
+				this.activeTouchID = e.touchPointID;
+
+				const parent:DisplayObjectContainer = current.target.parent;
+				const pointer:Point = parent.globalToLocal(new Point(e.stageX, e.stageY));
+
+				dragOffsetX = pointer.x - current.target.x;
+				dragOffsetY = pointer.y - current.target.y;
+
+				current.handle.visible = false;
+				current.target.stage.addEventListener(TouchEvent.TOUCH_MOVE, onTouchMove, false, 0, true);
+				current.target.stage.addEventListener(TouchEvent.TOUCH_END, onTouchEnd, false, 0, true);
 			}
 
-			const parent:DisplayObjectContainer = current.target.parent;
-			const pointer:Point = parent.globalToLocal(new Point(mouseEvent.stageX, mouseEvent.stageY));
+			private function onTouchMove(e:TouchEvent):void {
+				if (current == null || current.target.parent == null || e.touchPointID != this.activeTouchID) {
+					return;
+				}
 
-			dragOffsetX = pointer.x - current.target.x;
-			dragOffsetY = pointer.y - current.target.y;
+				const parent:DisplayObjectContainer = current.target.parent;
+				const pointer:Point = parent.globalToLocal(new Point(e.stageX, e.stageY));
 
-			current.handle.visible = false;
-			current.target.stage.addEventListener(MouseEvent.MOUSE_MOVE, onMouseMove, false, 0, true);
-			current.target.stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUp, false, 0, true);
+				var nextX:Number = pointer.x - dragOffsetX;
+				var nextY:Number = pointer.y - dragOffsetY;
+
+				if (isSnapToGridEnabled()) {
+					nextX = snap(nextX);
+					nextY = snap(nextY);
+				}
+
+				current.target.x = nextX;
+				current.target.y = nextY;
+
+				e.updateAfterEvent();
+			}
+
+			private function onTouchEnd(e:TouchEvent):void {
+				if (current == null || e.touchPointID != this.activeTouchID) {
+					return;
+				}
+
+				current.target.stage.removeEventListener(TouchEvent.TOUCH_MOVE, onTouchMove);
+				current.target.stage.removeEventListener(TouchEvent.TOUCH_END, onTouchEnd);
+
+				this.activeTouchID = -1;
+
+				if (isSnapToGridEnabled()) {
+					current.target.x = snap(current.target.x);
+					current.target.y = snap(current.target.y);
+				}
+
+				current.handle.visible = true;
+
+				repositionHandles(current);
+
+				current = null;
+			}
+
 		}
 
-		private function onMouseMove(e:MouseEvent):void {
-			if (current == null || current.target.parent == null) {
-				return;
+		//noinspection JSUnresolvedReference
+		POCKET::IS_DESKTOP {
+
+			private function onHandleMouseDown(mouseEvent:MouseEvent):void {
+				current = entryForHandle(SimpleButton(mouseEvent.currentTarget));
+
+				if (current == null) {
+					return;
+				}
+
+				const parent:DisplayObjectContainer = current.target.parent;
+				const pointer:Point = parent.globalToLocal(new Point(mouseEvent.stageX, mouseEvent.stageY));
+
+				dragOffsetX = pointer.x - current.target.x;
+				dragOffsetY = pointer.y - current.target.y;
+
+				current.handle.visible = false;
+				current.target.stage.addEventListener(MouseEvent.MOUSE_MOVE, onMouseMove, false, 0, true);
+				current.target.stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUp, false, 0, true);
 			}
 
-			const parent:DisplayObjectContainer = current.target.parent;
-			const pointer:Point = parent.globalToLocal(new Point(e.stageX, e.stageY));
+			private function onMouseMove(e:MouseEvent):void {
+				if (current == null || current.target.parent == null) {
+					return;
+				}
 
-			var nextX:Number = pointer.x - dragOffsetX;
-			var nextY:Number = pointer.y - dragOffsetY;
+				const parent:DisplayObjectContainer = current.target.parent;
+				const pointer:Point = parent.globalToLocal(new Point(e.stageX, e.stageY));
 
-			if (isSnapToGridEnabled()) {
-				nextX = snap(nextX);
-				nextY = snap(nextY);
+				var nextX:Number = pointer.x - dragOffsetX;
+				var nextY:Number = pointer.y - dragOffsetY;
+
+				if (isSnapToGridEnabled()) {
+					nextX = snap(nextX);
+					nextY = snap(nextY);
+				}
+
+				current.target.x = nextX;
+				current.target.y = nextY;
+
+				e.updateAfterEvent();
 			}
 
-			current.target.x = nextX;
-			current.target.y = nextY;
+			private function onMouseUp(e:MouseEvent):void {
+				if (current == null) {
+					return;
+				}
 
-			e.updateAfterEvent();
+				current.target.stage.removeEventListener(MouseEvent.MOUSE_MOVE, onMouseMove);
+				current.target.stage.removeEventListener(MouseEvent.MOUSE_UP, onMouseUp);
+
+				if (isSnapToGridEnabled()) {
+					current.target.x = snap(current.target.x);
+					current.target.y = snap(current.target.y);
+				}
+
+				current.handle.visible = true;
+
+				repositionHandles(current);
+
+				current = null;
+			}
+
 		}
 
-		private function onMouseUp(e:MouseEvent):void {
-			if (current == null) {
-				return;
-			}
-
-			current.target.stage.removeEventListener(MouseEvent.MOUSE_MOVE, onMouseMove);
-			current.target.stage.removeEventListener(MouseEvent.MOUSE_UP, onMouseUp);
-
-			if (isSnapToGridEnabled()) {
-				current.target.x = snap(current.target.x);
-				current.target.y = snap(current.target.y);
-			}
-
-			current.handle.visible = true;
-
-			repositionHandles(current);
-
-			current = null;
-		}
-
-		private function onResizeUp(e:MouseEvent):void {
+		private function onResizeUp(e:*):void {
 			const entry:WidgetEntry = entryForHandle(SimpleButton(e.currentTarget));
 
 			if (entry == null) {
@@ -265,7 +381,7 @@ package controller {
 			repositionHandles(entry);
 		}
 
-		private function onResizeDown(e:MouseEvent):void {
+		private function onResizeDown(e:*):void {
 			const entry:WidgetEntry = entryForHandle(SimpleButton(e.currentTarget));
 
 			if (entry == null) {

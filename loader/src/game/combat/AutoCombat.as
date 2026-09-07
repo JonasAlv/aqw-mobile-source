@@ -14,19 +14,21 @@ package game.combat {
 
 	public class AutoCombat {
 
-		private static var _pocket:Pocket;
+		public static var _pocket:Pocket;
 		private static var _timer:Timer;
-		private static var _isSmart:Boolean = false;
+		public static var isSmart:Boolean = false;
+		public static var IS_ON:Boolean = false;
+		public static var targetName:String = null;
 		private static var _customRotation:Array = [5, 4, 3, 2];
 		private static var _rotationIndex:int = 0;
-		private static var _lockedMMID:String = null;
+		public static var lockedMMID:String = null;
 		
 		private static var _promptContainer:Sprite;
 		private static var _promptInput:TextField;
 
 		public static function toggleSmart(pocket:Pocket):void {
 			_pocket = pocket;
-			if (_timer != null && _isSmart) {
+			if (_timer != null && isSmart) {
 				stop();
 			} else {
 				start(true);
@@ -35,13 +37,26 @@ package game.combat {
 
 		public static function toggleCustom(pocket:Pocket):void {
 			_pocket = pocket;
-			if (_timer != null && !_isSmart) {
+			if (_timer != null && !isSmart) {
 				stop();
 			} else {
 				showPrompt();
 			}
 		}
 		
+				public static function setCustomRotation(rot:String):void {
+			_customRotation = [];
+			for (var i:int = 0; i < rot.length; i++) {
+				var num:int = parseInt(rot.charAt(i));
+				if (!isNaN(num) && num >= 1 && num <= 6) {
+					_customRotation.push(num);
+				}
+			}
+			if (_customRotation.length == 0) {
+				_customRotation = [5, 4, 3, 2];
+			}
+		}
+
 		public static function showPrompt(pocket:Pocket = null):void {
 			if (pocket != null) _pocket = pocket;
 			if (_promptContainer != null) {
@@ -49,7 +64,7 @@ package game.combat {
 			}
 			
 			if (_pocket && _pocket.game && _pocket.game.MsgBox) {
-				_pocket.game.MsgBox.notify("Opening Custom Auto-Combat Settings...");
+				_pocket.overlay.notification("Opening Custom Auto-Combat Settings...");
 			}
 			
 			try {
@@ -73,7 +88,7 @@ package game.combat {
 				
 				_promptInput = new TextField();
 				_promptInput.type = TextFieldType.INPUT;
-				_promptInput.needsSoftKeyboard = true;
+				
 				var tfInput:TextFormat = new TextFormat("_sans", 32, 0x000000, true);
 				tfInput.align = TextFormatAlign.CENTER;
 				_promptInput.defaultTextFormat = tfInput;
@@ -121,7 +136,7 @@ package game.combat {
 				}
 			} catch (err:Error) {
 				if (_pocket && _pocket.game && _pocket.game.MsgBox) {
-					_pocket.game.MsgBox.notify("Error: " + err.message);
+					_pocket.overlay.notification("Error: " + err.message);
 				}
 			}
 		}
@@ -153,30 +168,33 @@ package game.combat {
 			start(false);
 		}
 
-		private static function stop():void {
+		public static function stop(silent:Boolean = false):void {
+			lockedMMID = null;
+			targetName = null;
 			if (_timer != null) {
 				_timer.stop();
 				_timer.removeEventListener(TimerEvent.TIMER, onTick);
 				_timer = null;
-				if (_pocket && _pocket.game && _pocket.game.MsgBox) {
-					_pocket.game.MsgBox.notify("Auto-Combat Disabled");
+				IS_ON = false;
+				if (!silent && _pocket && _pocket.game && _pocket.game.MsgBox) {
+					_pocket.overlay.notification("Auto-Combat Disabled");
 				}
 			}
 		}
 
-		private static function start(smart:Boolean):void {
-			stop();
-			_isSmart = smart;
-			_lockedMMID = null;
+		public static function start(smart:Boolean, silent:Boolean = false):void {
+			stop(silent);
+			isSmart = smart;
+			IS_ON = true;
 			_rotationIndex = 0;
 
-			if (_pocket && _pocket.game && _pocket.game.world && _pocket.game.world.myAvatar) {
+			if (lockedMMID == null && _pocket && _pocket.game && _pocket.game.world && _pocket.game.world.myAvatar) {
 				var avatar:* = _pocket.game.world.myAvatar;
 				if (avatar.target != null) {
 					if (avatar.target.dataLeaf != null && avatar.target.dataLeaf.MonMapID != null) {
-						_lockedMMID = String(avatar.target.dataLeaf.MonMapID);
+						lockedMMID = String(avatar.target.dataLeaf.MonMapID);
 					} else if (avatar.target.objData != null && avatar.target.objData.MonMapID != null) {
-						_lockedMMID = String(avatar.target.objData.MonMapID);
+						lockedMMID = String(avatar.target.objData.MonMapID);
 					}
 				}
 			}
@@ -185,13 +203,13 @@ package game.combat {
 			_timer.addEventListener(TimerEvent.TIMER, onTick, false, 0, true);
 			_timer.start();
 
-			if (_pocket && _pocket.game && _pocket.game.MsgBox) {
-				var msg:String = _isSmart ? "Smart Auto-Combat Enabled" : "Custom Auto-Combat Enabled: " + _customRotation.join("-");
-				if (_lockedMMID != null) {
-					msg += "\nLocked to MMID: " + _lockedMMID;
+			if (!silent && _pocket && _pocket.game && _pocket.game.MsgBox) {
+					var msg:String = isSmart ? "Smart Auto-Combat Enabled" : "Custom Auto-Combat Enabled: " + _customRotation.join("-");
+					if (lockedMMID != null) {
+						msg += "\nLocked to MMID: " + lockedMMID;
+					}
+					_pocket.overlay.notification(msg);
 				}
-				_pocket.game.MsgBox.notify(msg);
-			}
 		}
 
 		private static function onTick(e:TimerEvent):void {
@@ -221,12 +239,22 @@ package game.combat {
 				if (cellMonsters != null) {
 					for each (var m:* in cellMonsters) {
 						if (m != null && m.dataLeaf != null && m.dataLeaf.intState > 0 && m.dataLeaf.intHP > 0) {
-							if (_lockedMMID != null) {
+							if (lockedMMID != null) {
 								var mmid:String = null;
 								if (m.dataLeaf.MonMapID != null) mmid = String(m.dataLeaf.MonMapID);
 								else if (m.objData != null && m.objData.MonMapID != null) mmid = String(m.objData.MonMapID);
 								
-								if (mmid != _lockedMMID) continue;
+								if (mmid != lockedMMID) continue;
+							}
+							
+							if (targetName != null) {
+								var monName:String = null;
+								if (m.objData != null && m.objData.strMonName != null) {
+									monName = String(m.objData.strMonName).toLowerCase();
+								}
+								if (monName != null && monName.indexOf(targetName.toLowerCase()) == -1) {
+									continue;
+								}
 							}
 
 							if (world.setTarget != null) {
@@ -246,7 +274,7 @@ package game.combat {
 
 			var rotation:Array = _customRotation;
 
-			if (_isSmart) {
+			if (isSmart) {
 				var className:String = "";
 				if (avatar.objData && avatar.objData.strClassName) {
 					className = avatar.objData.strClassName.toLowerCase();

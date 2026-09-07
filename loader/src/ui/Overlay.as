@@ -25,6 +25,14 @@ package ui {
 	import game.combat.AutoCombat;
 	import game.combat.AutoQuest;
 
+	POCKET::IS_DESKTOP { 
+		import flash.filesystem.File; 
+		import flash.filesystem.FileStream; 
+		import flash.filesystem.FileMode; 
+		import flash.net.FileFilter; 
+		import game.script.ScriptEngine; 
+	}
+
 
 	public class Overlay extends MovieClip {
 
@@ -39,7 +47,6 @@ package ui {
 			this.pocket.addChild(this);
 
 			this.notifications = Sprite(addChild(new Sprite()));
-			
 		}
 
 		public var showPanelBtn:SimpleButton;
@@ -63,6 +70,16 @@ package ui {
 
 		public var menus:Vector.<Menu> = new <Menu> [
 			new Menu("General", new <Option>[
+								new Check(
+					"botAutoAcceptAllDrops",
+					false,
+					"Auto Accept All Drops",
+					"Automatically accept all item drops while script is active.",
+					true,
+					function (option:Check):void {
+						// noop
+					}
+				),
 				new Toggle(
 					HelperSetting.OPTION_FPS,
 					0,
@@ -91,14 +108,14 @@ package ui {
 					function (option:Toggle):void {
 						const languages:Vector.<String> = new <String> ['en', 'pt', 'tl', 'es', 'id', 'ceb'];
 
-						Pocket.SINGLETON.language = languages[option.getIndex()];
+						Pocket.SINGLETON.config.option_language = languages[option.getIndex()];
 					},
 					null,
 					function (frame:String):void {
 						const languages:Vector.<String> = new <String> ['en', 'pt', 'tl', 'es', 'id', 'ceb'];
 						const savedIndex:int = HelperSetting.getInt(HelperSetting.OPTION_LANGUAGE);
 
-						Pocket.SINGLETON.language = languages[savedIndex];
+						Pocket.SINGLETON.config.option_language = languages[savedIndex];
 					}
 				),
 				new Toggle(
@@ -137,26 +154,6 @@ package ui {
 						}
 					}
 				),
-				new Check(
-					HelperSetting.OPTION_DISCORD_RPC,
-					true,
-					"Discord RPC",
-					"Enable Discord Rich Presence",
-					POCKET::IS_DESKTOP,
-					function (option:Check):void {
-						//noinspection JSUnresolvedReference
-						POCKET::IS_DESKTOP {
-							const pocket:Pocket = Pocket.SINGLETON;
-
-							if (option.state) {
-								pocket.discordRichPresence.enable();
-								return;
-							}
-
-							pocket.discordRichPresence.disable();
-						}
-					}
-				),
 				new Button(
 					null,
 					"Hide Pocket",
@@ -191,6 +188,47 @@ package ui {
 					}
 				)
 			]),
+			new Menu("Gameplay", new <Option>[
+				new Check(
+					HelperSetting.OPTION_SKILL_TOOLTIPS,
+					true,
+					"Show Skill Tooltips",
+					"Display skill tooltips when hovering over skills.",
+					true,
+					function (option:Check):void {
+						Pocket.SINGLETON.config.option_skill_tooltips = option.state;
+					},
+					function (frame:String):void {
+						Pocket.SINGLETON.config.option_skill_tooltips = HelperSetting.getBool(HelperSetting.OPTION_SKILL_TOOLTIPS);
+					}
+				),
+				new Check(
+					HelperSetting.OPTION_DISABLE_CUTSCENES,
+					false,
+					"Disable cutscenes",
+					"Skip cutscenes during gameplay.",
+					true,
+					function (option:Check):void {
+						Pocket.SINGLETON.config.option_disable_cutscenes = option.state;
+					},
+					function (frame:String):void {
+						Pocket.SINGLETON.config.option_disable_cutscenes = HelperSetting.getBool(HelperSetting.OPTION_DISABLE_CUTSCENES);
+					}
+				),
+				new Check(
+					HelperSetting.OPTION_SLOW_WALK,
+					false,
+					"Slow Walk",
+					"Move slower when gently pushing the joystick, and at full speed when pushed further.",
+					true,
+					function (option:Check):void {
+						Pocket.SINGLETON.config.option_slow_walk = option.state;
+					},
+					function (frame:String):void {
+						Pocket.SINGLETON.config.option_slow_walk = HelperSetting.getBool(HelperSetting.OPTION_SLOW_WALK);
+					}
+				)
+			]),
 			new Menu("Graphics", new <Option>[
 				new Check(
 					HelperSetting.OPTION_ANIMATION_MONSTER,
@@ -199,10 +237,10 @@ package ui {
 					"Freeze monster animations to improve FPS in battle.",
 					true,
 					function (option:Check):void {
-						Pocket.IS_GRAPHIC_ANIMATION_MONSTER_OFF = option.state;
+						Config.IS_GRAPHIC_ANIMATION_MONSTER_OFF = option.state;
 					},
 					function (frame:String):void {
-						Pocket.IS_GRAPHIC_ANIMATION_MONSTER_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_MONSTER);
+						Config.IS_GRAPHIC_ANIMATION_MONSTER_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_MONSTER);
 					}
 				),
 				new Check(
@@ -212,10 +250,10 @@ package ui {
 					"Freeze animations.",
 					true,
 					function (option:Check):void {
-						Pocket.IS_GRAPHIC_ANIMATION_HELM_OFF = option.state;
+						Config.IS_GRAPHIC_ANIMATION_HELM_OFF = option.state;
 					},
 					function (frame:String):void {
-						Pocket.IS_GRAPHIC_ANIMATION_HELM_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_HELM);
+						Config.IS_GRAPHIC_ANIMATION_HELM_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_HELM);
 					}
 				),
 				new Check(
@@ -225,10 +263,10 @@ package ui {
 					"Freeze animations.",
 					true,
 					function (option:Check):void {
-						Pocket.IS_GRAPHIC_ANIMATION_ARMOR_OFF = option.state;
+						Config.IS_GRAPHIC_ANIMATION_ARMOR_OFF = option.state;
 					},
 					function (frame:String):void {
-						Pocket.IS_GRAPHIC_ANIMATION_ARMOR_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_ARMOR);
+						Config.IS_GRAPHIC_ANIMATION_ARMOR_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_ARMOR);
 					}
 				),
 				new Check(
@@ -238,10 +276,10 @@ package ui {
 					"Freeze animations.",
 					true,
 					function (option:Check):void {
-						Pocket.IS_GRAPHIC_ANIMATION_CAPE_OFF = option.state;
+						Config.IS_GRAPHIC_ANIMATION_CAPE_OFF = option.state;
 					},
 					function (frame:String):void {
-						Pocket.IS_GRAPHIC_ANIMATION_CAPE_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_CAPE);
+						Config.IS_GRAPHIC_ANIMATION_CAPE_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_CAPE);
 					}
 				),
 				new Check(
@@ -251,10 +289,10 @@ package ui {
 					"Freeze animations.",
 					true,
 					function (option:Check):void {
-						Pocket.IS_GRAPHIC_ANIMATION_HAIR_OFF = option.state;
+						Config.IS_GRAPHIC_ANIMATION_HAIR_OFF = option.state;
 					},
 					function (frame:String):void {
-						Pocket.IS_GRAPHIC_ANIMATION_HAIR_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_HAIR);
+						Config.IS_GRAPHIC_ANIMATION_HAIR_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_HAIR);
 					}
 				),
 				new Check(
@@ -264,10 +302,10 @@ package ui {
 					"Freeze animations.",
 					true,
 					function (option:Check):void {
-						Pocket.IS_GRAPHIC_ANIMATION_WEAPON_OFF = option.state;
+						Config.IS_GRAPHIC_ANIMATION_WEAPON_OFF = option.state;
 					},
 					function (frame:String):void {
-						Pocket.IS_GRAPHIC_ANIMATION_WEAPON_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_WEAPON);
+						Config.IS_GRAPHIC_ANIMATION_WEAPON_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_WEAPON);
 					}
 				),
 				new Check(
@@ -277,10 +315,10 @@ package ui {
 					"Freeze animations.",
 					true,
 					function (option:Check):void {
-						Pocket.IS_GRAPHIC_ANIMATION_MISC_OFF = option.state;
+						Config.IS_GRAPHIC_ANIMATION_MISC_OFF = option.state;
 					},
 					function (frame:String):void {
-						Pocket.IS_GRAPHIC_ANIMATION_MISC_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_MISC);
+						Config.IS_GRAPHIC_ANIMATION_MISC_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_MISC);
 					}
 				),
 				new Check(
@@ -290,10 +328,10 @@ package ui {
 					"Freeze animations.",
 					true,
 					function (option:Check):void {
-						Pocket.IS_GRAPHIC_ANIMATION_PET_OFF = option.state;
+						Config.IS_GRAPHIC_ANIMATION_PET_OFF = option.state;
 					},
 					function (frame:String):void {
-						Pocket.IS_GRAPHIC_ANIMATION_PET_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_PET);
+						Config.IS_GRAPHIC_ANIMATION_PET_OFF = HelperSetting.getBool(HelperSetting.OPTION_ANIMATION_PET);
 					}
 				),
 				new Check(
@@ -305,14 +343,75 @@ package ui {
 					function (option:Check):void {
 						const pocket:Pocket = Pocket.SINGLETON;
 
-						Pocket.IS_GRAPHIC_FILTER_OFF = option.state;
+						Config.IS_GRAPHIC_FILTER_OFF = option.state;
 
 						if (pocket.game) {
 							pocket.game.MsgBox.notify("Filter setting saved. Join a new map/relog to take effect.");
 						}
 					},
 					function (frame:String):void {
-						Pocket.IS_GRAPHIC_FILTER_OFF = HelperSetting.getBool(HelperSetting.OPTION_FILTER);
+						Config.IS_GRAPHIC_FILTER_OFF = HelperSetting.getBool(HelperSetting.OPTION_FILTER);
+					}
+				)
+			]),
+			
+						new Menu("Bot Scripts", new <Option>[
+				new Button(
+					null,
+					"Load Script",
+					"Load a bot.txt script file from your PC",
+					"Load",
+					function (option:Button):void {
+						POCKET::IS_DESKTOP {
+							var file:* = File.desktopDirectory;
+							file.addEventListener(flash.events.Event.SELECT, function(e:flash.events.Event):void {
+								var stream:* = new FileStream();
+								stream.open(file, FileMode.READ);
+								var text:String = stream.readUTFBytes(stream.bytesAvailable);
+								stream.close();
+								
+								ScriptEngine.SINGLETON.loadScript(text, Pocket.SINGLETON);
+								Pocket.SINGLETON.overlay.notification("Script loaded successfully!");
+							});
+							file.browseForOpen("Select Bot Script", [new FileFilter("Text Files", "*.txt")]);
+						}
+					}
+				),
+									new Button(
+						null,
+						"Start Script",
+						"Start the loaded script",
+						"Start",
+						function (option:Button):void {
+							var engine:ScriptEngine = ScriptEngine.SINGLETON;
+							if (!engine.isRunning) {
+								engine.start(Pocket.SINGLETON);
+								Pocket.SINGLETON.overlay.notification("Bot Started!");
+							}
+						}
+					),
+					new Button(
+						null,
+						"Stop Script",
+						"Stop the script and drop combat",
+						"Stop",
+						function (option:Button):void {
+							var engine:ScriptEngine = ScriptEngine.SINGLETON;
+							engine.stop();
+							Pocket.SINGLETON.overlay.notification("Bot Stopped.");
+						}
+					),
+				new Button(
+					null,
+					"Restart Bot",
+					"Start the loaded script from the beginning",
+					"Restart",
+					function (option:Button):void {
+						var engine:ScriptEngine = ScriptEngine.SINGLETON;
+						engine.stop();
+						engine.reset();
+						engine.start(Pocket.SINGLETON);
+						Pocket.SINGLETON.overlay.notification("Bot Restarted!");
 					}
 				)
 			]),
@@ -341,13 +440,30 @@ package ui {
 				),
 				new Button(
 					null,
-					"Auto Quest ID",
-					"Automatically turns in a specific quest when ready",
+					"Leveling Bot",
+					"Join shadowbattleon and configure quests 9421, 9422, 9423",
+					"Start",
+					function (option:Button):void {
+						const pocket:Pocket = Pocket.SINGLETON;
+						pocket.overlay.gotoAndStop("Init");
+						if (pocket.game && pocket.game.world) {
+							pocket.game.world.gotoTown("shadowbattleon", "Enter", "Spawn");
+							AutoQuest.startWith(pocket, "9421,9422,9423");
+							pocket.overlay.notification("Leveling Bot Active! Setting up Custom Auto Combat...");
+							AutoCombat.toggleCustom(pocket);
+						}
+					}
+				),
+				new Button(
+					null,
+					"Auto Quest",
+					"Automatically turn in quests as they complete",
 					"Toggle",
 					function (option:Button):void {
 						const pocket:Pocket = Pocket.SINGLETON;
 						pocket.overlay.gotoAndStop("Init");
 						AutoQuest.toggle(pocket);
+
 					}
 				)
 			]),
@@ -701,6 +817,31 @@ package ui {
 			navigateToURL(new URLRequest("https://discord.gg/EXS5qM35ff"), "_blank");
 		}
 
+				public function stickyNotification(id:String, message:String):void {
+			// update existing if present
+			for (var i:int = 0; i < this.notifications.numChildren; i++) {
+				var n:Notification = Notification(this.notifications.getChildAt(i));
+				if (n.isSticky && n.id == id) {
+					n.messageTxt.htmlText = message;
+					return;
+				}
+			}
+			var notif:Notification = new Notification(message, true);
+			notif.id = id;
+			this.notifications.addChild(notif);
+			rearrangeNotifications();
+		}
+		
+		public function removeStickyNotification(id:String):void {
+			for (var i:int = 0; i < this.notifications.numChildren; i++) {
+				var n:Notification = Notification(this.notifications.getChildAt(i));
+				if (n.isSticky && n.id == id) {
+					n.onClose();
+					return;
+				}
+			}
+		}
+
 		public function notification(message:String):void {
 			const index:uint = this.notifications.numChildren;
 			const notification:Notification = Notification(this.notifications.addChild(new Notification(message)));
@@ -711,6 +852,15 @@ package ui {
 			}
 
 			notification.y = index * (notification.height + 10);
+		}
+
+		private function rearrangeNotifications():void {
+			var yOffset:Number = 10;
+			for (var i:int = 0; i < this.notifications.numChildren; i++) {
+				var n:* = this.notifications.getChildAt(i);
+				n.y = yOffset;
+				yOffset += n.height + 10;
+			}
 		}
 
 		public function setOverlayButtonTransform():void {

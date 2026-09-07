@@ -31,7 +31,7 @@ package game {
 				// Low priority
 				if (++_tickDiscordRPC >= TICK_DISCORD_RPC) {
 					_tickDiscordRPC = 0;
-					this.pocket.discordRichPresence.refreshPresence();
+					
 				}
 			}
 		}

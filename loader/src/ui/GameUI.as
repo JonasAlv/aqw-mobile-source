@@ -1,7 +1,7 @@
 package ui {
 
 	import flash.display.*;
-	import flash.events.MouseEvent;
+	import flash.events.Event;
 
 	import controller.LayoutController;
 	import controller.walk.KeyboardWalkSimulatorController;
@@ -18,7 +18,7 @@ package ui {
 			this.pocket = pocket;
 
 			this.pocket.addChild(this);
-			
+
 			this.mouseChildren = true;
 			this.mouseEnabled = false;
 		}
@@ -209,7 +209,7 @@ package ui {
 			this.layoutController.toggleEdit(true);
 		}
 
-		public function hideEditLayout(event:MouseEvent = null):void {
+		public function hideEditLayout(event:Event = null):void {
 			this.layoutController.toggleEdit(false);
 		}
 
@@ -239,4 +239,3 @@ package ui {
 
 	}
 }
-

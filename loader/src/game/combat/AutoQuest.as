@@ -26,13 +26,42 @@ package game.combat {
 			}
 		}
 
+		
+		public static function startWith(pocket:*, questString:String):void {
+			_pocket = pocket;
+			_promptInput = new TextField();
+			_promptInput.text = questString;
+			
+			if (_promptInput.text.length > 0) {
+				var parts:Array = _promptInput.text.split(",");
+				_questIDs = [];
+				for (var i:int = 0; i < parts.length; i++) {
+					var raw:String = parts[i];
+					var subParts:Array = raw.split(":");
+					var val:int = parseInt(subParts[0]);
+					if (!isNaN(val) && val > 0) {
+						var itemId:int = -1;
+						if (subParts.length > 1) {
+							itemId = parseInt(subParts[1]);
+						}
+						_questIDs.push({qid: val, itemId: itemId});
+					}
+				}
+			}
+			hidePrompt();
+			
+			if (_questIDs.length > 0) {
+				start();
+			}
+		}
+
 		public static function showPrompt():void {
 			if (_promptContainer != null) {
 				hidePrompt();
 			}
 			
 			if (_pocket && _pocket.game && _pocket.game.MsgBox) {
-				_pocket.game.MsgBox.notify("Opening Auto-Quest Settings...");
+				_pocket.overlay.notification("Opening Auto-Quest Settings...");
 			}
 			
 			try {
@@ -56,7 +85,7 @@ package game.combat {
 				
 				_promptInput = new TextField();
 				_promptInput.type = TextFieldType.INPUT;
-				_promptInput.needsSoftKeyboard = true;
+				
 				var tfInput:TextFormat = new TextFormat("_sans", 32, 0x000000, true);
 				tfInput.align = TextFormatAlign.CENTER;
 				_promptInput.defaultTextFormat = tfInput;
@@ -115,7 +144,7 @@ package game.combat {
 				}
 			} catch (err:Error) {
 				if (_pocket && _pocket.game && _pocket.game.MsgBox) {
-					_pocket.game.MsgBox.notify("Error: " + err.message);
+					_pocket.overlay.notification("Error: " + err.message);
 				}
 			}
 		}
@@ -152,13 +181,21 @@ package game.combat {
 			}
 		}
 
-		private static function stop():void {
+		public static function stopSilent():void {
+				if (_timer != null) {
+					_timer.stop();
+					_timer.removeEventListener(TimerEvent.TIMER, onTick);
+					_timer = null;
+				}
+			}
+
+			private static function stop():void {
 			if (_timer != null) {
 				_timer.stop();
 				_timer.removeEventListener(TimerEvent.TIMER, onTick);
 				_timer = null;
 				if (_pocket && _pocket.game && _pocket.game.MsgBox) {
-					_pocket.game.MsgBox.notify("Auto-Quest Disabled");
+					_pocket.overlay.notification("Auto-Quest Disabled");
 				}
 			}
 		}
@@ -166,7 +203,7 @@ package game.combat {
 		private static function start():void {
 			stop();
 			_lastTurnIns = {};
-			_timer = new Timer(4000); // Check every 4 seconds to prevent lag spam
+			_timer = new Timer(1500); // Check every 1.5s to cycle fast but safely
 			_timer.addEventListener(TimerEvent.TIMER, onTick, false, 0, true);
 			_timer.start();
 
@@ -177,7 +214,7 @@ package game.combat {
 				if (_questIDs[i].itemId > 0) strList.push(_questIDs[i].qid + ":" + _questIDs[i].itemId);
 				else strList.push(_questIDs[i].qid);
 			}
-			_pocket.game.MsgBox.notify("Auto-Quest Enabled: " + strList.join(","));
+			_pocket.overlay.notification("Auto-Quest Enabled: " + strList.join(","));
 
 			}
 		}
@@ -194,30 +231,40 @@ package game.combat {
 						var qid:int = qObj.qid;
 						var itemId:int = qObj.itemId;
 						
-						if (world.questTree[qid] != null) {
-							var quest:* = world.questTree[qid];
-							
-							var lastAttempt:Number = 0;
-							if (_lastTurnIns[qid] != null) {
-								lastAttempt = _lastTurnIns[qid];
-							}
-							if (now - lastAttempt < 6000) {
-								continue;
-							}
+						var lastAttempt:Number = 0;
+						if (_lastTurnIns[qid] != null) {
+							lastAttempt = _lastTurnIns[qid];
+						}
+						
+						// Minimum 3.5 seconds between ANY action on this quest
+						if (now - lastAttempt < 2000) {
+							continue;
+						}
 
+						var quest:* = world.questTree[qid];
+						if (quest != null) {
 							if (quest.status == "c") {
 								if (world.tryQuestComplete != null) {
 									_lastTurnIns[qid] = now;
 									if (itemId > 0) {
 										world.tryQuestComplete(qid, itemId);
-										trace("AutoQuest: Attempted tryQuestComplete for " + qid + " with item " + itemId);
 									} else {
 										world.tryQuestComplete(qid);
-										trace("AutoQuest: Attempted tryQuestComplete for " + qid);
 									}
-									// Only turn in one quest per tick to prevent server spam!
 									break;
 								}
+							} else if (quest.status == null || quest.status == "") {
+								if (world.acceptQuest != null) {
+									_lastTurnIns[qid] = now;
+									world.acceptQuest(qid);
+									break;
+								}
+							}
+						} else {
+							if (world.acceptQuest != null) {
+								_lastTurnIns[qid] = now;
+								world.acceptQuest(qid);
+								break;
 							}
 						}
 					}
