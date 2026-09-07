@@ -98,6 +98,7 @@
 					this.backgroundLoad.start();
 					break;
 				case 2:
+					this.gameLoader.start();
 					break;
 				case 3:
 					this.gameLoader.start();
