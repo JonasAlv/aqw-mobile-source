@@ -100,8 +100,26 @@ package game.script {
 				_promptInput.wordWrap = true;
 				_promptContainer.addChild(_promptInput);
 				
-				var startBtn:BasicButton = new BasicButton("Load Script");
-				startBtn.x = bg.x + 120;
+				var startBtn:Sprite = new Sprite();
+				startBtn.graphics.beginFill(0x3498db, 1);
+				startBtn.graphics.lineStyle(2, 0x2980b9);
+				startBtn.graphics.drawRoundRect(0, 0, 150, 40, 10, 10);
+				startBtn.graphics.endFill();
+				var stf:TextField = new TextField();
+				var fmt2:TextFormat = new TextFormat("_sans", 14, 0xFFFFFF, true);
+				fmt2.align = TextFormatAlign.CENTER;
+				stf.defaultTextFormat = fmt2;
+				stf.text = "Load Script";
+				stf.width = 150;
+				stf.height = 40;
+				stf.y = 10;
+				stf.selectable = false;
+				stf.mouseEnabled = false;
+				startBtn.addChild(stf);
+				startBtn.buttonMode = true;
+				startBtn.mouseChildren = false;
+				
+				startBtn.x = bg.x + 80;
 				startBtn.y = bg.y + 240;
 				startBtn.addEventListener(MouseEvent.CLICK, function(e:MouseEvent):void {
 					var text:String = _promptInput.text;
@@ -111,8 +129,24 @@ package game.script {
 				});
 				_promptContainer.addChild(startBtn);
 				
-				var cancelBtn:BasicButton = new BasicButton("Cancel");
-				cancelBtn.x = bg.x + 300;
+				var cancelBtn:Sprite = new Sprite();
+				cancelBtn.graphics.beginFill(0xe74c3c, 1);
+				cancelBtn.graphics.lineStyle(2, 0xc0392b);
+				cancelBtn.graphics.drawRoundRect(0, 0, 150, 40, 10, 10);
+				cancelBtn.graphics.endFill();
+				var ctf:TextField = new TextField();
+				ctf.defaultTextFormat = fmt2;
+				ctf.text = "Cancel";
+				ctf.width = 150;
+				ctf.height = 40;
+				ctf.y = 10;
+				ctf.selectable = false;
+				ctf.mouseEnabled = false;
+				cancelBtn.addChild(ctf);
+				cancelBtn.buttonMode = true;
+				cancelBtn.mouseChildren = false;
+				
+				cancelBtn.x = bg.x + 270;
 				cancelBtn.y = bg.y + 240;
 				cancelBtn.addEventListener(MouseEvent.CLICK, function(e:MouseEvent):void {
 					hidePastePrompt();
