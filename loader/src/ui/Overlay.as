@@ -24,13 +24,14 @@ package ui {
 	import util.HelperSetting;
 	import game.combat.AutoCombat;
 	import game.combat.AutoQuest;
+	import game.script.ScriptEngine;
 
 	POCKET::IS_DESKTOP { 
 		import flash.filesystem.File; 
 		import flash.filesystem.FileStream; 
 		import flash.filesystem.FileMode; 
 		import flash.net.FileFilter; 
-		import game.script.ScriptEngine; 
+		
 	}
 
 
