@@ -17,3 +17,8 @@
 loader.iml
 
 .env
+# Locally added SDKs and keystores
+/AIRSDK_Linux/
+/android_sdk/
+/aqwpocket_keystore.jks
+/dev_scripts/
