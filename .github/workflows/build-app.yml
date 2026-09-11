@@ -104,10 +104,10 @@ jobs:
                     # 3. Compile Mobile
                     mkdir -p loader/assets/embed
                     echo "Compiling WorkerMain..."
-                    amxmlc loader/worker-src/WorkerMain.as -source-path+=loader/src -source-path+=aqw-api/src -source-path+=loader/worker-src -output loader/assets/embed/WorkerMain.swf -swf-version=18
+                    amxmlc loader/worker-src/WorkerMain.as -compiler.source-path loader/src aqw-api/src loader/worker-src -output loader/assets/embed/WorkerMain.swf -swf-version=18
                     
                     echo "Compiling Mobile_code..."
-                    amxmlc +configname=air -define+=POCKET::IS_DESKTOP,false -define+=POCKET::IS_MOBILE,true -source-path+=loader/src -source-path+=aqw-api/src -source-path+=loader/worker-src -output loader/Mobile_code.swf loader/src/Pocket.as
+                    amxmlc +configname=air -define+=POCKET::IS_DESKTOP,false -define+=POCKET::IS_MOBILE,true -compiler.source-path loader/src aqw-api/src loader/worker-src -output loader/Mobile_code.swf loader/src/Pocket.as
                     
                     echo "Injecting into Mobile.swf..."
                     abcexport loader/Mobile_code.swf
@@ -115,7 +115,7 @@ jobs:
                     
                     # 4. Compile Desktop
                     echo "Compiling Desktop_code..."
-                    amxmlc +configname=air -define+=POCKET::IS_DESKTOP,true -define+=POCKET::IS_MOBILE,false -source-path+=loader/src -source-path+=aqw-api/src -source-path+=loader/worker-src -output loader/Desktop_code.swf loader/src/Pocket.as
+                    amxmlc +configname=air -define+=POCKET::IS_DESKTOP,true -define+=POCKET::IS_MOBILE,false -compiler.source-path loader/src aqw-api/src loader/worker-src -output loader/Desktop_code.swf loader/src/Pocket.as
                     
                     echo "Injecting into Desktop.swf..."
                     abcexport loader/Desktop_code.swf
