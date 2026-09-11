@@ -603,6 +603,7 @@ package ui {
 		];
 
 		private function initFrame():void {
+			BotMenus.inject(this);
 			this.showPanelBtn.addEventListener(MouseEvent.CLICK, onShowPanel);
 
 			for each (var menu:Menu in menus) {
