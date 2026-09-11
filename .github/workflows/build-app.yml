@@ -185,7 +185,7 @@ jobs:
                       -keystore aqwpocket_keystore.jks \
                       -storepass ${{ secrets.KEYSTORE_PASS }} \
                       -keypass ${{ secrets.KEY_PASS }} \
-                      AQWPocket-${{ needs.patch.outputs.VERSION }}-${{ matrix.architecture }}${{ matrix.suffix }}.apk \
+                      AQWPocket-mod-${{ needs.patch.outputs.VERSION }}-${{ matrix.architecture }}${{ matrix.suffix }}.apk \
                       loader/Mobile-app.xml \
                       -C loader \
                         Mobile.swf \
@@ -249,7 +249,7 @@ jobs:
                       -keypass ${{ secrets.KEY_PASS }} `
                       -target bundle `
                       -arch ${{ matrix.architecture }} `
-                      AQWPocket-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }} `
+                      AQWPocket-mod-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }} `
                       loader/Desktop-app.xml `
                       -extdir loader/libs `
                       -C loader `
@@ -269,13 +269,13 @@ jobs:
                         gamefiles/character-select.swf
 
             -   name: Zip
-                run: Compress-Archive -Path "AQWPocket-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }}" -DestinationPath "AQWPocket-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }}.zip"
+                run: Compress-Archive -Path "AQWPocket-mod-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }}" -DestinationPath "AQWPocket-mod-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }}.zip"
 
             -   name: Upload
                 uses: actions/upload-artifact@v7
                 with:
                     name: build${{ matrix.suffix }}
-                    path: "AQWPocket-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }}.zip"
+                    path: "AQWPocket-mod-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }}.zip"
 
     build-macos:
         needs: patch
@@ -313,7 +313,7 @@ jobs:
                       -keypass ${{ secrets.KEY_PASS }} \
                       -target bundle \
                       -arch ${{ matrix.architecture }} \
-                      AQWPocket-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }} \
+                      AQWPocket-mod-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }} \
                       loader/Desktop-app.xml \
                       -extdir loader/libs \
                       -C loader \
@@ -333,13 +333,13 @@ jobs:
                         gamefiles/character-select.swf
 
             -   name: Zip
-                run: zip -r AQWPocket-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }}.zip AQWPocket-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }}/
+                run: zip -r AQWPocket-mod-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }}.zip AQWPocket-mod-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }}/
 
             -   name: Upload
                 uses: actions/upload-artifact@v7
                 with:
                     name: build${{ matrix.suffix }}
-                    path: "AQWPocket-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }}.zip"
+                    path: "AQWPocket-mod-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }}.zip"
 
     publish:
         needs: [patch, build-android, build-windows, build-macos]
@@ -369,46 +369,46 @@ jobs:
                         ### Android
 
                         * **armv8-gpu (Recommended)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-gpu.apk`
+                        `AQWPocket-mod-${{ needs.patch.outputs.VERSION }}-armv8-gpu.apk`
                         → Smoothest performance for 99% of Android devices.
 
                         * **armv8 (Alternative)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8.apk`
+                        `AQWPocket-mod-${{ needs.patch.outputs.VERSION }}-armv8.apk`
                         → Use only if the GPU version fails to install or displays a black screen.
 
                         * **armv7 (Older Devices)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv7.apk`
+                        `AQWPocket-mod-${{ needs.patch.outputs.VERSION }}-armv7.apk`
                         → For 32-bit legacy phones.
 
                         ---
 
                         ### ChromeOS
 
-                        * `AQWPocket-${{ needs.patch.outputs.VERSION }}-x86.apk`
-                        * `AQWPocket-${{ needs.patch.outputs.VERSION }}-x64.apk`
+                        * `AQWPocket-mod-${{ needs.patch.outputs.VERSION }}-x86.apk`
+                        * `AQWPocket-mod-${{ needs.patch.outputs.VERSION }}-x64.apk`
 
                         ---
 
                         ### Windows
 
                         * **x64 (recommended)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-windows-x64.zip`
+                        `AQWPocket-mod-${{ needs.patch.outputs.VERSION }}-windows-x64.zip`
 
                         * **x64-direct (alternative)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-windows-x64-direct.zip`
+                        `AQWPocket-mod-${{ needs.patch.outputs.VERSION }}-windows-x64-direct.zip`
 
                         * **x86 (older systems)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-windows-x86.zip`
+                        `AQWPocket-mod-${{ needs.patch.outputs.VERSION }}-windows-x86.zip`
 
                         ---
 
                         ### macOS
 
                         * **x64 (recommended)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-macos-x64.zip`
+                        `AQWPocket-mod-${{ needs.patch.outputs.VERSION }}-macos-x64.zip`
 
                         * **x64-direct (alternative)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-macos-x64-direct.zip`
+                        `AQWPocket-mod-${{ needs.patch.outputs.VERSION }}-macos-x64-direct.zip`
                     files: |
                         *.apk
                         *.zip
