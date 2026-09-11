@@ -60,10 +60,6 @@ jobs:
             
 
             
-            -   name: Keystore
-                run: |
-                    adt -certificate -cn AQWPocketMod 2048-RSA cert.p12 password
-            
             -   name: Inject version
                 run: |
                     sed -i "s|<versionNumber>.*</versionNumber>|<versionNumber>${{ steps.version.outputs.VERSION_NUMBER }}</versionNumber>|" loader/Mobile-app.xml
@@ -77,6 +73,11 @@ jobs:
                     air-version: "51.3.1"
                     accept-license: yes
                     
+            -   name: Keystore
+                run: |
+                    adt -certificate -cn AQWPocketMod 2048-RSA cert.p12 password
+            
+
             -   name: Inject Bot Mod Overlays
                 run: |
                     echo "Injecting Custom Scripts and Bot Menus into build..."
@@ -105,9 +106,11 @@ jobs:
                     mkdir -p loader/gamefiles/embed
                     echo "Compiling WorkerMain..."
                     amxmlc loader/worker-src/WorkerMain.as -source-path+=$GITHUB_WORKSPACE/loader/src -source-path+=$GITHUB_WORKSPACE/aqw-api/src -source-path+=$GITHUB_WORKSPACE/loader/worker-src -output loader/gamefiles/embed/WorkerMain.swf -swf-version=18
+                        cert.p12
                     
                     echo "Compiling Mobile_code..."
                     amxmlc +configname=air -define+=POCKET::IS_DESKTOP,false -define+=POCKET::IS_MOBILE,true -source-path+=$GITHUB_WORKSPACE/loader/src -source-path+=$GITHUB_WORKSPACE/aqw-api/src -source-path+=$GITHUB_WORKSPACE/loader/worker-src -output loader/Mobile_code.swf loader/src/Pocket.as
+                        cert.p12
                     
                     echo "Injecting into Mobile.swf..."
                     abcexport loader/Mobile_code.swf
@@ -116,6 +119,7 @@ jobs:
                     # 4. Compile Desktop
                     echo "Compiling Desktop_code..."
                     amxmlc +configname=air -define+=POCKET::IS_DESKTOP,true -define+=POCKET::IS_MOBILE,false -external-library-path+=$GITHUB_WORKSPACE/loader/libs/DiscordRPC.ane -source-path+=$GITHUB_WORKSPACE/loader/src -source-path+=$GITHUB_WORKSPACE/aqw-api/src -source-path+=$GITHUB_WORKSPACE/loader/worker-src -output loader/Desktop_code.swf loader/src/Pocket.as
+                        cert.p12
                     
                     echo "Injecting into Desktop.swf..."
                     abcexport loader/Desktop_code.swf
@@ -128,6 +132,7 @@ jobs:
                     path: |
                         loader/
                         aqw-api/
+                        cert.p12
                         cert.p12
                         cert.p12
     
