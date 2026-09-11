@@ -33,7 +33,6 @@ jobs:
                 uses: actions/checkout@v7
                 with:
                     repository: anthony-hyo/pocket-patches
-                    token: ${{ secrets.PATCHES_TOKEN }}
                     path: pocket-patches
 
             -   name: Checkout aqw-api
