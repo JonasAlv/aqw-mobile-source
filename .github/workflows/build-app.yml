@@ -99,7 +99,7 @@ jobs:
                     echo "Downloading upstream Windows ZIP for base assets..."
                     curl -sL -o anthony_win.zip "https://github.com/anthony-hyo/aqw-mobile/releases/download/v${VERSION}/AQWPocket-v${VERSION}-windows-x64.zip"
                     unzip -q -o anthony_win.zip -d anthony_win
-                    cp "anthony_win/AQWPocket-${VERSION}-windows-x64/loader/Desktop.swf" loader/Desktop.swf
+                    cp "anthony_win/AQWPocket-v${VERSION}-windows-x64/Desktop.swf" loader/Desktop.swf
                     
                     # 3. Compile Mobile
                     mkdir -p loader/assets/embed
