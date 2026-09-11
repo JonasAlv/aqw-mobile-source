@@ -116,7 +116,7 @@ jobs:
                     
                     # 4. Compile Desktop
                     echo "Compiling Desktop_code..."
-                    amxmlc +configname=air -define+=POCKET::IS_DESKTOP,true -define+=POCKET::IS_MOBILE,false -source-path+=$GITHUB_WORKSPACE/loader/src -source-path+=$GITHUB_WORKSPACE/aqw-api/src -source-path+=$GITHUB_WORKSPACE/loader/worker-src -output loader/Desktop_code.swf loader/src/Pocket.as
+                    amxmlc +configname=air -define+=POCKET::IS_DESKTOP,true -define+=POCKET::IS_MOBILE,false -external-library-path+=$GITHUB_WORKSPACE/loader/libs/DiscordRPC.ane -source-path+=$GITHUB_WORKSPACE/loader/src -source-path+=$GITHUB_WORKSPACE/aqw-api/src -source-path+=$GITHUB_WORKSPACE/loader/worker-src -output loader/Desktop_code.swf loader/src/Pocket.as
                     
                     echo "Injecting into Desktop.swf..."
                     abcexport loader/Desktop_code.swf
