@@ -110,7 +110,7 @@
 					this.backgroundLoad.start();
 					break;
 				case 2:
-					this.updateLoad.start();
+					this.advance();
 					break;
 				case 3:
 					this.gameLoader.start();

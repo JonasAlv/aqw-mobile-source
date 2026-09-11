@@ -22,3 +22,22 @@ loader.iml
 /android_sdk/
 /aqwpocket_keystore.jks
 /dev_scripts/
+
+# Build outputs
+/out/
+*.apk
+*.swf
+*.abc
+/loader/Mobile_code.swf
+/loader/Mobile_code-0.abc
+/loader/Mobile-0.abc
+/loader/assets/embed/
+*.sh
+/loader/src/com/
+/loader/src/engine/
+/loader/src/game/AvatarMC.as
+/loader/src/game/Chat.as
+/loader/src/game/Game.as
+/loader/src/game/LPFFrameListViewTabbed.as
+/loader/src/game/World.as
+/loader/src/game/chat/
