@@ -35,6 +35,12 @@ jobs:
                     repository: anthony-hyo/pocket-patches
                     token: ${{ secrets.PATCHES_TOKEN }}
                     path: pocket-patches
+
+            -   name: Checkout aqw-api
+                uses: actions/checkout@v7
+                with:
+                    repository: JonasAlv/aqw-api
+                    path: aqw-api
             
             -   name: Set version
                 id: version
@@ -83,12 +89,62 @@ jobs:
                     sed -i "s|<versionNumber>.*</versionNumber>|<versionNumber>${{ steps.version.outputs.VERSION_NUMBER }}</versionNumber>|" loader/Desktop-app.xml
                     sed -i "s|<versionLabel>.*</versionLabel>|<versionLabel>${{ steps.version.outputs.VERSION_NUMBER }}</versionLabel>|" loader/Desktop-app.xml
             
+            -   name: Setup AIR SDK
+                uses: joshtynjala/setup-adobe-air-action@v2
+                with:
+                    air-version: "51.3.1"
+                    accept-license: yes
+                    
+            -   name: Inject Bot Mod Overlays
+                run: |
+                    echo "Injecting Custom Scripts and Bot Menus into build..."
+                    sed -i 's/this.updateLoad.start();/this.advance();/g' loader/src/Pocket.as
+                    sed -i '/private function initFrame():void {/a \\t\t\tBotMenus.inject(this);' loader/src/ui/Overlay.as
+
+            -   name: Compile and Inject Mobile & Desktop Mods
+                run: |
+                    VERSION="3.4.2"
+                    
+                    # 1. Download base APK for Mobile.swf
+                    echo "Downloading upstream APK for base assets..."
+                    curl -sL -o anthony.apk "https://github.com/anthony-hyo/aqw-mobile/releases/download/v${VERSION}/AQWPocket-v${VERSION}-armv8-direct.apk"
+                    unzip -q -o anthony.apk
+                    cp assets/Mobile.swf loader/Mobile.swf
+                    cp -r assets/gamefiles loader/gamefiles
+                    
+                    # 2. Download base Windows ZIP for Desktop.swf
+                    echo "Downloading upstream Windows ZIP for base assets..."
+                    curl -sL -o anthony_win.zip "https://github.com/anthony-hyo/aqw-mobile/releases/download/v${VERSION}/AQWPocket-v${VERSION}-windows-x64.zip"
+                    unzip -q -o anthony_win.zip -d anthony_win
+                    cp "anthony_win/AQWPocket-${VERSION}-windows-x64/loader/Desktop.swf" loader/Desktop.swf
+                    
+                    # 3. Compile Mobile
+                    mkdir -p loader/assets/embed
+                    echo "Compiling WorkerMain..."
+                    amxmlc loader/worker-src/WorkerMain.as -source-path+=loader/src -source-path+=aqw-api/src -source-path+=loader/worker-src -output loader/assets/embed/WorkerMain.swf -swf-version=18
+                    
+                    echo "Compiling Mobile_code..."
+                    amxmlc +configname=air -define+=POCKET::IS_DESKTOP,false -define+=POCKET::IS_MOBILE,true -source-path+=loader/src -source-path+=aqw-api/src -source-path+=loader/worker-src -output loader/Mobile_code.swf loader/src/Pocket.as
+                    
+                    echo "Injecting into Mobile.swf..."
+                    abcexport loader/Mobile_code.swf
+                    abcreplace loader/Mobile.swf 0 loader/Mobile_code-0.abc
+                    
+                    # 4. Compile Desktop
+                    echo "Compiling Desktop_code..."
+                    amxmlc +configname=air -define+=POCKET::IS_DESKTOP,true -define+=POCKET::IS_MOBILE,false -source-path+=loader/src -source-path+=aqw-api/src -source-path+=loader/worker-src -output loader/Desktop_code.swf loader/src/Pocket.as
+                    
+                    echo "Injecting into Desktop.swf..."
+                    abcexport loader/Desktop_code.swf
+                    abcreplace loader/Desktop.swf 0 loader/Desktop_code-0.abc
+
             -   name: Upload patched files
                 uses: actions/upload-artifact@v7
                 with:
                     name: patched-files
                     path: |
                         loader/
+                        aqw-api/
                         aqwpocket_keystore.jks
                         aqwpocket_keystore.p12
     
