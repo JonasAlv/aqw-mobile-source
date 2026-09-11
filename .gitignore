@@ -33,7 +33,6 @@ loader.iml
 /loader/Mobile-0.abc
 /loader/assets/embed/
 *.sh
-/loader/src/com/
 /loader/src/engine/
 /loader/src/game/AvatarMC.as
 /loader/src/game/Chat.as
