@@ -29,11 +29,7 @@ jobs:
             -   name: Checkout
                 uses: actions/checkout@v7
             
-            -   name: Checkout custom
-                uses: actions/checkout@v7
-                with:
-                    repository: anthony-hyo/pocket-patches
-                    path: pocket-patches
+
 
             -   name: Checkout aqw-api
                 uses: actions/checkout@v7
@@ -48,18 +44,7 @@ jobs:
                     echo "VERSION_NUMBER=${{ github.event.inputs.version_prefix }}" >> $GITHUB_OUTPUT
                     echo "IS_PRERELEASE=${{ github.event.inputs.prerelease }}" >> $GITHUB_OUTPUT
             
-            -   name: Setup Rust
-                uses: dtolnay/rust-toolchain@stable
-            
-            -   name: Cache Rust dependencies
-                uses: actions/cache@v6
-                with:
-                    path: |
-                        ~/.cargo/registry
-                        ~/.cargo/git
-                        target
-                    key: ${{ runner.os }}-cargo-${{ hashFiles('Cargo.lock') }}
-            
+
             -   name: Setup Dlang
                 uses: dlang-community/setup-dlang@v1
             
@@ -73,8 +58,7 @@ jobs:
                     dmd -run build_rabcdasm.d
                     sudo cp abcexport rabcdasm rabcasm abcreplace /usr/local/bin/
             
-            -   name: Patch Game.swf
-                run: cargo run --release
+
             
             -   name: Keystore
                 run: |
@@ -384,21 +368,17 @@ jobs:
 
                         ### Android
 
-                        * **armv8 (recommended)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8.apk`
-                        → For most modern devices
-
-                        * **armv8-direct (alternative)**
-                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-direct.apk`
-                        → Use if the recommended version has issues
-
-                        * **armv8-gpu (legacy)**
+                        * **armv8-gpu (Recommended)**
                         `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8-gpu.apk`
-                        → Not recommended; fallback only
+                        → Smoothest performance for 99% of Android devices.
 
-                        * **armv7 (32-bit)**
+                        * **armv8 (Alternative)**
+                        `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv8.apk`
+                        → Use only if the GPU version fails to install or displays a black screen.
+
+                        * **armv7 (Older Devices)**
                         `AQWPocket-${{ needs.patch.outputs.VERSION }}-armv7.apk`
-                        → For older devices only
+                        → For 32-bit legacy phones.
 
                         ---
 
