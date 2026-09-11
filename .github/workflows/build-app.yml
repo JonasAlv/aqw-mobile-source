@@ -62,8 +62,7 @@ jobs:
             
             -   name: Keystore
                 run: |
-                    echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > aqwpocket_keystore.jks
-                    echo "${{ secrets.KEYSTORE_P12_BASE64 }}" | base64 -d > aqwpocket_keystore.p12
+                    adt -certificate -cn AQWPocketMod 2048-RSA cert.p12 password
             
             -   name: Inject version
                 run: |
@@ -129,8 +128,8 @@ jobs:
                     path: |
                         loader/
                         aqw-api/
-                        aqwpocket_keystore.jks
-                        aqwpocket_keystore.p12
+                        cert.p12
+                        cert.p12
     
     build-android:
         needs: patch
@@ -182,10 +181,10 @@ jobs:
                     adt -package \
                       -target apk-captive-runtime \
                       -arch ${{ matrix.architecture }} \
-                      -storetype JKS \
-                      -keystore aqwpocket_keystore.jks \
-                      -storepass ${{ secrets.KEYSTORE_PASS }} \
-                      -keypass ${{ secrets.KEY_PASS }} \
+                      -storetype PKCS12 \
+                      -keystore cert.p12 \
+                      -storepass password \
+                      -keypass password \
                       AQWPocket-mod-${{ needs.patch.outputs.VERSION }}-${{ matrix.architecture }}${{ matrix.suffix }}.apk \
                       loader/Mobile-app.xml \
                       -C loader \
@@ -245,9 +244,9 @@ jobs:
                       | Set-Content loader/Desktop-app.xml
                     adt -package `
                       -storetype PKCS12 `
-                      -keystore aqwpocket_keystore.p12 `
-                      -storepass ${{ secrets.KEYSTORE_PASS }} `
-                      -keypass ${{ secrets.KEY_PASS }} `
+                      -keystore cert.p12 `
+                      -storepass password `
+                      -keypass password `
                       -target bundle `
                       -arch ${{ matrix.architecture }} `
                       AQWPocket-mod-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }} `
@@ -309,9 +308,9 @@ jobs:
                     sed -i '' "s|<renderMode>.*</renderMode>|<renderMode>${{ matrix.render-mode }}</renderMode>|" loader/Desktop-app.xml
                     adt -package \
                       -storetype PKCS12 \
-                      -keystore aqwpocket_keystore.p12 \
-                      -storepass ${{ secrets.KEYSTORE_PASS }} \
-                      -keypass ${{ secrets.KEY_PASS }} \
+                      -keystore cert.p12 \
+                      -storepass password \
+                      -keypass password \
                       -target bundle \
                       -arch ${{ matrix.architecture }} \
                       AQWPocket-mod-${{ needs.patch.outputs.VERSION }}${{ matrix.suffix }} \
